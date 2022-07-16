@@ -1,0 +1,104 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> onflap </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'web/img/logo/favicon.png' %}">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="{% static 'web/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/fontawesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/bsnav.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/slick.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/themify-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/swiper-bundle.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/icofont.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/splitting.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/splitting-cells.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/style.css' %}" rel="stylesheet">
+    <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+</head>
+
+<body class="demo-1" id="bdy">
+
+    <!-- Start PreLoader
+    ============================================= -->
+    <div class="se-pre-con"></div>
+    <!-- Start PreLoader-->
+
+    <div class="theme_all_wrap" data-magic-cursor=" " data-color="crimson">
+
+        <!-- Document Wrapper   
+=============================== -->
+        <div id="main-wrapper">
+
+            <!-- Start header
+    ============================================= -->
+            {% include 'web/partials/header.html' %}
+            <!-- End header -->
+
+            <div class="clearfix"></div>
+
+            {% block content %}
+            {% endblock %}
+
+            <div class="clearfix"></div>
+
+            <!-- Start Footer
+	============================================= -->
+            {% include 'web/partials/footer.html' %}
+            <!-- End Footer-->
+
+            <!-- Start Scroll top
+	============================================= -->
+            <a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
+            <!-- End Scroll top-->
+
+
+            <!-- CURSOR -->
+            <div class="mouse-cursor cursor-outer"></div>
+            <div class="mouse-cursor cursor-inner"></div>
+            <!-- /CURSOR -->
+        </div>
+    </div> <!-- Mouse Cursor End -->
+
+    <!-- jQuery Frameworks 
+    ============================================= -->
+
+    <script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.appear.js' %}"></script>
+    <script src="{% static 'web/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'web/js/progress-bar.min.js' %}"></script>
+    <script src="{% static 'web/js/modernizr.custom.13711.js' %}"></script>
+    <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/js/count-to.js' %}"></script>
+    <script src="{% static 'web/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/js/text.js' %}"></script>
+    <script src="{% static 'web/js/YTPlayer.min.js' %}"></script>
+    <script src="{% static 'web/js/slick.min.js' %}"></script>
+    <script src="{% static 'web/js/bsnav.min.js' %}"></script>
+    <script src="{% static 'web/js/splitting.min.js' %}"></script>
+    <script src="{% static 'web/js/splitting-animation.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+{% extends 'web/partials/base.html' %}
+{% block content %}
+{% load static %}
+
+
+<main class="main">
+
+    <!-- Start Hero   
+============================================= -->
+    <div id="home" class="hero-section">
+        <div class="hero-sliderr">
+            <!-- owl Slider Begin -->
+            <div class="hero-single" style="background-image: url({% static 'web/img/header/hdr-1.png' %})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="hero-content text-center">
+                                <span class="top-title wow fadeInDown" data-wow-duration="1s"
+                                    data-wow-delay=".3s">Business Consulting Agency</span>
+                                <h2 data-splitting class="home-title wow" data-wow-duration=".1s"
+                                    data-wow-delay=".2s">
+                                    Creative & Inteligents People help <br /> Growing Business.
+                                </h2>
+                                <p>
+                                    Lorem ipsum dolor consecteture elite we’re a creative digitalyour
+                                    business growing we’re a creative digitalyour business growing up.
+                                </p>
+                                <div class="hro-btn wow fadeInUp" data-wow-duration="1s"
+                                    data-wow-delay=".3s">
+                                    <a href="service.html" class="theme-btn">
+                                        Explore More <i class="icofont-long-arrow-right"></i>
+                                    </a>
+                                    <div class="how-we-work">
+                                        <a href="https://www.youtube.com/watch?v=ku6dEtynrRI"
+                                            class="item popup-youtube">
+                                            <i class="fas fa-play"></i>
+                                            <span class="how-txt">How we work</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- single Slider End -->
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start Feature
+============================================= -->
+    <div class="feature-area">
+        <div class="container">
+            <div class="feature-wpr grid-4">
+                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="feature-icon">
+                        <img src="{% static 'web/img/icons/man.png' %}" alt="thumb">
+                    </div>
+                    <div class="feature-info">
+                        <h5>Great Team</h5>
+                        <p class="mb-0">
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="feature-icon">
+                        <img src="{% static 'web/img/icons/checked.png' %}" alt="thumb">
+                    </div>
+                    <div class="feature-info">
+                        <h5>Trusted Agency</h5>
+                        <p class="mb-0">
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                    <div class="feature-icon">
+                        <img src="{% static 'web/img/icons/rating.png' %}" alt="thumb">
+                    </div>
+                    <div class="feature-info">
+                        <h5>Top Rated Agency</h5>
+                        <p class="mb-0">
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                    <div class="feature-icon">
+                        <img src="{% static 'web/img/icons/consult.png' %}" alt="thumb">
+                    </div>
+                    <div class="feature-info">
+                        <h5>Support Alltime</h5>
+                        <p class="mb-0">
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Feature -->
+
+    <!-- Start About
+============================================= -->
+    <div class="about-area de-padding">
+        <div class="about-wpr grid-2">
+            <div class="about-left">
+                <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                    <img src="{% static 'web/img/about/about-1.png' %}" alt="thumb">
+                </div>
+            </div>
+            <div class="about-right about-padding-right">
+                <span class="about-sub-title">About Agency</span>
+                <h2 data-splitting class="about-title wow" data-wow-duration=".1s" data-wow-delay=".2s">A
+                    helping hand agency <br /> for Business</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, seieiusmoed
+                    dui too consecteture elite more.According to ipsum dolor seat ameat
+                    consecteture elite.
+                </p>
+                <div class="about-fact grid-3">
+                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="fun-icon">
+                            <img src="{% static 'web/img/icons/1.png' %}" alt="thumb">
+                            <p class="timer" data-to="2382" data-speed="3000">2382</p>
+                        </div>
+                        <div class="fun-desc">
+                            <span class="medium">Project Completed</span>
+                        </div>
+                    </div>
+                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="fun-icon">
+                            <img src="{% static 'web/img/icons/2.png' %}" alt="thumb">
+                            <p class="timer" data-to="1382" data-speed="3000">1382</p>
+                        </div>
+                        <div class="fun-desc">
+                            <span class="medium">Team Members</span>
+                        </div>
+                    </div>
+                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="fun-icon">
+                            <img src="{% static 'web/img/icons/feedback.png' %}" alt="thumb">
+                            <p class="timer" data-to="2382" data-speed="3000">2382</p>
+                        </div>
+                        <div class="fun-desc">
+                            <span class="medium">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-btn mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <a href="work.html" class="theme-btn">
+                        Explore More <i class="icofont-long-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start What We Do
+============================================= -->
+    <div class="what-area de-pb">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center">
+                        <span class="about-sub-title">What We Do</span>
+                        <h2 data-splitting class="about-title mb-0 wow" data-wow-duration=".1s"
+                            data-wow-delay=".2s">
+                            We Providing Some Special Services
+                            <br />
+                            To our Clients.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="what-wpr grid-3">
+                <div class="what-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="what-icon">
+                        <img src="{% static 'web/img/icons/3.png' %}" alt="thumb">
+                    </div>
+                    <div class="what-info">
+                        <h5>Business Analysis</h5>
+                        <p>
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                        <a href="service-single.html" class="what-btn">Explore Service</a>
+                    </div>
+                </div>
+                <div class="what-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="what-icon">
+                        <img src="{% static 'web/img/icons/4.png' %}" alt="thumb">
+                    </div>
+                    <div class="what-info">
+                        <h5>Financial Planning</h5>
+                        <p>
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                        <a href="service-single.html" class="what-btn">Explore Service</a>
+                    </div>
+                </div>
+                <div class="what-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="what-icon">
+                        <img src="{% static 'web/img/icons/5.png' %}" alt="thumb">
+                    </div>
+                    <div class="what-info">
+                        <h5>Digital Marketing</h5>
+                        <p>
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                        <a href="service-single.html" class="what-btn">Explore Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="what-footer mt-60">
+                <h5 class="mb-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    If you have any project or task for us Please
+                    <a href="contact.html">Contact Us</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- End What We Do -->
+
+    <!-- Start Faq
+============================================= -->
+    <div class="faq-area de-padding">
+        <div class="faq-wpr grid-2">
+            <div class="faq-left faq-padding-left">
+                <div class="site-title">
+                    <span class="about-sub-title">Questions & Answer</span>
+                    <h2 data-splitting class="about-title mb-0 wow" data-wow-duration=".1s"
+                        data-wow-delay=".6s">
+                        Need anything to ask check
+                        <br />
+                        Asked Question
+                    </h2>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                1. Think ahead & boost your business?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusitempor is exercitation ullamco laboris.Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                2. How our experts consulter work?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusitempor is exercitation ullamco laboris.Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                3. What is the best tips for growth your business?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusitempor is exercitation ullamco laboris.Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                aria-controls="collapse4">
+                                4. How to improved your business?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusitempor is exercitation ullamco laboris.Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                aria-controls="collapse4">
+                                5. How to improved your business?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusitempor is exercitation ullamco laboris.Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-right">
+                <div class="faq-pic wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                    <img src="{% static 'web/img/faq/fag-bg.png' %}" alt="thumb">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Faq -->
+
+    <!-- Start Work
+============================================= -->
+    <div class="work-area de-pb">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center">
+                        <span class="about-sub-title">Protfolio</span>
+                        <h2 data-splitting class="about-title mb-0 wow" data-wow-duration=".1s"
+                            data-wow-delay=".6s">
+                            Recently done case study by our
+                            <br />
+                            inteligents team
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="work-wpr magnific-mix-gallery">
+                <div class="work-grid-1 mb-30">
+                    <div class="work-pic work-pic-1">
+                        <img src="{% static 'web/img/work/1.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/1.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-pic work-pic-2">
+                        <img src="{% static 'web/img/work/2.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/2.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-pic work-pic-3">
+                        <img src="{% static 'web/img/work/3.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/3.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-grid-2 grid-3">
+                    <div class="work-pic work-pic-4">
+                        <img src="{% static 'web/img/work/4.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/4.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-pic work-pic-5">
+                        <img src="{% static 'web/img/work/5.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/5.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-pic work-pic-6">
+                        <img src="{% static 'web/img/work/6.png' %}" alt="thumb">
+                        <div class="work-overlay">
+                            <a href="{% static 'web/img/work/6.png' %}" class="item popup-link">
+                                <i class="ti ti-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work-btn text-center mt-70">
+                <a href="work.html" class="theme-btn">
+                    Explore More <i class="icofont-long-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Work -->
+
+    <!-- Start Subscribe
+============================================= -->
+    <div class="sub-area de-padding" style="background-image: url({% static 'web/img/subscribe/bg.png' %})">
+        <div class="container">
+            <div class="sub-wpr grid-2">
+                <div class="sub-left">
+                    <div class="site-title">
+                        <span class="about-sub-title wh">Newsletter</span>
+                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s"
+                            data-wow-delay=".6s">
+                            To get Our Weekly & Monthly News.
+                            Subscribe Newsletter.
+                        </h2>
+                    </div>
+                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
+                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
+                    </form>
+                </div>
+                <div class="sub-right text-center">
+                    <img src="{% static 'web/img/subscribe/sub-right.png' %}" alt="thumb">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe -->
+
+    <!-- Start Blog
+============================================= -->
+    <div class="blog-area de-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="site-title text-center wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".2s">
+                        <span class="about-sub-title">Blog</span>
+                        <h2 class="about-title mb-0">
+                            See our Latest & Popular Tips & Tricks
+                            <br>
+                            from our Experts
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-wpr grid-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                <div class="blog-box">
+                    <div class="blog-pic">
+                        <img src="{% static 'web/img/blog/1.jpg' %}" alt="thumb">
+                    </div>
+                    <div class="blog-info">
+                        <ul class="blog-meta">
+                            <li><i class="icofont-user-alt-4"></i> Philip Hobs</li>
+                            <li><i class="icofont-clock-time"></i> 02feb,2021</li>
+                        </ul>
+                        <a href="single.html">
+                            <h5 class="blog-title">
+                                How to make money online easily & quickly
+                            </h5>
+                        </a>
+                        <a href="single.html" class="btn-4 hv">
+                            <i class="icofont-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-box">
+                    <div class="blog-pic">
+                        <img src="{% static 'web/img/blog/2.jpg' %}" alt="thumb">
+                    </div>
+                    <div class="blog-info">
+                        <ul class="blog-meta">
+                            <li><i class="icofont-user-alt-4"></i> Philip Hobs</li>
+                            <li><i class="icofont-clock-time"></i> 02feb,2021</li>
+                        </ul>
+                        <a href="single.html">
+                            <h5 class="blog-title">
+                                How to growing your business tips & tricks
+                            </h5>
+                        </a>
+                        <a href="single.html" class="btn-4 hv">
+                            <i class="icofont-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-box">
+                    <div class="blog-pic">
+                        <img src="{% static 'web/img/blog/3.jpg' %}" alt="thumb">
+                    </div>
+                    <div class="blog-info">
+                        <ul class="blog-meta">
+                            <li><i class="icofont-user-alt-4"></i> Philip Hobs</li>
+                            <li><i class="icofont-clock-time"></i> 02feb,2021</li>
+                        </ul>
+                        <a href="single.html">
+                            <h5 class="blog-title">
+                                Most profitable business case studies tricks
+                            </h5>
+                        </a>
+                        <a href="single.html" class="btn-4 hv">
+                            <i class="icofont-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
+
+    <!-- Start Review
+============================================= -->
+    <div class="review-area de-pb">
+        <div class="container">
+            <div class="swiper-container review-wpr">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-single text-center">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div class="review-content">
+                                        <p>
+                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                            According the agency is best for growing your business what your
+                                            A best consulting business agency.
+                                        </p>
+                                        <div class="review-bio">
+                                            <h5>Atardam Steve</h5>
+                                            <span>Founder</span>
+                                            <div class="review-rating d-flex align-items-center">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-single text-center">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div class="review-content">
+                                        <p>
+                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                            According the agency is best for growing your business what your
+                                            A best consulting business agency.
+                                        </p>
+                                        <div class="review-bio">
+                                            <h5>Atardam Steve</h5>
+                                            <span>Founder</span>
+                                            <div class="review-rating d-flex align-items-center">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-single text-center">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div class="review-content">
+                                        <p>
+                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                            According the agency is best for growing your business what your
+                                            A best consulting business agency.
+                                        </p>
+                                        <div class="review-bio">
+                                            <h5>Atardam Steve</h5>
+                                            <span>Founder</span>
+                                            <div class="review-rating d-flex align-items-center">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Review -->
+
+</main>
+{% endblock %}
