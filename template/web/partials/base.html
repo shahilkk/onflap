@@ -76,7 +76,8 @@
 
     <!-- jQuery Frameworks 
     ============================================= -->
-
+    {% block js %}
+    {% endblock %}
     <script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'web/js/popper.min.js' %}"></script>
@@ -99,6 +100,11 @@
     <script src="{% static 'web/js/splitting-animation.js' %}"></script>
     <script src="{% static 'web/js/main.js' %}"></script>
 
+
+
+
 </body>
 
 </html>
+
+
