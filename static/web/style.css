@@ -77,8 +77,8 @@ body {
   font-family: var(--font-2);
   font-style: normal;
   color: var(--body-color);
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 100;
   line-height: 2.6rem;
   -moz-osx-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased; }
@@ -136,7 +136,7 @@ h6 {
 p {
   margin-bottom: 1.5rem;
   color: var(--body-color);
-  line-height: 2.8rem; }
+  line-height: 2rem; }
 
 .img, img {
   max-width: 100%;
@@ -890,7 +890,7 @@ select:focus {
   margin-top: -26rem; }
 
 .feature-wpr {
-  padding: 9rem 3rem;
+  padding: 5rem 3rem;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: var(--white-color);
