@@ -2,85 +2,98 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'sof/css/fontawesome-all.min.css' %}">
-    <!-- bootstrap css link -->
-    <link rel="stylesheet" href="{% static 'sof/css/bootstrap.min.css' %}">
-    <!-- favicon -->
-    <!-- swipper css link -->
-    <link rel="stylesheet" href="{% static 'sof/css/swiper.min.css' %}">
-    <!-- lightcase css links -->
-    <link rel="stylesheet" href="{% static 'sof/css/lightcase.css' %}">
-    <!-- odometer css link -->
-    <link rel="stylesheet" href="{% static 'sof/css/odometer.css' %}">
-    <!-- line-awesome-icon css -->
-    <link rel="stylesheet" href="{% static 'sof/css/icomoon.css' %}">
-    <!-- line-awesome-icon css -->
-    <link rel="stylesheet" href="{% static 'sof/css/line-awesome.min.css' %}">
-    <!-- animate.css'  -->
-    <link rel="stylesheet" href="{% static 'sof/css/animate.css' %}">
-    <!-- aos.css'  -->
-    <link rel="stylesheet" href="{% static 'sof/css/aos.css' %}">
-    <!-- nice select css -->
-    <link rel="stylesheet" href="{% static 'sof/css/nice-select.css' %}">
-    <!-- main style css link -->
-    <link rel="stylesheet" href="{% static 'sof/css/style.css' %}">
+<!-- bootstrap css link -->
+<link rel="stylesheet" href="{% static 'sof/css/bootstrap.min.css' %}">
+<!-- favicon -->
+<!-- swipper css link -->
+<link rel="stylesheet" href="{% static 'sof/css/swiper.min.css' %}">
+<!-- lightcase css links -->
+<link rel="stylesheet" href="{% static 'sof/css/lightcase.css' %}">
+<!-- odometer css link -->
+<link rel="stylesheet" href="{% static 'sof/css/odometer.css' %}">
+<!-- line-awesome-icon css -->
+<link rel="stylesheet" href="{% static 'sof/css/icomoon.css' %}">
+<!-- line-awesome-icon css -->
+<link rel="stylesheet" href="{% static 'sof/css/line-awesome.min.css' %}">
+<!-- animate.css'  -->
+<link rel="stylesheet" href="{% static 'sof/css/animate.css' %}">
+<!-- aos.css'  -->
+<link rel="stylesheet" href="{% static 'sof/css/aos.css' %}">
+<!-- nice select css -->
+<link rel="stylesheet" href="{% static 'sof/css/nice-select.css' %}">
+<!-- main style css link -->
+<link rel="stylesheet" href="{% static 'sof/css/style.css' %}">
 
 
 <style>
     .prdcty-sec {
-    padding: 10px 30px 0;
-}
-*, :after, :before {
-    box-sizing: content-box;
-}
-.prdcty-inrsec {
-    max-width: 1180px;
-    margin: 0 auto;
-    text-align: center;
-}
-.cstmr-cntnt-sec {
-    max-width: 780px;
-    margin: 0 auto;
-    text-align: center;
-}
-.label-txt.blck-txt {
-    color: #333;
-}
-.label-txt {
-    font: 16px/1 var(--zf-secondary-medium);
-    color: #dcdcdc;
-    text-transform: uppercase;
-    letter-spacing: 3.2px;
-}
- p {
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-.inner-hdr {
-    font-size: 5rem;
-    padding: 10px 0;
-}
-h2{
-    
-    margin-bottom: 15px;
+        padding: 10px 30px 0;
+    }
 
-}
-.para {
-    font: 16px/1.6 var(--zf-primary-regular);
-}
-p {
-    font-size: 17px;
-    line-height: 1.6;
-    margin: 0 0 20px;
-}
-.learnmore {
-    padding-top: 15px;
-    display: inline-block;
-    color: #0067ff;
-    text-decoration: none;
-    font: 16px/1.2 var(--zf-secondary-medium);
-}
+    *,
+    :after,
+    :before {
+        box-sizing: content-box;
+    }
+
+    .prdcty-inrsec {
+        max-width: 1180px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cstmr-cntnt-sec {
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .label-txt.blck-txt {
+        color: #333;
+    }
+
+    .label-txt {
+        font: 16px/1 var(--zf-secondary-medium);
+        color: #dcdcdc;
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .inner-hdr {
+        font-size: 5rem;
+        padding: 10px 0;
+    }
+
+    h2 {
+
+        margin-bottom: 15px;
+
+    }
+
+    .para {
+        font: 16px/1.6 var(--zf-primary-regular);
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 0 0 20px;
+    }
+
+    .learnmore {
+        padding-top: 15px;
+        display: inline-block;
+        color: #0067ff;
+        text-decoration: none;
+        font: 16px/1.2 var(--zf-secondary-medium);
+    }
 </style>
 
 <main class="main">
@@ -107,13 +120,13 @@ p {
                     <div class="cstmr-cntnt-sec">
                         <p class="label-txt blck-txt">For a streamlined work experience</p>
                         <h2 class="inner-hdr" style="font-weight: 900;">Maximum productivity with minimum use</h2>
-                        <p >Let's break the myth that CRMs are all about data entry. Zoho CRM is built to be
+                        <p>Let's break the myth that CRMs are all about data entry. Zoho CRM is built to be
                             used less. Automate workflows, processes, campaigns, customer journeys, and more so that you
                             can focus less on software and more on relationships.</p><a
                             href="/crm/maximum-productivity.html?source_from=crm_home" target="_blank" rel="noopener"
                             class="learnmore">Read More<span></span></a>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -124,7 +137,7 @@ p {
 
     <!-- introoooo -->
 
-    
+
 
 
 
@@ -132,14 +145,14 @@ p {
 
 
     <section class="banner-section two">
-    
-       
-       
+
+
+
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
                 <div class="col-xl-12 mb-30">
                     <div class="banner-content two">
-                       <!-- <div class="banner-content-header" data-aos="fade-up" data-aos-duration="1200">
+                        <!-- <div class="banner-content-header" data-aos="fade-up" data-aos-duration="1200">
                             <h1 class="title">Soft i'm Developers</h1>
                             <h1 class="title">Impressive Experience</h1>
                        </div> -->
@@ -150,15 +163,21 @@ p {
                             <div class="banner-left-content">
                                 <div class="banner-left-video">
                                     <div class="circle">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+                                            height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                                            xml:space="preserve">
                                             <defs>
-                                                <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                                                <path id="circlePath"
+                                                    d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
                                             </defs>
-                                            <circle cx="150" cy="100" r="75" fill="none"/>
+                                            <circle cx="150" cy="100" r="75" fill="none" />
                                             <g>
-                                                <use xlink:href="#circlePath" fill="none"/>
+                                                <use xlink:href="#circlePath" fill="none" />
                                                 <text fill="#3249b3">
-                                                    <textPath xlink:href="#circlePath">Softim it solution Softim it solution Softim it solution Softim it solution</textPath>
+                                                    <textPath xlink:href="#circlePath">Onflap * Onflap * Onflap * Onflap
+                                                        * Onflap * Onflap * Onflap * Onflap * Onflap * Onflap * Onflap *
+                                                    </textPath>
                                                 </text>
                                             </g>
                                         </svg>
@@ -171,7 +190,8 @@ p {
                                                 <div class="waves wave-3"></div>
                                             </div>
                                         </div>
-                                        <a class="video-icon video" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/LRhrNC-OC0Y">
+                                        <a class="video-icon video" data-rel="lightcase:myCollection"
+                                            href="https://www.youtube.com/embed/LRhrNC-OC0Y">
                                             <i class="fas fa-play"></i>
                                         </a>
                                     </div>
@@ -183,13 +203,14 @@ p {
                                     <span>Play Intro</span>
                                 </div>
                                 <div class="banner-left-footer">
-                                    <p>Personalization assumed up an excess of position in the showcasing space and has made each and every one of your messages exhausting and without feelings.</p>
+                                    <p>Personalization assumed up an excess of position in the showcasing space and has
+                                        made each and every one of your messages exhausting and without feelings.</p>
                                     <div class="banner-left-btn">
                                         <a href="contact.html" class="btn--base active">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -197,6 +218,91 @@ p {
         </div>
     </section>
     <!-- end introooo -->
+
+<style>
+    @media only screen and (max-width: 1024px){
+    .whychose-sec {
+        padding: 110px 30px 20px;
+        display: block;
+    }
+    }
+    .whychose-sec {
+        max-width: 1090px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 125px 30px 20px;
+        box-sizing: border-box;
+    }
+    #block-system-main {
+    line-height: 1.5;
+    font-weight: inherit;
+    }
+
+    style attribute {
+        visibility: visible;
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+    body {
+        font: 17px/1.5 Zoho_Puvi_Regular,sans-serif;
+        color: #000;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    @media only screen and (max-width: 1024px)
+    {
+        .whychose-sec .inner-hdr {
+    padding: 0 0 30px;
+}
+    }
+.whychose-sec .inner-hdr {
+    padding: 0;
+}
+.inner-hdr {
+    font: 48px/1 var(--zf-primary-bold);
+    padding: 10px 0;
+}
+h1, h2, h3, h4, h5, h6, li, p, ul, body {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+</style>
+
+
+    <!-- <div class="whychose-sec">
+        <h2 class="inner-hdr">Why choose <br><span class="dib">Onflap CRM?</span></h2>
+        <ul class="ftr-lists">
+            <li class="list-item">Refreshingly simple to use—a modern CRM for a modern business</li>
+            <li class="list-item">Dedicated programs for migration, deployment, and training</li>
+            <li class="list-item">Extensive developer platform for custom solutions and integrations</li>
+            <li class="list-item">Flexible contracts with no lock-in periods</li>
+            <li class="list-item">No hidden costs—we don't nickel and dime features</li>
+            <li class="list-item">Price protection–get the best deal, always</li>
+        </ul>
+    </div> -->
+
+    <!-- <div class="single-area de-padding">
+        <div class="container">
+            <div class="contact-page-info grid-2">
+                <div class="contact-left">
+                    <h2 data-splitting class="mb-50 wow" data-wow-duration=".1s" data-wow-delay=".4s">
+                        Why choose <br>
+                        Onflap CRM?
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
 
 
     <div class="single-area de-padding">
@@ -224,19 +330,24 @@ p {
                     </ul>
                 </div>
                 <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                    <form class="contact-form" id="contact-form" action="https://themetum.com/ailng/php/contact.php" method="POST">					
+                    <form class="contact-form" id="contact-form" action="https://themetum.com/ailng/php/contact.php"
+                        method="POST">
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control input-style-2" placeholder="Marcos Zeletoyan">
+                                <input type="text" name="name" class="form-control input-style-2"
+                                    placeholder="Marcos Zeletoyan">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="phone" class="form-control input-style-2" placeholder="+00- 1234- 56789">
+                                <input type="text" name="phone" class="form-control input-style-2"
+                                    placeholder="+00- 1234- 56789">
                             </div>
                             <div class="col-md-12">
-                                <input type="email" name="email" class="form-control input-style-2" placeholder="Email Address">
+                                <input type="email" name="email" class="form-control input-style-2"
+                                    placeholder="Email Address">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control input-style-2" name="message" placeholder="Message"></textarea>
+                                <textarea class="form-control input-style-2" name="message"
+                                    placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="theme-btn mt-20">
@@ -245,13 +356,17 @@ p {
                             </div>
                             <div class="col-12 text-center">
                                 <p class="form-message"></p>
-                            </div>								
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- <section class="contact-section two pb-120">
         <div class="container">
