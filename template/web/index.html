@@ -64,6 +64,71 @@
         vertical-align: bottom;
         transition: .5s ease;
     }
+
+
+
+
+    .zoho-apps-category1 ul li {
+        position: relative;
+        display: inline-block;
+        padding: 30px 10px 10px;
+        width: 47%;
+        /* font-size: 10px; */
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid #f5f5f563;
+        border-right: 1px solid #f5f5f5;
+        vertical-align: bottom;
+        transition: .5s ease;
+    }
+
+    .region-promo .promotion-app a {
+        color: #000;
+        display: block;
+        padding: 60px 20px 60px 170px;
+        position: relative;
+    }
+
+    .region-promo .promo-appicon.promo-crm {
+        background-position: -1044px 10px;
+    }
+
+    .region-promo .learn-more {
+        color: #fff;
+        background: #f0483e;
+        padding: 8px 20px;
+        display: inline-block;
+        font-family: var(--zf-primary-bold);
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    .promotion-app .promo-crm {
+        background-image: url(https://img.icons8.com/color/48/000000/sell-stock.png);
+    }
+
+    .zoho-apps-category1 ul  :hover {
+        border-bottom: 1px solid #0a3daa;
+    }
+
+
+
+
+
+    .vertical {
+        border-right: 1px solid #aaa7a7d5;
+        }
+    @media only screen and (max-width: 757px){
+    .vertical {
+        border-right: 0px solid #aaa7a7d5;
+        }
+    }
+    @media only screen and (max-width: 971px){
+    .vertical {
+        border-right: 0px solid #aaa7a7d5;
+        /* border-bottom: 1px solid #aaa7a7d5; */
+        }
+    }
 </style>
 
 
@@ -110,106 +175,237 @@
     </div>
     <!-- End Hero -->
 
+    <!-- -------------------------------------------------------------- -->
+
+
+
+    <!-- ----------------------------------------- -->
+
     <!-- Start Feature
 ============================================= -->
     <div class="feature-area">
         <div class="container">
-            <div class="feature-wpr grid-3">
-                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                    <div class="feature-icon">
-                        <img src="{% static 'web/img/icons/man.png' %}" alt="thumb">
+            <div class="row" style="background: linear-gradient(to right, #aed3f8 32%, #ffffff 100%);">
+
+                <div class="col-md-6 region-promo ">
+                    <div class="promotion-app">
+                        <a href="" class="zpa-row">
+                            <span class="promo-appicon promo-crm">CRM</span>
+                            <div>
+                                <h3>Complete CRM Platform</h3>
+                                <p>End-to-end, fully customizable CRM solution for growing businesses and enterprises.
+                                </p><span class="learn-more">Sign Up Now</span>
+                            </div>
+                        </a>
+
                     </div>
-                    <div class="feature-info">
-                        <h5>Great Team</h5>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="zoho-apps-category1">
+                        <ul style="margin: 30px 0 0;" class="test1">
+
+                            <li class="zp-apps zp-bigin">
+                                <a target="_blank">
+                                    <span>
+                                        <img src="https://img.icons8.com/nolan/64/google-sites.png"/>
+                                    </span>
+                                    <label>Sites</label>
+                                </a>
+                            </li>
+                            <li class="zp-apps zp-campaigns"><a target=""><span><img
+                                            src="https://img.icons8.com/color/48/000000/sell-stock.png"
+                                            style="height: 45px;" />
+                                    </span><label>Campaigns</label></a></li>
+                            <li class="zp-apps zp-forms"><a target=""><span><img
+                                            src="https://img.icons8.com/color/48/000000/purchase-order.png"
+                                            style="height: 45px;" />
+                                    </span><label>Forms</label></a></li>
+                            <li class="zp-apps zp-sign"><a target=""><span> <img
+                                            src="https://img.icons8.com/color/48/000000/land-surveying.png"
+                                            style="height: 45px;" /></span><label>Survey</label></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 80px;">
+            <h6 class="text-center">All OnFlap Apps</h6>
+            <div class="feature-wpr grid-3" style="margin-top: 50px;">
+
+                <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="feature-info ">
+                        <h5 class="text-center">Sales & Marketing</h5>
                         <p class="mb-0">
                             According to lorem ipsum dolo siti ameat dui too consecteture consecteture
                             elite.
                         </p>
-
-
-
-
-                        <div class="zoho-apps-category"> 
+                        <div class="zoho-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm"><a href="" target=""><span> <img src="https://img.icons8.com/color/48/000000/customer-insight.png" style="size: 100px;"/></span><label><b style="color: black;font-size: 1.5rem;">CRM</b></label></a></li>
-                                <li class="zp-apps zp-bigin"><a target="_blank"><span><i class="fa fa-clipboard" style="color: red;"></i>
-                                        </span><label>Bigin</label></a></li>
-                                <li class="zp-apps zp-campaigns"><a target=""><span><img src="https://img.icons8.com/color/48/000000/sell-stock.png"/>
-                                        </span><label>Campaigns</label></a></li>
-                                <li class="zp-apps zp-forms"><a target=""><span><img src="https://img.icons8.com/color/48/000000/purchase-order.png"/>
-                                        </span><label>Forms</label></a></li>
-                                <li class="zp-apps zp-sign"><a target=""><span> <img src="https://img.icons8.com/color/48/000000/land-surveying.png"/></span><label>Survey</label></a>
+                                <li class="zp-apps zp-main-crm"><a href="" target=""><span>
+                                            <div class="feature-icon">
+                                                <img src="{% static 'web/img/icons/man.png' %}" alt="thumb">
+                                            </div>
+                                        </span><label><b style="color: black;font-size: 1.5rem;">CRM</b></label></a>
                                 </li>
-                                <li class="zp-apps zp-social"><a target=""><span><img src="https://img.icons8.com/color/48/000000/storyfire.png"/>
+                                <li class="zp-apps zp-bigin">
+                                    <a target="_blank">
+                                        <span>
+                                            <img src="https://img.icons8.com/nolan/64/google-sites.png"/>
+                                        </span>
+                                        <label>Sites</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-campaigns"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/sell-stock.png" />
+                                        </span><label>Campaigns</label></a></li>
+                                <li class="zp-apps zp-forms"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/purchase-order.png" />
+                                        </span><label>Forms</label></a></li>
+                                <li class="zp-apps zp-sign"><a target=""><span> <img
+                                                src="https://img.icons8.com/color/48/000000/land-surveying.png" /></span><label>Survey</label></a>
+                                </li>
+                                <li class="zp-apps zp-social"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/storyfire.png" />
                                         </span><label>Social</label></a></li>
-                                <li class="zp-apps zp-salesiq"><a target=""><span><img src="https://img.icons8.com/color/48/000000/project-management.png"/>
+                                <li class="zp-apps zp-salesiq"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/project-management.png" />
                                         </span><label>Projects</label></a></li>
                             </ul>
                         </div>
+                        </p>
+                    </div>
+                </div>
 
+                <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="feature-info">
+                        <h5 class="text-center">Custom Solutions</h5>
+                        <p class="mb-0">
+                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+                            elite.
+                        </p>
+                        <p>
+                        <div class="zoho-apps-category">
+                            <ul style="margin: 30px 0 0;" class="test">
+                                <li class="zp-apps zp-main-crm">
+                                    <a href="" target=""><span>
+                                            <div class="feature-icon">
+                                                <img src="{% static 'web/img/icons/checked.png' %}" alt="thumb">
+                                            </div>
+                                        </span><label><b style="color: black;font-size: 1.5rem;">ERP</b></label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-bigin">
+                                    <a target="_blank">
+                                        <span>
+                                            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-creator-influencer-marketing-flaticons-lineal-color-flat-icons.png"/>
+                                        </span>
+                                        <label>Creator</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-campaigns">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/external-flat-icons-pause-08/64/000000/external-analyst-business-charts-and-diagrams-flat-icons-pause-08.png"/>                                        </span>
+                                        <label>catalyst</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-forms">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/nolan/64/serial-tasks.png"/>                                        </span>
+                                        <label>Flow</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-sign">
+                                    <a target="">
+                                        <span> 
+                                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-development-experience-through-the-native-integrations-of-azure-with-visual-studio-logo-color-tal-revivo.png"/>                                        </span>
+                                        <label>Office integrator</label>
+                                    </a>
+                                </li>
+                                <!-- <li class="zp-apps zp-social">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/color/48/000000/storyfire.png" />
+                                        </span>
+                                        <label>Social</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-salesiq">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/color/48/000000/project-management.png" />
+                                        </span>
+                                        <label>Projects</label>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
                         </p>
                     </div>
                 </div>
                 
-                <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".4s" >
-                    <div class="feature-icon">
-                        <img src="{% static 'web/img/icons/checked.png' %}" alt="thumb">
-                    </div>
-                    <div class="feature-info">
-                        <h5>Trusted Agency</h5>
-                        <p class="mb-0">
-                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
-                            elite.
-                        </p>
-                        <p>
-                            <div class="zoho-apps-category"> 
-                                <ul style="margin: 30px 0 0;" class="test">
-                                    <li class="zp-apps zp-main-crm"><a href="" target=""><span> <img src="https://img.icons8.com/color/48/000000/customer-insight.png" style="size: 100px;"/></span><label><b style="color: black;font-size: 1.5rem;">CRM</b></label></a></li>
-                                    <li class="zp-apps zp-bigin"><a target="_blank"><span><i class="fa fa-clipboard" style="color: red;"></i>
-                                            </span><label>Bigin</label></a></li>
-                                    <li class="zp-apps zp-campaigns"><a target=""><span><img src="https://img.icons8.com/color/48/000000/sell-stock.png"/>
-                                            </span><label>Campaigns</label></a></li>
-                                    <li class="zp-apps zp-forms"><a target=""><span><img src="https://img.icons8.com/color/48/000000/purchase-order.png"/>
-                                            </span><label>Forms</label></a></li>
-                                    <li class="zp-apps zp-sign"><a target=""><span> <img src="https://img.icons8.com/color/48/000000/land-surveying.png"/></span><label>Survey</label></a>
-                                    </li>
-                                    <li class="zp-apps zp-social"><a target=""><span><img src="https://img.icons8.com/color/48/000000/storyfire.png"/>
-                                            </span><label>Social</label></a></li>
-                                    <li class="zp-apps zp-salesiq"><a target=""><span><img src="https://img.icons8.com/color/48/000000/project-management.png"/>
-                                            </span><label>Projects</label></a></li>
-                                </ul>
-                            </div>
-                        </p>
-                    </div>
-                </div>
+
+
                 <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                    <div class="feature-icon">
-                        <img src="{% static 'web/img/icons/rating.png' %}" alt="thumb">
-                    </div>
                     <div class="feature-info">
-                        <h5>Top Rated Agency</h5>
+                        <h5 class="text-center">Human Resources</h5>
                         <p class="mb-0">
-                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
-                            elite.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laudantium quos sapiente . 
                         </p>
                         <p>
-                            <div class="zoho-apps-category"> 
-                                <ul style="margin: 30px 0 0;" class="test">
-                                    <li class="zp-apps zp-main-crm"><a href="" target=""><span> <img src="https://img.icons8.com/color/48/000000/customer-insight.png" style="size: 100px;"/></span><label><b style="color: black;font-size: 1.5rem;">CRM</b></label></a></li>
-                                    <li class="zp-apps zp-bigin"><a target="_blank"><span><i class="fa fa-clipboard" style="color: red;"></i>
-                                            </span><label>Bigin</label></a></li>
-                                    <li class="zp-apps zp-campaigns"><a target=""><span><img src="https://img.icons8.com/color/48/000000/sell-stock.png"/>
-                                            </span><label>Campaigns</label></a></li>
-                                    <li class="zp-apps zp-forms"><a target=""><span><img src="https://img.icons8.com/color/48/000000/purchase-order.png"/>
-                                            </span><label>Forms</label></a></li>
-                                    <li class="zp-apps zp-sign"><a target=""><span> <img src="https://img.icons8.com/color/48/000000/land-surveying.png"/></span><label>Survey</label></a>
-                                    </li>
-                                    <li class="zp-apps zp-social"><a target=""><span><img src="https://img.icons8.com/color/48/000000/storyfire.png"/>
-                                            </span><label>Social</label></a></li>
-                                    <li class="zp-apps zp-salesiq"><a target=""><span><img src="https://img.icons8.com/color/48/000000/project-management.png"/>
-                                            </span><label>Projects</label></a></li>
-                                </ul>
-                            </div>
+                        <div class="zoho-apps-category">
+                            <ul style="margin: 30px 0 0;" class="test">
+                                <li class="zp-apps zp-main-crm">
+                                    <a href="" target=""><span>
+                                            <div class="feature-icon">
+                                                <img src="{% static 'web/img/icons/rating.png' %}" alt="thumb">
+                                            </div>
+                                        </span>
+                                        <label><b style="color: black;font-size: 1.5rem;">HRMS</b></label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-bigin">
+                                    <a target="_blank">
+                                        <span>
+                                            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-recruitment-recruitment-agency-flaticons-flat-flat-icons-10.png"/>
+                                        </span>
+                                        <label>Recruit</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-campaigns">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/doodle/48/000000/crowd.png"/>                                        
+                                        </span>
+                                        <label>People</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-forms">
+                                    <a target="">
+                                        <span>
+                                            <img src="https://img.icons8.com/doodle/48/000000/maintenance.png"/>                                        </span>
+                                        <label>Workerly</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-sign"><a target=""><span> <img
+                                                src="https://img.icons8.com/color/48/000000/land-surveying.png" /></span><label>Survey</label></a>
+                                </li>
+                                <li class="zp-apps zp-social"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/storyfire.png" />
+                                        </span><label>Social</label></a></li>
+                                <li class="zp-apps zp-salesiq"><a target=""><span><img
+                                                src="https://img.icons8.com/color/48/000000/project-management.png" />
+                                        </span><label>Projects</label></a></li>
+                            </ul>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -277,7 +473,7 @@
 
     <!-- Start What We Do
 ============================================= -->
-    <div class="what-area de-pb">
+    <!-- <div class="what-area de-pb">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2">
@@ -339,7 +535,7 @@
                 </h5>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End What We Do -->
 
     <!-- Start Faq
@@ -459,7 +655,7 @@
 
     <!-- Start Work
 ============================================= -->
-    <div class="work-area de-pb">
+    <!-- <div class="work-area de-pb">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 offset-xl-2">
@@ -533,7 +729,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Work -->
 
     <!-- Start Subscribe
