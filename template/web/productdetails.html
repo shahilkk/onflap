@@ -1,6 +1,8 @@
 {% extends 'web/partials/base.html' %}
 {% block content %}
 {% load static %}
+
+
 <link rel="stylesheet" href="{% static 'sof/css/fontawesome-all.min.css' %}">
 <!-- bootstrap css link -->
 <link rel="stylesheet" href="{% static 'sof/css/bootstrap.min.css' %}">
@@ -219,7 +221,7 @@
     </section>
     <!-- end introooo -->
 
-<style>
+<!-- <style>
     @media only screen and (max-width: 1024px){
     .whychose-sec {
         padding: 110px 30px 20px;
@@ -275,8 +277,25 @@ h1, h2, h3, h4, h5, h6, li, p, ul, body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-</style>
+</style> -->
 
+<div class="row">
+    <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+            <h2 class="inner-hdr">Why choose <br><span class="dib">Onflap CRM?</span></h2>
+        </div>
+        <div class="col-lg-4">
+            <ul class="ftr-lists">
+                <li class="list-item"><i class="fa fa-pen"></i> Refreshingly simple to use—a modern CRM for a modern business</li>
+                <li class="list-item"><i class="fa fa-pen"></i>Dedicated programs for migration, deployment, and training</li>
+                <li class="list-item"><i class="fa fa-pen"></i>Extensive developer platform for custom solutions and integrations</li>
+                <li class="list-item"><i class="fa fa-pen"></i>Flexible contracts with no lock-in periods</li>
+                <li class="list-item"><i class="fa fa-pen"></i>No hidden costs—we don't nickel and dime features</li>
+                <li class="list-item"><i class="fa fa-pen"></i>Price protection–get the best deal, always</li>
+            </ul>
+        </div>
+    <div class="col-lg-2"></div>
+</div>
 
     <!-- <div class="whychose-sec">
         <h2 class="inner-hdr">Why choose <br><span class="dib">Onflap CRM?</span></h2>
