@@ -41,7 +41,7 @@
   --heading-color: #120f2d;
   --bg-color: #f6f5fd;
   --body-color: #818090;
-  --theme-color: #4d41e0;
+  --theme-color: #b71919;
   --theme-color-2: #f14e5e;
   --white-color: #fff;
   --black-color: #000;
@@ -264,7 +264,7 @@ select:focus {
   width: 6px;
   height: 6px;
   z-index: 10000001;
-  background-color: #4D41E1;
+  background-color: #b71919;
   -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
   transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
 }
@@ -273,7 +273,7 @@ select:focus {
   margin-top: -30px;
   width: 60px;
   height: 60px;
-  background-color: #4D41E1;
+  background-color: #b71919;
   opacity: .2;
 }
 .cursor-outer {
@@ -281,7 +281,7 @@ select:focus {
   margin-top: -15px;
   width: 30px;
   height: 30px;
-  border: 2px solid #4D41E1;
+  border: 2px solid #b71919;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 10000000;
