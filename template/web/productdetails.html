@@ -3,26 +3,7 @@
 {% load static %}
 
 
-<link rel="stylesheet" href="{% static 'sof/css/fontawesome-all.min.css' %}">
-<!-- bootstrap css link -->
-<link rel="stylesheet" href="{% static 'sof/css/bootstrap.min.css' %}">
-<!-- favicon -->
-<!-- swipper css link -->
-<link rel="stylesheet" href="{% static 'sof/css/swiper.min.css' %}">
-<!-- lightcase css links -->
-<link rel="stylesheet" href="{% static 'sof/css/lightcase.css' %}">
-<!-- odometer css link -->
-<link rel="stylesheet" href="{% static 'sof/css/odometer.css' %}">
-<!-- line-awesome-icon css -->
-<link rel="stylesheet" href="{% static 'sof/css/icomoon.css' %}">
-<!-- line-awesome-icon css -->
-<link rel="stylesheet" href="{% static 'sof/css/line-awesome.min.css' %}">
-<!-- animate.css'  -->
-<link rel="stylesheet" href="{% static 'sof/css/animate.css' %}">
-<!-- aos.css'  -->
-<link rel="stylesheet" href="{% static 'sof/css/aos.css' %}">
-<!-- nice select css -->
-<link rel="stylesheet" href="{% static 'sof/css/nice-select.css' %}">
+
 <!-- main style css link -->
 <link rel="stylesheet" href="{% static 'sof/css/style.css' %}">
 
@@ -95,6 +76,25 @@
         color: #0067ff;
         text-decoration: none;
         font: 16px/1.2 var(--zf-secondary-medium);
+    }
+    @media only screen and (max-width: 363px){
+    .form-control {
+        width: 76%;
+        }
+        .inner-hdr{
+            font-size: 2rem;
+        padding: 10px 0;
+        }
+     
+    }
+    @media only screen and (max-width: 800px){
+        .inner-hdr{
+            font-size: 2rem;
+        padding: 10px 0;
+        }
+        .form-control {
+        width: 76%;
+        }
     }
 </style>
 
@@ -221,105 +221,24 @@
     </section>
     <!-- end introooo -->
 
-<!-- <style>
-    @media only screen and (max-width: 1024px){
-    .whychose-sec {
-        padding: 110px 30px 20px;
-        display: block;
-    }
-    }
-    .whychose-sec {
-        max-width: 1090px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        padding: 125px 30px 20px;
-        box-sizing: border-box;
-    }
-    #block-system-main {
-    line-height: 1.5;
-    font-weight: inherit;
-    }
+    
 
-    style attribute {
-        visibility: visible;
-    }
-    body {
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-    body {
-        font: 17px/1.5 Zoho_Puvi_Regular,sans-serif;
-        color: #000;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
-    }
-    @media only screen and (max-width: 1024px)
-    {
-        .whychose-sec .inner-hdr {
-    padding: 0 0 30px;
-}
-    }
-.whychose-sec .inner-hdr {
-    padding: 0;
-}
-.inner-hdr {
-    font: 48px/1 var(--zf-primary-bold);
-    padding: 10px 0;
-}
-h1, h2, h3, h4, h5, h6, li, p, ul, body {
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-</style> -->
 
-<div class="row">
-    <div class="col-lg-2"></div>
-        <div class="col-lg-4">
-            <h2 class="inner-hdr">Why choose <br><span class="dib">Onflap CRM?</span></h2>
-        </div>
-        <div class="col-lg-4">
+    <!-- <div class="gray-bgsec">
+        <div class="whychose-sec">
+            <h2 class="inner-hdr">Why choose <br><span class="dib">Zoho CRM?</span></h2>
             <ul class="ftr-lists">
-                <li class="list-item"><i class="fa fa-pen"></i> Refreshingly simple to use—a modern CRM for a modern business</li>
-                <li class="list-item"><i class="fa fa-pen"></i>Dedicated programs for migration, deployment, and training</li>
-                <li class="list-item"><i class="fa fa-pen"></i>Extensive developer platform for custom solutions and integrations</li>
-                <li class="list-item"><i class="fa fa-pen"></i>Flexible contracts with no lock-in periods</li>
-                <li class="list-item"><i class="fa fa-pen"></i>No hidden costs—we don't nickel and dime features</li>
-                <li class="list-item"><i class="fa fa-pen"></i>Price protection–get the best deal, always</li>
+                <li class="list-item">Refreshingly simple to use—a modern CRM for a
+                    modern business</li>
+                <li class="list-item">Dedicated programs for migration, deployment, and
+                    training</li>
+                <li class="list-item">Extensive developer platform for custom solutions
+                    and integrations</li>
+                <li class="list-item">Flexible contracts with no lock-in periods</li>
+                <li class="list-item">No hidden costs—we don't nickel and dime features
+                </li>
+                <li class="list-item">Price protection–get the best deal, always</li>
             </ul>
-        </div>
-    <div class="col-lg-2"></div>
-</div>
-
-    <!-- <div class="whychose-sec">
-        <h2 class="inner-hdr">Why choose <br><span class="dib">Onflap CRM?</span></h2>
-        <ul class="ftr-lists">
-            <li class="list-item">Refreshingly simple to use—a modern CRM for a modern business</li>
-            <li class="list-item">Dedicated programs for migration, deployment, and training</li>
-            <li class="list-item">Extensive developer platform for custom solutions and integrations</li>
-            <li class="list-item">Flexible contracts with no lock-in periods</li>
-            <li class="list-item">No hidden costs—we don't nickel and dime features</li>
-            <li class="list-item">Price protection–get the best deal, always</li>
-        </ul>
-    </div> -->
-
-    <!-- <div class="single-area de-padding">
-        <div class="container">
-            <div class="contact-page-info grid-2">
-                <div class="contact-left">
-                    <h2 data-splitting class="mb-50 wow" data-wow-duration=".1s" data-wow-delay=".4s">
-                        Why choose <br>
-                        Onflap CRM?
-                    </h2>
-                </div>
-
-            </div>
         </div>
     </div> -->
 
@@ -401,28 +320,7 @@ h1, h2, h3, h4, h5, h6, li, p, ul, body {
 
     <!-- Start Subscribe
     ============================================= -->
-    <div class="sub-area de-padding" style="background-image: url({% static 'web/img/subscribe/bg.png' %})">
-        <div class="container">
-            <div class="sub-wpr grid-2">
-                <div class="sub-left">
-                    <div class="site-title">
-                        <span class="about-sub-title wh">Newsletter</span>
-                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s" data-wow-delay=".2s">
-                            To get Our Weekly & Monthly News
-                            Subscribe Newsletter.
-                        </h2>
-                    </div>
-                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
-                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
-                    </form>
-                </div>
-                <div class="sub-right text-center">
-                    <img src="{% static 'web/img/subscribe/sub-right.png' %}" alt="thumb">
-                </div>
-            </div>
-        </div>
-    </div>
+  
     <!-- End Subscribe -->
 
 </main>
@@ -435,27 +333,7 @@ h1, h2, h3, h4, h5, h6, li, p, ul, body {
 {% block js %}
 
 
-<!-- jquery -->
-<script src="{% static 'sof/js/jquery-3.6.0.min.js' %}"></script>
-<!-- bootstrap js -->
-<script src="{% static 'sof/js/bootstrap.min.js' %}"></script>
-<!-- swipper js -->
-<script src="{% static 'sof/js/swiper.min.js' %}"></script>
-<!-- lightcase js-->
-<script src="{% static 'sof/js/lightcase.js' %}"></script>
-<!-- odometer js -->
-<script src="{% static 'sof/js/odometer.min.js' %}"></script>
-<!-- viewport js -->
-<script src="{% static 'sof/js/viewport.jquery.js' %}"></script>
-<!-- aos js file -->
-<script src="{% static 'sof/js/aos.js' %}"></script>
-<!-- nice select js -->
-<script src="{% static 'sof/js/jquery.nice-select.js' %}"></script>
-<!-- isotope js -->
-<script src="{% static 'sof/js/isotope.pkgd.min.js' %}"></script>
-<!-- tweenMax js -->
-<script src="{% static 'sof/js/TweenMax.min.js' %}"></script>
-<!-- main -->
-<script src="{% static 'sof/js/main.js' %}"></script>
+
+
 
 {% endblock %}
