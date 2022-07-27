@@ -161,6 +161,23 @@
         padding: 6px 10px;
     } 
     }
+    @media only screen and (max-width: 1440px){
+        .hro-btn{
+            margin-bottom: 27px;
+        } 
+        .row{
+            margin-top: 100px;
+        }
+        .fadeInUp{
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width: 425px){
+        .hro-btn{
+            margin-bottom: 5px;
+        } 
+    }
+
 </style>
 
 
@@ -180,14 +197,17 @@
                                 <span class="top-title wow fadeInDown" data-wow-duration="1s"
                                     data-wow-delay=".3s">Business Consulting Agency</span>
                                 <h2 data-splitting class="home-title wow" data-wow-duration=".1s" data-wow-delay=".2s">
-                                    Creative & Inteligents People help <br /> Growing Business.
+                                    DELIVERING
+                                    THE ULTIMATE
+                                    EXPERIENCE
+                                    TO THE ENDUSER
                                 </h2>
                                 <p>
                                     Lorem ipsum dolor consecteture elite we’re a creative digitalyour
                                     business growing we’re a creative digitalyour business growing up.
                                 </p>
                                 <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                    <a href="service.html" class="theme-btn">
+                                    <a href="{% url 'web:about' %}" class="theme-btn">
                                         Explore More <i class="icofont-long-arrow-right"></i>
                                     </a>
                                     <div class="how-we-work">
