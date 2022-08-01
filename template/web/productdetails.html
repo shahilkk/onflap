@@ -19,6 +19,46 @@
     .ptb-120 {
     padding: 1px 0;}
 }
+.banner-section .banner-area .banner-left-content .banner-left-btn {
+    margin-top: 40px;
+}
+.btn--base.active {
+    background: transparent;
+    border: 1px solid #b71919;
+    color: #b71919;
+}
+
+@media only screen and (max-width: 991px){
+    .btn--base {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+}.banner-section .banner-area .banner-left-content .banner-left-btn {
+    margin-top: 40px;
+}
+.btn--base {
+    position: relative;
+    background: #3249B3;
+    border: 1px solid #3249B3;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+a, a:focus, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+a {
+    display: inline-block;
+}
+
 
 </style>
 
@@ -123,13 +163,14 @@
     <!-- Start Breadcrumb
     ============================================= -->
     <div class="site-breadcrumb" style="background: url({% static 'web/img/breadcrumb/breadcrumb.png' %})">
-        <div class="container wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".6s">
-            <h2 class="breadcrumb-title">Project Details</h2>
+        <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+        <h2 class="breadcrumb-title">Product Details</h2>
             <ul class="breadcrumb-menu clearfix">
-                <li><a style="font-size: 10px;" href="index-2.html">Home</a></li>
-                <li class="active">Project Details</li>
+                <li><a href="{% url 'web:home' %}">Home</a></li>
+                <li class="active">Product Details</li>
             </ul>
         </div>
+    </div>
     </div>
     <!-- End  Breadcrumb -->
 
@@ -145,7 +186,7 @@
                         <p>Let's break the myth that CRMs are all about data entry. Zoho CRM is built to be
                             used less. Automate workflows, processes, campaigns, customer journeys, and more so that you
                             can focus less on software and more on relationships.</p><a
-                            href="/crm/maximum-productivity.html?source_from=crm_home" target="_blank" rel="noopener"
+                            href="" target="_blank" rel="noopener"
                             class="learnmore">Read More<span></span></a>
                     </div>
 
@@ -228,7 +269,7 @@
                                     <p>Personalization assumed up an excess of position in the showcasing space and has
                                         made each and every one of your messages exhausting and without feelings.</p>
                                     <div class="banner-left-btn">
-                                        <a href="contact.html" class="btn--base active">Contact Us</a>
+                                        <a href="{% url 'web:contact' %}" class="btn--base active">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
