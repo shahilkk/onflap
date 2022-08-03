@@ -235,7 +235,7 @@ select:focus {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #331b88 !important;
+	background: #b71919 !important;
 	border-radius:5px;
 	transition:all .4s ease;
 }
