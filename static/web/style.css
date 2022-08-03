@@ -600,13 +600,13 @@ select:focus {
   padding: 5rem 0; }
 
 .de-padding {
-  padding: 5rem 0; }
+  padding: 10rem 0; }
 
 .de-pt {
   padding-top: 13rem; }
 
 .de-pb {
-  padding-bottom: 13rem; }
+  padding-bottom: 0rem; }
 
 .pt-0 {
   padding-top: 0rem; }
@@ -958,7 +958,7 @@ select:focus {
   flex-direction: column;
   justify-content: center; }
   .about-right p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 5.2rem; }
 
 .about-padding-right {
@@ -1281,7 +1281,7 @@ select:focus {
   font-weight: 500;
   font-size: 1.6rem;
   border: none;
-  background-color: #f14e5e;
+  background-color: #b71919;
   color: var(--white-color);
   line-height: 1;
   outline: none;

@@ -11,7 +11,10 @@ def home(request):
 
 
 def about(request):
-    return render(request,"web/about.html")        
+    return render(request,"web/about.html")    
+
+def career(request):
+    return render(request,"web/career.html")     
 
 def contact(request):
     return render(request,"web/contact.html")    
