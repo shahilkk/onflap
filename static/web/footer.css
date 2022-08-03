@@ -1,0 +1,77 @@
+.footer-widget-box .footer-list li {
+    line-height: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 0rem !important;
+}
+
+.input-group {
+    margin-top: 5rem !important;
+}
+
+.de-pb {
+    padding-bottom: 4rem;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+
+.cw_loc_div {
+    opacity: .3;
+    margin: 0 15px;
+    width: 1px;
+    height: 22px;
+    background-color: #707070;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+}
+.ZPprivacy li{
+        display: block;
+        padding: 0px;
+        margin-left: 10px;
+    }
+    .navbar{
+        margin-top: 0px;
+        margin-bottom: 30px;
+    } 

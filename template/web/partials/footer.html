@@ -1,76 +1,39 @@
 {% load static %}
 
-<style>
-    .footer-widget-box .footer-list li {
-        line-height: 1.5rem;
-    }
-
-    .mt-5 {
-        margin-top: 0rem !important;
-    }
-
-    .input-group {
-        margin-top: 5rem !important;
-    }
-
-    .de-pb {
-        padding-bottom: 4rem;
-    }
-
-    .has-search .form-control {
-        padding-left: 2.375rem;
-    }
-
-    .has-search .form-control-feedback {
-        position: absolute;
-        z-index: 2;
-        display: block;
-        width: 2.375rem;
-        height: 2.375rem;
-        line-height: 2.375rem;
-        text-align: center;
-        pointer-events: none;
-        color: #aaa;
-    }
-
-    .form-control-underlined {
-        border-width: 0;
-        border-bottom-width: 1px;
-        border-radius: 0;
-        padding-left: 0;
-    }
-
-    .form-control:focus {
-        box-shadow: none;
-    }
-
-    h2 {
-        font-family: 'Indie Flower', cursive;
-        font-size: 32px;
-        color: white;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    .form-control::placeholder {
-        font-size: 0.95rem;
-        color: #aaa;
-        font-style: italic;
-    }
-</style>
+<link rel="stylesheet" href="{% static 'web/footer.css' %}">
 
 
 <footer>
-    <!-- <div class="footer-shape">
-    </div> -->
+    <!-- Start Subscribe
+    ============================================= -->
+    <div class="sub-area de-padding" style="background-image: url({% static 'web/web-2.png' %})">
+        <div class="container">
+            <div class="sub-wpr grid-2">
+                <div class="sub-left">
+                    <div class="site-title">
+                        <span class="about-sub-title wh">Newsletter</span>
+                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s" data-wow-delay=".6s">
+                            To get Our Weekly & Monthly News.
+                            Subscribe Newsletter.
+                        </h2>
+                    </div>
+                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
+                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
+                    </form>
+                </div>
+                <div class="sub-right text-center">
+                    <!-- <img src="{% static 'web/img/subscribe/sub-right.png' %}" alt="thumb"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe -->
+
     <div class="footer-widget">
         <div class="container-fluid " style="background: #f1f1f1;">
             <div class="footer-widget-wrapper de-pb">
                 <div class="row g-5 mt-5 ms-5 me-5 mt-5">
-                    <!-- <div class="col-xl-5 col-sm-6 col-lg-6">
-                        <div class="footer-widget-box ab-us">
-                        </div>
-                    </div> -->
                     <div class="col-xl-2 col-sm-3 col-lg-6">
                         <div class="footer-widget-box">
                             <h4 class="footer-widget-title">Apps</h4>
@@ -113,8 +76,8 @@
                             <ul class="footer-list">
                                 <li><a href="#">ABOUT ONFLAP</a></li>
                                 <li><a href="#">TERMS & CONDITIONS</a></li>
-                                <li><a href="#">BLOG</a></li>
-                                <li><a href="#">TESTIMONIAL</a></li>
+                                <li><a href="{% url 'web:blog' %}">BLOG</a></li>
+                                <li><a href="{% url 'web:testimonial' %}">TESTIMONIAL</a></li>
                                 <li><a href="#">CONTACTUS</a></li>
                                 <li><a href="#">CAREER</a></li>
                             </ul>
@@ -150,7 +113,6 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto">
-                    <!-- <div class="bg-white p-5 rounded shadow"> -->
                     <form action="">
                         <div class="input-group mb-4">
                             <input type="search" placeholder="Search here..." aria-describedby="button-addon5"
@@ -163,32 +125,39 @@
                     </form>
                 </div>
             </div>
-            
-                <ul class="ZPprivacy nav navbar navbar-left d-flex d-inline-flex justify-content-center">
-                    <li class=""><a href="/">Onflap Home</a></li>
-                    <li class=""><a href="/contactus.html">Contact Us</a></li>
-                    <li><a href="/security.html">Security</a></li>
-                    <li><a href="/compliance.html">Compliance</a></li>
-                    <li><a href="/ipr-complaints.html">IPR Complaints</a></li>
-                    <li><a href="/policy.html"> Anti-spam Policy</a></li>
-                    <li class="footer-terms"><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li class="cookie-policy"><a href="https://www.zoho.com/privacy/cookie-policy.html">Cookie Policy</a>
-                    </li>
-                    <li><a href="/gdpr.html" class="gdprc">GDPR Compliance</a></li>
-                    <li><a href="/abuse-policy/">Abuse Policy</a></li>
+
+            <ul class="ZPprivacy nav navbar navbar-left d-flex d-inline-flex justify-content-center">
+                <li class=""><a href="/">Onflap Home</a></li> <span class="cw_loc_div"></span>
+                <li class=""><a href="">Contact Us</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">Security</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">Compliance</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">IPR Complaints</a></li> <span class="cw_loc_div"></span>
+                <li><a href=""> Anti-spam Policy</a></li> <span class="cw_loc_div"></span>
+                <li class="footer-terms"><a href="">Terms of Service</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">Privacy Policy</a></li> <span class="cw_loc_div"></span>
+                <li><a href="" class="gdprc">GDPR Compliance</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">Abuse Policy</a></li>
+            </ul>
+
+            <div class="text-center">
+                <p class="text-dark">
+                    © 2022, Onflap Corporation Pvt. Ltd. All Rights Reserved.
+                </p>
+            </div>
+
+            <div class="copyright justify-content-center">
+                <ul class="footer-social">
+                    <li><a target="_blank" href="https://www.facebook.com/onflaptech/"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/onflaptech/?igshid=1b8qlek00fuj"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/onflap-technologies/about/"><i
+                                class="fab fa-linkedin-in"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/OnflapT"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
-        
     </div>
-
-
-    <style>
-        .ZPprivacy li{
-            display: block;
-            padding: 10px;
-        }
-    </style>
     </div>
 </footer>

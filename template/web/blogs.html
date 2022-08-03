@@ -1,4 +1,8 @@
-    <!-- Start Blog
+
+{% extends 'web/partials/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Start Blog
 ============================================= -->
 <div class="blog-area de-padding">
     <div class="container">
@@ -6,7 +10,7 @@
             <div class="col-xl-8 offset-xl-2">
                 <div class="site-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                     <span class="about-sub-title">Blog</span>
-                    <h2 class="about-title mb-0">
+                    <h2 class="about-title mb-0 text-dark" >
                         See our Latest & Popular Tips & Tricks
                         <br>
                         from our Experts
@@ -17,7 +21,7 @@
         <div class="blog-wpr grid-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
             <div class="blog-box">
                 <div class="blog-pic">
-                    <img src="{% static 'web/img/blog/1.jpg' %}" alt="thumb">
+                    <img src="{% static 'web/img/team/1.jpg' %}" alt="thumb">
                 </div>
                 <div class="blog-info">
                     <ul class="blog-meta">
@@ -36,7 +40,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-pic">
-                    <img src="{% static 'web/img/blog/2.jpg' %}" alt="thumb">
+                    <img src="{% static 'web/img/team/2.jpg' %}" alt="thumb">
                 </div>
                 <div class="blog-info">
                     <ul class="blog-meta">
@@ -55,7 +59,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-pic">
-                    <img src="{% static 'web/img/blog/3.jpg' %}" alt="thumb">
+                    <img src="{% static 'web/img/team/3.jpg' %}" alt="thumb">
                 </div>
                 <div class="blog-info">
                     <ul class="blog-meta">
@@ -76,3 +80,6 @@
     </div>
 </div>
 <!-- End Blog -->
+
+
+{% endblock %}

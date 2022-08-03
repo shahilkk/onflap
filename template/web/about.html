@@ -2,66 +2,9 @@
 {% block content %}
 {% load static %}
 
-<style>
-    
-.section-header h3 {
-    font-size: 36px;
-    color: #050505;
-    text-align: center;
-    font-weight: 5500;
-    position: relative;
-    font-family: serif;
-}
-
-.section-header p {
-    text-align: center;
-    margin: auto;
-    font-size: 15px;
-    padding-bottom: 60px;
-    color: #5f1212;
-    width: 50%;
-}
-
-#clients {
-    padding: 60px 0;
-    
-}
-#clients .clients-wrap {
-    border-top: 0px solid #5f1212;
-    border-left: 0px solid #5f1212;
-    margin-bottom: 30px;
-}
-
-#clients .client-logo {
-    padding: 64px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-right: 0px solid #5f1212;
-    border-bottom: 0px solid #5f1212;
-    overflow: hidden;
-    background: #fff;
-    height: 160px;
-}
-
-#clients img {
-    transition: all 0.4s ease-in-out;
-}
- 
-
-</style>
+<link rel="stylesheet" href="{% static 'web/about.css' %}">
 
 <main class="main">
-
     <!-- Start About
     ============================================= -->
     <div class="about-area de-pt">
@@ -73,7 +16,8 @@
             </div>
             <div class="about-right about-padding-right">
                 <span class="about-sub-title">About Agency</span>
-                <h2 data-splitting class="about-title wow" data-wow-duration=".1s" data-wow-delay=".4s">WHO WE ARE</h2>
+                <h2 data-splitting class="about-title wow text-dark" data-wow-duration=".1s" data-wow-delay=".4s">WHO WE
+                    ARE</h2>
                 <p>
                     Established with the specific aim of
                     empowering the IT industry
@@ -122,7 +66,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-btn mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="text-align: center;">
+                <div class="about-btn mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"
+                    style="text-align: center;">
                     <a href="#" class="theme-btn">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>
@@ -136,7 +81,7 @@
     ============================================= -->
     <div class="feature-areag de-pt">
         <div class="container">
-            <div class=" feature-2 grid-12 ml-5" >
+            <div class=" feature-2 grid-12 ml-5">
                 <h6 class="text-center" style="font-weight: 900;">OUR RANGE OF PRODUCTS</h6>
 
                 <div class="feature-wpr grid-3">
@@ -320,10 +265,10 @@
                             <p class="mb-0">
                                 <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
                                     Travel Accounting</span><br>
-                                    It is our flagship premier product
-                                    which is widely acknowledged in the
-                                    travel industry for all back, mid and
-                                    front office operations
+                                It is our flagship premier product
+                                which is widely acknowledged in the
+                                travel industry for all back, mid and
+                                front office operations
                             </p>
                         </div>
                     </div>
@@ -362,164 +307,131 @@
     </div>
     <!-- End Feature -->
 
-
+    <!-- ------partners ------ -->
     <section id="clients" class="section-bg">
 
         <div class="container">
-  
-          <div class="section-header">
-            <h3>Our Partners</h3>
-          </div>
-  
-          <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-  
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-          
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-          
-            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-            
-            <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-  
-          </div>
-  
-        </div>
-  
-    </section>
 
-    <section id="clients" class="section-bg">
+            <div class="section-header">
+                <h3>Our Partners</h3>
+            </div>
 
-        <div class="container">
-  
-          <div class="section-header">
-            <h3>Trusted by more than 80 million users globally</h3>
-          </div>
-  
-          <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-  
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-          
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt="">
-              </div>
-            </div>
-          
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-  
-    </section>
+            <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
+                style="visibility: visible; animation-name: fadeInUp;">
 
-
-    <!-- Start Subscribe
-    ============================================= -->
-    <div class="sub-area de-padding" style="background-image: url({% static 'web/web-2.png' %})">
-        <div class="container">
-            <div class="sub-wpr grid-2">
-                <div class="sub-left">
-                    <div class="site-title">
-                        <span class="about-sub-title wh">Newsletter</span>
-                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s" data-wow-delay=".4s">
-                            To get Our Weekly & Monthly News
-                            Subscribe Newsletter.
-                        </h2>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
                     </div>
-                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
-                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
-                    </form>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt="">
+              </div>
+            </div> -->
+
+                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt="">
+              </div>
+            </div> -->
+
+                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png" class="img-fluid" alt="">
+              </div>
+            </div> -->
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ------partners ------ -->
+
+    <!-- ------clients ------ -->
+    <section id="clients" class="section-bg">
+        <div class="container">
+            <div class="section-header">
+                <h3>Trusted by more than 80 million users globally</h3>
+            </div>
+            <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
+                style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <div class="client-logo">
+                        <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png"
+                            class="img-fluid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Subscribe -->
-
+    </section>
+    <!-- ------/clients ------ -->
 </main>
 
-{% block js %}
-
-{% endblock %}
 
 
 {% endblock %}

@@ -32,3 +32,11 @@ def careerdetails(request):
 def applynow(request):
     return render(request,"web/applynow.html")   
 
+
+
+def blog(request):
+    return render(request,"web/blogs.html")   
+
+
+def testimonial(request):
+    return render(request,"web/testimonial.html")   

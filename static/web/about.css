@@ -1,0 +1,63 @@
+.section-header h3 {
+    font-size: 36px;
+    color: #050505;
+    text-align: center;
+    font-weight: 5500;
+    position: relative;
+    font-family: serif;
+}
+
+.section-header p {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #5f1212;
+    width: 50%;
+}
+
+#clients {
+    padding: 60px 0;
+    
+}
+#clients .clients-wrap {
+    border-top: 0px solid #5f1212;
+    border-left: 0px solid #5f1212;
+    margin-bottom: 30px;
+}
+
+#clients .client-logo {
+    padding: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 0px solid #5f1212;
+    border-bottom: 0px solid #5f1212;
+    overflow: hidden;
+    background: #fff;
+    height: 160px;
+}
+
+#clients img {
+    transition: all 0.4s ease-in-out;
+}
+.fun-fact .fun-icon .timer {
+    font-size: 1.4rem;}
+    .fun-fact .fun-icon {
+        height: 8.8rem;
+        width: 8.8rem;}
+
+        .fun-fact .fun-icon img {
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+ 
