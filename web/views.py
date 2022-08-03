@@ -22,3 +22,13 @@ def contact(request):
 
 def productdetails(request):
     return render(request,"web/productdetails.html")        
+
+
+def careerdetails(request):
+    return render(request,"web/careerdetails.html")   
+
+
+
+def applynow(request):
+    return render(request,"web/applynow.html")   
+
