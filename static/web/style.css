@@ -74,7 +74,7 @@ html, body {
   box-sizing: border-box; }
 
 body {
-  font-family: var(--font-2);
+  font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   color: var(--body-color);
   font-size: 1.2rem;
