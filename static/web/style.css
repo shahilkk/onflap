@@ -565,7 +565,8 @@ select:focus {
   height: 100%;
   z-index: 999999;
   background: url({% static 'web/img/logo/pre-loader.gif' %}) center no-repeat var(--white-color);
-  text-align: center; }
+  text-align: center; 
+}
 
 .height100 {
   height: 100%; }
