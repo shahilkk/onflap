@@ -4,7 +4,7 @@
     text-align: center;
     font-weight: 5500;
     position: relative;
-    font-family: serif;
+    font-family: var(--font-2);
 }
 
 .section-header p {

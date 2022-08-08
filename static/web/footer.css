@@ -42,7 +42,7 @@
 }
 
 h2 {
-    font-family: 'Poppins';
+    font-family: var(--font-2);
     font-size: 32px;
     color: white;
     font-weight: bold;

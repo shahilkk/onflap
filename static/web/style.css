@@ -65,7 +65,7 @@
   box-sizing: inherit; }
 
 html, body {
-  font-family: 'Poppins';
+  font-family: var(--font-2);
 
   height: auto;
   width: 100%;
