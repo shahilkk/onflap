@@ -65,7 +65,7 @@
   box-sizing: inherit; }
 
 html, body {
-  font-family: 'Poppins';
+  font-family: var(--font-2);
 
   height: auto;
   width: 100%;
@@ -565,7 +565,7 @@ select:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background: url({% static 'web/img/logo/pre-loader.gif' %}) center no-repeat var(--white-color);
+  /* background: url({% static 'web/img/logo/pre-loader.gif' %}) center no-repeat var(--white-color); */
   text-align: center; 
 }
 

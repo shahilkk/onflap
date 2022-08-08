@@ -42,7 +42,8 @@
 }
 
 h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-2);
+
     font-size: 32px;
     color: white;
     font-weight: bold;
