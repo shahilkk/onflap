@@ -36,6 +36,11 @@
         height: 32px;
         width: 32px;
     }
+    .zp-apps label{
+        font-size: 10px;
+        font-weight: 400;
+        color: #000;
+    }
 
     .zp-apps a>span,
     .zp-main-apps a>span {
@@ -248,6 +253,17 @@
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
     }
+    .feature-box h5{
+        font-size: 20px;
+        font-weight: 900;
+
+    }
+    .feature-box  p{
+        font-size: 16px;
+    }
+    h6{
+        font-size: 30px;
+    }
 </style>
 
 
@@ -256,46 +272,47 @@
 
     <!-- Start Hero   
 ============================================= -->
-    <div id="home" class="hero-section">
-        <div class="hero-sliderr">
-            <!-- owl Slider Begin -->
-            <div class="hero-single">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8 offset-xl-2">
-                            <div class="hero-content text-center">
-                                <span class="top-title wow fadeInDown" data-wow-duration="1s"
-                                    data-wow-delay=".3s">Business Consulting Agency</span>
-                                <h2 data-splitting class="home-title wow text-dark" data-wow-duration=".1s"
-                                    data-wow-delay=".2s"
-                                    >
-                                    DELIVERING
-                                    THE ULTIMATE
-                                    EXPERIENCE
-                                    TO THE ENDUSER
-                                </h2>
-                                <p>
-                                    Reliability, Affordability, Customizability.
-                                </p>
-                                <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                    <a href="{% url 'web:about' %}" class="theme-btn">
-                                        Explore More <i class="icofont-long-arrow-right"></i>
+
+<div id="home" class="hero-section">
+    <div class="hero-sliderr">
+        <!-- owl Slider Begin -->
+        <div class="hero-single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        <div class="hero-content text-center">
+                            <span class="top-title wow fadeInDown" data-wow-duration="1s"
+                                data-wow-delay=".3s">Business Consulting Agency</span>
+                            <h2 data-splitting class="home-title wow text-dark" data-wow-duration=".1s"
+                                data-wow-delay=".2s"
+                                >
+                                DELIVERING
+                                THE ULTIMATE
+                                EXPERIENCE
+                                TO THE ENDUSER
+                            </h2>
+                            <p>
+                                Reliability, Affordability, Customizability.
+                            </p>
+                            <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                                <a href="{% url 'web:about' %}" class="theme-btn">
+                                    Explore More <i class="icofont-long-arrow-right"></i>
+                                </a>
+                                <div class="how-we-work">
+                                    <a href="https://www.youtube.com/watch?v=ku6dEtynrRI"
+                                        class="item popup-youtube">
+                                        <i class="fas fa-play"></i>
+                                        <span class="how-txt">How we work</span>
                                     </a>
-                                    <div class="how-we-work">
-                                        <a href="https://www.youtube.com/watch?v=ku6dEtynrRI"
-                                            class="item popup-youtube">
-                                            <i class="fas fa-play"></i>
-                                            <span class="how-txt">How we work</span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!-- single Slider End -->
-        </div>
+            </div>
+        </div><!-- single Slider End -->
     </div>
+</div>
     <!-- End Hero -->
 
     <!-- -------------------------------------------------------------- -->
@@ -315,7 +332,7 @@
                         <a href="{% url 'web:productdetails' %}" class="zpa-row">
                             <div>
                                 <h3>Complete Onflap Platform</h3>
-                                <p>End-to-end, fully customizable Onflap solution for growing businesses and enterprises.
+                                <p style="font-size: 19px;">End-to-end, fully customizable Onflap solution for growing businesses and enterprises.
                                 </p><span class="learn-more">Explore More</span>
                             </div>
                         </a>
@@ -556,58 +573,60 @@
         </div>
     </div>
     <!-- End Feature -->
-
-    <div class="feature-wpr grid-3" style="margin-top: 50px;">
-
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/ERP.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">ERP Solutions</h3>
-                <p class="card-content">We provide Enterprise Resource Planning (ERP) systems customized for each industry based on Open Source Technologies with an unmatched service..</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+    <div class="container" style="margin-top: 80px;">
+        <h6 class="text-center">All OnFlap Service</h6>
+        <div class="feature-wpr grid-3" style="margin-top: 50px;">
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-03.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">ERP Solutions</h3>
+                    <p class="card-content">We provide Enterprise Resource Planning (ERP) systems customized for each industry based on Open Source Technologies with an unmatched service..</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
-        </div>
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/SW.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">Software Developments</h3>
-                <p class="card-content">Our expert team of Analysts, designers and Developers can advice, study and create customized applications that suit your needs.Work with all Platforms</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-02.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">Software Developments</h3>
+                    <p class="card-content">Our expert team of Analysts, designers and Developers can advice, study and create customized applications that suit your needs.Work with all Platforms</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
-        </div>
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/HW.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">Hardware Installation & Support</h3>
-                <p class="card-content">Be it installation of a brand new server, or supply and installation of computers, we are a one-stop solution center for all your hardware needs..</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-01.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">Hardware Installation & Support</h3>
+                    <p class="card-content">Be it installation of a brand new server, or supply and installation of computers, we are a one-stop solution center for all your hardware needs..</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
-        </div>
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/WEB.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">Web Services</h3>
-                <p class="card-content">Total solutions for any kind of requirements, whether it be design development of website/e-commerce/web-applications, domain registration hosting, implementing SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-04.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">Web Services</h3>
+                    <p class="card-content">Total solutions for any kind of requirements, whether it be design development of website/e-commerce/web-applications, domain registration hosting, implementing SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
-        </div>
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/NW.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">Networking & Security</h3>
-                <p class="card-content">Long years of expertise in installing & maintaining internal/external networks, data servers and applications by providing security reviews, audits, penetration testing, investigative data services, business continuity and disaster recovery planning etc..</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-05.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">Networking & Security</h3>
+                    <p class="card-content">Long years of expertise in installing & maintaining internal/external networks, data servers and applications by providing security reviews, audits, penetration testing, investigative data services, business continuity and disaster recovery planning etc..</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
-        </div>
-        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
-            <div class="card">
-                <img src="https://www.onflap.com/assets/images/MOB.jpg" class="card-img-top" alt="...">
-                <h3 class="card-title">Mobile Applications</h3>
-                <p class="card-content">Looking for building Fast and Easy native iOS, Android or Windows app? or a cross-platform hybrid app? We thrive in building custom APPs for individuals or corporates with solutions for a secure back-end, APIs and cloud services..</p>
-                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="card">
+                    <img src="{% static  'web/img/servies/oNflap-06.png' %}" class="card-img-top" alt="...">
+                    <h3 class="card-title">Mobile Applications</h3>
+                    <p class="card-content">Looking for building Fast and Easy native iOS, Android or Windows app? or a cross-platform hybrid app? We thrive in building custom APPs for individuals or corporates with solutions for a secure back-end, APIs and cloud services..</p>
+                    <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+                </div>
             </div>
         </div>
     </div>
+    
 
 
     <!-- -------------------------------------------- -->
@@ -618,7 +637,7 @@
 
     <!-- Start About
 ============================================= -->
-    <div class="about-area de-padding">
+    <!-- <div class="about-area de-padding">
         <div class="about-wpr grid-2">
             <div class="about-left">
                 <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
@@ -671,7 +690,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End About -->
 
 
