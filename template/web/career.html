@@ -3,80 +3,105 @@
 {% load static %}
 
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
- body{
-     font-family: 'Roboto', sans-serif;
-}
- .wrapper{
-     display: flex;
-     justify-content: center;
-     /* flex-wrap: wrap; */
-}
- .card{
-    margin-top: 1px;
-    max-width: 300px;
-     min-height: 250px;
-     background: white;
-     padding: 30px;
-    border-radius: 3px;
-     box-sizing: border-box;
-     color: black;
-     margin:20px;
-      box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
-}
- .card-title{
-     margin-top: 0;
-     font-size: 16px;
-     font-weight: 600;
-     letter-spacing: 1.2px;
-}
- .card-content{
-     font-size: 14px;
-     letter-spacing: 0.5px;
-     line-height: 1.5;
-}
- .card-btn{
-     all: unset;
-     display: block;
-     margin-left: auto;
-     border: 2px solid rgb(83, 81, 81);
-     padding: 10px 15px;
-     border-radius: 25px;
-     font-size: 10px;
-     font-weight: 600;
-     transition: all 0.5s;
-     cursor: pointer;
-     letter-spacing: 1.2px;
-}
+    /* @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    } */
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+
+    .card {
+        margin-top: 1px;
+        max-width: 300px;
+        min-height: 250px;
+        background: white;
+        padding: 30px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: black;
+        margin: 20px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    }
+
+    .card-title {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+    }
+
+    .card-content {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+
+    .card-btn {
+        all: unset;
+        display: block;
+        margin-left: auto;
+        border: 2px solid rgb(83, 81, 81);
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-size: 10px;
+        font-weight: 600;
+        transition: all 0.5s;
+        cursor: pointer;
+        letter-spacing: 1.2px;
+    }
 </style>
 
 
 <main class="main">
     <div class="site-breadcrumb">
         <div class="container">
-        <h2 class="breadcrumb-title">Some opportunities for <br> you to explore</h2>
+            <h2 class="breadcrumb-title">Some opportunities for <br> you to explore</h2>
         </div>
     </div>
 
-    <div class="wrapper" >
+    <div class="wrapper">
         <div class="card">
             <h3 class="card-title">CARD TITLE</h3>
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a >
-            </div>
-            <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a >
-            </div>
-            <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a >
-            </div>
+            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a>
         </div>
+        <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a>
+        </div>
+        <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a>
+        </div>
+    </div>
 </main>
 
 
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

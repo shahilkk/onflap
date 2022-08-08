@@ -98,7 +98,6 @@
         background: #b71919;
         padding: 8px 20px;
         display: inline-block;
-        font-family: var(--zf-primary-bold);
         text-transform: uppercase;
         font-size: 13px;
     }
@@ -156,33 +155,99 @@
             font-family: var(--font-2);
         }
     }
-    @media only screen and (max-width: 333px){
-    .region-promo .learn-more{
-        padding: 6px 10px;
-    } 
+
+    @media only screen and (max-width: 333px) {
+        .region-promo .learn-more {
+            padding: 6px 10px;
+        }
     }
-    @media only screen and (max-width: 1440px){
-        .row{
+
+    @media only screen and (max-width: 1440px) {
+        .row {
             margin-top: 50px;
         }
     }
-    @media only screen and (max-width: 1440px){
-        .hro-btn{
+
+    @media only screen and (max-width: 1440px) {
+        .hro-btn {
             margin-bottom: 27px;
-        } 
-        .row{
+        }
+
+        .row {
             margin-top: 10px;
         }
-        .fadeInUp{
+
+        .fadeInUp {
             text-align: center;
         }
     }
-    @media only screen and (max-width: 425px){
-        .hro-btn{
+
+    @media only screen and (max-width: 425px) {
+        .hro-btn {
             margin-bottom: 5px;
-        } 
+        }
     }
 
+
+
+
+
+
+    .card {
+        margin-top: 1px;
+        max-width: 300px;
+        min-height: 250px;
+        background: white;
+        padding: 30px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: black;
+        margin: 20px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    }
+
+    .card-title {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+    }
+
+    .card-content {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+
+    .card-btn {
+        all: unset;
+        display: block;
+        margin-left: auto;
+        border: 2px solid rgb(83, 81, 81);
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-size: 10px;
+        font-weight: 600;
+        transition: all 0.5s;
+        cursor: pointer;
+        letter-spacing: 1.2px;
+    }
+    .card {
+        background: #fff;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+        transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+        border: 0;
+        border-radius: 1rem
+    }
+    .card-img,
+    .card-img-top {
+        border-top-left-radius: calc(1rem - 1px);
+        border-top-right-radius: calc(1rem - 1px)
+    }
+     .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+    }
 </style>
 
 
@@ -194,14 +259,16 @@
     <div id="home" class="hero-section">
         <div class="hero-sliderr">
             <!-- owl Slider Begin -->
-            <div class="hero-single" >
+            <div class="hero-single">
                 <div class="container">
-                    <div class="row" >
+                    <div class="row">
                         <div class="col-xl-8 offset-xl-2">
                             <div class="hero-content text-center">
                                 <span class="top-title wow fadeInDown" data-wow-duration="1s"
                                     data-wow-delay=".3s">Business Consulting Agency</span>
-                                <h2 data-splitting class="home-title wow text-dark" data-wow-duration=".1s" data-wow-delay=".2s">
+                                <h2 data-splitting class="home-title wow text-dark" data-wow-duration=".1s"
+                                    data-wow-delay=".2s"
+                                    >
                                     DELIVERING
                                     THE ULTIMATE
                                     EXPERIENCE
@@ -246,10 +313,9 @@
                 <div class="col-md-6 region-promo ">
                     <div class="promotion-app">
                         <a href="{% url 'web:productdetails' %}" class="zpa-row">
-                            <span class="promo-appicon promo-crm">CRM</span>
                             <div>
-                                <h3>Complete CRM Platform</h3>
-                                <p>End-to-end, fully customizable CRM solution for growing businesses and enterprises.
+                                <h3>Complete Onflap Platform</h3>
+                                <p>End-to-end, fully customizable Onflap solution for growing businesses and enterprises.
                                 </p><span class="learn-more">Explore More</span>
                             </div>
                         </a>
@@ -265,18 +331,18 @@
                             <li class="zp-apps zp-bigin">
                                 <a target="_blank" href="{% url 'web:productdetails' %}">
 
-                                    <span><img src="https://img.icons8.com/nolan/64/google-sites.png" /></span>
+                                    <span><img src="{% static 'web/img/product/6.png' %}" /></span>
 
 
 
-                                    <label>Sites</label>
+                                    <label>Fiesta</label>
                                 </a>
                             </li>
                             <li class="zp-apps zp-campaigns"><a target="" href="{% url 'web:productdetails' %}">
 
                                     <span><img src="https://img.icons8.com/color/48/000000/sell-stock.png" /></span>
 
-                                    <label>Campaigns</label></a></li>
+                                    <label> Courier and Cargo services</label></a></li>
                             <li class="zp-apps zp-forms"><a target="" href="{% url 'web:productdetails' %}">
 
                                     <span><img src="https://img.icons8.com/color/48/000000/purchase-order.png" /></span>
@@ -285,14 +351,14 @@
 
 
 
-                                    <label>Forms</label></a></li>
+                                    <label> CRM</label></a></li>
                             <li class="zp-apps zp-sign"><a target="" href="{% url 'web:productdetails' %}">
 
 
 
                                     <span><img src="https://img.icons8.com/color/48/000000/land-surveying.png" /></span>
 
-                                    <label>Survey</label></a>
+                                    <label>DMS</label></a>
                             </li>
 
 
@@ -491,6 +557,65 @@
     </div>
     <!-- End Feature -->
 
+    <div class="feature-wpr grid-3" style="margin-top: 50px;">
+
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/ERP.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">ERP Solutions</h3>
+                <p class="card-content">We provide Enterprise Resource Planning (ERP) systems customized for each industry based on Open Source Technologies with an unmatched service..</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/SW.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Software Developments</h3>
+                <p class="card-content">Our expert team of Analysts, designers and Developers can advice, study and create customized applications that suit your needs.Work with all Platforms</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/HW.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Hardware Installation & Support</h3>
+                <p class="card-content">Be it installation of a brand new server, or supply and installation of computers, we are a one-stop solution center for all your hardware needs..</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/WEB.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Web Services</h3>
+                <p class="card-content">Total solutions for any kind of requirements, whether it be design development of website/e-commerce/web-applications, domain registration hosting, implementing SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/NW.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Networking & Security</h3>
+                <p class="card-content">Long years of expertise in installing & maintaining internal/external networks, data servers and applications by providing security reviews, audits, penetration testing, investigative data services, business continuity and disaster recovery planning etc..</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+        <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
+            <div class="card">
+                <img src="https://www.onflap.com/assets/images/MOB.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Mobile Applications</h3>
+                <p class="card-content">Looking for building Fast and Easy native iOS, Android or Windows app? or a cross-platform hybrid app? We thrive in building custom APPs for individuals or corporates with solutions for a secure back-end, APIs and cloud services..</p>
+                <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------------- -->
+
+    
+    <!-- ------------------------------------------------ -->
+
+
     <!-- Start About
 ============================================= -->
     <div class="about-area de-padding">
@@ -502,7 +627,8 @@
             </div>
             <div class="about-right about-padding-right">
                 <span class="about-sub-title">About Agency</span>
-                <h2 style="color: black;" data-splitting class="about-title wow" data-wow-duration=".1s" data-wow-delay=".2s">A
+                <h2 style="color: black;" data-splitting class="about-title wow" data-wow-duration=".1s"
+                    data-wow-delay=".2s">A
                     helping hand agency <br /> for Business</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, seieiusmoed
