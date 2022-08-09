@@ -36,7 +36,8 @@
         height: 32px;
         width: 32px;
     }
-    .zp-apps label{
+
+    .zp-apps label {
         font-size: 10px;
         font-weight: 400;
         color: #000;
@@ -112,7 +113,7 @@
     }
 
     .zoho-apps-category1 ul li:hover {
-        border-bottom: 1px solid #0a3daa;
+        border-bottom: 1px solid #b71919;
     }
 
     .zoho-apps-category ul li:hover {
@@ -164,6 +165,9 @@
     @media only screen and (max-width: 333px) {
         .region-promo .learn-more {
             padding: 6px 10px;
+        }
+        #map{
+            width: 300px;
         }
     }
 
@@ -237,6 +241,7 @@
         cursor: pointer;
         letter-spacing: 1.2px;
     }
+
     .card {
         background: #fff;
         box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
@@ -244,24 +249,29 @@
         border: 0;
         border-radius: 1rem
     }
+
     .card-img,
     .card-img-top {
         border-top-left-radius: calc(1rem - 1px);
         border-top-right-radius: calc(1rem - 1px)
     }
-     .card:hover {
+
+    .card:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
     }
-    .feature-box h5{
+
+    .feature-box h5 {
         font-size: 20px;
         font-weight: 900;
 
     }
-    .feature-box  p{
+
+    .feature-box p {
         font-size: 16px;
     }
-    h6{
+
+    h6 {
         font-size: 30px;
     }
 </style>
@@ -272,6 +282,10 @@
 
     <!-- Start Hero   
 ============================================= -->
+
+
+
+
 <div class="about-area" style="padding: 9rem 0;">
     <div class="about-wpr grid-2">
         <div class="about-left">
@@ -288,29 +302,28 @@
                 THE ULTIMATE
                 EXPERIENCE
                 TO THE ENDUSER
-                
+
             </p>
-           <p>
-            Our mission is to Provide the market with innovative, flexible and smart software solutions which match the international standards for a greater convenience, safety and security . 
-           </p>
-           
+            <p>
+                Our mission is to Provide the market with innovative, flexible and smart software solutions which
+                match the international standards for a greater convenience, safety and security .
+            </p>
+
             <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                 <a href="{% url 'web:about' %}" class="theme-btn">
                     Explore More <i class="icofont-long-arrow-right"></i>
                 </a>
                 <div class="how-we-work">
-                    <a href="https://www.youtube.com/watch?v=ku6dEtynrRI"
-                        class="item popup-youtube">
+                    <a href="https://www.youtube.com/watch?v=ku6dEtynrRI" class="item popup-youtube">
                         <i class="fas fa-play"></i>
                         <span class="how-txt">How we work</span>
                     </a>
                 </div>
             </div>
-          
+
         </div>
     </div>
 </div>
-
 
 
 
@@ -325,68 +338,72 @@
 
     <!-- Start Feature
 ============================================= -->
-    <div class="feature-area">
-        <div class="container">
-            <div class="row" style="background: linear-gradient(to right, #aed3f8 32%, #ffffff 100%);">
+    <div class="feature-area" style="padding: 10px;" >
+        <div class="container" >
+                <div class="row" style="margin-top: 50px; background:#f1f1f1; opacity: .8; border-radius: 10px;">
 
-                <div class="col-md-6 region-promo ">
-                    <div class="promotion-app">
-                        <a href="{% url 'web:productdetails' %}" class="zpa-row">
-                            <div>
-                                <h3>Complete Onflap Platform</h3>
-                                <p style="font-size: 19px;">End-to-end, fully customizable Onflap solution for growing businesses and enterprises.
-                                </p><span class="learn-more">Explore More</span>
-                            </div>
-                        </a>
+                    <div class="col-md-6 region-promo ">
+                        <div class="promotion-app">
+                            <a href="{% url 'web:productdetails' %}" class="zpa-row">
+                                <div>
+                                    <h3>Complete Onflap Platform</h3>
+                                    <p style="font-size: 19px;">End-to-end, fully customizable Onflap solution for
+                                        growing businesses and enterprises.
+                                    </p><span class="learn-more">Explore More</span>
+                                </div>
+                            </a>
+
+                        </div>
 
                     </div>
+                    <div class="col-md-6">
 
-                </div>
-                <div class="col-md-6">
+                        <div class="zoho-apps-category1">
+                            <ul style="margin: 30px 0 0;" class="test1">
 
-                    <div class="zoho-apps-category1">
-                        <ul style="margin: 30px 0 0;" class="test1">
+                                <li class="zp-apps zp-bigin">
+                                    <a target="_blank" href="{% url 'web:productdetails' %}">
 
-                            <li class="zp-apps zp-bigin">
-                                <a target="_blank" href="{% url 'web:productdetails' %}">
-
-                                    <span><img src="{% static 'web/img/product/6.png' %}" /></span>
+                                        <span><img src="{% static 'web/img/product/6.png' %}" /></span>
 
 
 
-                                    <label>Fiesta</label>
-                                </a>
-                            </li>
-                            <li class="zp-apps zp-campaigns"><a target="" href="{% url 'web:productdetails' %}">
+                                        <label>Fiesta</label>
+                                    </a>
+                                </li>
+                                <li class="zp-apps zp-campaigns"><a target="" href="{% url 'web:productdetails' %}">
 
-                                    <span><img src="https://img.icons8.com/color/48/000000/sell-stock.png" /></span>
+                                        <span><img src="https://img.icons8.com/color/48/000000/sell-stock.png" /></span>
 
-                                    <label> Courier and Cargo services</label></a></li>
-                            <li class="zp-apps zp-forms"><a target="" href="{% url 'web:productdetails' %}">
+                                        <label> Courier and Cargo services</label></a></li>
+                                <li class="zp-apps zp-forms"><a target="" href="{% url 'web:productdetails' %}">
 
-                                    <span><img src="https://img.icons8.com/color/48/000000/purchase-order.png" /></span>
-
+                                        <span><img
+                                                src="https://img.icons8.com/color/48/000000/purchase-order.png" /></span>
 
 
 
 
-                                    <label> CRM</label></a></li>
-                            <li class="zp-apps zp-sign"><a target="" href="{% url 'web:productdetails' %}">
+
+                                        <label> CRM</label></a></li>
+                                <li class="zp-apps zp-sign"><a target="" href="{% url 'web:productdetails' %}">
 
 
 
-                                    <span><img src="https://img.icons8.com/color/48/000000/land-surveying.png" /></span>
+                                        <span><img
+                                                src="https://img.icons8.com/color/48/000000/land-surveying.png" /></span>
 
-                                    <label>DMS</label></a>
-                            </li>
+                                        <label>DMS</label></a>
+                                </li>
 
 
-                        </ul>
+                            </ul>
+                        </div>
+
+
                     </div>
-
-
                 </div>
-            </div>
+
         </div>
         <div class="container" style="margin-top: 80px;">
             <h6 class="text-center">All OnFlap Apps</h6>
@@ -394,10 +411,9 @@
 
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
                     <div class="feature-info ">
-                        <h5 class="text-center">Sales & Marketing</h5>
+                        <h5 class="text-center">FIESTA</h5>
                         <p class="mb-0">
-                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
-                            elite.
+                            Fully Integrated Enterprise Suite for Travel Accounting (FIESTA)
                         </p>
                         <div class="zoho-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
@@ -440,10 +456,10 @@
 
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="feature-info">
-                        <h5 class="text-center">Custom Solutions</h5>
+                        <h5 class="text-center">COURIER AND CARGO SERVICES</h5>
                         <p class="mb-0">
-                            According to lorem ipsum dolo siti ameat dui too consecteture consecteture
-                            elite.
+                            It will explain the purpose and features of the system, the interfaces
+of the system, what the system will do, the constraints under which it must operate.
                         </p>
                         <p>
                         <div class="zoho-apps-category">
@@ -516,10 +532,9 @@
 
                 <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                     <div class="feature-info">
-                        <h5 class="text-center">Human Resources</h5>
+                        <h5 class="text-center">DMS</h5>
                         <p class="mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laudantium quos sapiente .
-                        </p>
+                            This system is used to track, manage and store the documents
                         <p>
                         <div class="zoho-apps-category">
                             <ul style="margin: 30px 0 0;" class="test">
@@ -574,15 +589,57 @@
             </div>
         </div>
     </div>
+
+<!-- ------------------------ -->
+
+<style>
+    #home{
+    background: url(../../static/web/img/bg\ \(1\).jpg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+.landing-text{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 1000px;
+
+
+}
+.landing-text h1{
+    font-size: 500%;
+    font-weight: 700;  
+    color: rgb(7, 7, 7); 
+
+}
+</style>
+
+
+<!-- <div class="row row1 " style="margin: 0;">
+    <div class="col-lg-12">
+      <div id="home">
+        <div class="landing-text">
+          <h1>Onflap</h1>
+          <h3>Business Consulting Agency</h3>
+          <p>Our mission is to Provide the market with innovative, flexible and smart software solutions which match the international standards for a greater convenience, safety and security .</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <!-- -------------------------- -->
     <!-- End Feature -->
     <div class="container" style="margin-top: 80px;">
         <h6 class="text-center">All OnFlap Service</h6>
         <div class="feature-wpr grid-3" style="margin-top: 50px;">
             <div class="feature-box wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s">
                 <div class="card">
-                    <img src="{% static  'web/img/servies/oNflap-03.png' %}" class="card-img-top" alt="...">
+                    <img src="{% static  'web/img/servies/oNflap-03.png' %}"  alt="...">
                     <h3 class="card-title">ERP Solutions</h3>
-                    <p class="card-content">We provide Enterprise Resource Planning (ERP) systems customized for each industry based on Open Source Technologies with an unmatched service..</p>
+                    <p class="card-content">We provide Enterprise Resource Planning (ERP) systems customized for each
+                        industry based on Open Source Technologies with an unmatched service..</p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
@@ -590,7 +647,8 @@
                 <div class="card">
                     <img src="{% static  'web/img/servies/oNflap-02.png' %}" class="card-img-top" alt="...">
                     <h3 class="card-title">Software Developments</h3>
-                    <p class="card-content">Our expert team of Analysts, designers and Developers can advice, study and create customized applications that suit your needs.Work with all Platforms</p>
+                    <p class="card-content">Our expert team of Analysts, designers and Developers can advice, study and
+                        create customized applications that suit your needs.Work with all Platforms</p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
@@ -598,7 +656,8 @@
                 <div class="card">
                     <img src="{% static  'web/img/servies/oNflap-01.png' %}" class="card-img-top" alt="...">
                     <h3 class="card-title">Hardware Installation & Support</h3>
-                    <p class="card-content">Be it installation of a brand new server, or supply and installation of computers, we are a one-stop solution center for all your hardware needs..</p>
+                    <p class="card-content">Be it installation of a brand new server, or supply and installation of
+                        computers, we are a one-stop solution center for all your hardware needs..</p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
@@ -606,7 +665,9 @@
                 <div class="card">
                     <img src="{% static  'web/img/servies/oNflap-04.png' %}" class="card-img-top" alt="...">
                     <h3 class="card-title">Web Services</h3>
-                    <p class="card-content">Total solutions for any kind of requirements, whether it be design development of website/e-commerce/web-applications, domain registration hosting, implementing SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).</p>
+                    <p class="card-content">Total solutions for any kind of requirements, whether it be design
+                        development of website/e-commerce/web-applications, domain registration hosting, implementing
+                        SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).</p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
@@ -614,7 +675,10 @@
                 <div class="card">
                     <img src="{% static  'web/img/servies/oNflap-05.png' %}" class="card-img-top" alt="...">
                     <h3 class="card-title">Networking & Security</h3>
-                    <p class="card-content">Long years of expertise in installing & maintaining internal/external networks, data servers and applications by providing security reviews, audits, penetration testing, investigative data services, business continuity and disaster recovery planning etc..</p>
+                    <p class="card-content">Long years of expertise in installing & maintaining internal/external
+                        networks, data servers and applications by providing security reviews, audits, penetration
+                        testing, investigative data services, business continuity and disaster recovery planning etc..
+                    </p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
@@ -622,18 +686,20 @@
                 <div class="card">
                     <img src="{% static  'web/img/servies/oNflap-06.png' %}" class="card-img-top" alt="...">
                     <h3 class="card-title">Mobile Applications</h3>
-                    <p class="card-content">Looking for building Fast and Easy native iOS, Android or Windows app? or a cross-platform hybrid app? We thrive in building custom APPs for individuals or corporates with solutions for a secure back-end, APIs and cloud services..</p>
+                    <p class="card-content">Looking for building Fast and Easy native iOS, Android or Windows app? or a
+                        cross-platform hybrid app? We thrive in building custom APPs for individuals or corporates with
+                        solutions for a secure back-end, APIs and cloud services..</p>
                     <!-- <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a> -->
                 </div>
             </div>
         </div>
     </div>
-    
+
 
 
     <!-- -------------------------------------------- -->
 
-    
+
     <!-- ------------------------------------------------ -->
 
 
@@ -696,6 +762,15 @@
     <!-- End About -->
 
 
+    <div class="about-area " style="margin-top: 80px;">
+        <div class="about-wpr grid-12">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.9936688978087!2d76.36939361413144!3d10.181168892727099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08076f45a0a33d%3A0x8c89eaed71ef7195!2sOnFlap%20Technologies%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1659949147370!5m2!1sen!2sin"
+                width="1350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+        </div>
+    </div>
+  
 
 </main>
 {% endblock %}
