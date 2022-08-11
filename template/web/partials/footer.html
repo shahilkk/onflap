@@ -2,61 +2,91 @@
 
 <link rel="stylesheet" href="{% static 'web/footer.css' %}">
 
-<style>
-       .foot-title{
-        font-size: 14px;
-    }
-</style>
 
-
-<!-- <footer style="margin-top: 80px;"> -->
-    <footer style="">
-    
+<footer>
+    <!-- Start Subscribe
+    ============================================= -->
+    <div class="sub-area de-padding" style="background-image: url({% static 'web/web-2.png' %})">
+        <div class="container">
+            <div class="sub-wpr grid-2">
+                <div class="sub-left">
+                    <div class="site-title">
+                        <span class="about-sub-title wh">Newsletter</span>
+                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s" data-wow-delay=".6s">
+                            To get Our Weekly & Monthly News.
+                            Subscribe Newsletter.
+                        </h2>
+                    </div>
+                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
+                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
+                    </form>
+                </div>
+                <div class="sub-right text-center">
+                    <!-- <img src="{% static 'web/img/subscribe/sub-right.png' %}" alt="thumb"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe -->
 
     <div class="footer-widget">
         <div class="container-fluid " style="background: #f1f1f1;">
-            <div class="footer-widget-wrapper de-pb" >
+            <div class="footer-widget-wrapper de-pb">
                 <div class="row g-5 mt-5 ms-5 me-5 mt-5">
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
                         <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">APPS</h5>
+                            <h4 class="footer-widget-title">Apps</h4>
                             <ul class="footer-list">
-                                <li><a href="#">Crm</a></li>
-                                <li><a href="#">Hrm</a></li>
-                                <li><a href="#">Fiesta</a></li>
-                                <li><a href="#">Courier And Cargo </a></li>
+                                <li><a href="#">CRM</a></li>
+                                <li><a href="#">HRM</a></li>
+                                <li><a href="#">FIESTA</a></li>
+                                <li><a href="#">COURIER AND CARGO</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
                         <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">PARTNERS</h5>
+                            <h4 class="footer-widget-title">PARTNERS</h4>
                             <ul class="footer-list">
-                                <li><a href="#">Clickripple</a></li>
-                                <li><a href="#">Fiesta</a></li>
-                                <li><a href="#">Amiyon </a></li>
-                                <li><a href="#">Mehery</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
-                        <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">ABOUT</h5>
-                            <ul class="footer-list">
-                                <li><a href="#">About Onflap</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="{% url 'web:testimonial' %}">Testimonial</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Career</a></li>
+                                <li><a href="#">CLICKRIPPLE</a></li>
+                                <li><a href="#">FIESTA</a></li>
+                                <li><a href="#">AMIYON</a></li>
+                                <li><a href="#">MEHERY</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
                         <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">INDIA</h5>
+                            <h4 class="footer-widget-title">RESOURCES</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">TIPS & TRICKS</a></li>
+                                <li><a href="#">NEWSLETTER</a></li>
+                                <li><a href="#">PRIVACY & POLICY</a></li>
+                                <li><a href="#">SUPPORT</a></li>
+                                <li><a href="#">COMMUNITY</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
+                        <div class="footer-widget-box">
+                            <h4 class="footer-widget-title">ABOUT</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">ABOUT ONFLAP</a></li>
+                                <li><a href="#">TERMS & CONDITIONS</a></li>
+                                <li><a href="{% url 'web:blog' %}">BLOG</a></li>
+                                <li><a href="{% url 'web:testimonial' %}">TESTIMONIAL</a></li>
+                                <li><a href="#">CONTACTUS</a></li>
+                                <li><a href="#">CAREER</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
+                        <div class="footer-widget-box">
+                            <h4 class="footer-widget-title">INDIA</h4>
                             <ul class="footer-list">
                                 <li><a href="#">+ 91 484 2955885</a></li>
                                 <li><a href="#">+ 91 628 2307829</a></li>
@@ -65,9 +95,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
+                    <div class="col-xl-2 col-sm-3 col-lg-6">
                         <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">KUWAIT</h5>
+                            <h4 class="footer-widget-title">KUWAIT</h4>
                             <ul class="footer-list">
                                 <li><a href="#">+ 965 22056939</a></li>
                                 <li><a href="#">+ 965 97708442</a></li>
@@ -76,18 +106,6 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-sm-3 col-lg-6 text-center">
-                        <div class="footer-widget-box">
-                            <h5 class="footer-widget-title foot-title">DUBAI</h5>
-                            <ul class="footer-list">
-                                <li><a href="#">+ 965 22056939</a></li>
-                                <li><a href="#">+ 965 97708442</a></li>
-                                <li><a href="#">sales@tracoms.com</a></li>
-                                <li><a href="#">www.tracoms.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -113,9 +131,11 @@
                 <li class=""><a href="">Contact Us</a></li> <span class="cw_loc_div"></span>
                 <li><a href="">Security</a></li> <span class="cw_loc_div"></span>
                 <li><a href="">Compliance</a></li> <span class="cw_loc_div"></span>
+                <li><a href="">IPR Complaints</a></li> <span class="cw_loc_div"></span>
                 <li><a href=""> Anti-spam Policy</a></li> <span class="cw_loc_div"></span>
                 <li class="footer-terms"><a href="">Terms of Service</a></li> <span class="cw_loc_div"></span>
                 <li><a href="">Privacy Policy</a></li> <span class="cw_loc_div"></span>
+                <li><a href="" class="gdprc">GDPR Compliance</a></li> <span class="cw_loc_div"></span>
                 <li><a href="">Abuse Policy</a></li>
             </ul>
 
@@ -139,5 +159,5 @@
             </div>
         </div>
     </div>
-
+    </div>
 </footer>
