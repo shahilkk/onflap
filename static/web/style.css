@@ -964,7 +964,7 @@ select:focus {
   justify-content: center; }
   .about-right p {
     font-size: 1.5rem;
-    margin-bottom: 5.2rem; }
+    margin-bottom: -1.5rem; }
 
 .about-padding-right {
   padding-right: 40rem; }

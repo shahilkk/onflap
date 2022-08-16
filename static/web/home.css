@@ -1,0 +1,341 @@
+.card-custom {
+    overflow: hidden;
+    min-height: 250px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+    position: absolute;
+    content: '';
+    top: 161px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(206, 1, 1, 0.3);
+    /* position: absolute; */
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+}
+
+.about-right p {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.zp-apps.zp-forms a>span {
+    background-position: -128px -64px;
+}
+
+.zp-apps a>span {
+    height: 32px;
+    width: 32px;
+}
+
+.zp-apps label {
+    font-size: 10px;
+    font-weight: 400;
+    color: #000;
+}
+
+.zp-apps a>span,
+.zp-main-apps a>span {
+    display: block;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/2048px-Circle-icons-computer.svg.png) left top no-repeat;
+    margin: 0 auto 10px;
+    background-size: 960px auto;
+}
+
+.onflap-apps-category ul li:first-child {
+    width: 99%;
+    font-size: 14px;
+    padding: 0 10px 10px;
+}
+
+.onflap-apps-category ul li {
+    position: relative;
+    display: inline-block;
+    padding: 30px 10px 10px;
+    width: 32%;
+    /* font-size: 10px; */
+    text-align: center;
+    text-transform: uppercase;
+    /* border-bottom: 1px solid #f5f5f5; */
+    /* border-right: 1px solid #f5f5f5; */
+    vertical-align: bottom;
+    transition: .5s ease;
+}
+.onflap-apps-category1 ul li {
+    position: relative;
+    display: inline-block;
+    padding: 30px 10px 10px;
+    width: 47%;
+    /* font-size: 10px; */
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f5f5f563;
+    border-right: 1px solid #f5f5f5;
+    vertical-align: bottom;
+    transition: .5s ease;
+}
+.region-promo .promotion-app a {
+    color: #000;
+    display: block;
+    padding: 60px 20px 60px 170px;
+    position: relative;
+}
+
+.region-promo .promo-appicon.promo-crm {
+    background-position: -1044px 10px;
+}
+
+.region-promo .learn-more {
+    color: #fff;
+    background: #b71919;
+    padding: 8px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.promotion-app .promo-crm {
+    background-image: url(https://img.icons8.com/color/48/000000/sell-stock.png);
+}
+
+.onflap-apps-category1 ul li:hover {
+    border-bottom: 1px solid #b71919;
+}
+
+.onflap-apps-category ul li:hover {
+    border-bottom: 1px solid #0a3daa;
+}
+
+
+
+
+.vertical {
+    border-right: 1px solid #aaa7a7d5;
+}
+
+@media only screen and (max-width: 757px) {
+    .vertical {
+        border-right: 0px solid #aaa7a7d5;
+    }
+
+    .region-promo .promotion-app a {
+        color: #000;
+        display: block;
+        padding: 53px 7px 68px 0px;
+        position: relative;
+    }
+
+}
+
+@media only screen and (max-width: 971px) {
+    .vertical {
+        border-right: 0px solid #aaa7a7d5;
+        /* border-bottom: 1px solid #aaa7a7d5; */
+    }
+
+    #map {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 363px) {
+    .region-promo .promotion-app a {
+        color: #000;
+        display: block;
+        padding: 53px 7px 68px 0px;
+        position: relative;
+    }
+
+
+    .footer-widget-box ul li a {
+        font-size: 1.5rem;
+        font-family: var(--font-2);
+    }
+}
+
+@media only screen and (max-width: 333px) {
+    .region-promo .learn-more {
+        padding: 6px 10px;
+    }
+
+    #map {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .row {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .hro-btn {
+        margin-bottom: 27px;
+    }
+
+    .row {
+        margin-top: 10px;
+    }
+
+    .fadeInUp {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .hro-btn {
+        margin-bottom: 5px;
+    }
+
+    #map {
+        width: 400px;
+    }
+}
+
+.card {
+    margin-top: 1px;
+    max-width: 300px;
+    min-height: 250px;
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: black;
+    margin: 20px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.card-content {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.card-btn {
+    all: unset;
+    display: block;
+    margin-left: auto;
+    border: 2px solid rgb(83, 81, 81);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    border: 0;
+    border-radius: 1rem
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px)
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+}
+
+.feature-box h5 {
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+.feature-box p {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 30px;
+}
+.card-custom {
+    overflow: hidden;
+    min-height: 250px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    }
+    
+    .card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+    }
+    
+    /* First border-left-width setting is a fallback */
+    .card-custom-img::after {
+    position: absolute;
+    content: '';
+    top: 161px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+    }
+    
+    .card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(206, 1, 1, 0.3);
+    /* position: absolute; */
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+    }
+    
