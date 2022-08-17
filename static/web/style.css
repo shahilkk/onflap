@@ -1479,8 +1479,8 @@ button.theme-btn {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: var(--white-color);
-  -webkit-box-shadow: 0px 8px 13px 0px rgba(152, 152, 153, 0.25);
-  box-shadow: 0px 8px 13px 0px rgba(152, 152, 153, 0.25);
+  -webkit-box-shadow: 0px 5px 5px 4px rgba(152, 152, 153, 0.25);
+  box-shadow: 0px 5px 5px 4px rgba(152, 152, 153, 0.25);
   position: relative;
   z-index: 1; }
   .review-single::before {

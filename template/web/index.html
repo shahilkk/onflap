@@ -3,7 +3,11 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
+<link rel="stylesheet" href="{% static 'web/filter.css' %}">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
 
 
 
@@ -69,11 +73,13 @@
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
                                 <li class="zp-apps zp-main-crm">
-                                    <a href="{% url 'web:productdetails' %}" target=""><span>
+                                    <a href="{% url 'web:productdetails' %}" target="">
+                                        <span>
                                             <div class="feature-icon">
                                                 <img src="{% static 'web/img/icons/man.png' %}" alt="thumb">
                                             </div>
-                                        </span><label><b style="color: black;font-size: 1.5rem;">FIESTA</b></label>
+                                        </span>
+                                        <!-- <label><b style="color: black;font-size: 1.5rem;">FIESTA</b></label> -->
                                     </a>
                                 </li>
                                 <li class="zp-apps zp-bigin">
@@ -114,13 +120,13 @@
                         <p>
                         <div class="onflap-apps-category">
                             <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm"><a href="{% url 'web:productdetails' %}"
-                                        target=""><span>
+                                <li class="zp-apps zp-main-crm"><a href="{% url 'web:productdetails'%}" target="">
+                                        <span>
                                             <div class="feature-icon">
                                                 <img src="{% static 'web/img/icons/checked.png' %}" alt="thumb">
                                             </div>
-                                        </span><label><b style="color: black;font-size: 1.5rem;">COURIER AND CARGO
-                                                SERVICES</b></label>
+                                        </span>
+                                        <!-- <label><b style="color: black;font-size: 1.5rem;">COURIER AND CARGOSERVICES</b></label> -->
                                     </a>
                                 </li>
                                 <li class="zp-apps zp-bigin">
@@ -177,7 +183,7 @@
                                                 <img src="{% static 'web/img/icons/rating.png' %}" alt="thumb">
                                             </div>
                                         </span>
-                                        <label><b style="color: black;font-size: 1.5rem;">DMS</b></label>
+                                        <!-- <label><b style="color: black;font-size: 1.5rem;">DMS</b></label> -->
                                     </a>
                                 </li>
                                 <li class="zp-apps zp-bigin">
@@ -234,7 +240,8 @@
                                             <div class="feature-icon">
                                                 <img src="{% static 'web/img/icons/checked.png' %}" alt="thumb">
                                             </div>
-                                        </span><label><b style="color: black;font-size: 1.5rem;">CRM</b></label>
+                                        </span>
+                                        <!-- <label><b style="color: black;font-size: 1.5rem;">CRM</b></label> -->
                                     </a>
                                 </li>
                                 <li class="zp-apps zp-bigin">
@@ -522,7 +529,7 @@
     <!-- -------------------------- -->
 
 
-     <!-- Start services
+    <!-- Start services
 ============================================= -->
 
     <div class="container">
@@ -652,6 +659,7 @@
 
     <!-- Start Partners
 ============================================= -->
+
     <section id="clients" class="section-bg">
         <div class="container">
             <div class="section-header">
@@ -700,194 +708,227 @@
             <h3>Our Clients</h3>
         </div>
 
-        <div class="container-fluid">
-            <div class="footer-widget-wrapper de-pb">
-                <div class="row g-5 mt-5 ms-4" style="margin-top: 10px;">
-                    <div class="col-xl-3 col-sm-3 col-lg-6">
-                        <div class="footer-widget-box">
-                            <h3 class="footer-widget-title foot-title" style="font-weight:500;font-size: 20px;">LOCATION
-                            </h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 3</a>
-                                </li>
-                                <li><a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 4</a></li>
-                            </ul>
+        <div class="container">
+            <div class="">
+                <h2>Filtering divs</h2>
+            </div>
+            <div>
+                <button class="btn btn-default filter-button btn1" style="background-color: #b71919;color: white;"
+                    data-filter="location1">DUBAI</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location2">BAHRAIN</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location3">SAUDI ARABIA</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location4">UAE</button>
+                <button class="btn btn-default filter-button" data-filter="location5">EGYPT</button>
+                <button class="btn btn-default filter-button" data-filter="location6">OMAN</button>
+                <button class="btn btn-default filter-button" data-filter="location7">LEBANON</button>
+                <button class="btn btn-default filter-button" data-filter="location8">QATAR</button>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="row filter location1">
+                        <div class="each-item"></div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- <h4 class="card-title">Bologna</h4> -->
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <ul class="footer-list text-center" id="ul1">
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 4
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 6
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 3
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 7
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="footer-list text-center" id="ul2"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="list-group list-group-flush">
+                                    <ul class="footer-list text-center" id="ul1">
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 8</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 9</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color: black;font-size:15px;" class="">
+                                                <span class="icon-wrapper circle-yes"
+                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                        style="line-height: 2;color: white;"></i></span>
+                                                Client 10</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-xl-3 col-sm-3 col-lg-6">
-                        <div class="footer-widget-box">
-                            <h3 class="footer-widget-title foot-title" style="font-weight:500;font-size: 20px;">LOCATION
-                            </h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 3</a>
-                                </li>
-                                <li><a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 4</a></li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 5</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:10px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 6</a>
-                                </li>
-                                <li><a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 7</a></li>
-                            </ul>
+
+                <div class="col-sm-12 filter location2">
+                    <div class="">
+                        <div class="card col-4">
+                            <div class="list-group list-group-flush">
+                                <ul class="footer-list text-center" id="ul1">
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 6
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color: black;font-size:15px;" class="">
+                                            <span class="icon-wrapper circle-yes"
+                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
+                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
+                                                    style="line-height: 2;color: white;"></i></span>
+                                            Client 7
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
-
-                    <div class="col-xl-3 col-sm-3 col-lg-6">
-                        <div class="footer-widget-box">
-                            <h3 class="footer-widget-title foot-title" style="font-weight:500;font-size: 20px;">LOCATION
-                            </h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 3</a>
-                                </li>
-                                <li><a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="col-xl-3 col-sm-3 col-lg-6">
-                        <div class="footer-widget-box">
-                            <h3 class="footer-widget-title foot-title" style="font-weight:500;font-size: 20px;">LOCATION
-                            </h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 3</a>
-                                </li>
-                                <li><a href="#" style="color: black;font-size:15px;">
-                                        <span class="icon-wrapper circle-yes"
-                                            style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                            <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                style="line-height: 2;color: white;"></i></span>
-                                        Client 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- End Client Section -->
 
@@ -899,7 +940,7 @@
     <!-- testimonials
 ============================================= -->
 
-    <div class="review-area de-pb">
+    <div class="review-area de-pb" style="margin-top: 50px;">
         <div class="container">
             <div class="swiper-container review-wpr">
                 <div class="swiper-wrapper">
@@ -994,14 +1035,32 @@
     <!-- ------------------------------------------------ -->
 
 
-    <style>
-        .fusion-checklist,
-        ul.fusion-checklist {
-            list-style-type: none;
-            padding: 0;
-            margin: 10px 0 0;
-        }
-    </style>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".filter-button").click(function () {
+                var value = $(this).attr('data-filter');
+
+
+
+                if (value == "all") {
+                    // $('.filter').removeClass('hidden');
+                    // $('.filter').show('1000');
+                }
+                else {
+                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+
+                }
+            });
+
+        });
+    </script>
 
 </main>
 {% endblock %}
