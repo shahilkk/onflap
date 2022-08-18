@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'web/filter.css' %}">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
 
 
@@ -19,7 +20,7 @@
         <div class="about-wpr grid-2">
             <div class="about-left">
                 <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                    <img src="{% static 'web/contact.png' %}" alt="thumb">
+                    <img src="{% static 'web/img/222222222.png' %}" alt="thumb">
                 </div>
             </div>
             <div class="about-right about-padding-right">
@@ -107,7 +108,8 @@
                                         </span><label>Projects</label></a></li>
                             </ul>
                         </div>
-                        </p>
+                        
+                        <button type="button" class="btn btn-danger btn-md mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
                     </div>
                 </div>
 
@@ -166,6 +168,8 @@
                             </ul>
                         </div>
                         </p>
+                        <button type="button" class="btn btn-danger btn-md mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
+
                     </div>
                 </div>
 
@@ -223,6 +227,8 @@
                             </ul>
                         </div>
                         </p>
+                        <button type="button" class="btn btn-danger btn-md mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
+
                     </div>
                 </div>
 
@@ -281,6 +287,8 @@
                             </ul>
                         </div>
                         </p>
+                        <button type="button" class="btn btn-danger btn-md mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
+
                     </div>
                 </div>
             </div>
@@ -713,24 +721,25 @@
                 <h2>Filtering divs</h2>
             </div>
             <div>
-                <button class="btn btn-default filter-button btn1" style="background-color: #b71919;color: white;"
-                    data-filter="location1">DUBAI</button>
+                <button class="btn btn-default filter-button btn1" hidden data-filter="all" >All</button>
+                <button class="btn btn-default filter-button btn1" style="background-color: #b71919;color: white;" data-filter="location1">DUBAI</button>
                 <button class="btn btn-default filter-button btn1" data-filter="location2">BAHRAIN</button>
                 <button class="btn btn-default filter-button btn1" data-filter="location3">SAUDI ARABIA</button>
                 <button class="btn btn-default filter-button btn1" data-filter="location4">UAE</button>
-                <button class="btn btn-default filter-button" data-filter="location5">EGYPT</button>
-                <button class="btn btn-default filter-button" data-filter="location6">OMAN</button>
-                <button class="btn btn-default filter-button" data-filter="location7">LEBANON</button>
-                <button class="btn btn-default filter-button" data-filter="location8">QATAR</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location5">EGYPT</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location6">OMAN</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location7">LEBANON</button>
+                <button class="btn btn-default filter-button btn1" data-filter="location8">QATAR</button>
             </div>
 
             <br />
 
             <div class="row">
                 <div class="col-12">
-
-                    <div class="row filter location1">
-                        <div class="each-item"></div>
+                    <div class="row filter location1" >
+                        <!-- <button type="button" class="btn btn-outline-danger btn-sm btn-block">Block level button</button> -->
+                        <div class="each-item">
+                        </div>
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
@@ -848,7 +857,7 @@
                 </div>
 
 
-                <div class="col-sm-12 filter location2">
+                <div class="col-sm-12 filter location2"  style="display: none;">
                     <div class="">
                         <div class="card col-4">
                             <div class="list-group list-group-flush">
@@ -1031,36 +1040,63 @@
     </div>
     <!-- End testimonials -->
 
-    <!-- ------------------------------------------------ -->
-    <!-- ------------------------------------------------ -->
-
-
-
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $(".filter-button").click(function () {
-                var value = $(this).attr('data-filter');
-
-
-
-                if (value == "all") {
-                    // $('.filter').removeClass('hidden');
-                    // $('.filter').show('1000');
-                }
-                else {
-                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                    $(".filter").not('.' + value).hide('3000');
-                    $('.filter').filter('.' + value).show('3000');
-
-                }
-            });
-
-        });
-    </script>
-
 </main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".filter-button").click(function () {
+            var value = $(this).attr('data-filter');
+            // var  bg = $(this)
+            if (value == "all") {
+                // $('.filter').removeClass('hidden');
+                $('.filter').show('1000');
+            }
+            else {
+                // $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                $(".filter").not('.' + value).hide('3000');
+                $('.filter').filter('.' + value).show('3000');
+            }
+        });
+    });
+</script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
 {% endblock %}
