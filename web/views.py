@@ -7,14 +7,23 @@ def base(request):
 
 
 def home(request):
-    return render(request,"web/index.html")    
+    last_video = VideoUpload.objects.all().last()
+    context = {
+        "last_video":last_video,
+        
+    }
+    return render(request,"web/index.html",context)    
 
 
 def about(request):
     return render(request,"web/about.html")    
 
 def career(request):
-    return render(request,"web/career.html")     
+    jobs = JobCategory.objects.all()
+    context = {
+        "jobs":jobs,
+    }
+    return render(request,"web/career.html",context)     
 
 def contact(request):
     return render(request,"web/contact.html")    

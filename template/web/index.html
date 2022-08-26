@@ -3,12 +3,8 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
-<link rel="stylesheet" href="{% static 'web/filter.css' %}">
-
+<link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-
-
 
 
 
@@ -16,11 +12,11 @@
 
     <!-- Start Hero   
 ============================================= -->
-    <div class="about-area" style="padding: 9rem 0;">
+    <div class="about-area" style="padding: 10rem 0rem;">
         <div class="about-wpr grid-2">
             <div class="about-left">
                 <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                    <img src="{% static 'web/img/222222222.png' %}" alt="thumb">
+                    <img src="{% static 'web/img/logo/2.png' %}" alt="thumb">
                 </div>
             </div>
             <div class="about-right about-padding-right">
@@ -41,11 +37,12 @@
                     <a href="{% url 'web:about' %}" class="theme-btn">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>
+                    <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
-                        <a href="https://www.youtube.com/watch?v=ku6dEtynrRI" class="item popup-youtube">
-                            <i class="fas fa-play"></i>
-                            <span class="how-txt">How we work</span>
-                        </a>
+                            <a data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">
+                                <i class="fas fa-play" ></i>
+                                <span class="how-txt">How we work</span>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -579,8 +576,8 @@
 ============================================= -->
 
     <div class="container">
-        <h6 class="text-center" style="margin-top: 30px;">OUR SERVICES</h6>
-        <div class="feature-wpr grid-3" style="margin-top: 50px;">
+        <h6 class="text-center" style="margin-top: 80px;">OUR SERVICES</h6>
+        <div class="feature-wpr grid-3" style="margin-top: 40px;">
 
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
@@ -734,7 +731,7 @@
 
                 <div class="col-lg-3 col-md-4 col-xs-6">
                     <div class="client-logo">
-                        <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
+                        <img src="{% static 'web/img/logo/Mehery logo.png' %}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -748,233 +745,122 @@
 
     <!-- Client Section
 ============================================= -->
-
-    <div class="container">
-        <div class="section-header">
-            <h3>Our Clients</h3>
-        </div>
-
-        <div class="container">
-            <div class="">
-                <h2>Filtering divs</h2>
-            </div>
-            <div>
-                <button class="btn btn-default filter-button btn1" hidden data-filter="all" >All</button>
-                <button class="btn btn-default filter-button btn1" style="background-color: #b71919;color: white;" data-filter="location1">DUBAI</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location2">BAHRAIN</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location3">SAUDI ARABIA</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location4">UAE</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location5">EGYPT</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location6">OMAN</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location7">LEBANON</button>
-                <button class="btn btn-default filter-button btn1" data-filter="location8">QATAR</button>
-            </div>
-
-            <br />
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="row filter location1" >
-                        <div class="each-item">
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                </div>
-                                <div class="list-group list-group-flush">
-                                    <ul class="footer-list text-center" id="ul1">
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 4
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 5</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 6
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 3
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 7
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul class="footer-list text-center" id="ul2"></ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="list-group list-group-flush">
-                                    <ul class="footer-list text-center" id="ul1">
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 8</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 9</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color: black;font-size:15px;" class="">
-                                                <span class="icon-wrapper circle-yes"
-                                                    style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                    <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                        style="line-height: 2;color: white;"></i></span>
-                                                Client 10</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="container">
+    <h6 class="text-center" style="margin-top: 80px;">We Cater To</h6>
+    
+    <div>
+        <button class="btn btn-primary filter-button btn1" data-filter="all" hidden>All</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Travel">Travel Sector</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Retail">Retail</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Restaurant">Restaurant</button>
+        <button class="btn btn-default filter-button btn1" data-filter="SME">SME</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Industrial">Industrial Manufacturers</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Health">Health Care</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Pet">Pet Care</button>
+        <button class="btn btn-default filter-button btn1" data-filter="Sports">Sports Training Centers</button>
+        <!-- <button class="btn btn-default filter-button btn1" data-filter="webdesign">Health Care</button> -->
+    </div>
+    <br/>
+    
+    <div class="row">
+        <div class="col-md-3  Travel">
+            <div class="each-item">
+                <img class="port-image" src="http://www.templates4all.com/wp-content/uploads/2011/09/Engon-Joomla-Corporate-Portfolio-Template.jpg"/>
+                <div class="cap1">
+                    <h3>Client Name</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
                 </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-3  Travel">
+            <div class="each-item">
+                <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
 
-
-                <div class="col-sm-12 filter location2"  style="display: none;">
-                    <div class="">
-                        <div class="card col-4">
-                            <div class="list-group list-group-flush">
-                                <ul class="footer-list text-center" id="ul1">
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 4
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 5</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 6
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: black;font-size:15px;" class="">
-                                            <span class="icon-wrapper circle-yes"
-                                                style="background-color:#b71919;font-size:15px;height:30.6px;width:30.6px;margin-right:12.6px;border-radius: 49%;">
-                                                <i class="fusion-li-icon fa-arrow-circle-right fas"
-                                                    style="line-height: 2;color: white;"></i></span>
-                                            Client 7
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="cap1">
+                    <h3>Client Name</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="col-md-3 filter graphic photo">
+            <div class="each-item">
+                <img class="port-image" src="http://www.wpchats.com/wp-content/uploads/2011/11/Mixfolio-Wordpress-HTML5-Portfolio-Theme.jpg"/>
+                <div class="cap1">
+                    <h3>Car show</h3>
+                    <p>A car showroom for all verities of cars to display</p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 filter webdesign">
+            <div class="each-item">
+                <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
+                <div class="cap1">
+                    <h3>Car show</h3>
+                    <p>A car showroom for all verities of cars to display</p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 filter graphic photo">
+            <div class="each-item">
+                <img class="port-image" src="http://101bestwebsites.com/public/images/entry_images//2009/05/14/medium_www.matthiasdittrich.com.jpg"/>
+                <div class="cap1">
+                    <h3>Car show</h3>
+                    <p>A car showroom for all verities of cars to display</p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 filter webdesign graphic">
+            <div class="each-item">
+                <img class="port-image" src="http://paperhaus.com/images/products/shrapnel-design-handmade-double-thick-screwpost-portfolio-cover-11x14-landscape-black-anodized-aluminum-14231_detail.jpg"/>
+                <div class="cap1">
+                    <h3>Car show</h3>
+                    <p>A car showroom for all verities of cars to display</p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 filter photo">
+            <div class="each-item">
+                <img class="port-image" src="http://4.bp.blogspot.com/_IDQ_mBDYk9I/SsON_Or-mGI/AAAAAAAAAEs/0AchAjEekYU/s400/Portfolio-idea-3.jpg"/>
+                <div class="cap1">
+                    <h3>Car show</h3>
+                    <p>A car showroom for all verities of cars to display</p>
+                </div>
+                <div class="cap2">
+                    <p class="text-center">Visit</p>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     <!-- End Client Section -->
 
     <!-- ------------------------------------------------ -->
@@ -984,30 +870,86 @@
 
     <!-- testimonials
 ============================================= -->
-
-    <div class="review-area de-pb" style="margin-top: 50px;">
-        <div class="container">
-            <div class="swiper-container review-wpr">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="review-single text-center">
-                            <div class="row">
-                                <div class="col-xl-8 offset-xl-2">
-                                    <div class="review-content">
-                                        <p>
-                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                            According the agency is best for growing your business what your
-                                            A best consulting business agency.
-                                        </p>
-                                        <div class="review-bio">
-                                            <h5>Atardam Steve</h5>
-                                            <span>Founder</span>
-                                            <div class="review-rating d-flex align-items-center">
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
+    <div class="container ">
+        <div class="section-header" style="margin-top:80px ;">
+            <h3>Trusted by Businesses WorldWide</h3>
+        </div>
+        <div class="review-area de-pb" style="margin-top:50px ;">
+            <div class="container">
+                <div class="swiper-container review-wpr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review-single text-center">
+                                <div class="row">
+                                    <div class="col-xl-8 offset-xl-2">
+                                        <div class="review-content">
+                                            <p>
+                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                                According the agency is best for growing your business what your
+                                                A best consulting business agency.
+                                            </p>
+                                            <div class="review-bio">
+                                                <h5>Atardam Steve</h5>
+                                                <span>Founder</span>
+                                                <div class="review-rating d-flex align-items-center">
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-single text-center">
+                                <div class="row">
+                                    <div class="col-xl-8 offset-xl-2">
+                                        <div class="review-content">
+                                            <p>
+                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                                According the agency is best for growing your business what your
+                                                A best consulting business agency.
+                                            </p>
+                                            <div class="review-bio">
+                                                <h5>Atardam Steve</h5>
+                                                <span>Founder</span>
+                                                <div class="review-rating d-flex align-items-center">
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-single text-center">
+                                <div class="row">
+                                    <div class="col-xl-8 offset-xl-2">
+                                        <div class="review-content">
+                                            <p>
+                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
+                                                According the agency is best for growing your business what your
+                                                A best consulting business agency.
+                                            </p>
+                                            <div class="review-bio">
+                                                <h5>Atardam Steve</h5>
+                                                <span>Founder</span>
+                                                <div class="review-rating d-flex align-items-center">
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                    <i class="icofont-star"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1015,62 +957,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="review-single text-center">
-                            <div class="row">
-                                <div class="col-xl-8 offset-xl-2">
-                                    <div class="review-content">
-                                        <p>
-                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                            According the agency is best for growing your business what your
-                                            A best consulting business agency.
-                                        </p>
-                                        <div class="review-bio">
-                                            <h5>Atardam Steve</h5>
-                                            <span>Founder</span>
-                                            <div class="review-rating d-flex align-items-center">
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review-single text-center">
-                            <div class="row">
-                                <div class="col-xl-8 offset-xl-2">
-                                    <div class="review-content">
-                                        <p>
-                                            Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                            According the agency is best for growing your business what your
-                                            A best consulting business agency.
-                                        </p>
-                                        <div class="review-bio">
-                                            <h5>Atardam Steve</h5>
-                                            <span>Founder</span>
-                                            <div class="review-rating d-flex align-items-center">
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
@@ -1078,6 +968,57 @@
 
 </main>
 
+
+<!-- video popup modal -->
+<div class="modal fade" id="video">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <video id="VisaChipCardVideo" width="100%" controls>
+                    <source src="{{last_video.video.url}}" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- video popup modal end -->
+
+<!-- Modal -->
+<div class="modal fade" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 15px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="col-form-label">email:</label>
+                <input type="text" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="text" class="form-control" id="phone">
+            </div>
+            <div class="mb-3">
+              <label for="address" class="col-form-label">Address:</label>
+              <textarea class="form-control" id="address"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1117,29 +1058,30 @@
 
 
 
-
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $(".filter-button").click(function () {
+    $(document).ready(function(){
+        $(".filter-button").click(function(){
             var value = $(this).attr('data-filter');
-            // var  bg = $(this)
-            if (value == "all") {
-                // $('.filter').removeClass('hidden');
+            if(value == "all")
+            {
+                //$('.filter').removeClass('hidden');
                 $('.filter').show('1000');
             }
-            else {
+            else
+            {
                 // $('.filter[filter-item="'+value+'"]').removeClass('hidden');
                 // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                $(".filter").not('.' + value).hide('3000');
-                $('.filter').filter('.' + value).show('3000');
+                $(".filter").not('.'+value).hide('3000');
+                $('.filter').filter('.'+value).show('3000');
             }
         });
+
     });
 </script>
 
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 
 
 {% endblock %}
