@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'web',
 
     'tinymce',
+    'phone_field',
+    # 'djangoratings'
 ]
 
 MIDDLEWARE = [

@@ -710,14 +710,14 @@
             </div>
             <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
                 style="visibility: visible; animation-name: fadeInUp;">
-
+                {% for p in partners %}
                 <div class="col-lg-3 col-md-4 col-xs-6">
                     <div class="client-logo">
-                        <img src="{% static 'web/img/logo/clickripple logo.png' %}" class="img-fluid" alt="">
+                        <img src="{{p.logo.url}}" class="img-fluid" alt="">
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
+                {% endfor %}
+                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
                     <div class="client-logo">
                         <img src="{% static 'web/img/logo/TRACOMS logo-01.png' %}" class="img-fluid" alt="">
                     </div>
@@ -733,7 +733,7 @@
                     <div class="client-logo">
                         <img src="{% static 'web/img/logo/Mehery logo.png' %}" class="img-fluid" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -876,20 +876,22 @@
         </div>
         <div class="review-area de-pb" style="margin-top:50px ;">
             <div class="container">
+                
                 <div class="swiper-container review-wpr">
                     <div class="swiper-wrapper">
+                        {% for r in reviews %}
                         <div class="swiper-slide">
+                            
                             <div class="review-single text-center">
                                 <div class="row">
+                                    
                                     <div class="col-xl-8 offset-xl-2">
                                         <div class="review-content">
                                             <p>
-                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                                According the agency is best for growing your business what your
-                                                A best consulting business agency.
+                                                {{r.review}}
                                             </p>
                                             <div class="review-bio">
-                                                <h5>Atardam Steve</h5>
+                                                <h5>{{r.name}}</h5>
                                                 <span>Founder</span>
                                                 <div class="review-rating d-flex align-items-center">
                                                     <i class="icofont-star"></i>
@@ -901,61 +903,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="swiper-slide">
-                            <div class="review-single text-center">
-                                <div class="row">
-                                    <div class="col-xl-8 offset-xl-2">
-                                        <div class="review-content">
-                                            <p>
-                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                                According the agency is best for growing your business what your
-                                                A best consulting business agency.
-                                            </p>
-                                            <div class="review-bio">
-                                                <h5>Atardam Steve</h5>
-                                                <span>Founder</span>
-                                                <div class="review-rating d-flex align-items-center">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-single text-center">
-                                <div class="row">
-                                    <div class="col-xl-8 offset-xl-2">
-                                        <div class="review-content">
-                                            <p>
-                                                Lorem Ipsum dolor seat ameat dui too consecteture more be elite.
-                                                According the agency is best for growing your business what your
-                                                A best consulting business agency.
-                                            </p>
-                                            <div class="review-bio">
-                                                <h5>Atardam Steve</h5>
-                                                <span>Founder</span>
-                                                <div class="review-rating d-flex align-items-center">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>

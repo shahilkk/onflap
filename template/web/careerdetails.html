@@ -5,17 +5,19 @@
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
 
 <style>
-    
+
 </style>
 
 <main class="main">
     <div class="site-breadcrumb">
         <div class="container">
+            {% for d in careerdetails %}
             <p>
-             <span class="subhead">Onflap, Chennai</span>
+                <span class="subhead">{{d.job_category.department|title}}, {{d.location|title}}</span>
                 <span class="cw_loc_div"></span><span id="data_jobtype">
-                </span> <span  class="subhead">Full Time</span> </p>
-                <h1 class="breadcrumb-title">Designers- UI/UX/Visual/Graphic</h2>
+                </span> <span class="subhead">{{d.job_type}}</span>
+            </p>
+            <h1 class="breadcrumb-title">{{d.job_category.department|title}}- {{d.job_title|title}}</h2>
 
         </div>
     </div>
@@ -29,45 +31,35 @@
                         <div class="section-title">
                             <h2 class="title">Job Details</h2>
                         </div>
-                        <h6 class="title">Fashion Designer</h6>
-                        <span>Bevilard international</span>
+                        
+                        <h6 class="title">{{d.job_title|title}}</h6>
+                        <!-- <span>Bevilard international</span> -->
                         <h6 class="sub-title">Vacancy</h6>
-                        <span>04</span>
+                        <span>{{d.vaccancy}}</span>
                         <h6 class="sub-title">Job Responsibilities</h6>
                         <div class="cw_jd_innr">
-                            <ul>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Find out fashion trends of International market and to work out of them</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Creation of creative fashion design that suits the company brand's requirement</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Development of new accessories design for upcoming collection</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Analyze development in fabrics, colors and shapes</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Development of new accessories design for upcoming collection</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Develop design ideas through coordination with merchandising and client.</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Ensure developing of patterns & overseeing the production</span></li>
-                                <li class="align-justify listtype" style="text-align: justify;"><span class="text">Design new labeling and badge.</span></li>
-
-                      
-                               
-                            </ul>
+                            <span class="text">
+                                {{d.job_responsibility|safe|title}}
+                            </span>
                         </div>
-                       
+
                         <h6 class="sub-title">Educational Requirements</h6>
-                        <p>Bachelor of Fine Arts (B.F.A)</p>
-                        <p>Training/Trade Course: Shanto Mariam University of Creative Technology,BGMEA University of
-                            Fashion</p>
-                        <p>Technology students wi,Skills Required: Graphics Design; Local and world populated Fashion
-                            house (Buyer)</p>
+                        <span class="text">
+                            {{d.educational_requirments|safe|title}}
+                        </span>
+
                         <h6 class="sub-title">Experience Requirements</h6>
-                        <p>1 to 3 year(s)</p>
-                        <p>The applicants should have experience in the following area(s):</p>
-                        <p>Fashion Design</p>
+                        <span class="text">
+                            {{d.experience_requirments|safe|title}}
+                        </span>
+
                         <h6 class="sub-title">Additional Requirements</h6>
-                        <p>Age 26 to 35 years</p>
-                        <p>Both males and females are allowed to apply</p>
-                        <h6 class="sub-title">Job Location</h6>
-                        <p>Gulshan, Dhaka Division, Dhaka.</p>
-                        <h6 class="sub-title">Salary</h6>
-                        <p class="m-0">Negotiable</p>
-                        <a href="{% url 'web:applynow' %}"  class="job-apply-btn" style="margin-bottom: 20px;">Apply Now</a>
+                        <span class="text">
+                            {{d.additional_requirments|safe|title}}
+                        </span>
+                        
+                        <a href="{% url 'web:applynow' category.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
+                            Now</a>
                     </div>
                     <div class="col-xl-3 col-lg-4 offset-xl-1">
                         <div class="widget widget-job-details">
@@ -76,39 +68,40 @@
                                 <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Department</h6>
-                                    <span>UI Designer</span>
+                                    <span>{{d.job_category.department|title}}</span>
                                 </div>
                             </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Location</h6>
-                                    <span>Bangladesh</span>
+                                    <span>{{d.location|title}}</span>
                                 </div>
                             </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Job Type</h6>
-                                    <span>Full Time</span>
+                                    <span>{{d.job_type}}</span>
                                 </div>
                             </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Experience</h6>
-                                    <span>2 years</span>
+                                    <span>{{d.experience}} year{{d.experience|pluralize}}</span>
                                 </div>
                             </div>
                             <div class="media single-job-details mb-0">
                                 <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Salary</h6>
-                                    <span>$2000</span>
+                                    <span>{{d.salary}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

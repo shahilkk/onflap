@@ -6,13 +6,15 @@ app_name='web'
 urlpatterns = [
     path('base',views.base,name='base'),
     path('',views.home,name='home'),
+
     path('about',views.about,name='about'),
+
     path('career',views.career,name='career'),
+    path('careerdetails/<int:id>',views.careerDetails,name='careerdetails'),
+    path('applynow/<int:id>',views.applynow,name='applynow'),
+
     path('contact',views.contact,name='contact'),
+    
     path('productdetails',views.productdetails,name='productdetails'),
-    path('careerdetails',views.careerdetails,name='careerdetails'),
-    path('applynow',views.applynow,name='applynow'),
-    path('blog',views.blog,name='blog'),
-    path('testimonial',views.testimonial,name='testimonial'),
 ]
      

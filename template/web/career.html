@@ -18,7 +18,7 @@
             <p class="card-content">
                 {{job.description}}
             </p>
-            <a href="{% url 'web:careerdetails' %}" class="card-btn">READ MORE</a>
+            <a href="{% url 'web:careerdetails' job.id %}" class="card-btn">READ MORE</a>
         </div>
         {% endfor %}
     </div>

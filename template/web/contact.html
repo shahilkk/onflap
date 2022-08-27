@@ -21,13 +21,12 @@
         <div class="container">
             <div class="contact-page-info grid-2">
                 <div class="contact-left">
-                    <img src="{% static 'web/contact.png' %}" alt="">
-                    <h2 data-splitting class="mb-50 wow" data-wow-duration=".1s" data-wow-delay=".4s">
+                    <h2>
                         Hello! Have you want <br />
                         to need any inquary or <br />
                         have any Questions?
                     </h2>
-                    <ul class="contact-list wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <ul>
                         <li>
                             <h5 class="fz-18-5">Address:</h5>
                             <span>House 00, Road No : 01, Street address, ABC, Canada</span>
@@ -42,62 +41,34 @@
                         </li>
                     </ul>
                 </div>
-                <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                    <form class="contact-form" id="contact-form" action="https://themetum.com/ailng/php/contact.php" method="POST">					
+                <!-- <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"> -->
+                    <form  method="POST">	
+                        {% csrf_token %}				
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control input-style-2" placeholder="Marcos Zeletoyan">
+                                {{contactfrom.cust_name}}
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="phone" class="form-control input-style-2" placeholder="+00- 1234- 56789">
+                                {{contactfrom.phone}}                            
                             </div>
                             <div class="col-md-12">
-                                <input type="email" name="email" class="form-control input-style-2" placeholder="Email Address">
+                                {{contactfrom.email}}
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control input-style-2" name="message" placeholder="Message"></textarea>
+                                {{contactfrom.message}}                            
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="theme-btn mt-20">
                                     Send Message
                                 </button>
-                            </div>
-                            <div class="col-12 text-center">
-                                <p class="form-message"></p>
-                            </div>								
+                            </div>							
                         </div>
                     </form>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
     <!-- End  Blog-Content -->
-    
-    <!-- Start Subscribe
-    ============================================= -->
-    <!-- <div class="sub-area de-padding" style="background-image: url({% static 'web/img/subscribe/bg.png' %})">
-        <div class="container">
-            <div class="sub-wpr grid-2">
-                <div class="sub-left">
-                    <div class="site-title">
-                        <span class="about-sub-title wh">Newsletter</span>
-                        <h2 data-splitting class="about-title wh mb-0 wow" data-wow-duration=".1s" data-wow-delay=".4s">
-                            To get Our Weekly & Monthly News
-                            Subscribe Newsletter.
-                        </h2>
-                    </div>
-                    <form class="sub-form wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <input type="text" placeholder="Your e-mail Address" class="input-style-1">
-                        <button type="submit" class="sub-btn hv btn-3">Subscribe</button>
-                    </form>
-                </div>
-                <div class="sub-right text-center">
-                    <img src="{% static 'web/img/subscribe/sub-right.png' %}" alt="thumb">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Subscribe -->
     
 </main>
 {% endblock %}
