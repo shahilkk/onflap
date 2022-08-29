@@ -3,9 +3,9 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
+<link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-
 
 
 <main class="main">
@@ -26,9 +26,9 @@
                     match the international standards for a greater convenience, safety and security Established with
                     the specific aim of empowering the IT industry in the region through distribution &
                     development of powerful, cost effective and scalable IT solutions.. </p>
-                    <p><b>We are </b> the region's fastest growing software development house, encompassing some of the best
+                <p><b>We are </b> the region's fastest growing software development house, encompassing some of the best
                     programmers in the industry. </p>
-                    <p> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
+                <p> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
                     sectors like Travel & Tourism, BPOs, Retail & Manufacturing, Medical, Aggro Industries,
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
@@ -39,10 +39,10 @@
                     </a>
                     <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
-                            <a data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">
-                                <i class="fas fa-play" ></i>
-                                <span class="how-txt">How we work</span>
-                            </a>
+                        <a data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">
+                            <i class="fas fa-play"></i>
+                            <span class="how-txt">How we work</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -62,11 +62,15 @@
             <h6 class="text-center">OUR FLAGSHIP PRODUCTS</h6>
             <div class="feature-wpr grid-3" style="margin-top: 50px;">
 
+
+
+                {% for p in product_details %}
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
+
                     <div class="feature-info ">
-                        <h5 class="text-center">FIESTA</h5>
+                        <h5 class="text-center">{{p.product_name}}</h5>
                         <p class="mb-0">
-                            Fully Integrated Enterprise Suite for Travel Accounting
+                            {{p.product_fullname}}
                         </p>
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
@@ -74,258 +78,71 @@
                                     <a href="{% url 'web:productdetails' %}" target="">
                                         <span>
                                             <div class="feature-icon">
-                                                <img src="{% static 'web/img/icons/24.png' %}" alt="thumb">
+                                                <img src="{{p.product_logo.url}}" alt="thumb">
                                             </div>
                                         </span>
                                     </a>
                                 </li>
-                                <li class="zp-apps zp-bigin">
-                                    <a target="_blank">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/nolan/64/google-sites.png" />
-                                        </span> -->
-                                        <label>greater accounting accuracy </label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-campaigns">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/color/48/000000/sell-stock.png" />
-                                        </span> -->
-                                        <label>comprehensive reporting.
-                                        </label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-forms">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/color/48/000000/purchase-order.png" />
-                                        </span> -->
-                                        <label>accounting & management system 
-                                        </label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-sign">
-                                    <a target="">
-                                        <!-- <span> 
-                                            <img src="https://img.icons8.com/color/48/000000/land-surveying.png" />
-                                        </span> -->
-                                        <label>enhance revenues</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-social">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/color/48/000000/storyfire.png" />
-                                        </span> -->
-                                        <label>superior customer service</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-salesiq">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/color/48/000000/project-management.png" />
-                                        </span> -->
-                                        <label>low cost ownership </label>
-                                    </a>
-                                </li>
+                                <!-- {{p.product_features|safe}} -->
+                                <a target="_blank" class="zp-apps zp-bigin">
+                                    {{p.product_features|safe}}
+                                </a>
+
                             </ul>
                         </div>
-                        
-                        <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
-                    </div>
-                </div>
 
-                <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".4s">
-                    <div class="feature-info ms-2 me-4">
-                        <h5 class="text-center">CORE</h5>
-                        <p class="mb-0">
-                            Client Oriented Relations En
-                        </p>
-                        <p>
-                        <div class="onflap-apps-category">
-                            <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm"><a href="{% url 'web:productdetails' %}"
-                                        target=""><span>
-                                            <div class="feature-icon">
-                                                <img src="{% static 'web/img/icons/23.png' %}" alt="thumb">
+                        <button type="button" class="btn btn-lg"
+                            style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo</button>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal{{p.id}}" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content" style="border-radius: 15px;">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"> Contact Us</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" action="{% url 'web:productenquiry' p.id %}">
+                                            {% csrf_token %}
+                                            <div class="mb-3">
+                                                <label for="name" class="col-form-label">Name:</label>
+                                                <input type="text" class="form-control" name="name" id="name">
                                             </div>
-                                        </span>
-                                        <!-- <label><b style="color: black;font-size: 1.5rem;">CRM</b></label> -->
-                                    </a>
-                                </li>
-
-                                <li class="zp-apps zp-bigin">
-                                    <a target="_blank">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-creator-influencer-marketing-flaticons-lineal-color-flat-icons.png" />
-                                        </span> -->
-                                        <label>manages easily</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-campaigns">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-flat-icons-pause-08/64/000000/external-analyst-business-charts-and-diagrams-flat-icons-pause-08.png" />
-                                        </span> -->
-                                        <label>Secure</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-forms">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/nolan/64/serial-tasks.png" /> 
-                                        </span> -->
-                                        <label>all client info</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-sign">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-development-experience-through-the-native-integrations-of-azure-with-visual-studio-logo-color-tal-revivo.png" />
-                                        </span> -->
-                                        <label>All client concerns </label>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        </p>
-                        <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
-
-                    </div>
-                </div>
-
-                <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                    <div class="feature-info">
-                        <h5 class="text-center">FIRST</h5>
-                        <p class="mb-0">
-                            Financial Reporting system
-                        <p>
-                        <div class="onflap-apps-category">
-                            <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm">
-                                    <a href="" target=""><span>
-                                            <div class="feature-icon">
-                                                <img src="{% static 'web/img/icons/21.png' %}" alt="thumb">
+                                            <div class="mb-3">
+                                                <label for="email" class="col-form-label">email:</label>
+                                                <input type="text" class="form-control" name="email" id="email">
                                             </div>
-                                        </span>
-                                        <!-- <label><b style="color: black;font-size: 1.5rem;">DMS</b></label> -->
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-bigin">
-                                    <a target="_blank">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-recruitment-recruitment-agency-flaticons-flat-flat-icons-10.png" />
-                                        </span> -->
-                                        <label>Time saving</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-campaigns">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/doodle/48/000000/crowd.png" />
-                                        </span> -->
-                                         <label>Transparent</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-forms">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/doodle/48/000000/maintenance.png" />
-                                        </span> -->
-                                        <label>Easy</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-sign">
-                                    <a target="">
-                                        <!-- <span> 
-                                            <img src="https://img.icons8.com/color/48/000000/land-surveying.png" />
-                                        </span> -->
-                                        <label>Single place for all financial data</label>
-                                    </a>
-                                </li>
-                                <!-- <li class="zp-apps zp-social">
-                                    <a target="">
-                                        <span>
-                                            <img  src="https://img.icons8.com/color/48/000000/storyfire.png" />
-                                        </span>
-                                        <label>Social</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-salesiq"><a target=""><span><img
-                                                src="https://img.icons8.com/color/48/000000/project-management.png" />
-                                        </span><label>Projects</label></a></li> -->
-                            </ul>
-                        </div>
-                        </p>
-                        <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
-
-                    </div>
-                </div>
-
-                <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".4s">
-                    <div class="feature-info ms-2 me-4">
-                        <h5 class="text-center">RPOS</h5>
-                        <p class="mb-0">
-                            Retail / Restaurant point of sale
-                        </p>
-                        <p>
-                        <div class="onflap-apps-category">
-                            <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm"><a href="{% url 'web:productdetails'%}" target="">
-                                        <span>
-                                            <div class="feature-icon">
-                                                <img src="{% static 'web/img/icons/22.png' %}" alt="thumb">
+                                            <div class="mb-3">
+                                                <label for="phone" class="col-form-label">Phone:</label>
+                                                <input type="text" class="form-control" name="phone" id="phone">
                                             </div>
-                                        </span>
-                                        <!-- <label><b style="color: black;font-size: 1.5rem;">COURIER AND CARGOSERVICES</b></label> -->
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-bigin">
-                                    <a target="_blank">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-creator-influencer-marketing-flaticons-lineal-color-flat-icons.png" />
-                                        </span> -->
-                                        <label>User friendly</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-campaigns">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img
-                                                src="https://img.icons8.com/external-flat-icons-pause-08/64/000000/external-analyst-business-charts-and-diagrams-flat-icons-pause-08.png" />
-                                        </span> -->
-                                        <label>Fast</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-forms">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/nolan/64/serial-tasks.png" /> 
-                                        </span> -->
-                                        <label>Secure</label>
-                                    </a>
-                                </li>
-                                <li class="zp-apps zp-sign">
-                                    <a target="">
-                                        <!-- <span>
-                                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-development-experience-through-the-native-integrations-of-azure-with-visual-studio-logo-color-tal-revivo.png" />
-                                        </span> -->
-                                        <label>Manage your restaurant business</label>
-                                    </a>
-                                </li>
-                            </ul>
+                                            <div class="mb-3">
+                                                <label for="address" class="col-form-label">Address:</label>
+                                                <textarea class="form-control" name="address" id="address"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Send message</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                        </p>
-                        <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Request Demo</button>
+
+                        <!-- Modal -->
 
                     </div>
                 </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>
@@ -745,122 +562,46 @@
 
     <!-- Client Section
 ============================================= -->
-<div class="container">
-    <h6 class="text-center" style="margin-top: 80px;">We Cater To</h6>
-    
-    <div>
-        <button class="btn btn-primary filter-button btn1" data-filter="all" hidden>All</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Travel">Travel Sector</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Retail">Retail</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Restaurant">Restaurant</button>
-        <button class="btn btn-default filter-button btn1" data-filter="SME">SME</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Industrial">Industrial Manufacturers</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Health">Health Care</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Pet">Pet Care</button>
-        <button class="btn btn-default filter-button btn1" data-filter="Sports">Sports Training Centers</button>
-        <!-- <button class="btn btn-default filter-button btn1" data-filter="webdesign">Health Care</button> -->
-    </div>
-    <br/>
-    
-    <div class="row">
-        <div class="col-md-3  Travel">
-            <div class="each-item">
-                <img class="port-image" src="http://www.templates4all.com/wp-content/uploads/2011/09/Engon-Joomla-Corporate-Portfolio-Template.jpg"/>
-                <div class="cap1">
-                    <h3>Client Name</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-md-3  Travel">
-            <div class="each-item">
-                <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
+    <div class="container">
+        <h6 class="text-center" style="margin-top: 80px;">We Cater To</h6>
 
-                <div class="cap1">
-                    <h3>Client Name</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-                
-            </div>
+
+        <div class="filters filter-button-group">
+            <ul class="ul">
+                <h4>
+                    <li class="active" data-filter="*">All</li>
+                    {% for category in clients %}
+                    <li data-filter=".{{category.title|slugify}}">{{category.title}}</li>
+                    {% endfor %}
+                </h4>
+            </ul>
         </div>
-        
-        <div class="col-md-3 filter graphic photo">
-            <div class="each-item">
-                <img class="port-image" src="http://www.wpchats.com/wp-content/uploads/2011/11/Mixfolio-Wordpress-HTML5-Portfolio-Theme.jpg"/>
-                <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 filter webdesign">
-            <div class="each-item">
-                <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
-                <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
+        <br />
+
+        <div class="content grid row">
+            {% for items in client_details %}
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item">
+                <div class="each-item">
+                    <img class="port-image"
+                        src="{% static 'web/img/default.jpg' %}" />
+                        <div class="centered">
+                            <h4>{{items.Client_name}}</h4>
+                        </div> 
+                    <div class="cap1">
+                        <h3>{{items.Client_name}}</h3>
+                        <p>
+                            {{items.description}}
+                        </p>
+                    </div>
+                    <div class="cap2">
+                        <p class="text-center">Visit</p>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        
-        <div class="col-md-3 filter graphic photo">
-            <div class="each-item">
-                <img class="port-image" src="http://101bestwebsites.com/public/images/entry_images//2009/05/14/medium_www.matthiasdittrich.com.jpg"/>
-                <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 filter webdesign graphic">
-            <div class="each-item">
-                <img class="port-image" src="http://paperhaus.com/images/products/shrapnel-design-handmade-double-thick-screwpost-portfolio-cover-11x14-landscape-black-anodized-aluminum-14231_detail.jpg"/>
-                <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 filter photo">
-            <div class="each-item">
-                <img class="port-image" src="http://4.bp.blogspot.com/_IDQ_mBDYk9I/SsON_Or-mGI/AAAAAAAAAEs/0AchAjEekYU/s400/Portfolio-idea-3.jpg"/>
-                <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
-                </div>
-                <div class="cap2">
-                    <p class="text-center">Visit</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-</div>
     <!-- End Client Section -->
 
     <!-- ------------------------------------------------ -->
@@ -876,15 +617,15 @@
         </div>
         <div class="review-area de-pb" style="margin-top:50px ;">
             <div class="container">
-                
+
                 <div class="swiper-container review-wpr">
                     <div class="swiper-wrapper">
                         {% for r in reviews %}
                         <div class="swiper-slide">
-                            
+
                             <div class="review-single text-center">
                                 <div class="row">
-                                    
+
                                     <div class="col-xl-8 offset-xl-2">
                                         <div class="review-content">
                                             <p>
@@ -903,10 +644,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
-                            
+
                         </div>
                         {% endfor %}
                     </div>
@@ -937,101 +678,29 @@
 </div>
 <!-- video popup modal end -->
 
-<!-- Modal -->
-<div class="modal fade" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="border-radius: 15px;">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> Contact Us</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="col-form-label">Name:</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="col-form-label">email:</label>
-                <input type="text" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone:</label>
-                <input type="text" class="form-control" id="phone">
-            </div>
-            <div class="mb-3">
-              <label for="address" class="col-form-label">Address:</label>
-              <textarea class="form-control" id="address"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="border-radius: 15px;">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> Contact Us</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="col-form-label">Name:</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="col-form-label">email:</label>
-                <input type="text" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone:</label>
-                <input type="text" class="form-control" id="phone">
-            </div>
-            <div class="mb-3">
-              <label for="address" class="col-form-label">Address:</label>
-              <textarea class="form-control" id="address"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 
 
 
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $(".filter-button").click(function(){
-            var value = $(this).attr('data-filter');
-            if(value == "all")
-            {
-                //$('.filter').removeClass('hidden');
-                $('.filter').show('1000');
-            }
-            else
-            {
-                // $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                $(".filter").not('.'+value).hide('3000');
-                $('.filter').filter('.'+value).show('3000');
-            }
+    $(document).ready(function () {
+
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
         });
 
-    });
+        // filter items on button click
+        $('.filter-button-group').on('click', 'li', function () {
+            var filterValue = $(this).attr('data-filter');
+            $('.grid').isotope({ filter: filterValue });
+            $('.filter-button-group li').removeClass('active');
+            $(this).addClass('active');
+        });
+    })
 </script>
 
 

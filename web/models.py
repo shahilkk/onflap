@@ -4,6 +4,9 @@ from xml.parsers.expat import model
 from django.db import models
 from tinymce.models import HTMLField
 from phone_field import PhoneField
+from django.template.defaultfilters import slugify
+# from unidecode import unidecode
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -73,3 +76,34 @@ class Contact(models.Model):
     def __str__(self):
         return str(self.cust_name)
 
+
+class Product(models.Model):
+    product_name = models.CharField(max_length=50)
+    product_fullname = models.CharField(max_length=100,null=True)
+    product_logo = models.FileField(upload_to='product_log',null=True)
+    product_features = HTMLField()
+
+    def __str__(self):
+        return str(self.product_name)
+
+
+class ProductEnquiry(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.CharField(max_length=12)
+    address = models.TextField()
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.name)
+
+class ClientCategory(models.Model):
+    title = models.CharField(max_length=200)
+    is_active = models.BooleanField(default=True)
+
+
+class ClientList(models.Model):
+    category = models.ForeignKey(ClientCategory, on_delete=models.CASCADE)
+    Client_name = models.CharField(max_length=200)
+    description = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, null=True, blank=True)

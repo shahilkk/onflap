@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 
 from web.forms import ApplyNowForm,ContactUsForm
 from .models import *
+# from unicodedata import category
 
 # Create your views here.
 def base(request):
@@ -12,12 +13,35 @@ def home(request):
     last_video = VideoUpload.objects.all().last()
     reviews = Review.objects.all()
     partners = Partners.objects.all()
+    product_details = Product.objects.all()
+    clients = ClientCategory.objects.filter(is_active =True)
+    client_details = ClientList.objects.all()
     context = {
         "last_video":last_video,
         "reviews":reviews,
         "partners":partners,
+        "product_details":product_details,
+        "clients":clients,
+        "client_details":client_details,
     }
-    return render(request,"web/index.html",context)    
+    return render(request,"web/index.html",context)  
+
+def productEnquiry(request,id):
+    product = Product.objects.get(id=id)
+    if request.method == 'POST':
+        
+        print(product)
+        print('#'*20)
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        address = request.POST['address']
+        product = product
+
+        new_enquiry = ProductEnquiry(name=name,email=email,phone=phone,address=address,product=product)
+        new_enquiry.save()
+
+    return redirect('web:home')  
 
 
 def about(request):

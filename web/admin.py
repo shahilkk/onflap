@@ -36,3 +36,27 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ('cust_name','message')
     search_fields=('partner_name',)
 admin.site.register(Contact,ContactAdmin)
+
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('product_name','product_fullname')
+    search_fields=('product_name',)
+admin.site.register(Product,ProductAdmin)
+
+
+class ProductEnquiryAdmin(admin.ModelAdmin):
+    list_display = ('name','email','product')
+    search_fields=('name',)
+admin.site.register(ProductEnquiry,ProductEnquiryAdmin)
+
+
+class ClientCategoryAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields=('title',)
+admin.site.register(ClientCategory,ClientCategoryAdmin)
+
+
+class ClientListAdmin(admin.ModelAdmin):
+    list_display = ('category','Client_name')
+    search_fields=('category',)
+admin.site.register(ClientList,ClientListAdmin)
