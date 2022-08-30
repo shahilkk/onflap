@@ -2,26 +2,44 @@
 {% block content %}
 {% load static %}
 
+<style>
+    @media only screen and (max-width: 330px){
+        .brtitle{
+            margin-top: 60px;
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
 
 <main class="main">
     <div class="site-breadcrumb">
         <div class="container">
-            <h2 class="breadcrumb-title">Some opportunities for <br> you to explore</h2>
+            <h2 class="breadcrumb-title brtitle">Some opportunities for <br> you to explore</h2>
         </div>
     </div>
 
-    <div class="wrapper">
+ <div class="container">
+    <div class="row">
         {% for job in jobs %}
-        <div class="card">
-            <h3 class="card-title">{{job.department}}</h3>
-            <p class="card-content">
-                {{job.description}}
-            </p>
-            <a href="{% url 'web:careerdetails' job.id %}" class="card-btn">READ MORE</a>
+        <div class="col-lg-12">
+           
+            <div class="card">
+                <h3 class="card-title">{{job.department}}</h3>
+                <p class="card-content">
+                    {{job.description}}
+                </p>
+                <a href="{% url 'web:careerdetails' job.id %}" class="card-btn">READ MORE</a>
+            </div>
+            
         </div>
         {% endfor %}
     </div>
+ </div>
+        
+     
+   
 </main>
 
 
