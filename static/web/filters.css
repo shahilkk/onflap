@@ -61,7 +61,7 @@
         color: #636363;
         font-weight: 400;
         cursor: pointer;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         letter-spacing: .2em;
     }
 
@@ -88,6 +88,9 @@
         .h3filter{
             font-size: 17px;
         }
+.feature-area {
+    margin-top: -65px;
+}
     }
 
 

@@ -36,7 +36,7 @@
                 </p>
 
                 <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                    <a href="{% url 'web:about' %}" class="theme-btn">
+                    <a href="{% url 'web:about' %}" class="theme-btn text-center">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>
                     <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
@@ -59,8 +59,8 @@
 
     <!-- Start Products
 ============================================= -->
-    <div class="feature-area" style="padding: 10px;">
-        <div class="container" style="margin-top: 80px;">
+    <div class="feature-area" style=>
+        <div class="container" style="margin-top: 10px;">
             <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6>
             <div class="feature-wpr grid-3" style="margin-top: 50px;">
 
@@ -573,7 +573,7 @@
                 <h4>
                     <li class="active" data-filter="*">All</li>
                     {% for category in clients %}
-                    <li data-filter=".{{category.title|slugify}}">{{category.title}}</li>
+                    <li data-filter=".{{category.title|slugify}}">{{category.title|capfirst}}</li>
                     {% endfor %}
                 </h4>
             </ul>
