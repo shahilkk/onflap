@@ -19,7 +19,7 @@
     }
 
     h4 {
-        color: grey;
+        color: rgb(250, 246, 246);
         font-size: 24px;
         font-weight: 400;
     }
@@ -68,9 +68,31 @@
     .ul li:hover {
         color: black;
     }
+    @media only screen and (max-width: 430px){
+        .ul li {
+            display: inline;
+            padding: 7px 25px;
+            font-size: 8px;
+            color: #636363;
+            font-weight: 400;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+        }
+        .filterh6 {
+            font-size: 20px;
+        }
+        .pfilter{
+            font-size: 15px;
+        }
+        .h3filter{
+            font-size: 17px;
+        }
+    }
+
 
     li.active {
-        color: rgb(105, 105, 105);
+        color: rgb(255, 254, 254);
         background-color: #b71919;
         border: 1px solid #b71919;
         border-radius: 15px;

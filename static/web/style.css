@@ -605,7 +605,9 @@ select:focus {
   padding: 5rem 0; }
 
 .de-padding {
-  padding: 10rem 0; }
+  padding: 1rem 0;
+  margin-top: -50px;
+ }
 
 .de-pt {
   padding-top: 13rem; }
@@ -2025,3 +2027,46 @@ footer {
     background-color: rgb(119, 4, 4);
   }
 
+
+  @media only screen and (max-width: 1500px) {
+    .about-padding-right {
+      padding-right: 5rem;
+    }
+    .feature-area {
+      margin-top: -16rem;
+  }
+}
+@media only screen and (max-width: 767px){
+  .about-padding-right {
+    padding: 5px;
+    text-align: center;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+  .about-padding-right {
+    /* padding-right: 0; */
+    padding: 25px;
+    /* margin-top: -8px; */
+    text-align: center;
+}
+}
+
+@media only screen  and (max-width: 430px)
+{
+.ul li {
+  display: inline;
+  padding: 9px 22px;
+  font-size: 11px;
+}
+.review-single .review-content p{
+  font-size: 1rem;
+}
+.review-single .review-content .review-bio h5{
+  font-size: 1rem;
+}
+.review-single .review-content .review-bio span{
+  font-size: 1rem;
+}
+}
