@@ -8,15 +8,23 @@
             margin-top: 60px;
             font-size: 1.5rem;
         }
+        .height{
+            margin-top: -77px;
+        }
+        .head1 .brtitle {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
     }
 </style>
 
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
 
 <main class="main">
-    <div class="site-breadcrumb">
+    <div class="site-breadcrumb head1">
         <div class="container">
-            <h2 class="breadcrumb-title brtitle">Some opportunities for <br> you to explore</h2>
+            <h2 class="breadcrumb-title brtitle">Some opportunities for you to explore</h2>
         </div>
     </div>
 
@@ -25,7 +33,7 @@
         {% for job in jobs %}
         <div class="col-lg-4 col-md-6">
            
-            <div class="card">
+            <div class="card height">
                 <h3 class="card-title">{{job.department}}</h3>
                 <p class="card-content">
                     {{job.description}}

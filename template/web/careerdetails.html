@@ -8,12 +8,34 @@
 @media only screen and (max-width: 768px){
 .heading .subhead {
     font-size: 1.5rem;
+    font-weight: 800;
 }
 .value .department{
     font-size: 1.5rem;
 }
-.pad{
-    margin: 10px;
+.row {
+    margin-top: -31px;
+        }
+        .job-details-area h6.title {
+    font-size: 20px;
+}
+.section-title{
+    text-align: center;
+}
+.job-details-area span {
+    font-size: 15px;
+    font-weight: 400;
+    padding: -1px;
+}
+.job-details-area .sub-title {
+    margin-top: 22px;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #b71919;
+    margin-bottom: -3px;
+    padding: -1px;
 }
 }
 </style>
@@ -41,12 +63,49 @@
                         <div class="section-title">
                             <h2 class="title">Job Details</h2>
                         </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title pad">{{d.job_title|title}}</h6>
+                            </div>
+                        </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title">Vacancy</h6>
+                                <span class="pad">{{d.vaccancy|title}}</span>
+                            </div>
+                        </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title ">Job Responsibilities</h6>
+                                <span class="">{{d.job_responsibility|safe|title}}</span>
+                            </div>
+                        </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title ">Educational Requirements</h6>
+                                <span class="">{{d.educational_requirments|safe|title}}</span>
+                            </div>
+                        </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title ">Experience Requirements</h6>
+                                <span class="">{{d.experience_requirments|safe|title}}</span>
+                            </div>
+                        </div>
+                        <div class="media single-job-details">
+                            <div class="media-body">
+                                <h6 class="sub-title ">Additional Requirements</h6>
+                                <span class="">{{d.additional_requirments|safe|title}}</span>
+                            </div>
+                        </div>
+                        <a href="{% url 'web:applynow' category.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
+                            Now</a>
+
                         
-                        <h6 class="title pad">{{d.job_title|title}}</h6>
-                        <!-- <span>Bevilard international</span> -->
-                        <h6 class="sub-title pad">Vacancy</h6>
-                        <span class="pad">{{d.vaccancy}}</span>
-                        <h6 class="sub-title pad">Job Responsibilities</h6>
+                        <!-- <h6 class="title pad">{{d.job_title|title}}</h6> -->
+                        <!-- <h6 class="sub-title pad">Vacancy</h6>
+                        <span class="pad">{{d.vaccancy}}</span> -->
+                        <!-- <h6 class="sub-title pad">Job Responsibilities</h6>
                         <div class="cw_jd_innr">
                             <span class="text pad">
                                 {{d.job_responsibility|safe|title}}
@@ -56,9 +115,9 @@
                         <h6 class="sub-title pad">Educational Requirements</h6>
                         <span class="text pad">
                             {{d.educational_requirments|safe|title}}
-                        </span>
+                        </span> -->
 
-                        <h6 class="sub-title pad">Experience Requirements</h6>
+                        <!-- <h6 class="sub-title pad">Experience Requirements</h6>
                         <span class="text pad">
                             {{d.experience_requirments|safe|title}}
                         </span>
@@ -69,7 +128,7 @@
                         </span>
                         
                         <a href="{% url 'web:applynow' category.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
-                            Now</a>
+                            Now</a> -->
                     </div>
                     <div class="col-xl-3 col-lg-4 offset-xl-1">
                         <div class="widget widget-job-details">

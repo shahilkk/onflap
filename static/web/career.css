@@ -5,16 +5,17 @@
 }
 
 .card {
-    margin-top: 1px;
-    max-width: 300px;
+   
+    max-width: 315px;
     min-height: 250px;
     background: white;
     padding: 30px;
     border-radius: 3px;
     box-sizing: border-box;
     color: black;
-    margin: 20px;
+    /* margin: 20px; */
     box-shadow: rgb(50 50 93 / 25%) 8px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    margin-top: -77px;
 }
 
 .card-title {
@@ -87,4 +88,5 @@ p {
     color: var(--secondary-color);
     background-color: unset !important;
 }
+
 
