@@ -17,6 +17,7 @@ def home(request):
     clients = ClientCategory.objects.filter(is_active =True)
     client_details = ClientList.objects.all()
     context = {
+        "is_house":True,
         "last_video":last_video,
         "reviews":reviews,
         "partners":partners,
@@ -45,13 +46,17 @@ def productEnquiry(request,id):
 
 
 def about(request):
-    return render(request,"web/about.html")    
+    context = {
+        "is_about":True,
+    }
+    return render(request,"web/about.html",context)    
 
 
 # Career section
 def career(request):
     jobs = JobCategory.objects.all()
     context = {
+        "is_career":True,
         "jobs":jobs,
     }
     return render(request,"web/career.html",context)   
@@ -60,6 +65,7 @@ def careerDetails(request,id):
     category = JobCategory.objects.get(id=id)
     career_details = JobDetails.objects.filter(job_category=category)
     context = {
+        "is_careerDetails":True,
         "careerdetails":career_details,
         "category":category, 
     }
@@ -80,8 +86,9 @@ def applynow(request,id):
             return redirect('web:career')         
    
     context = {
-            "form" : apply_forms,
-        }
+        "is_applynow":True,
+        "form" : apply_forms,
+    }
     return render(request,"web/applynow.html",context)
 
 
@@ -98,13 +105,17 @@ def contact(request):
             print('2'*12)
             return redirect('web:home')
     context = {
+        "is_contact":True,
         "contactfrom":contactfrom,
     }
     return render(request,"web/contact.html",context)    
 
 
 def productdetails(request):
-    return render(request,"web/productdetails.html")        
+    context  = {
+        "is_productdetails":True,
+    }
+    return render(request,"web/productdetails.html",context)        
  
 
   

@@ -79,9 +79,7 @@
             text-transform: uppercase;
             letter-spacing: .2em;
         }
-        .filterh6 {
-            font-size: 20px;
-        }
+        
         .pfilter{
             font-size: 15px;
         }
@@ -96,9 +94,9 @@
 
     li.active {
         color: rgb(255, 254, 254);
-        background-color: #b71919;
-        border: 1px solid #b71919;
-        border-radius: 15px;
+        /* background-color: #b71919;
+        border: 1px solid #b71919; */
+        /* border-radius: 15px; */
     }
     .centered {
         color: grey;
@@ -107,3 +105,5 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
+

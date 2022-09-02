@@ -3,7 +3,28 @@
 {% load static %}
 
 
-
+<style>
+    @media only screen and (max-width: 430px){
+        .filterh6 {
+            font-size: 20px;
+            padding: 0px 35px 0px 33px;
+        }
+        .about-right p{
+            padding: 0px 35px 0px 33px;
+        } 
+        .how-we-work {
+            display: flex;
+            align-items: center;
+            margin-left: -26px;
+        }
+        .card{
+            margin-bottom: 98px;
+        }
+    }
+    .card {
+        margin-bottom: 98px;
+    }
+</style>
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
@@ -35,7 +56,7 @@
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
 
-                <div class="hro-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                <div class="hro-btn wow fadeInUp " data-wow-duration="1s" data-wow-delay=".3s" style="align-items: center;">
                     <a href="{% url 'web:about' %}" class="theme-btn text-center">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>

@@ -17,6 +17,14 @@
         }
         
     }
+    @media only screen and (max-width: 430px){
+        .card{
+            margin-bottom: 98px;
+        }
+    }
+    .card {
+        margin-bottom: 98px;
+    }
 </style>
 
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
@@ -33,7 +41,7 @@
         {% for job in jobs %}
         <div class="col-lg-4 col-md-6">
            
-            <div class="card height">
+            <div class="card height d-flex">
                 <h3 class="card-title">{{job.department}}</h3>
                 <p class="card-content">
                     {{job.description}}
