@@ -5,61 +5,91 @@
 
 
 <!-- main style css link -->
+<!-- <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}"> -->
 <link rel="stylesheet" href="{% static 'sof/css/style.css' %}">
 <style>
+    .widget-job-details .single-job-details .media-body {
+        margin-left: 25.25px;
+    }
     @media only screen and (max-width: 380px) {
-  .banner-section .banner-area .banner-left-content .circle svg {
-    top: -95px;
-    left: -45px;
-    width: 135%;
-    height: 292px;
-  }
-}
-@media only screen and (max-width: 991px){
-    .ptb-120 {
-    padding: 1px 0;}
-}
-.banner-section .banner-area .banner-left-content .banner-left-btn {
-    margin-top: 40px;
-}
-.btn--base.active {
-    background: transparent;
-    border: 1px solid #b71919;
-    color: #b71919;
-}
+        .banner-section .banner-area .banner-left-content .circle svg {
+            top: -95px;
+            left: -45px;
+            width: 135%;
+            height: 292px;
+        }
+    }
 
-@media only screen and (max-width: 991px){
+    @media only screen and (max-width: 991px) {
+        .ptb-120 {
+            padding: 1px 0;
+        }
+    }
+
+    .banner-section .banner-area .banner-left-content .banner-left-btn {
+        margin-top: 40px;
+    }
+
+    .btn--base.active {
+        background: transparent;
+        border: 1px solid #b71919;
+        color: #b71919;
+    }
+
+    @media only screen and (max-width: 991px) {
+        .btn--base {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+    }
+
+    .banner-section .banner-area .banner-left-content .banner-left-btn {
+        margin-top: 40px;
+    }
+
     .btn--base {
-    padding: 12px 20px;
-    font-size: 14px;
-}
-}.banner-section .banner-area .banner-left-content .banner-left-btn {
-    margin-top: 40px;
-}
-.btn--base {
-    position: relative;
-    background: #3249B3;
-    border: 1px solid #3249B3;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    z-index: 2;
-    overflow: hidden;
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-}
-a, a:focus, a:hover {
-    text-decoration: none;
-    color: inherit;
-}
-a {
-    display: inline-block;
-}
+        position: relative;
+        background: #3249B3;
+        border: 1px solid #3249B3;
+        color: #fff;
+        padding: 14px 30px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        z-index: 2;
+        overflow: hidden;
+        -webkit-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+    }
 
+    a,
+    a:focus,
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
 
+    a {
+        display: inline-block;
+    }
+    .widget-job-details .single-job-details .media-body h6 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.2px;
+    color: #535764;
+    margin-bottom: 0px;
+}
+.widget-job-details {
+    border-radius: 8px;
+    padding: 0px 16px;
+}
+.widget-job-details .single-job-details img {
+    margin-top: 4px;
+    margin-bottom: -45px;
+    margin-left: -15px;
+}
 </style>
 
 
@@ -72,7 +102,7 @@ a {
         padding: 10px 30px 0;
     }
 
-   
+
 
     .prdcty-inrsec {
         max-width: 1180px;
@@ -132,25 +162,30 @@ a {
         text-decoration: none;
         font: 16px/1.2 var(--zf-secondary-medium);
     }
-    @media only screen and (max-width: 363px){
-    .form-control {
-        width: 76%;
-        }
-        .inner-hdr{
-            font-size: 2rem;
-        padding: 10px 0;
-        }
-     
-    }
-    @media only screen and (max-width: 800px){
-        .inner-hdr{
-            font-size: 2rem;
-        padding: 10px 0;
-        }
+
+    @media only screen and (max-width: 363px) {
         .form-control {
-        width: 100%;
+            width: 76%;
+        }
+
+        .inner-hdr {
+            font-size: 2rem;
+            padding: 10px 0;
+        }
+
+    }
+
+    @media only screen and (max-width: 800px) {
+        .inner-hdr {
+            font-size: 2rem;
+            padding: 10px 0;
+        }
+
+        .form-control {
+            width: 100%;
         }
     }
+
     /* .service-section ,
     :after,
     :before {
@@ -164,10 +199,9 @@ a {
     ============================================= -->
     <div class="site-breadcrumb" style="background: url({% static 'web/img/breadcrumb/breadcrumb.png' %})">
         <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-        <h2 class="breadcrumb-title">Product Details</h2>
-            <ul class="breadcrumb-menu clearfix">
-                <li><a href="{% url 'web:home' %}">Home</a></li>
-                <li class="active">Product Details</li>
+            <h2 class="breadcrumb-title">Product Details</h2>
+            <ul class="breadcrumb-menu">
+                <li><a href="{% url 'web:home' %}" style="color: grey;">Back To Home</a></li>
             </ul>
         </div>
     </div>
@@ -182,12 +216,11 @@ a {
                 <div class="prdcty-inrsec">
                     <div class="cstmr-cntnt-sec">
                         <p class="label-txt blck-txt">For a streamlined work experience</p>
-                        <h2 class="inner-hdr" style="font-weight: 900;">Maximum productivity with minimum use</h2>
+                        <h4 class="inner-hdr" style="font-weight: 500;color: black;">Maximum productivity with minimum use</h4>
                         <p>Let's break the myth that CRMs are all about data entry. Zoho CRM is built to be
                             used less. Automate workflows, processes, campaigns, customer journeys, and more so that you
-                            can focus less on software and more on relationships.</p><a
-                            href="" target="_blank" rel="noopener"
-                            class="learnmore">Read More<span></span></a>
+                            can focus less on software and more on relationships.
+                        </p>
                     </div>
 
                 </div>
@@ -200,17 +233,7 @@ a {
 
     <!-- introoooo -->
 
-
-
-
-
-
-
-
     <section class="banner-section two">
-
-
-
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
                 <div class="col-xl-12 mb-30">
@@ -220,60 +243,89 @@ a {
                             <h1 class="title">Impressive Experience</h1>
                        </div> -->
                         <div class="banner-area">
-                            <div class="banner-text">
-                                <span>TECH</span>
-                            </div>
-                            <div class="banner-left-content">
-                                <div class="banner-left-video">
-                                    <div class="circle">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-                                            height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
-                                            xml:space="preserve">
-                                            <defs>
-                                                <path id="circlePath"
-                                                    d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
-                                            </defs>
-                                            <circle cx="150" cy="100" r="75" fill="none" />
-                                            <g>
-                                                <use xlink:href="#circlePath" fill="none" />
-                                                <text fill="#3249b3">
-                                                    <textPath xlink:href="#circlePath">Onflap * Onflap * Onflap * Onflap
-                                                        * Onflap * Onflap * Onflap * Onflap * Onflap * Onflap * Onflap *
-                                                    </textPath>
-                                                </text>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="video-main">
-                                        <div class="promo-video">
-                                            <div class="waves-block">
-                                                <div class="waves wave-1"></div>
-                                                <div class="waves wave-2"></div>
-                                                <div class="waves wave-3"></div>
+                            <div class="contact-page-info grid-2">
+                                <div class="contact-left">
+                                    <div class="widget widget-job-details">
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
                                             </div>
                                         </div>
-                                        <a class="video-icon video" data-rel="lightcase:myCollection"
-                                            href="https://www.youtube.com/embed/LRhrNC-OC0Y">
-                                            <i class="fas fa-play"></i>
-                                        </a>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'web/img/tick-01.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="banner-left-arrow">
-                                    <img src="{% static 'sof/images/element/element-1.png' %}" alt="element">
-                                </div>
-                                <div class="banner-left-intro">
-                                    <span>Play Intro</span>
-                                </div>
-                                <div class="banner-left-footer">
-                                    <p>Personalization assumed up an excess of position in the showcasing space and has
-                                        made each and every one of your messages exhausting and without feelings.</p>
-                                    <div class="banner-left-btn">
-                                        <a href="{% url 'web:contact' %}" class="btn--base active">Contact Us</a>
+                                
+                                <div class="contact-right">
+                                    <div class="widget widget-job-details">
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb fyhdydv hgyt tfg </h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -282,8 +334,8 @@ a {
     </section>
     <!-- end introooo -->
 
-    
-    <section class="service-section two ptb-120">
+
+    <!-- <section class="service-section two ptb-120">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12">
@@ -293,7 +345,10 @@ a {
                         </div>
                         <div class="service-content">
                             <h2 class="title">Corporate Business Consulting</h2>
-                            <p>That is the reason you can redo each component of our administrations to your organization, items or administrations, and objectives. As a result, you can customize each aspect of our administrations to your organization, products or administrations, and goals.</p>
+                            <p>That is the reason you can redo each component of our administrations to your
+                                organization, items or administrations, and objectives. As a result, you can customize
+                                each aspect of our administrations to your organization, products or administrations,
+                                and goals.</p>
                             <div class="service-widget-item-area">
                                 <div class="row justify-content-center mb-30-none">
                                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
@@ -344,9 +399,19 @@ a {
                             </div>
                             <div class="service-bottom-content">
                                 <h2 class="title">Service Description</h2>
-                                <p>Pick our website architecture administrations, and your business can depend on 100% straightforwardness. From our customized statements to our underlying plans, our group gives your organization complete admittance to our website
-                                    Get free, exact, and moment quote for our website architecture and advancement administrations with our simple to-utilize number cruncher. Our group tailors our website composition administrations to your organization and its one of a kind requirements. That is the reason you can redo each component of our administrations to your organization, items or administrations, and objectives.</p>
-                                <p>We expand the aftereffects of your web composition or upgrade plan, just as improve your advanced advertising methodology, by guaranteeing your site follows best practices for website streamlining (SEO). Web optimization alludes to an umbrella of strategies that upgrade your site’s positioning for significant list items. A higher positioning in list items relates to higher perceivability.</p>
+                                <p>Pick our website architecture administrations, and your business can depend on 100%
+                                    straightforwardness. From our customized statements to our underlying plans, our
+                                    group gives your organization complete admittance to our website
+                                    Get free, exact, and moment quote for our website architecture and advancement
+                                    administrations with our simple to-utilize number cruncher. Our group tailors our
+                                    website composition administrations to your organization and its one of a kind
+                                    requirements. That is the reason you can redo each component of our administrations
+                                    to your organization, items or administrations, and objectives.</p>
+                                <p>We expand the aftereffects of your web composition or upgrade plan, just as improve
+                                    your advanced advertising methodology, by guaranteeing your site follows best
+                                    practices for website streamlining (SEO). Web optimization alludes to an umbrella of
+                                    strategies that upgrade your site’s positioning for significant list items. A higher
+                                    positioning in list items relates to higher perceivability.</p>
                                 <div class="sevice-inner-item-area">
                                     <div class="row justify-content-center mb-30-none">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
@@ -365,7 +430,8 @@ a {
                                                     <img src="{% static 'sof/images/icon/icon-15.png' %}" alt="icon">
                                                 </div>
                                                 <div class="service-inner-content">
-                                                    <h4 class="title">Free access to our award winning road brain stroming</h4>
+                                                    <h4 class="title">Free access to our award winning road brain
+                                                        stroming</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -375,16 +441,23 @@ a {
                                                     <img src="{% static 'sof/images/icon/icon-16.png' %}" alt="icon">
                                                 </div>
                                                 <div class="service-inner-content">
-                                                    <h4 class="title">Successful Project Delivery System in our team</h4>
+                                                    <h4 class="title">Successful Project Delivery System in our team
+                                                    </h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                             
-                                <p>Pick our website architecture administrations, and your business can depend on 100% straightforwardness. From our customized statements to our underlying plans, our group gives your organization complete admittance to our website
-                                    Get free, exact, and moment quote for our website architecture and advancement administrations with our simple to-utilize number cruncher. Our group tailors our website composition administrations to your organization and its one of a kind requirements. That is the reason you can redo each component of our administrations to your organization, items or administrations, and objectives.</p>
-                                
+
+                                <p>Pick our website architecture administrations, and your business can depend on 100%
+                                    straightforwardness. From our customized statements to our underlying plans, our
+                                    group gives your organization complete admittance to our website
+                                    Get free, exact, and moment quote for our website architecture and advancement
+                                    administrations with our simple to-utilize number cruncher. Our group tailors our
+                                    website composition administrations to your organization and its one of a kind
+                                    requirements. That is the reason you can redo each component of our administrations
+                                    to your organization, items or administrations, and objectives.</p>
+
                             </div>
                         </div>
                     </div>
@@ -393,7 +466,7 @@ a {
         </div>
     </section>
 
- 
+
 
 
     <div class="single-area de-padding">
@@ -453,7 +526,7 @@ a {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -473,7 +546,7 @@ a {
 
     <!-- Start Subscribe
     ============================================= -->
-  
+
     <!-- End Subscribe -->
 
 </main>
