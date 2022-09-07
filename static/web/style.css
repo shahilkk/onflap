@@ -168,7 +168,7 @@ p {
 
 .img,
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;

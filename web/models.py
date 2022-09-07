@@ -11,37 +11,35 @@ from django.utils.text import slugify
 # Create your models here.
 
 class VideoUpload(models.Model):
-    video = models.FileField(upload_to='videos',null=True)
+    video = models.FileField(upload_to='videos',null=True,blank=True)
 
     class Meta:
         verbose_name_plural = ("Video upload")
 
 
-class JobCategory(models.Model):
-    department = models.CharField(max_length=100)
-    description = models.CharField(max_length=500)
+# class JobCategory(models.Model):
+#     department = models.CharField(max_length=100,null=True)
+#     # description = models.CharField(max_length=500,null=True)
 
-    class Meta:
-        verbose_name_plural = ("Job Categories")
+#     class Meta:
+#         verbose_name_plural = ("Job Categories")
     
-    def __str__(self):
-        return str(self.department)
+#     def __str__(self):
+#         return str(self.department)
 
 
 class JobDetails(models.Model):
-    job_category = models.ForeignKey(JobCategory,on_delete=models.CASCADE)
-    jobtype_choice =(('Full time','full time'),('Part time','part time'))
-    job_title = models.CharField(max_length=50)
-    vaccancy = models.IntegerField()
-    job_responsibility = HTMLField()
-    educational_requirments = HTMLField()
-    experience_requirments = HTMLField()
-    additional_requirments = HTMLField()
-    location = models.CharField(max_length=50)
-    job_type = models.CharField(max_length=30, choices=jobtype_choice)
-    experience = models.CharField(max_length=100)
-    salary = models.IntegerField()
-
+    jobtype_choice =(('On-site ','On-site '),('Hybrid for India & On-site for Kuwait','Hybrid for India & On-site for Kuwait'))
+    job_title = models.CharField(max_length=50,null=True,blank=True)
+    location = models.CharField(max_length=50,null=True,blank=True)
+    work_mode = models.CharField(max_length=50, choices=jobtype_choice,null=True,blank=True)
+    salary = models.CharField(max_length=50,null=True,blank=True)
+    vaccancy = models.IntegerField(null=True,blank=True)
+    experience = models.IntegerField(null=True,blank=True)
+    job_description = HTMLField(null=True,blank=True)
+    job_responsibility = HTMLField(null=True,blank=True)
+    educational_requirments = HTMLField(null=True,blank=True)
+    
     class Meta:
         verbose_name_plural = ("Job details")
     
@@ -50,7 +48,7 @@ class JobDetails(models.Model):
         return str(self.job_title)
 
 class ApplyNow(models.Model):
-    job = models.ForeignKey(JobDetails,on_delete=models.CASCADE,null=True)
+    job = models.ForeignKey(JobDetails,on_delete=models.CASCADE,null=True,blank=True)
     applicant_name = models.CharField(max_length=100)
     phone = models.CharField(unique=True,max_length=100)
     email = models.EmailField()
@@ -65,8 +63,8 @@ class ApplyNow(models.Model):
 
 class Review(models.Model):
     review = models.TextField()
-    name = models.CharField(max_length=50)
-
+    name = models.CharField(max_length=50,null=True,blank=True)
+    pro_pic = models.FileField(upload_to='review',null=True,default='default_test.jpg',blank=True)
     class Meta:
         verbose_name_plural = ("Reviews")
 
@@ -75,8 +73,8 @@ class Review(models.Model):
 
 
 class Partners(models.Model):
-    partner_name = models.CharField(max_length=100)
-    logo = models.FileField(upload_to='partners')
+    partner_name = models.CharField(max_length=100,null=True,blank=True)
+    logo = models.FileField(upload_to='partners',null=True,blank=True)
 
     class Meta:
         verbose_name_plural = ("Partners")
@@ -99,9 +97,9 @@ class Contact(models.Model):
 
 
 class Product(models.Model):
-    product_name = models.CharField(max_length=50)
-    product_fullname = models.CharField(max_length=100,null=True)
-    product_logo = models.FileField(upload_to='product_log',null=True)
+    product_name = models.CharField(max_length=50,null=True,blank=True)
+    product_fullname = models.CharField(max_length=100,null=True,blank=True)
+    product_logo = models.FileField(upload_to='product_log',null=True,blank=True)
     product_features = HTMLField()
 
     class Meta:
@@ -125,8 +123,8 @@ class ProductEnquiry(models.Model):
         return str(self.name)
 
 class ClientCategory(models.Model):
-    title = models.CharField(max_length=200)
-    is_active = models.BooleanField(default=True)
+    title = models.CharField(max_length=200,null=True,blank=True)
+    is_active = models.BooleanField(default=True,blank=True)
 
     class Meta:
         verbose_name_plural = ("Client Categories")
@@ -136,8 +134,8 @@ class ClientCategory(models.Model):
 
 class ClientList(models.Model):
     category = models.ForeignKey(ClientCategory, on_delete=models.CASCADE)
-    Client_name = models.CharField(max_length=200)
-    description = models.CharField(max_length=100)
+    Client_name = models.CharField(max_length=200,null=True,blank=True)
+    description = models.CharField(max_length=100,null=True,blank=True)
     slug = models.SlugField(unique=True, null=True, blank=True)
 
     class Meta:

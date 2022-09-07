@@ -6,12 +6,12 @@ from . models import *
 
 
 admin.site.register(VideoUpload)
-admin.site.register(JobCategory)
+# admin.site.register(JobCategory)
 
 
 class JobDetailsAdmin(admin.ModelAdmin):
-    list_display = ('job_title','job_category')
-    search_fields=('job_title',)
+    list_display = ('job_title','location','work_mode')
+    search_fields=('job_title','location')
 admin.site.register(JobDetails,JobDetailsAdmin)
 
 

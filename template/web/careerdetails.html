@@ -43,13 +43,13 @@
 <main class="main">
     <div class="site-breadcrumb">
         <div class="container value">
-            {% for d in careerdetails %}
+            {% for d in category %}
             <p class="heading">
-                <span class="subhead ">{{d.job_category.department|title}}, {{d.location|title}}</span>
+                <span class="subhead "> {{d.location|title}}</span>
                 <span class="cw_loc_div"></span><span id="data_jobtype">
-                </span> <span class="subhead">{{d.job_type}}</span>
+                </span> <span class="subhead">{{d.work_mode}}</span>
             </p>
-            <h2 class="breadcrumb-title department">{{d.job_category.department|title}}- {{d.job_title|title}}</h2>
+            <h2 class="breadcrumb-title department">{{d.job_title|upper}}</h2>
 
         </div>
     </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="media single-job-details">
                             <div class="media-body">
-                                <h6 class="sub-title pad">{{d.job_title|title}}</h6>
+                                <h6 class="sub-title pad" style="font-weight: 900;">{{d.job_title|upper}}</h6>
                             </div>
                         </div>
                         <div class="media single-job-details">
@@ -86,60 +86,15 @@
                                 <span class="">{{d.educational_requirments|safe|title}}</span>
                             </div>
                         </div>
-                        <div class="media single-job-details">
-                            <div class="media-body">
-                                <h6 class="sub-title ">Experience Requirements</h6>
-                                <span class="">{{d.experience_requirments|safe|title}}</span>
-                            </div>
-                        </div>
-                        <div class="media single-job-details">
-                            <div class="media-body">
-                                <h6 class="sub-title ">Additional Requirements</h6>
-                                <span class="">{{d.additional_requirments|safe|title}}</span>
-                            </div>
-                        </div>
-                        <a href="{% url 'web:applynow' category.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
+                        <a href="{% url 'web:applynow' d.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
                             Now</a>
 
                         
-                        <!-- <h6 class="title pad">{{d.job_title|title}}</h6> -->
-                        <!-- <h6 class="sub-title pad">Vacancy</h6>
-                        <span class="pad">{{d.vaccancy}}</span> -->
-                        <!-- <h6 class="sub-title pad">Job Responsibilities</h6>
-                        <div class="cw_jd_innr">
-                            <span class="text pad">
-                                {{d.job_responsibility|safe|title}}
-                            </span>
-                        </div>
-
-                        <h6 class="sub-title pad">Educational Requirements</h6>
-                        <span class="text pad">
-                            {{d.educational_requirments|safe|title}}
-                        </span> -->
-
-                        <!-- <h6 class="sub-title pad">Experience Requirements</h6>
-                        <span class="text pad">
-                            {{d.experience_requirments|safe|title}}
-                        </span>
-
-                        <h6 class="sub-title pad">Additional Requirements</h6>
-                        <span class="text pad">
-                            {{d.additional_requirments|safe|title}}
-                        </span>
                         
-                        <a href="{% url 'web:applynow' category.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
-                            Now</a> -->
                     </div>
                     <div class="col-xl-3 col-lg-4 offset-xl-1">
                         <div class="widget widget-job-details">
                             <h3 class="widget-title">Job Details</h3>
-                            <div class="media single-job-details">
-                                <img src="{% static 'career/images/riyastemp/1.svg' %}" alt="icon">
-                                <div class="media-body">
-                                    <h6>Department</h6>
-                                    <span>{{d.job_category.department|title}}</span>
-                                </div>
-                            </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
                                 <div class="media-body">
@@ -151,7 +106,7 @@
                                 <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
                                 <div class="media-body">
                                     <h6>Job Type</h6>
-                                    <span>{{d.job_type}}</span>
+                                    <span>{{d.work_mode}}</span>
                                 </div>
                             </div>
                             <div class="media single-job-details">

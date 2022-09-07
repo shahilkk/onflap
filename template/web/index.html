@@ -3,31 +3,10 @@
 {% load static %}
 
 
-<style>
-    @media only screen and (max-width: 430px){
-        .filterh6 {
-            font-size: 20px;
-            padding: 0px 35px 0px 33px;
-        }
-        .about-right p{
-            padding: 0px 35px 0px 33px;
-        } 
-        .how-we-work {
-            display: flex;
-            align-items: center;
-            margin-left: -26px;
-        }
-        .card{
-            margin-bottom: 98px;
-        }
-    }
-    .card {
-        margin-bottom: 98px;
-    }
-</style>
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
+<link rel="stylesheet" href="{% static 'web/index.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 
@@ -56,7 +35,8 @@
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
 
-                <div class="hro-btn wow fadeInUp " data-wow-duration="1s" data-wow-delay=".3s" style="align-items: center;">
+                <div class="hro-btn wow fadeInUp " data-wow-duration="1s" data-wow-delay=".3s"
+                    style="align-items: center;">
                     <a href="{% url 'web:about' %}" class="theme-btn text-center">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>
@@ -88,39 +68,38 @@
             </div>
             <div class="feature-wpr grid-3" style="margin-top: 50px;">
 
-
-
                 {% for p in product_details %}
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
 
                     <div class="feature-info ">
                         <a href="{% url 'web:productdetails' %}" target="">
-                        <h5 class="text-center">{{p.product_name}}</h5>
-                        <p class="mb-0">
+                            <h5 class="text-center">{{p.product_name}}</h5>
+                            <p class="mb-0">
                                 {{p.product_fullname}}
-                        </p>
+                            </p>
+                        </a>
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
                                 <li class="zp-apps zp-main-crm">
                                     <a href="{% url 'web:productdetails' %}" target="">
-                                        <span>
-                                            <div class="feature-icon">
-                                                <img src="{{p.product_logo.url}}" alt="thumb">
-                                            </div>
-                                        </span>
+                                        <div class="feature-icon">
+                                            <img src="{{p.product_logo.url}}" alt="thumb">
+                                        </div>
                                     </a>
                                 </li>
-                                {{p.product_features|safe}}
+
                                 <!-- <a target="_blank" class="zp-apps zp-bigin">
                                     {{p.product_features|safe}}
                                 </a> -->
 
                             </ul>
+                            {{p.product_features|safe}}
                         </div>
 
                         <button type="button" class="btn btn-lg"
                             style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo</button>
+                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo
+                        </button>
 
 
                         <!-- Modal -->
@@ -163,9 +142,7 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Modal -->
-
                     </div>
                 </div>
                 {% endfor %}
@@ -586,7 +563,7 @@
         <div class="filters filter-button-group">
             <ul class="ul">
                 <h4>
-                    <li class="active" data-filter="*">All</li>
+                    <li class="active text-dark" data-filter="*">All</li>
                     {% for category in clients %}
                     <li data-filter=".{{category.title|slugify}}">{{category.title|capfirst}}</li>
                     {% endfor %}
@@ -599,11 +576,10 @@
             {% for items in client_details %}
             <div class="col-md-3  {{items.category.title|slugify}}  grid-item">
                 <div class="each-item">
-                    <img class="port-image"
-                        src="{% static 'web/img/default.jpg' %}" />
-                        <div class="centered">
-                            <h4>{{items.Client_name}}</h4>
-                        </div> 
+                    <img class="port-image" src="{% static 'web/img/default.jpg' %}" />
+                    <div class="centered">
+                        <h4>{{items.Client_name}}</h4>
+                    </div>
                     <div class="cap1">
                         <h3>{{items.Client_name}}</h3>
                         <p>
@@ -624,13 +600,6 @@
     <!-- ------------------------------------------------ -->
     <!-- ------------------------------------------------ -->
 
-<style>
-    .review_img{
-    width: 6rem;
-    border-radius: 5rem;
-    margin-top: 2rem;
-    }
-</style>
 
     <!-- testimonials
 ============================================= -->
@@ -655,7 +624,8 @@
                                                 {{r.review}}
                                             </p>
                                             <div class="review-bio">
-                                                <img src="{% static 'web/img/default_test.jpg' %}" alt="" class="review_img">
+                                                <img src="{{r.pro_pic.url}}" alt=""
+                                                    class="review_img">
                                                 <h5>{{r.name}}</h5>
                                                 <span>Founder</span>
                                                 <div class="review-rating d-flex align-items-center">

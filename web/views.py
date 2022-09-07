@@ -2,6 +2,11 @@ from django.shortcuts import render,redirect
 
 from web.forms import ApplyNowForm,ContactUsForm
 from .models import *
+from django.core.mail import EmailMessage
+import base64
+import imghdr
+from django.conf import settings
+import csv
 # from unicodedata import category
 
 # Create your views here.
@@ -54,7 +59,7 @@ def about(request):
 
 # Career section
 def career(request):
-    jobs = JobCategory.objects.all()
+    jobs = JobDetails.objects.all()
     context = {
         "is_career":True,
         "jobs":jobs,
@@ -62,32 +67,53 @@ def career(request):
     return render(request,"web/career.html",context)   
 
 def careerDetails(request,id):
-    category = JobCategory.objects.get(id=id)
-    career_details = JobDetails.objects.filter(job_category=category)
+    category = JobDetails.objects.filter(id=id)
+    print(category)
     context = {
         "is_careerDetails":True,
-        "careerdetails":career_details,
+        # "careerdetails":career_details,
         "category":category, 
     }
     return render(request,'web/careerdetails.html',context)
 
 def applynow(request,id):
-    print('hello')
+    
     Jobdetails = JobDetails.objects.get(id=id)
-    apply_forms=ApplyNowForm(request.POST, request.FILES ) 
-    # print('apply_forms')
-    if request.method == 'POST' or 'FILES':
-        # print('post worked')
-        if apply_forms.is_valid():
-            # print('valid')
-            # print(apply_forms.errors)
-            apply_data = apply_forms.save()   
-            ApplyNow.objects.filter(id=apply_data.id).update(job=Jobdetails)
-            return redirect('web:career')         
+    if request.method == 'POST':
+        applicant_name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        cv = request.FILES['cv']
+        job=Jobdetails
+
+        new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
+        new_application.save()
+        # email = EmailMessage('Subject here', 'Here is the message.', settings.EMAIL_HOST_USER, [email])
+        
+        # email.attach_file(cv.name,cv.read())
+        # email.send()
+        return redirect('web:home') 
+    # apply_forms=ApplyNowForm(request.POST, request.FILES ) 
+    # # print('apply_forms')
+    # if request.method == 'POST' or 'FILES':
+    #     # print('post worked')
+    #     if apply_forms.is_valid():
+    #         # print('valid')
+    #         # print(apply_forms.errors)
+    #         apply_data = apply_forms.save()   
+    #         ApplyNow.objects.filter(id=apply_data.id).update(job=Jobdetails)
+    #         email = EmailMessage(
+    #         'Subject here', 'Here is the message.', 'apply_data.email', ['mhdshd.ak@gmail.com'])
+    #         with open(apply_data.cv, "rb") as f:
+    #             encoded_string = f.read()
+    #             filetype= imghdr.what(f.name)
+    #             print(filetype,'""'*6)
+    #         email.attach_file(apply_data.cv)
+    #         email.send()
+    #         return redirect('web:career')         
    
     context = {
         "is_applynow":True,
-        "form" : apply_forms,
     }
     return render(request,"web/applynow.html",context)
 
