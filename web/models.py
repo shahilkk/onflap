@@ -41,7 +41,7 @@ class JobDetails(models.Model):
     educational_requirments = HTMLField(null=True,blank=True)
     
     class Meta:
-        verbose_name_plural = ("Job details")
+        verbose_name_plural = ("Jobs")
     
 
     def __str__(self):

@@ -263,3 +263,13 @@ def applynow(request,id):
         "is_applynow":True,
     }
     return render(request,"web/applynow.html",context)
+
+def handler404(request,exception):
+    return render(request, 'web/404.html', status=404)
+
+
+
+def handler500(request, *args, **argv):
+    response = render("web/500.html")
+    response.status_code = 500
+    return response

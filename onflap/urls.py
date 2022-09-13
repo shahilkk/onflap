@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from web import views
 
 
 urlpatterns = [
@@ -29,3 +30,8 @@ urlpatterns = [
 admin.site.site_header = "Onflap Administration"
 admin.site.site_title = "Onflap  Admin Portal"
 admin.site.index_title = "Welcome to Onflap Admin Portal"
+
+
+handler404 = views.handler404
+
+handler500 = views.handler500
