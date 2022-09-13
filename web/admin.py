@@ -50,6 +50,12 @@ class ProductEnquiryAdmin(admin.ModelAdmin):
 admin.site.register(ProductEnquiry,ProductEnquiryAdmin)
 
 
+class ProductDetailsAdmin(admin.ModelAdmin):
+    list_display = ('product',)
+    search_fields=('product',)
+admin.site.register(ProductDetails,ProductDetailsAdmin)
+
+
 class ClientCategoryAdmin(admin.ModelAdmin):
     list_display = ('title',)
     search_fields=('title',)
@@ -60,3 +66,9 @@ class ClientListAdmin(admin.ModelAdmin):
     list_display = ('category','Client_name')
     search_fields=('category',)
 admin.site.register(ClientList,ClientListAdmin)
+
+
+class ProductFeaturesAdmin(admin.ModelAdmin):
+    list_display = ('features',)
+    search_fields=('features',)
+admin.site.register(ProductFeatures,ProductFeaturesAdmin)

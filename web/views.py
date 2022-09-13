@@ -7,6 +7,12 @@ import base64
 import imghdr
 from django.conf import settings
 import csv
+
+from django.core.mail import send_mail
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+import os
+
 # from unicodedata import category
 
 # Create your views here.
@@ -50,6 +56,22 @@ def productEnquiry(request,id):
     return redirect('web:home')  
 
 
+def productdetails(request,id):
+    product_obj = Product.objects.get(id=id)
+    print(product_obj)
+    productdetail_obj = ProductDetails.objects.get(product=product_obj)
+    product_detail = ProductDetails.objects.filter(product=product_obj).values("features__features")
+    # detailss = productdetail_obj.features
+    # print(detailss)
+    # print(productdetail_obj,"&"*10)
+    context  = {
+        "is_productdetails":True,
+        "productdetail" : productdetail_obj,
+        "detail":product_detail,
+    }
+    return render(request,"web/productdetails.html",context)     
+
+
 def about(request):
     context = {
         "is_about":True,
@@ -66,6 +88,7 @@ def career(request):
     }
     return render(request,"web/career.html",context)   
 
+
 def careerDetails(request,id):
     category = JobDetails.objects.filter(id=id)
     print(category)
@@ -75,6 +98,8 @@ def careerDetails(request,id):
         "category":category, 
     }
     return render(request,'web/careerdetails.html',context)
+
+
 
 def applynow(request,id):
     
@@ -88,10 +113,37 @@ def applynow(request,id):
 
         new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
         new_application.save()
-        # email = EmailMessage('Subject here', 'Here is the message.', settings.EMAIL_HOST_USER, [email])
-        
-        # email.attach_file(cv.name,cv.read())
+        subject ='Hello',
+        message = 'Body goes here',
+        email = 'mhdshd.ak@gmail.com',
+        try:
+
+            mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
+            print(cv.name, cv.read(), cv.content_type)
+            print(cv,'#'*10)
+            print(new_application.cv,'*'*10)
+            
+            file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
+            print(file_path,'%'*10)
+            mail.attach_file(file_path)
+            # mail.content_type
+            mail.send()
+            return redirect('web:home')
+        except Exception as e:
+            print(e)
+            return redirect('web:contact')
+        # email = EmailMessage(
+        #     'Hello',
+        #     'Body goes here',
+        #     'from@example.com',
+        #     ['mhdshd.ak@gmail.com'],
+        #   headers={'Message-ID': 'foo'},
+        # )
+        # email.attach(cv,'new_application.cv')
         # email.send()
+        
+        
+        # message.attach_file(new_application.cv)
         return redirect('web:home') 
     # apply_forms=ApplyNowForm(request.POST, request.FILES ) 
     # # print('apply_forms')
@@ -120,6 +172,7 @@ def applynow(request,id):
 
 
 
+
 def contact(request):
     contactfrom = ContactUsForm(request.POST)
     if request.method == 'POST':
@@ -137,11 +190,76 @@ def contact(request):
     return render(request,"web/contact.html",context)    
 
 
-def productdetails(request):
-    context  = {
-        "is_productdetails":True,
-    }
-    return render(request,"web/productdetails.html",context)        
+   
  
 
-  
+
+
+
+def applynow(request,id):
+    
+    Jobdetails = JobDetails.objects.get(id=id)
+    if request.method == 'POST':
+        applicant_name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        cv = request.FILES['cv']
+        job=Jobdetails
+
+        new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
+        new_application.save()
+        subject ='Hello',
+        message = 'Body goes here',
+        email = 'mhdshd.ak@gmail.com',
+        try:
+
+            mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
+            print(cv.name, cv.read(), cv.content_type)
+            print(cv,'#'*10)
+            print(new_application.cv,'*'*10)
+            
+            file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
+            print(file_path,'%'*10)
+            mail.attach_file(file_path)
+            # mail.content_type
+            mail.send()
+            return redirect('web:home')
+        except Exception as e:
+            print(e)
+            return redirect('web:contact')
+        # email = EmailMessage(
+        #     'Hello',
+        #     'Body goes here',
+        #     'from@example.com',
+        #     ['mhdshd.ak@gmail.com'],
+        #   headers={'Message-ID': 'foo'},
+        # )
+        # email.attach(cv,'new_application.cv')
+        # email.send()
+        
+        
+        # message.attach_file(new_application.cv)
+        return redirect('web:home') 
+    # apply_forms=ApplyNowForm(request.POST, request.FILES ) 
+    # # print('apply_forms')
+    # if request.method == 'POST' or 'FILES':
+    #     # print('post worked')
+    #     if apply_forms.is_valid():
+    #         # print('valid')
+    #         # print(apply_forms.errors)
+    #         apply_data = apply_forms.save()   
+    #         ApplyNow.objects.filter(id=apply_data.id).update(job=Jobdetails)
+    #         email = EmailMessage(
+    #         'Subject here', 'Here is the message.', 'apply_data.email', ['mhdshd.ak@gmail.com'])
+    #         with open(apply_data.cv, "rb") as f:
+    #             encoded_string = f.read()
+    #             filetype= imghdr.what(f.name)
+    #             print(filetype,'""'*6)
+    #         email.attach_file(apply_data.cv)
+    #         email.send()
+    #         return redirect('web:career')         
+   
+    context = {
+        "is_applynow":True,
+    }
+    return render(request,"web/applynow.html",context)

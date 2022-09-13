@@ -28,22 +28,18 @@
 
     <!-- Start Blog-Content
     ============================================= -->
+
     <div class="single-area de-padding">
         <div class="container">
             <div class="prdcty-sec">
                 <div class="prdcty-inrsec">
                     <div class="cstmr-cntnt-sec">
-                        <p class="label-txt blck-txt">For a streamlined work experience</p>
-                        <h4 class="inner-hdr" style="font-weight: 500;color: black;">Maximum productivity with minimum
-                            use</h4>
+                        <p class="label-txt blck-txt">{{productdetail.heading1}}</p>
+                        <h4 class="inner-hdr" style="font-weight: 500;color: black;">
+                            {{productdetail.heading2}}
+                        </h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
+                            {{productdetail.description}}
                         </p>
                     </div>
 
@@ -71,51 +67,20 @@
                                 <div class="contact-left">
                                     <div class="widget widget-job-details">
                                         <div class="media single-job-details">
+                                        {% for f in detail %}
                                             <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
                                             <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
+                                                <h6>
+                                                {{f.features__features}}
+                                                    {% comment %} {{productdetail.features|safe}} {% endcomment %}
+                                                </h6>
                                             </div>
-                                        </div>
-                                        <div class="media single-job-details">
-                                            <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
-                                            <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
-                                            </div>
-                                        </div>
-                                        <div class="media single-job-details">
-                                            <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
-                                            <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
-                                            </div>
-                                        </div>
-                                        <div class="media single-job-details">
-                                            <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
-                                            <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
-                                            </div>
-                                        </div>
-                                        <div class="media single-job-details">
-                                            <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
-                                            <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
-                                            </div>
-                                        </div>
-                                        <div class="media single-job-details">
-                                            <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
-                                            <div class="media-body">
-                                                <h6>qweryuiopl jkhjgj fcfsdxf gfdtydrtdrtdghf gytdtydtrdg hgyyftygb
-                                                    fyhdydv hgyt tfg </h6>
-                                            </div>
+                                        {% endfor %}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="contact-right">
+                                {% comment %} <!-- <div class="contact-right">
                                     <div class="widget widget-job-details">
                                         <div class="media single-job-details">
                                             <img src="{% static 'web/img/tick-01.png' %}" alt="icon">
@@ -160,7 +125,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -169,6 +134,7 @@
         </div>
     </section>
     <!-- end introooo -->
+
 </main>
 
 

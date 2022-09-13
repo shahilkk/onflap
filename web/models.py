@@ -109,6 +109,29 @@ class Product(models.Model):
         return str(self.product_name)
 
 
+class ProductFeatures(models.Model):
+    features = models.CharField(max_length=1000,null=True,blank=True)
+
+    def __str__(self):
+        return str(self.features)
+
+
+class ProductDetails(models.Model):
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    heading1 = models.CharField(max_length=500,null=True,blank=True)
+    heading2 = models.CharField(max_length=500,null=True,blank=True)
+    description = models.CharField(max_length=1500,null=True,blank=True)
+    features = models.ManyToManyField(ProductFeatures,null=True,blank=True)
+
+    class Meta:
+        verbose_name_plural = ("Product Details")
+
+    def __str__(self):
+        return str(self.product)
+
+
+
+
 class ProductEnquiry(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()

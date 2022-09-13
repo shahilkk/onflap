@@ -5,9 +5,9 @@
 }
 
 .card {
-    
+   
     max-width: 315px;
-    max-height: 350px;
+    min-height: 250px;
     background: white;
     padding: 30px;
     border-radius: 3px;
@@ -34,8 +34,7 @@
 .card-btn {
     all: unset;
     display: block;
-    margin-left: 164px;
-    position: fixed;
+    margin-left: auto;
     border: 2px solid #b71919;
     padding: 10px 15px;
     border-radius: 25px;
