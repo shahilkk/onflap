@@ -199,7 +199,7 @@
     list-style: none;
   }
   .job-details-area ul li {
-    font-size: var(--body-font-size);
+    font-size: var(--font-2);
     line-height: var(--line-height30);
     letter-spacing: 0.3px;
     color: #5B6880;

@@ -3,9 +3,6 @@
 {% load static %}
 
 <style>
-    .card-btn{
-        
-    }
     @media only screen and (max-width: 330px){
         .brtitle{
             margin-top: 60px;
@@ -27,11 +24,15 @@
     }
     .card {
         margin-bottom: 98px;
+        height: 400px;
     }
-    @media only screen and (max-width: 1024px){
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
         .card-btn{
             position: absolute;
             margin: 324px 0px 0px 122px;
+        }
+        .card{
+            height: 400px;
         }
     }
 </style>
@@ -50,12 +51,12 @@
         {% for job in jobs %}
         <div class="col-lg-4 col-md-6">
            
-            <div class="card height d-flex" style="height: 400px;">
+            <div class="card height d-flex" style="">
                 <h3 class="card-title">{{job.job_title}}</h3>
                 <p class="card-content">
                     {{job.job_description|safe}}
                 </p>
-                <a href="{% url 'web:careerdetails' job.id %}" class="card-btn fixed-bottom" style="position: absolute;margin: 300px 0px 0px 151px;">READ MORE</a>
+                <a href="{% url 'web:careerdetails' job.id %}" class="card-btn fixed-bottom" style="">READ MORE</a>
             </div>
             
         </div>

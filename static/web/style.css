@@ -2291,10 +2291,10 @@ footer .footer-shape img {
 }
 
 .site-breadcrumb .breadcrumb-title {
-  font-size: 4.8rem;
+  font-size: 32px;
   text-transform: capitalize;
   color: var(--heading-color);
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .site-breadcrumb .breadcrumb-menu {
