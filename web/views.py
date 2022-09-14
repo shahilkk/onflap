@@ -116,6 +116,7 @@ def applynow(request,id):
    
     context = {
         "is_applynow":True,
+        "Jobdetails":Jobdetails
     }
     return render(request,"web/applynow.html",context)
 
