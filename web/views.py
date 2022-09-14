@@ -25,6 +25,8 @@ def home(request):
     reviews = Review.objects.all()
     partners = Partners.objects.all()
     product_details = Product.objects.all()
+    # for i in product_details :
+    #     print(i.product_features)
     clients = ClientCategory.objects.filter(is_active =True)
     client_details = ClientList.objects.all()
     context = {

@@ -3,46 +3,19 @@
 {% load static %}
 
 
-<style>
-    @media only screen and (max-width: 430px) {
-        .filterh6 {
-            font-size: 20px;
-            padding: 0px 35px 0px 33px;
-        }
-
-        .about-right p {
-            padding: 0px 35px 0px 33px;
-        }
-
-        .how-we-work {
-            display: flex;
-            align-items: center;
-            margin-left: -26px;
-        }
-
-        .card {
-            margin-bottom: 98px;
-        }
-    }
-
-    .card {
-        margin-bottom: 98px;
-    }
-
-    img.tm-people {
-        width: 60px;
-        height: 60px;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        max-width: none
-    }
-</style>
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
+<link rel="stylesheet" href="{% static 'web/index.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+<style>
+    @media only screen and (max-width: 780px) {
+    #clients .client-logo {
+    padding: 15px;
+    }
+}
+</style>
 
 
 <main class="main">
@@ -95,43 +68,46 @@
 
     <!-- Start Products
 ============================================= -->
-    <div class="feature-area" style=>
+    <div class="feature-area" style="margin-top: -5rem">
         <div class="container" style="margin-top: 10px;">
-            <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6>
+            <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
+            <div class="section-header">
+                <h3 class="h3filter">Our Flagship Products</h3>
+            </div>
             <div class="feature-wpr grid-3" style="margin-top: 50px;">
-
-
 
                 {% for p in product_details %}
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
 
                     <div class="feature-info ">
-                        <h5 class="text-center">{{p.product_name}}</h5>
-                        <p class="mb-0">
-                            {{p.product_fullname}}
-                        </p>
+                        <a href="{% url 'web:productdetails' p.id %}" target="">
+                            <h5 class="text-center">{{p.product_name}}</h5>
+                            <p class="mb-0">
+                                {{p.product_fullname}}
+                            </p>
+                        </a>
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
                                 <li class="zp-apps zp-main-crm">
-                                    <a href="{% url 'web:productdetails' %}" target="">
-                                        <span>
-                                            <div class="feature-icon">
-                                                <img src="{{p.product_logo.url}}" alt="thumb">
-                                            </div>
-                                        </span>
+                                    <a href="{% url 'web:productdetails' p.id %}" target="">
+                                        <div class="feature-icon">
+                                            <img src="{{p.product_logo.url}}" alt="thumb">
+                                        </div>
                                     </a>
                                 </li>
-                                <!-- {{p.product_features|safe}} -->
-                                <a target="_blank" class="zp-apps zp-bigin">
+
+                                <!-- <a target="_blank" class="zp-apps zp-bigin">
                                     {{p.product_features|safe}}
-                                </a>
+                                </a> -->
 
                             </ul>
+                            {{p.product_features|safe}}
                         </div>
 
                         <button type="button" class="btn btn-lg"
                             style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo</button>
+                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo
+                        </button>
 
 
                         <!-- Modal -->
@@ -174,9 +150,7 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Modal -->
-
                     </div>
                 </div>
                 {% endfor %}
@@ -197,8 +171,10 @@
     <div class="feature-areag de-pt">
         <div class="container">
             <div class=" feature-2 grid-12 ml-5">
-                <h6 class="text-center filterh6" style="font-weight: 900;">OUR RANGE OF PRODUCTS</h6>
-
+                <!-- <h6 class="text-center filterh6" style="font-weight: 900;">OUR RANGE OF PRODUCTS</h6> -->
+                <div class="section-header">
+                    <h3 class="h3filter">Our Range Of Products</h3>
+                </div>
                 <div class="feature-wpr grid-3">
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="feature-icon">
@@ -229,20 +205,6 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/11.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">GLOBE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Global Booking Engine</span><br>
-
-                                Take your travel business online
-                                effortlessly
-                            </p>
-                        </div>
-                    </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
@@ -256,20 +218,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/13.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FILMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Learning
-                                    Management System</span><br>
-                                Replace the FILMS in your life with
-                                FILMS
-                            </p>
-                        </div>
-                    </div>
+                    
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
@@ -387,20 +336,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/7.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">E-COM</h5>
-                            <p class="mb-0">
-                                Grow your online business faster and
-                                quicker with our unified platform that
-                                can be easily set up and launched in
-                                minutes
-                            </p>
-                        </div>
-                    </div>
+                    
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
@@ -431,7 +367,10 @@
 ============================================= -->
 
     <div class="container">
-        <h6 class="text-center filterh6" style="margin-top: 80px;">OUR SERVICES</h6>
+        <!-- <h6 class="text-center filterh6" style="margin-top: 80px;">OUR SERVICES</h6> -->
+        <div class="section-header">
+            <h3 class="h3filter" style="margin-top: 80px;">Our Services</h3>
+        </div>
         <div class="feature-wpr grid-3" style="margin-top: 40px;">
 
             <div class="feature-box  ">
@@ -493,9 +432,9 @@
                     </div>
 
                     <div class="card-body" style="overflow-y: auto">
-                        <h4 class="card-title" style="color: #ef6363;">Web Services</h4>
+                        <h4 class="card-title" style="color: #ef6363;">Web / Digital Marketing</h4>
                         <p class="card-text">
-                            otal solutions for any kind of requirements, whether it be design
+                            Total solutions for any kind of requirements, whether it be design
                             development of website/e-commerce/web-applications, domain registration hosting,
                             implementing
                             SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).
@@ -566,29 +505,12 @@
             <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
                 style="visibility: visible; animation-name: fadeInUp;">
                 {% for p in partners %}
-                <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="col-lg-3 col-md-4 col-xs-6 col-6">
                     <div class="client-logo">
                         <img src="{{p.logo.url}}" class="img-fluid" alt="">
                     </div>
                 </div>
                 {% endfor %}
-                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/logo/TRACOMS logo-01.png' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/logo/Amiyon Logo.png' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/logo/Mehery logo.png' %}" class="img-fluid" alt="">
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -601,13 +523,15 @@
     <!-- Client Section
 ============================================= -->
     <div class="container">
-        <h6 class="text-center filterh6" style="margin-top: 80px;">We Cater To</h6>
-
+        <!-- <h6 class="text-center filterh6" style="margin-top: 80px;">We Cater To</h6> -->
+        <div class="section-header">
+            <h3 class="h3filter">We Cater To</h3>
+        </div>
 
         <div class="filters filter-button-group">
             <ul class="ul">
                 <h4>
-                    <li class="active" data-filter="*">All</li>
+                    <li class="active text-dark" data-filter="*">All</li>
                     {% for category in clients %}
                     <li data-filter=".{{category.title|slugify}}">{{category.title|capfirst}}</li>
                     {% endfor %}
@@ -618,11 +542,12 @@
 
         <div class="content grid row">
             {% for items in client_details %}
-            <div class="col-md-3  {{items.category.title|slugify}}  grid-item">
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item" style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="port-image" src="{% static 'web/img/default.jpg' %}" />
+                    <img class="port-image" src="{{items.client_log.url}}" style="padding: 5px;height: 80px;width: 80px;"/>
                     <div class="centered">
-                        <h4>{{items.Client_name}}</h4>
+                        <!-- <img src="{{items.client_log.url}}" alt=""> -->
+                        <!-- <h4>{{items.Client_name}}</h4> -->
                     </div>
                     <div class="cap1">
                         <h3>{{items.Client_name}}</h3>
@@ -645,7 +570,6 @@
     <!-- ------------------------------------------------ -->
 
 
-
     <!-- testimonials
 ============================================= -->
     <div class="container ">
@@ -654,6 +578,8 @@
         </div>
         <div class="review-area de-pb" style="margin-top:50px ;">
             <div class="container">
+
+                
 
                 <div class="swiper-container review-wpr">
                     <div class="swiper-wrapper">
@@ -665,11 +591,13 @@
 
                                     <div class="col-xl-8 offset-xl-2">
                                         <div class="review-content">
+                                            <img src="{{r.pro_pic.url}}" alt=""
+                                                    class="review_img">
                                             <p>
                                                 {{r.review}}
                                             </p>
                                             <div class="review-bio">
-                                                <img src="{% static 'web/img/default_test.jpg' %}" alt="">
+                                                
                                                 <h5>{{r.name}}</h5>
                                                 <span>Founder</span>
                                                 <div class="review-rating d-flex align-items-center">
@@ -688,7 +616,7 @@
 
                         </div>
                         {% endfor %}
-                    </div>
+                    </div> 
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -740,8 +668,6 @@
         });
     })
 </script>
-
-
 
 
 {% endblock %}

@@ -71,11 +71,11 @@
     background-size: 960px auto;
 }
 
-.onflap-apps-category ul li:first-child {
+/* .onflap-apps-category ul li:first-child {
     width: 99%;
     font-size: 14px;
     padding: 0 10px 10px;
-}
+} */
 
 .onflap-apps-category ul li {
     position: relative;
@@ -131,9 +131,9 @@
     border-bottom: 1px solid #b71919;
 }
 
-.onflap-apps-category ul li:hover {
+/* .onflap-apps-category ul li:hover {
     border-bottom: 1px solid #0a3daa;
-}
+} */
 
 
 
