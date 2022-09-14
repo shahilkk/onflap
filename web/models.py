@@ -159,6 +159,7 @@ class ClientList(models.Model):
     category = models.ForeignKey(ClientCategory, on_delete=models.CASCADE)
     Client_name = models.CharField(max_length=200,null=True,blank=True)
     description = models.CharField(max_length=100,null=True,blank=True)
+    client_log = models.FileField(upload_to='clientlogo',null=True,blank=True)
     slug = models.SlugField(unique=True, null=True, blank=True)
 
     class Meta:

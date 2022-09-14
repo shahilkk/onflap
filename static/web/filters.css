@@ -20,8 +20,8 @@
 
     h4 {
         color: rgb(250, 246, 246);
-        font-size: 24px;
-        font-weight: 400;
+        font-size: 35px;
+        font-weight: 600;
     }
 
     #portfolio p {
@@ -57,12 +57,13 @@
     .ul li {
         display: inline;
         padding: 10px 25px;
-        font-size: 14px;
+        font-size: 16px;
         color: #636363;
         font-weight: 400;
         cursor: pointer;
         /* text-transform: uppercase; */
         letter-spacing: .2em;
+        font-family: var(--font-2);
     }
 
     .ul li:hover {

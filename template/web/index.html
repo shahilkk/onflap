@@ -68,7 +68,7 @@
 
     <!-- Start Products
 ============================================= -->
-    <div class="feature-area" style=>
+    <div class="feature-area" style="margin-top: -5rem">
         <div class="container" style="margin-top: 10px;">
             <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
             <div class="section-header">
@@ -205,20 +205,6 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/11.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">GLOBE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Global Booking Engine</span><br>
-
-                                Take your travel business online
-                                effortlessly
-                            </p>
-                        </div>
-                    </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
@@ -232,20 +218,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/13.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FILMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Learning
-                                    Management System</span><br>
-                                Replace the FILMS in your life with
-                                FILMS
-                            </p>
-                        </div>
-                    </div>
+                    
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
@@ -363,20 +336,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/7.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">E-COM</h5>
-                            <p class="mb-0">
-                                Grow your online business faster and
-                                quicker with our unified platform that
-                                can be easily set up and launched in
-                                minutes
-                            </p>
-                        </div>
-                    </div>
+                    
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
@@ -472,9 +432,9 @@
                     </div>
 
                     <div class="card-body" style="overflow-y: auto">
-                        <h4 class="card-title" style="color: #ef6363;">Web Services</h4>
+                        <h4 class="card-title" style="color: #ef6363;">Web / Digital Marketing</h4>
                         <p class="card-text">
-                            otal solutions for any kind of requirements, whether it be design
+                            Total solutions for any kind of requirements, whether it be design
                             development of website/e-commerce/web-applications, domain registration hosting,
                             implementing
                             SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).
@@ -582,11 +542,12 @@
 
         <div class="content grid row">
             {% for items in client_details %}
-            <div class="col-md-3  {{items.category.title|slugify}}  grid-item">
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item" style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="port-image" src="{% static 'web/img/default.jpg' %}" />
+                    <img class="port-image" src="{{items.client_log.url}}" style="padding: 5px;height: 80px;width: 80px;"/>
                     <div class="centered">
-                        <h4>{{items.Client_name}}</h4>
+                        <!-- <img src="{{items.client_log.url}}" alt=""> -->
+                        <!-- <h4>{{items.Client_name}}</h4> -->
                     </div>
                     <div class="cap1">
                         <h3>{{items.Client_name}}</h3>
