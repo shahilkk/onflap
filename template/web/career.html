@@ -41,12 +41,12 @@
         {% for job in jobs %}
         <div class="col-lg-4 col-md-6">
            
-            <div class="card height d-flex h-100">
+            <div class="card height d-flex" style="height: 400px;">
                 <h3 class="card-title">{{job.job_title}}</h3>
                 <p class="card-content">
                     {{job.job_description|safe}}
                 </p>
-                <a href="{% url 'web:careerdetails' job.id %}" class="card-btn fixed-bottom">READ MORE</a>
+                <a href="{% url 'web:careerdetails' job.id %}" class="card-btn fixed-bottom" style="position: absolute;margin: 300px 0px 0px 151px;">READ MORE</a>
             </div>
             
         </div>

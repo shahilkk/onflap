@@ -16,7 +16,7 @@ admin.site.register(JobDetails,JobDetailsAdmin)
 
 
 class ApplyNowAdmin(admin.ModelAdmin):
-    list_display = ('applicant_name','job')
+    list_display = ('applicant_name','job','cv')
     search_fields=('job_title',)
 admin.site.register(ApplyNow,ApplyNowAdmin)
 
