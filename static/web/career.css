@@ -15,7 +15,7 @@
     color: black;
     /* margin: 20px; */
     box-shadow: rgb(50 50 93 / 25%) 8px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
-    margin-top: -77px;
+    margin-top: -20px;
 }
 
 .card-title {
@@ -44,8 +44,35 @@
     cursor: pointer;
     letter-spacing: 1.2px;
     position: absolute;
-    margin: 220px 0px 0px 151px;
+    margin: 215px 0px 0px 149px;
 }
+@media only screen and (min-width: 320px){
+    .card-btn {
+        position: absolute;
+        margin: 215px 0px 0px 122px;
+    }
+
+    .card {
+        height: 316px;
+    }
+}
+@media only screen and (min-width: 370px) and (max-width: 1044px) {
+    .card-btn {
+        position: absolute;
+        margin: 215px 0px 0px 149px;
+    }
+
+    .card {
+        height: 316px;
+    }
+}
+.job{
+    margin-bottom: 0.5rem;
+    padding: 2px 93px;
+    justify-content: center;
+    text-align: center;
+}
+
 
 
 
@@ -89,6 +116,121 @@ p {
     line-height: 1.9;
     color: var(--secondary-color);
     background-color: unset !important;
+}
+
+
+
+.head{
+    margin-top: 78px;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: var(--heading-color);
+    font-weight: bold;
+}
+.cw_loc_div {
+    opacity: .3;
+    margin: 0 15px;
+    width: 1px;
+    height: 22px;
+    background-color: #707070;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+}
+.subhead{
+    font-size: 20px;
+}
+.listtype {
+padding-left: 13px;
+position: relative;
+margin-bottom: 4px;
+list-style: none;
+font-family: var(--zf-primary-regular) !important;
+font-size: 17px;
+}
+.cw_jd_innr {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+.text{
+font-size: 15px !important;
+letter-spacing: 0;
+font-family: var(--zf-primary-regular);
+line-height: 1.9;
+color: var(--secondary-color);
+background-color: unset !important;
+}
+
+@media only screen and (max-width: 330px) {
+.brtitle {
+    margin-top: 60px;
+    font-size: 1.5rem;
+}
+
+.height {
+    margin-top: -77px;
+}
+
+.head1 .brtitle {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+}
+
+@media only screen and (max-width: 430px) {
+.card {
+    margin-bottom: 98px;
+}
+.job{
+    padding: 2px 10px 46px;
+    text-align: center;
+}
+}
+
+.card {
+margin-bottom: 98px;
+height: 316px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+.card-btn {
+    position: absolute;
+    margin: 324px 0px 0px 122px;
+}
+
+.card {
+    height: 316px;
+}
+}
+.job-redirect-button {
+padding: 15px 4px;
+border: 3px solid #0097a4;
+color: #fff;
+display: inline-block;
+font-size: 18px;
+margin-right: 20px;
+margin-bottom: 30px;
+}
+
+.margin-top-10 {
+margin-top: 10px;
+}
+@media (min-width: 1200px){
+.col-lg-offset-3 {
+margin-left: 25%;
+}
+}
+
+@media (min-width: 1200px){
+.col-lg-6 {
+width: 50%;
+}
+}
+.job-redirect-button span {
+background: #0097a4;
+padding: 10px;
 }
 
 

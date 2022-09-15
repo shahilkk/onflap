@@ -17,6 +17,8 @@ urlpatterns = [
     path('applynow/<int:id>',views.applynow,name='applynow'),
 
     path('contact',views.contact,name='contact'),
+
+    path('indianbenfits',views.indianBenfits,name="indianbenfits")
     
     
 ]

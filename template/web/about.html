@@ -10,13 +10,13 @@
     <div class="about-area de-pt">
         <div class="about-wpr grid-2">
             <div class="about-left">
-                <div class="about-img wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                    <!-- <img src="{% static 'web/img/about/about-1.png' %}" alt="thumb"> -->
+                <div class="about-img">
+                    <img src="{% static 'web/img.jpg' %}" alt="thumb">
                 </div>
             </div>
             <div class="about-right about-padding-right">
                 <!-- <span class="about-sub-title">About Agency</span> -->
-                <h2 data-splitting class="about-title wow text-dark" data-wow-duration=".1s" data-wow-delay=".4s">WHO WE
+                <h2 class="about-title" style="color: black;">WHO WE
                     ARE</h2>
                 <p>
                     Established with the specific aim of
@@ -71,360 +71,61 @@
     </div>
     <!-- End About -->
 
-    <!-- Start Feature
-    ============================================= -->
-    <div class="feature-areag de-pt">
-        <div class="container">
-            <div class=" feature-2 grid-12 ml-5">
-                <h6 class="text-center" style="font-weight: 900;">OUR RANGE OF PRODUCTS</h6>
 
-                <div class="feature-wpr grid-3">
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/9.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIRST</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Financial Reporting System</span><br>
+    <!-- mission vision -->
 
-                                With all financial data in a single
-                                place accountants wont have to spend
-                                hours cross posting data
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/10.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">CORE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Customer Oriented Relations
-                                    Enterprise</span><br>CORE manages easily and securely
-                                your client information and client
-                                concerns
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/11.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">GLOBE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Global Booking Engine</span><br>
+    <div class="container">
+        <div class="row">
+            <!-- <section class="mx-auto my-5" style="max-width: 23rem;"> -->
 
-                                Take your travel business online
-                                effortlessly
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body">
+                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+                            <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="para">
+                                "Everyday life is like programming,
+                                If you love something you can put beauty into it."
+                                <!-- <a href="#" class="text-info">@consequat</a>." -->
                             </p>
-                        </div>
+                            <footer class="blockquote-footer pt-4 mt-4 border-top">
+                                Vision
+                            </footer>
+                        </blockquote>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">EDMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Electronic Data Management System</span><br>
-                                One point source to archive
-                                all your documents
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/13.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FILMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Learning
-                                    Management System</span><br>
-                                Replace the FILMS in your life with
-                                FILMS
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FORCE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">FOR Clinical Efficiency</span><br>
-                                Quick overview of patient or doctor
-                                information and appointments or
-                                rooster management
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/box-01.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">PAC</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Pack And Courier</span><br>
-                                Effortless and secure booking creation
-                                for your clients to pack and move their
-                                items worldwide
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/1.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">R-POS(RESTO)</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">RESTO - POS</span><br>
-                                Manage your restaurant business with
-                                our Resto-POS system
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/2.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">R-POS(RETAIL)</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">RETAIL - POS</span><br>
-
-                                With all financial data in a single
-                                place accountants wont have to spend
-                                hours cross posting data
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/3.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">ATOMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">A Total Office Management Suite</span><br>
-                                Custom ERP comprising of multiple
-                                stand alone modules which helps to
-                                integrate different operations of your
-                                enterprise
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/4.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIIMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Inventory
-                                    Management System</span><br>
-                                Get up to date information of your
-                                business' inventory updated
-                                movements
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/5.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">HRMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Human Resource Management System</span><br>
-                                Employee attendance, salary
-                                processing and information
-                                management have never been easier
-                                with our online HR system
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/6.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIESTA</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
-                                    Travel Accounting</span><br>
-                                It is our flagship premier product
-                                which is widely acknowledged in the
-                                travel industry for all back, mid and
-                                front office operations
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/7.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">E-COM</h5>
-                            <p class="mb-0">
-                                Grow your online business faster and
-                                quicker with our unified platform that
-                                can be easily set up and launched in
-                                minutes
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">PAYNET</h5>
-                            <p class="mb-0">
-                                Quick, secure and contactless
-                                payment services
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
-
-
             </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card d-flex">
+                    <div class="card-body">
+                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+                            <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="para">
+                                " Provide the market with innovative, flexible and smart software solutions which
+                                matches the international standards for a greater convenience, safety and security "
+                                <!-- <a href="#" class="text-info">@consequat</a>." -->
+                            </p>
+                            <footer class="blockquote-footer pt-4 mt-5 border-top">
+                                Mission
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <!-- </section> -->
         </div>
     </div>
-    <!-- End Feature -->
+    <!-- /mission vision -->
 
-    <!-- ------partners ------ -->
-    <section id="clients" class="section-bg">
 
-        <div class="container">
 
-            <div class="section-header">
-                <h3>Our Partners</h3>
-            </div>
-
-            <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
-                style="visibility: visible; animation-name: fadeInUp;">
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-
-                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-
-                <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt="">
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png" class="img-fluid" alt="">
-              </div>
-            </div> -->
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- ------partners ------ -->
-
-    <!-- ------clients ------ -->
-    <section id="clients" class="section-bg">
-        <div class="container">
-            <div class="section-header">
-                <h3>Trusted by more than 80 million users globally</h3>
-            </div>
-            <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
-                style="visibility: visible; animation-name: fadeInUp;">
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/clickripple.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/fiesta.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/amiyon.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="{% static 'web/img/mehery.jpeg' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png"
-                            class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png"
-                            class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png"
-                            class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <div class="client-logo">
-                        <img src="https://bootstrapmade.com/demo/themes/NewBiz/img/clients/client-8.png"
-                            class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ------/clients ------ -->
 </main>
+
 
 
 

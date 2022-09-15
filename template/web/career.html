@@ -5,7 +5,7 @@
 <style>
     @media only screen and (max-width: 330px) {
         .brtitle {
-            margin-top: 60px;
+            margin-top: 160px;
             font-size: 1.5rem;
         }
 
@@ -30,17 +30,7 @@
         margin-bottom: 98px;
         height: 316px;
     }
-
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        .card-btn {
-            position: absolute;
-            margin: 324px 0px 0px 122px;
-        }
-
-        .card {
-            height: 316px;
-        }
-    }
+    
     .job-redirect-button {
     padding: 15px 4px;
     border: 3px solid #0097a4;
@@ -69,6 +59,7 @@
         background: #0097a4;
         padding: 10px;
     }
+    
 </style>
 
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
@@ -76,17 +67,7 @@
 <main class="main">
     <div class="site-breadcrumb head1">
         <div class="container">
-            <h2 class="breadcrumb-title brtitle">Some opportunities for you to explore</h2>
-            <p>
-                Rated amongst the fastest-growing companies, Onflap is built on a strong vision and corporate philosophy
-                of continuous adaptation, client service, and professional growth. With one of the lowest attrition
-                rates in the industry, onflap’s investment in its team members provides an ideal working environment that
-                fosters opportunities to innovate, learn, and excel. Our onflap Family is always growing, and we look
-                forward to welcoming new members who are looking to expand their potential and place their careers on a
-                path to success.
-
-
-            </p>
+                <h2 class="breadcrumb-title brtitle head">Some opportunities for you to explore</h2>
         </div>
     </div>
 
@@ -115,14 +96,17 @@
         </div>
     </div>
 
-    <div _ngcontent-ayi-c20="" class="col-xs-12 col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3 text-center margin-bottom-20 margin-top-20">
-        <a _ngcontent-ayi-c20="" href="/USBenefits" target="_blank" class="job-redirect-button margin-top-10">
-            <span _ngcontent-ayi-c20="">US Benefits </span>
-        </a>
-        <a _ngcontent-ayi-c20="" href="/IndiaBenefits" target="_blank" class="job-redirect-button margin-top-10">
-            <span _ngcontent-ayi-c20="">India Benefits </span>
-        </a>
+    <div class="container">
+        <div _ngcontent-ayi-c20="" class="col-xs-12 col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3 text-center margin-bottom-20 margin-top-20">
+            <a _ngcontent-ayi-c20="" href="" target="_blank" class="job-redirect-button margin-top-10">
+                <span _ngcontent-ayi-c20="">Kuwait Benefits </span>
+            </a>
+            <a _ngcontent-ayi-c20="" href="{% url 'web:indianbenfits' %}" target="_blank" class="job-redirect-button margin-top-10">
+                <span _ngcontent-ayi-c20="">India Benefits </span>
+            </a>
+        </div>
     </div>
+
     
 
 

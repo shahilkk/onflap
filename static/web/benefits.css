@@ -1,0 +1,44 @@
+
+
+
+
+
+.head{
+    /* color: #15909b; */
+    color: var(--heading-color);
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: var(--font-2);
+}
+
+p.benefits{
+    margin-bottom: 1.5rem;
+    color: #3e3e40;
+    line-height: 3rem;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 137px;
+}
+
+.bluecard{
+    background-color: #e8f7fa;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.card-content{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 2.5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.card{
+    height: 450px;
+}

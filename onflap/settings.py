@@ -26,12 +26,13 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -149,3 +150,12 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 RECIPIENT_ADDRESS = config('RECIPIENT_ADDRESS')
+
+
+RECAPTCHA_PUBLIC_KEY = '6Ld90f4hAAAAADFcAvb1E4Q2SzlTeKi1uRt6ld5P'
+RECAPTCHA_SECRET_KEY = '6Ld90f4hAAAAABBhN-ZKfSXPFJRL-wNdKCyerGw7'
+
+
+RECAPTCHA_REQUIRED_SCORE = 0.85
+# ECAPTCHA_PROXY = {'http': 'http://127.0.0.1:8000', 'https': 'https://127.0.0.1:8000'}
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']

@@ -3,7 +3,7 @@
 {% load static %}
 
 
-<link rel="stylesheet" href="{% static 'web/about.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'web/about.css' %}"> -->
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
@@ -11,9 +11,76 @@
 
 <style>
     @media only screen and (max-width: 780px) {
-    #clients .client-logo {
-    padding: 15px;
+        #clients .client-logo {
+            padding: 15px;
+        }
     }
+
+    ul.list_4 {
+        list-style: none;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+
+    ul.list_4 li {
+        width: 99%;
+        font-size: 12px;
+        padding: 0px;
+        margin-bottom: 0;
+        display: block;
+        /* padding-left: 24px; */
+        /* margin-right: 15px; */
+        position: relative;
+    }
+    .section-header h3 {
+    font-size: 32px;
+    color: #050505;
+    text-align: center;
+    font-weight: 5500;
+    position: relative;
+    font-family: var(--font-2);
+}
+@media only screen and (max-width: 767px){
+    .about-title {
+    font-size: 32px;
+    margin-bottom: 3rem;
+    margin-top: 120px;
+}
+  }
+  #clients {
+    padding: 60px 0;
+
+}
+
+#clients .clients-wrap {
+    border-top: 0px solid #5f1212;
+    border-left: 0px solid #5f1212;
+    margin-bottom: 30px;
+}
+
+#clients .client-logo {
+    padding: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 0px solid #5f1212;
+    border-bottom: 0px solid #5f1212;
+    overflow: hidden;
+    background: #fff;
+    height: 160px;
+}
+
+#clients img {
+    transition: all 0.4s ease-in-out;
 }
 </style>
 
@@ -88,7 +155,7 @@
                         </a>
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
-                                <li >
+                                <li>
                                     <a href="{% url 'web:productdetails' p.id %}" target="">
                                         <div class="feature-icon">
                                             <img src="{{p.product_logo.url}}" alt="thumb">
@@ -97,28 +164,15 @@
                                 </li>
 
                             </ul>
-                            <style>
-                                ul.list_4 {
-                                    list-style: none;
-                                    margin: 0 0 20px;
-                                    padding: 0;
-                                }
-                                ul.list_4 li {
-                                    width: 99%;
-                                    font-size: 12px;
-                                    padding: 0px;
-                                    margin-bottom: 0;
-                                    display: block;
-                                    /* padding-left: 24px; */
-                                    /* margin-right: 15px; */
-                                    position: relative;
-                                }
-                            </style>
                             <ul class="list_4">
                                 <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                                  </svg>{{p.product_features|safe}}</li>
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                    </svg> -->
+                                    {{p.product_features|safe}}
+                                </li>
                             </ul>
                         </div>
 
@@ -236,7 +290,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
@@ -354,7 +408,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
                             <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
@@ -560,9 +614,11 @@
 
         <div class="content grid row">
             {% for items in client_details %}
-            <div class="col-md-3  {{items.category.title|slugify}}  grid-item" style="position: absolute;left: 160px;top: 0px;">
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item"
+                style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="port-image" src="{{items.client_log.url}}" style="padding: 5px;height: 80px;width: 80px;"/>
+                    <img class="port-image" src="{{items.client_log.url}}"
+                        style="padding: 5px;height: 80px;width: 80px;" />
                     <div class="centered">
                         <!-- <img src="{{items.client_log.url}}" alt=""> -->
                         <!-- <h4>{{items.Client_name}}</h4> -->
@@ -597,7 +653,7 @@
         <div class="review-area de-pb" style="margin-top:50px ;">
             <div class="container">
 
-                
+
 
                 <div class="swiper-container review-wpr">
                     <div class="swiper-wrapper">
@@ -609,13 +665,12 @@
 
                                     <div class="col-xl-8 offset-xl-2">
                                         <div class="review-content">
-                                            <img src="{{r.pro_pic.url}}" alt=""
-                                                    class="review_img">
+                                            <img src="{{r.pro_pic.url}}" alt="" class="review_img">
                                             <p>
                                                 {{r.review}}
                                             </p>
                                             <div class="review-bio">
-                                                
+
                                                 <h5>{{r.name}}</h5>
                                                 <span>Founder</span>
                                                 <div class="review-rating d-flex align-items-center">
@@ -634,7 +689,7 @@
 
                         </div>
                         {% endfor %}
-                    </div> 
+                    </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
