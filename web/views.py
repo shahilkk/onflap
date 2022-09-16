@@ -19,7 +19,7 @@ import urllib
 import urllib.parse
 import urllib.request
 
-from . my_capta import FormWithCaptcha
+# from . my_capta import FormWithCaptcha
 # from unicodedata import category
 
 # Create your views here.
@@ -28,7 +28,7 @@ def base(request):
 
 
 def home(request):
-    last_video = VideoUpload.objects.all().last()
+    # last_video = VideoUpload.objects.all().last()
     reviews = Review.objects.all()
     partners = Partners.objects.all()
     product_details = Product.objects.all()
@@ -38,7 +38,7 @@ def home(request):
     client_details = ClientList.objects.all()
     context = {
         "is_house":True,
-        "last_video":last_video,
+        # "last_video":last_video,
         "reviews":reviews,
         "partners":partners,
         "product_details":product_details,

@@ -5,7 +5,7 @@ from . models import *
 # Register your models here.
 
 
-admin.site.register(VideoUpload)
+# admin.site.register(VideoUpload)
 # admin.site.register(JobCategory)
 
 

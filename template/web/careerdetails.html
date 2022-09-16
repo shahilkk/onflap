@@ -5,12 +5,21 @@
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
 
 <style>
+     @media only screen and (max-width: 1440px) {
+        
+        p {
+            margin-top: 69px;
+        }
+     }
+
     @media only screen and (max-width: 768px) {
         .heading .subhead {
             font-size: 1.5rem;
             font-weight: 800;
         }
-
+        .heading{
+            margin-top: 95px;
+        }
         .value .department {
             font-size: 1.5rem;
         }
@@ -25,6 +34,8 @@
 
         .section-title {
             text-align: center;
+
+            margin-top: 138px;
         }
 
         .job-details-area span {
@@ -43,6 +54,7 @@
             margin-bottom: -3px;
             padding: -1px;
         }
+        
     }
 </style>
 
@@ -52,7 +64,7 @@
             {% for d in category %}
             <p class="heading">
                 <span class="subhead "> {{d.location|title}}</span>
-                <span class="cw_loc_div"></span><span id="data_jobtype">
+                <span class="cw_loc_div subhead"></span><span id="data_jobtype">
                 </span> <span class="subhead">{{d.work_mode}}</span>
             </p>
             <h2 class="breadcrumb-title department">{{d.job_title|upper}}</h2>

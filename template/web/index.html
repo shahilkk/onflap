@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 <style>
-    @media only screen and (max-width: 780px) {
+    @media only screen and (max-width: 425px) {
         #clients .client-logo {
-            padding: 15px;
+            padding: 25px;
         }
     }
 
@@ -59,7 +59,7 @@
 }
 
 #clients .client-logo {
-    padding: 64px;
+    padding: 25px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -117,7 +117,7 @@
                     </a>
                     <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
-                        <a data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">
+                        <a href="https://www.youtube.com/c/OnFlapTechnologies" target="_blank">
                             <i class="fas fa-play"></i>
                             <span class="how-txt">How we work</span>
                         </a>
@@ -578,7 +578,7 @@
                 style="visibility: visible; animation-name: fadeInUp;">
                 {% for p in partners %}
                 <div class="col-lg-3 col-md-4 col-xs-6 col-6">
-                    <div class="client-logo">
+                    <div class="client-logo logo">
                         <img src="{{p.logo.url}}" class="img-fluid" alt="">
                     </div>
                 </div>
@@ -700,25 +700,6 @@
     <!-- End testimonials -->
 
 </main>
-
-
-<!-- video popup modal -->
-<div class="modal fade" id="video">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">
-                <video id="VisaChipCardVideo" width="100%" controls>
-                    <source src="{{last_video.video.url}}" type="video/mp4">
-                </video>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- video popup modal end -->
-
-
-
 
 
 

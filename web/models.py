@@ -10,11 +10,11 @@ from django.utils.text import slugify
 
 # Create your models here.
 
-class VideoUpload(models.Model):
-    video = models.FileField(upload_to='videos',null=True,blank=True)
+# class VideoUpload(models.Model):
+#     video = models.FileField(upload_to='videos',null=True,blank=True)
 
-    class Meta:
-        verbose_name_plural = ("Video upload")
+#     class Meta:
+#         verbose_name_plural = ("Video upload")
 
 
 # class JobCategory(models.Model):
