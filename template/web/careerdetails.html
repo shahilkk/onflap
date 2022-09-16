@@ -3,60 +3,8 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
+<link rel="stylesheet" href="{% static 'career/job_details.css' %}">
 
-<style>
-     @media only screen and (max-width: 1440px) {
-        
-        p {
-            margin-top: 69px;
-        }
-     }
-
-    @media only screen and (max-width: 768px) {
-        .heading .subhead {
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-        .heading{
-            margin-top: 95px;
-        }
-        .value .department {
-            font-size: 1.5rem;
-        }
-
-        .row {
-            margin-top: -136px;
-        }
-
-        .job-details-area h6.title {
-            font-size: 20px;
-        }
-
-        .section-title {
-            text-align: center;
-
-            margin-top: 138px;
-        }
-
-        .job-details-area span {
-            font-size: 15px;
-            font-weight: 400;
-            padding: -1px;
-        }
-
-        .job-details-area .sub-title {
-            margin-top: 22px;
-            font-size: 17px;
-            line-height: 22px;
-            font-weight: 500;
-            letter-spacing: 0.2px;
-            color: #b71919;
-            margin-bottom: -3px;
-            padding: -1px;
-        }
-        
-    }
-</style>
 
 <main class="main">
     <div class="site-breadcrumb">
@@ -106,10 +54,9 @@
                         </div>
                         <a href="{% url 'web:applynow' d.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
                             Now</a>
-
-
-
                     </div>
+
+
                     <div class="col-xl-3 col-lg-4 offset-xl-1">
                         <div class="widget widget-job-details">
                             <h3 class="widget-title">Job Details</h3>
@@ -147,7 +94,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 

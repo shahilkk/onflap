@@ -38,6 +38,7 @@ def home(request):
     #     print(i.product_features)
     clients = ClientCategory.objects.filter(is_active =True)
     client_details = ClientList.objects.all()
+    form = Myform()
     context = {
         "is_house":True,
         # "last_video":last_video,
@@ -46,24 +47,30 @@ def home(request):
         "product_details":product_details,
         "clients":clients,
         "client_details":client_details,
+        "form":form
     }
     return render(request,"web/index.html",context)  
 
 def productEnquiry(request,id):
     product = Product.objects.get(id=id)
     if request.method == 'POST':
-        
-        print(product)
-        print('#'*20)
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
         address = request.POST['address']
+        recapta = request.POST.get('g-recaptcha-response')
         product = product
 
-        new_enquiry = ProductEnquiry(name=name,email=email,phone=phone,address=address,product=product)
-        new_enquiry.save()
+        form = Myform(request.POST)
 
+        if form.is_valid():
+            new_enquiry = ProductEnquiry(name=name,email=email,phone=phone,address=address,product=product)
+            new_enquiry.save()
+            # return redirect('web:career') 
+            messages.error(request,"Wrong Captcha")
+        else:
+            messages.error(request,"Wrong Captcha")
+    form = Myform()
     return redirect('web:home')  
 
 
@@ -138,16 +145,22 @@ def careerDetails(request,id):
 
 def contact(request):
     contactfrom = ContactUsForm(request.POST)
+    form = Myform(request.POST)
     if request.method == 'POST':
         if contactfrom.is_valid():
             print('hello')
             print(contactfrom.errors)
             contactfrom.save()
+            messages.error(request,"Wrong Captcha")
             print('2'*12)
             return redirect('web:home')
+        else:
+            messages.error(request,"Wrong Captcha")
+    form = Myform()
     context = {
         "is_contact":True,
         "contactfrom":contactfrom,
+        "form":form
     }
     return render(request,"web/contact.html",context)    
 
