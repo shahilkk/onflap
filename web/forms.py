@@ -2,7 +2,7 @@ from django import forms
 from . models import *
 from django.forms.widgets import SelectMultiple, TextInput, Textarea, EmailInput, CheckboxInput,URLInput, Select, NumberInput, RadioSelect, FileInput,ClearableFileInput,PasswordInput,DateInput
 
-
+from captcha.fields import CaptchaField
 
 class ApplyNowForm(forms.ModelForm):
     class Meta:
@@ -26,3 +26,6 @@ class ContactUsForm(forms.ModelForm):
             'email': EmailInput(attrs={'class': 'form-control input-style-2', 'required': 'required', 'autocomplete':'off', 'placeholder':'E-mail','name':'email'}),
             'message' : Textarea(attrs={'class': 'form-control input-style-2', 'required': 'required', 'autocomplete':'off','name':'message','id':'message', 'placeholder':'Write Your Quries here....'}),
     }
+
+class Myform(forms.Form):
+    captcha=  CaptchaField()

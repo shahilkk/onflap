@@ -28,6 +28,15 @@
             <div class="col-lg-2"></div>
 
             <div class="col-lg-8">
+                {% if messages %}
+                    {% for message in messages %}
+
+                    <div class="alert text-center mt-5 alert-{{message.tags}}">
+                        {{message}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="row g-4">
@@ -55,10 +64,9 @@
                             {{form.cv}} -->
                         </div>
                         <div class="col-12">
-                            <!-- <script src='https://www.google.com/recaptcha/api.js'></script>
-                            <div class="g-recaptcha" data-sitekey="6Ld90f4hAAAAADFcAvb1E4Q2SzlTeKi1uRt6ld5P"></div> -->
+                         
                         
-                            <!-- {{capta}} -->
+                            {{form.captcha}}
                         </div>
                         <div class="col-12">
                             <button type="submit" class="theme-btn mt-20">

@@ -22,6 +22,7 @@ from web import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('captcha',include('captcha.urls')),
     path('',include('web.urls')),
     path('tinymce/', include('tinymce.urls')),
     

@@ -1,7 +1,7 @@
 from unittest import result
 from django.shortcuts import render,redirect
 
-from web.forms import ApplyNowForm,ContactUsForm
+from web.forms import ApplyNowForm,ContactUsForm, Myform
 from .models import *
 from django.core.mail import EmailMessage
 import base64
@@ -20,6 +20,8 @@ import urllib.parse
 import urllib.request
 
 # from . my_capta import FormWithCaptcha
+
+from django.contrib import messages
 # from unicodedata import category
 
 # Create your views here.
@@ -110,25 +112,25 @@ def careerDetails(request,id):
 
 
 
-def applynow(request,id):
-    Jobdetails = JobDetails.objects.get(id=id)
-    if request.method == 'POST':
-        applicant_name = request.POST['name']
-        phone = request.POST['phone']
-        email = request.POST['email']
-        cv = request.FILES['cv']
-        job=Jobdetails
+# def applynow(request,id):
+#     Jobdetails = JobDetails.objects.get(id=id)
+#     if request.method == 'POST':
+#         applicant_name = request.POST['name']
+#         phone = request.POST['phone']
+#         email = request.POST['email']
+#         cv = request.FILES['cv']
+#         job=Jobdetails
 
-        new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
-        new_application.save()
+#         new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
+#         new_application.save()
         
-        return redirect('web:career')         
+#         return redirect('web:career')         
    
-    context = {
-        "is_applynow":True,
-        "Jobdetails":Jobdetails
-    }
-    return render(request,"web/applynow.html",context)
+#     context = {
+#         "is_applynow":True,
+#         "Jobdetails":Jobdetails
+#     }
+#     return render(request,"web/applynow.html",context)
 
 
 
@@ -156,34 +158,67 @@ def contact(request):
 
 
 
-# def applynow(request,id):
+def applynow(request,id):
     
-#     Jobdetails = JobDetails.objects.get(id=id)
+    Jobdetails = JobDetails.objects.get(id=id)
 
-#     if request.method == 'POST':
-#         applicant_name = request.POST['name']
-#         phone = request.POST['phone']
-#         email = request.POST['email']
-#         recapta = request.POST.get('g-recaptcha-response')
-#         cv = request.FILES['cv']
-#         job=Jobdetails
+    if request.method == 'POST':
+        applicant_name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        recapta = request.POST.get('g-recaptcha-response')
+        cv = request.FILES['cv']
+        job=Jobdetails
+        form = Myform(request.POST)
+        if form.is_valid():
+            new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
+            new_application.save()
+            # return redirect('web:career') 
+            subject ='The application '
+            message = new_application.applicant_name
+            email = 'mhdshd.ak@gmail.com'
+            try:
 
-#         url = 'https://www.google.com/recaptcha/api/siteverify'
-#         values = {
-#                 'secret': settings.RECAPTCHA_SECRET_KEY,
-#                 'response': recapta
-#             }
-#         data = urllib.parse.urlencode(values)
-#         req = urllib.request.Request(url, data)
-#         with urllib.request.urlopen(req,data=data) as f:
-#             resp = f.read()
-#             print(resp)
-#             result = json.load(resp)
-#         # req = urllib.request.Request(url, data=data)
-#         # response = urllib.request.urlopen(req)
-#         # result = json.load(response.read().decode())
-#         # r=request.POST('https://www.google.com/recaptcha/api/siteverify',data=values) 
-#         # result=r.json()
+                mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
+                print(cv.name, cv.read(), cv.content_type)
+                print(cv,'#'*10)
+                print(new_application.cv,'*'*10)
+                
+                file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
+                print(file_path,'%'*10)
+                mail.attach_file(file_path)
+                # mail.content_type
+                mail.send()
+                # return redirect('web:home')
+                messages.success(request,"Sucess")
+            except Exception as e:
+                print(e)
+                messages.error(request,"Wrong Captcha")
+        else:
+            messages.error(request,"Wrong Captcha")
+                 
+    form = Myform()
+    context = {
+        "is_applynow":True,
+        "form":form
+    }
+    return render(request,"web/applynow.html",context)
+        # url = 'https://www.google.com/recaptcha/api/siteverify'
+        # values = {
+        #         'secret': settings.RECAPTCHA_SECRET_KEY,
+        #         'response': recapta
+        #     }
+        # data = urllib.parse.urlencode(values)
+        # req = urllib.request.Request(url, data)
+        # with urllib.request.urlopen(req,data=data) as f:
+        #     resp = f.read()
+        #     print(resp,'%'*10)
+        #     result = json.load(resp)
+        # # req = urllib.request.Request(url, data=data)
+        # # response = urllib.request.urlopen(req)
+        # # result = json.load(response.read().decode())
+        # # r=request.POST('https://www.google.com/recaptcha/api/siteverify',data=values) 
+        # # result=r.json()
 #         if result ['success']:
 #             new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
 #             new_application.save()
@@ -220,26 +255,26 @@ def contact(request):
 #         # email.send()
         
         
-#         # message.attach_file(new_application.cv)
+# #         # message.attach_file(new_application.cv)
         
-#     # apply_forms=ApplyNowForm(request.POST, request.FILES ) 
-#     # # print('apply_forms')
-#     # if request.method == 'POST' or 'FILES':
-#     #     # print('post worked')
-#     #     if apply_forms.is_valid():
-#     #         # print('valid')
-#     #         # print(apply_forms.errors)
-#     #         apply_data = apply_forms.save()   
-#     #         ApplyNow.objects.filter(id=apply_data.id).update(job=Jobdetails)
-#     #         email = EmailMessage(
-#     #         'Subject here', 'Here is the message.', 'apply_data.email', ['mhdshd.ak@gmail.com'])
-#     #         with open(apply_data.cv, "rb") as f:
-#     #             encoded_string = f.read()
-#     #             filetype= imghdr.what(f.name)
-#     #             print(filetype,'""'*6)
-#     #         email.attach_file(apply_data.cv)
-#     #         email.send()
-#     #         return redirect('web:career')         
+# #     # apply_forms=ApplyNowForm(request.POST, request.FILES ) 
+# #     # # print('apply_forms')
+# #     # if request.method == 'POST' or 'FILES':
+# #     #     # print('post worked')
+# #     #     if apply_forms.is_valid():
+# #     #         # print('valid')
+# #     #         # print(apply_forms.errors)
+# #     #         apply_data = apply_forms.save()   
+# #     #         ApplyNow.objects.filter(id=apply_data.id).update(job=Jobdetails)
+# #     #         email = EmailMessage(
+# #     #         'Subject here', 'Here is the message.', 'apply_data.email', ['mhdshd.ak@gmail.com'])
+# #     #         with open(apply_data.cv, "rb") as f:
+# #     #             encoded_string = f.read()
+# #     #             filetype= imghdr.what(f.name)
+# #     #             print(filetype,'""'*6)
+# #     #         email.attach_file(apply_data.cv)
+# #     #         email.send()
+# #     #         return redirect('web:career')         
    
 #     context = {
 #         "is_applynow":True,
