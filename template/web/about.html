@@ -3,66 +3,74 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
+<style>
+    .fun-fact .fun-icon {
+    height: 7.8rem;
+    width: 6.8rem;
+}
+</style>
 
 <main class="main">
     <!-- Start About
     ============================================= -->
-    <div class="about-area de-pt">
-        <div class="about-wpr grid-2">
-            <div class="about-left">
-                <div class="about-img">
-                    <img src="{% static 'web/img.jpg' %}" alt="thumb">
+    <div class="container">
+        <div class="about-area de-pt">
+            <div class="about-wpr grid-2">
+                <div class="about-left">
+                    <div class="about-img">
+                        <img src="{% static 'web/img.jpg' %}" alt="thumb">
+                    </div>
                 </div>
-            </div>
-            <div class="about-right about-padding-right">
-                <!-- <span class="about-sub-title">About Agency</span> -->
-                <h2 class="about-title" style="color: black;">WHO WE
-                    ARE</h2>
-                <p>
-                    Established with the specific aim of
-                    empowering the IT industry
-                    in the region through distribution &
-                    development
-                    of powerful, cost effective and scalable IT
-                    solutions. <br>
-                    <b>WE ARE</b> the region's fastest growing
-                    software development
-                    house, encompassing some of the best
-                    programmers in the
-                    industry. <br>
-                    WE enjoy a vast Clientele including multiple
-                    ERP and inventory solutions for various
-                    sectors like Travel & Tourism, BPOs, Retail
-                    & Manufacturing, Medical, Aggro Industries,
-                    Courier, Rental, Online E-COM and Learning
-                    Platforms etc,.
-                </p>
-                <div class="about-fact grid-3">
-                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="fun-icon">
-                            <img src="{% static 'web/img/icons/1.png' %}" alt="thumb">
-                            <p class="timer" data-to="1500" data-speed="3000">1500</p>
+                <div class="about-right about-padding-right">
+                    <!-- <span class="about-sub-title">About Agency</span> -->
+                    <h2 class="about-title" style="color: black;">WHO WE
+                        ARE</h2>
+                    <p>
+                        Established with the specific aim of
+                        empowering the IT industry
+                        in the region through distribution &
+                        development
+                        of powerful, cost effective and scalable IT
+                        solutions. <br>
+                        <b>WE ARE</b> the region's fastest growing
+                        software development
+                        house, encompassing some of the best
+                        programmers in the
+                        industry. <br>
+                        WE enjoy a vast Clientele including multiple
+                        ERP and inventory solutions for various
+                        sectors like Travel & Tourism, BPOs, Retail
+                        & Manufacturing, Medical, Aggro Industries,
+                        Courier, Rental, Online E-COM and Learning
+                        Platforms etc,.
+                    </p>
+                    <div class="about-fact grid-3">
+                        <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                            <div class="fun-icon">
+                                <img src="{% static 'web/img/icons/1.png' %}" alt="thumb">
+                                <p class="timer" data-to="1500" data-speed="3000">1500</p>
+                            </div>
+                            <div class="fun-desc">
+                                <span class="medium">Project Completed</span>
+                            </div>
                         </div>
-                        <div class="fun-desc">
-                            <span class="medium">Project Completed</span>
+                        <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="fun-icon">
+                                <img src="{% static 'web/img/icons/2.png' %}" alt="thumb">
+                                <p class="timer" data-to="50" data-speed="3000">50</p>
+                            </div>
+                            <div class="fun-desc">
+                                <span class="medium">Team Members</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="fun-icon">
-                            <img src="{% static 'web/img/icons/2.png' %}" alt="thumb">
-                            <p class="timer" data-to="50" data-speed="3000">50</p>
-                        </div>
-                        <div class="fun-desc">
-                            <span class="medium">Team Members</span>
-                        </div>
-                    </div>
-                    <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="fun-icon">
-                            <img src="{% static 'web/img/icons/feedback.png' %}" alt="thumb">
-                            <p class="timer" data-to="500" data-speed="3000">500</p>
-                        </div>
-                        <div class="fun-desc">
-                            <span class="medium">Happy Clients</span>
+                        <div class="fun-fact wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <div class="fun-icon">
+                                <img src="{% static 'web/img/icons/feedback.png' %}" alt="thumb">
+                                <p class="timer" data-to="500" data-speed="3000">500</p>
+                            </div>
+                            <div class="fun-desc">
+                                <span class="medium">Happy Clients</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +107,7 @@
             </div>
 
             <div class="col d-flex justify-content-center">
-                <div class="card d-flex">
+                <div class="card">
                     <div class="card-body">
                         <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
                             <div class="blockquote-custom-icon bg-info shadow-1-strong">

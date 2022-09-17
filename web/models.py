@@ -29,7 +29,7 @@ from django.utils.text import slugify
 
 
 class JobDetails(models.Model):
-    jobtype_choice =(('On-site ','On-site '),('Hybrid for India & On-site for Kuwait','Hybrid for India & On-site for Kuwait'))
+    jobtype_choice =(('On-site ','On-site '),('Hybrid','Hybrid'))
     job_title = models.CharField(max_length=50,null=True,blank=True)
     location = models.CharField(max_length=50,null=True,blank=True)
     work_mode = models.CharField(max_length=50, choices=jobtype_choice,null=True,blank=True)

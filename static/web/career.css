@@ -49,7 +49,7 @@
 @media only screen and (min-width: 320px){
     .card-btn {
         position: absolute;
-        margin: 215px 0px 0px 122px;
+        margin: 247px 0px 0px 122px;
     }
 
     .card {
@@ -59,7 +59,7 @@
 @media only screen and (min-width: 370px) and (max-width: 1044px) {
     .card-btn {
         position: absolute;
-        margin: 215px 0px 0px 149px;
+        margin: 215px 0px 0px 247px;
     }
 
     .card {
@@ -197,7 +197,7 @@ height: 316px;
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 .card-btn {
     position: absolute;
-    margin: 324px 0px 0px 122px;
+    margin: 234px 0px 0px 122px;
 }
 
 .card {

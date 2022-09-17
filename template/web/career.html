@@ -2,9 +2,77 @@
 {% block content %}
 {% load static %}
 
+<style>
+    @media only screen and (max-width: 330px) {
+        .brtitle {
+            margin-top: 160px;
+            font-size: 1.5rem;
+        }
+
+        .height {
+            margin-top: -77px;
+        }
+
+        .head1 .brtitle {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+    }
+
+    @media only screen and (max-width: 430px) {
+        .card {
+            margin-bottom: 98px;
+        }
+    }
+
+    .card {
+        margin-bottom: 98px;
+        height: 316px;
+    }
+
+    .job-redirect-button {
+        padding: 15px 4px;
+        border: 3px solid #0097a4;
+        color: #fff;
+        display: inline-block;
+        font-size: 18px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    .margin-top-10 {
+        margin-top: 10px;
+    }
+
+    @media (min-width: 1200px) {
+        .col-lg-offset-3 {
+            margin-left: 25%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .col-lg-6 {
+            width: 50%;
+        }
+    }
+
+    .job-redirect-button span {
+        background: #0097a4;
+        padding: 10px;
+    }
+
+
+
+    @media only screen and (max-width: 730px) {
+        .div1,.div2 {
+            justify-content: center !important;
+        }
+       
+    }
+</style>
 
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
-<link rel="stylesheet" href="{% static 'career/job.css' %}">
 
 <main class="main">
     <div class="site-breadcrumb head1">
@@ -12,23 +80,64 @@
             <h2 class="breadcrumb-title brtitle head">Some opportunities for you to explore</h2>
         </div>
     </div>
+    <div class="container ">
+        <div class="row">
+            <div _ngcontent-ayi-c20=""
+                class="col-xs-6 col-md-6 col-lg-6  d-flex justify-content-end  div1">
+                <a _ngcontent-ayi-c20="" href="" class="job-redirect-button margin-top-10  ">
+                    <span _ngcontent-ayi-c20="">Kuwait Benefits </span>
+                </a>
 
-    <div class="container">
+                <!-- col-md-offset-1 col-lg-offset-3 text-center d-flex justify-content-center margin-bottom-20 margin-top-20 -->
+            </div>
+            <div _ngcontent-ayi-c20=""
+                class="col-xs-6 col-md-6  col-lg-6 div2 d-flex ">
+                <a _ngcontent-ayi-c20="" href="{% url 'web:indianbenfits' %}" class="job-redirect-button margin-top-10">
+                    <span _ngcontent-ayi-c20="">India Benefits </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .single-job-details .media-body {
+            margin-left: 45.25px;
+            margin-top: -17px;
+            font-size: 13px;
+        }
+    </style>
+
+    <div class="container" style="margin-top: 60px;">
         <div class="row">
             {% for job in jobs %}
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
 
-                <div class="card height d-flex" style="">
+                <div class="card height d-flex justify-content-center" style="width: 350px;">
                     <h3 class="card-title">{{job.job_title}}</h3><br><br>
                     <p class="card-content">
-                        {{job.location|capfirst}}
-                        <!-- {{job.job_description|safe}} -->
+                    <div class="media single-job-details">
+                        <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
+                        <div class="media-body">
+                            <span>{{job.location|capfirst}}</span>
+                        </div>
+                    </div>
                     </p>
                     <p class="card-content">
-                        {{job.work_mode|capfirst}}
+                    <div class="media single-job-details">
+                        <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
+                        <div class="media-body">
+                            <span>{{job.work_mode|capfirst}}</span>
+                        </div>
+                    </div>
                     </p>
                     <p class="card-content">
-                        {{job.experience|capfirst}}
+                    <div class="media single-job-details">
+                        <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
+                        <div class="media-body">
+                            <span>{{job.experience|capfirst}}</span>
+                        </div>
+                    </div>
                     </p>
                     <a href="{% url 'web:careerdetails' job.id %}" class="card-btn fixed-bottom" style="">READ MORE</a>
                 </div>
@@ -38,17 +147,11 @@
         </div>
     </div>
 
-    <div class="container">
-        <div _ngcontent-ayi-c20=""
-            class="col-xs-12 col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3 text-center margin-bottom-20 margin-top-20">
-            <a _ngcontent-ayi-c20="" href="" class="job-redirect-button margin-top-10">
-                <span _ngcontent-ayi-c20="">Kuwait Benefits </span>
-            </a>
-            <a _ngcontent-ayi-c20="" href="{% url 'web:indianbenfits' %}" class="job-redirect-button margin-top-10">
-                <span _ngcontent-ayi-c20="">India Benefits </span>
-            </a>
-        </div>
-    </div>
+
+
+
+
+
 
 </main>
 

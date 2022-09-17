@@ -7,8 +7,88 @@
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
-<link rel="stylesheet" href="{% static 'career/landinpage.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+<style>
+    @media only screen and (max-width: 425px) {
+        #clients .client-logo {
+            padding: 25px;
+        }
+    }
+
+    ul.list_4 {
+        list-style: none;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+
+    ul.list_4 li {
+        width: 99%;
+        font-size: 12px;
+        padding: 0px;
+        margin-bottom: 0;
+        display: block;
+        /* padding-left: 24px; */
+        /* margin-right: 15px; */
+        position: relative;
+    }
+
+    .section-header h3 {
+        font-size: 32px;
+        color: #050505;
+        text-align: center;
+        font-weight: 5500;
+        position: relative;
+        font-family: var(--font-2);
+    }
+
+    @media only screen and (max-width: 767px) {
+        .about-title {
+            font-size: 32px;
+            margin-bottom: 3rem;
+            margin-top: 120px;
+        }
+        .section-header h3 {
+            font-size: 20px;
+        }
+    }
+
+    #clients {
+        padding: 60px 0;
+
+    }
+
+    #clients .clients-wrap {
+        border-top: 0px solid #5f1212;
+        border-left: 0px solid #5f1212;
+        margin-bottom: 30px;
+    }
+
+    #clients .client-logo {
+        padding: 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-right: 0px solid #5f1212;
+        border-bottom: 0px solid #5f1212;
+        overflow: hidden;
+        background: #fff;
+        height: 160px;
+    }
+
+    #clients img {
+        transition: all 0.4s ease-in-out;
+    }
+</style>
 
 
 <main class="main">
@@ -24,14 +104,14 @@
             </div>
             <div class="about-right about-padding-right">
                 <h2 style="color: black;" class="filterh6"> DELIVERING THE ULTIMATE EXPERIENCE TO THE END USER</h2>
-                <p>
-                    Our mission is to Provide the market with innovative, flexible and smart software solutions which
+                <p style="color: rgb(51, 48, 48);">
+                    <b>Our mission</b> is to Provide the market with innovative, flexible and smart software solutions which
                     match the international standards for a greater convenience, safety and security Established with
                     the specific aim of empowering the IT industry in the region through distribution &
                     development of powerful, cost effective and scalable IT solutions.. </p>
-                <p><b>We are </b> the region's fastest growing software development house, encompassing some of the best
+                <p style="color: rgb(51, 48, 48);"><b>We are </b> the region's fastest growing software development house, encompassing some of the best
                     programmers in the industry. </p>
-                <p> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
+                <p style="color: rgb(51, 48, 48);"> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
                     sectors like Travel & Tourism, BPOs, Retail & Manufacturing, Medical, Aggro Industries,
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
@@ -200,9 +280,8 @@
                             <h5 style="font-weight: 900;">CORE</h5>
                             <p class="mb-0">
                                 <span style="font-weight: bold;">Customer Oriented Relations
-                                    Enterprise</span><br>CORE manages easily and securely
-                                your client information and client
-                                concerns
+                                    Enterprise</span><br>CORE manages your client information and client
+                                concerns easily and securely
                             </p>
                         </div>
                     </div>
@@ -395,7 +474,7 @@
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Software Developments</h4>
-                        <p class="card-text">Our expert team of Analysts, designers and Developers can advice, study and
+                        <p class="card-text">Our expert team of Analysts, Designers and Developers can advice, study and
                             create customized applications that suit your needs.Work with all Platforms</p>
                     </div>
                 </div>
