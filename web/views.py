@@ -1,3 +1,4 @@
+from http.client import HTTPException
 from unittest import result
 from django.shortcuts import render,redirect
 
@@ -132,6 +133,7 @@ def applynow(request,id):
         form = Myform(request.POST)
 
         if form.is_valid():
+            print('print Valid')
             new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
             new_application.save()
             # return redirect('web:career') 
@@ -139,7 +141,7 @@ def applynow(request,id):
             message = new_application.applicant_name
             email = 'mhdshd.ak@gmail.com'
             try:
-
+                print('try')
                 mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
                 print(cv.name, cv.read(), cv.content_type)
                 print(cv,'#'*10)
@@ -153,9 +155,11 @@ def applynow(request,id):
                 # return redirect('web:home')
                 messages.success(request,"Sucess")
             except Exception as e:
-                print(e)
-                messages.error(request,"Wrong Captcha")
+                print('except')
+                print(str(e))
+                raise HTTPException(str(e))
         else:
+            print('else')
             messages.error(request,"Wrong Captcha")
                  
     form = Myform()

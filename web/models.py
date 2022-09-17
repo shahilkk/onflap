@@ -1,5 +1,6 @@
 from email import message
 from secrets import choice
+from trace import Trace
 from xml.parsers.expat import model
 from django.db import models
 from tinymce.models import HTMLField
@@ -50,7 +51,7 @@ class JobDetails(models.Model):
 class ApplyNow(models.Model):
     job = models.ForeignKey(JobDetails,on_delete=models.CASCADE,null=True,blank=True)
     applicant_name = models.CharField(max_length=100)
-    phone = models.CharField(unique=True,max_length=100)
+    phone = models.CharField(max_length=100,null=True,blank=True)
     email = models.EmailField()
     cv = models.FileField(upload_to='cv')
 
