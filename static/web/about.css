@@ -110,7 +110,7 @@
     .about-title {
     font-size: 32px;
     margin-bottom: 3rem;
-    margin-top: 120px;
+    margin-top: 0px;
 }
   }
 
@@ -120,3 +120,4 @@
     grid-gap: 3rem;
     margin-top: 25px;
 }
+

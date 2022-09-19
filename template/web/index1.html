@@ -3,18 +3,96 @@
 {% load static %}
 
 
-<link rel="stylesheet" href="{% static 'web/about.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'web/about.css' %}"> -->
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 <style>
-    @media only screen and (max-width: 780px) {
-    #clients .client-logo {
-    padding: 15px;
+    @media only screen and (max-width: 425px) {
+        #clients .client-logo {
+            padding: 25px;
+        }
     }
-}
+
+    ul.list_4 {
+        list-style: none;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+
+    ul.list_4 li {
+        width: 99%;
+        font-size: 12px;
+        padding: 0px;
+        margin-bottom: 0;
+        display: block;
+        /* padding-left: 24px; */
+        /* margin-right: 15px; */
+        position: relative;
+    }
+
+    .section-header h3 {
+        font-size: 32px;
+        color: #050505;
+        text-align: center;
+        font-weight: 5500;
+        position: relative;
+        font-family: var(--font-2);
+    }
+
+    @media only screen and (max-width: 767px) {
+        .about-title {
+            font-size: 32px;
+            margin-bottom: 3rem;
+            margin-top: 120px;
+        }
+        .section-header h3 {
+            font-size: 20px;
+        }
+    }
+
+    #clients {
+        padding: 60px 0;
+
+    }
+
+    #clients .clients-wrap {
+        border-top: 0px solid #5f1212;
+        border-left: 0px solid #5f1212;
+        margin-bottom: 30px;
+    }
+
+    #clients .client-logo {
+        padding: 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-right: 0px solid #5f1212;
+        border-bottom: 0px solid #5f1212;
+        overflow: hidden;
+        background: #fff;
+        height: 160px;
+    }
+
+    #clients img {
+        transition: all 0.4s ease-in-out;
+    }
+    @media only screen and (min-width: 1500) and (max-width:2000){
+        .about-right .about-padding-right{
+            padding-right: 7rem;
+        }
+    }
 </style>
 
 
@@ -29,16 +107,16 @@
                     <img src="{% static 'web/img/logo/2.png' %}" alt="thumb">
                 </div>
             </div>
-            <div class="about-right about-padding-right">
+            <div class="about-right about-padding-right" style="">
                 <h2 style="color: black;" class="filterh6"> DELIVERING THE ULTIMATE EXPERIENCE TO THE END USER</h2>
-                <p>
-                    Our mission is to Provide the market with innovative, flexible and smart software solutions which
+                <p style="color: rgb(51, 48, 48);">
+                    <b>Our mission</b> is to Provide the market with innovative, flexible and smart software solutions which
                     match the international standards for a greater convenience, safety and security Established with
                     the specific aim of empowering the IT industry in the region through distribution &
                     development of powerful, cost effective and scalable IT solutions.. </p>
-                <p><b>We are </b> the region's fastest growing software development house, encompassing some of the best
+                <p style="color: rgb(51, 48, 48);"><b>We are </b> the region's fastest growing software development house, encompassing some of the best
                     programmers in the industry. </p>
-                <p> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
+                <p style="color: rgb(51, 48, 48);"> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
                     sectors like Travel & Tourism, BPOs, Retail & Manufacturing, Medical, Aggro Industries,
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
@@ -50,7 +128,7 @@
                     </a>
                     <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
-                        <a data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">
+                        <a href="https://www.youtube.com/c/OnFlapTechnologies?app=desktop" target="_blank">
                             <i class="fas fa-play"></i>
                             <span class="how-txt">How we work</span>
                         </a>
@@ -88,7 +166,7 @@
                         </a>
                         <div class="onflap-apps-category ">
                             <ul style="margin: 30px 0 0;" class="test">
-                                <li class="zp-apps zp-main-crm">
+                                <li>
                                     <a href="{% url 'web:productdetails' p.id %}" target="">
                                         <div class="feature-icon">
                                             <img src="{{p.product_logo.url}}" alt="thumb">
@@ -96,12 +174,17 @@
                                     </a>
                                 </li>
 
-                                <!-- <a target="_blank" class="zp-apps zp-bigin">
-                                    {{p.product_features|safe}}
-                                </a> -->
-
                             </ul>
-                            {{p.product_features|safe}}
+                            <ul class="list_4">
+                                <li>
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                    </svg> -->
+                                    {{p.product_features|safe}}
+                                </li>
+                            </ul>
                         </div>
 
                         <button type="button" class="btn btn-lg"
@@ -136,8 +219,11 @@
                                                 <input type="text" class="form-control" name="phone" id="phone">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="address" class="col-form-label">Address:</label>
+                                                <label for="address" class="col-form-label">Message:</label>
                                                 <textarea class="form-control" name="address" id="address"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                {{form.captcha}}
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -199,37 +285,21 @@
                             <h5 style="font-weight: 900;">CORE</h5>
                             <p class="mb-0">
                                 <span style="font-weight: bold;">Customer Oriented Relations
-                                    Enterprise</span><br>CORE manages easily and securely
-                                your client information and client
-                                concerns
+                                    Enterprise</span><br>CORE manages your client information and client
+                                concerns easily and securely
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/1.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">EDMS</h5>
+                            <h5 style="font-weight: 900;">R-POS(RESTO)</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">Electronic Data Management System</span><br>
-                                One point source to archive
-                                all your documents
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FORCE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">FOR Clinical Efficiency</span><br>
-                                Quick overview of patient or doctor
-                                information and appointments or
-                                rooster management
+                                <span style="font-weight: bold;">RESTO - POS</span><br>
+                                Manage your restaurant business with
+                                our Resto-POS system
                             </p>
                         </div>
                     </div>
@@ -247,16 +317,19 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/1.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/6.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">R-POS(RESTO)</h5>
+                            <h5 style="font-weight: 900;">FIESTA</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">RESTO - POS</span><br>
-                                Manage your restaurant business with
-                                our Resto-POS system
+                                <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
+                                    Travel Accounting</span><br>
+                                It is our flagship premier product
+                                which is widely acknowledged in the
+                                travel industry for all back, mid and
+                                front office operations
                             </p>
                         </div>
                     </div>
@@ -277,31 +350,14 @@
                     </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/3.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">ATOMS</h5>
+                            <h5 style="font-weight: 900;">EDMS</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">A Total Office Management Suite</span><br>
-                                Custom ERP comprising of multiple
-                                stand alone modules which helps to
-                                integrate different operations of your
-                                enterprise
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/4.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIIMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Inventory
-                                    Management System</span><br>
-                                Get up to date information of your
-                                business' inventory updated
-                                movements
+                                <span style="font-weight: bold;">Electronic Data Management System</span><br>
+                                One point source to archive
+                                all your documents
                             </p>
                         </div>
                     </div>
@@ -322,23 +378,6 @@
                     </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/6.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIESTA</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
-                                    Travel Accounting</span><br>
-                                It is our flagship premier product
-                                which is widely acknowledged in the
-                                travel industry for all back, mid and
-                                front office operations
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
                             <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
@@ -349,10 +388,51 @@
                             </p>
                         </div>
                     </div>
-
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">FORCE</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">FOR Clinical Efficiency</span><br>
+                                Quick overview of patient or doctor
+                                information and appointments or
+                                rooster management
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/4.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">FIIMS</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">Fully Integrated Inventory
+                                    Management System</span><br>
+                                Get up to date information of your
+                                business' inventory updated
+                                movements
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/3.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">ATOMS</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">A Total Office Management Suite</span><br>
+                                Custom ERP comprising of multiple
+                                stand alone modules which helps to
+                                integrate different operations of your
+                                enterprise
+                            </p>
+                        </div>
+                    </div>            
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -382,27 +462,22 @@
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">ERP Solutions</h4>
                         <p class="card-text">We provide Enterprise Resource Planning (ERP) systems customized for each
-                            industry based on Open Source Technologies with an unmatched service..</p>
+                            industry based on ASP.NET CORE.</p>
                     </div>
-
                 </div>
-
             </div>
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
                     <div></div>
-
                     <div class="card-custom-avatar">
                         <img class="img-fluid" src="{% static  'web/img/servies/oN-02.png' %}" alt="Avatar" />
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Software Developments</h4>
-                        <p class="card-text">Our expert team of Analysts, designers and Developers can advice, study and
+                        <p class="card-text">Our expert team of Analysts, Designers and Developers can advice, study and
                             create customized applications that suit your needs.Work with all Platforms</p>
                     </div>
-
                 </div>
-
             </div>
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
@@ -410,7 +485,6 @@
 
                     <div class="card-custom-avatar">
                         <img src="{% static  'web/img/servies/oN-01.png' %}" class="card-img-top" alt="...">
-
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Hardware Installation & Support</h4>
@@ -419,9 +493,7 @@
                             computers, we are a one-stop solution center for all your hardware needs..
                         </p>
                     </div>
-
                 </div>
-
             </div>
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
@@ -430,7 +502,6 @@
                     <div class="card-custom-avatar">
                         <img src="{% static  'web/img/servies/oN-04.png' %}" class="card-img-top" alt="...">
                     </div>
-
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Web / Digital Marketing</h4>
                         <p class="card-text">
@@ -440,9 +511,7 @@
                             SSL, e-mails, search engine (SEO/SEM) or social media (SMO/SME).
                         </p>
                     </div>
-
                 </div>
-
             </div>
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
@@ -459,9 +528,7 @@
                             testing, investigative data services ,disaster recovery planning etc..
                         </p>
                     </div>
-
                 </div>
-
             </div>
             <div class="feature-box  ">
                 <div class="card card-custom bg-white border-white border-0">
@@ -480,12 +547,9 @@
                             solutions for a secure back-end, APIs and cloud services..
                         </p>
                     </div>
-
                 </div>
-
             </div>
         </div>
-
     </div>
     <!-- End services -->
 
@@ -506,7 +570,7 @@
                 style="visibility: visible; animation-name: fadeInUp;">
                 {% for p in partners %}
                 <div class="col-lg-3 col-md-4 col-xs-6 col-6">
-                    <div class="client-logo">
+                    <div class="client-logo logo">
                         <img src="{{p.logo.url}}" class="img-fluid" alt="">
                     </div>
                 </div>
@@ -539,12 +603,13 @@
             </ul>
         </div>
         <br />
-
         <div class="content grid row">
             {% for items in client_details %}
-            <div class="col-md-3  {{items.category.title|slugify}}  grid-item" style="position: absolute;left: 160px;top: 0px;">
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item"
+                style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="port-image" src="{{items.client_log.url}}" style="padding: 5px;height: 80px;width: 80px;"/>
+                    <img class="port-image" src="{{items.client_log.url}}"
+                        style="padding: 5px;height: 80px;width: 80px;" />
                     <div class="centered">
                         <!-- <img src="{{items.client_log.url}}" alt=""> -->
                         <!-- <h4>{{items.Client_name}}</h4> -->
@@ -578,9 +643,6 @@
         </div>
         <div class="review-area de-pb" style="margin-top:50px ;">
             <div class="container">
-
-                
-
                 <div class="swiper-container review-wpr">
                     <div class="swiper-wrapper">
                         {% for r in reviews %}
@@ -591,13 +653,12 @@
 
                                     <div class="col-xl-8 offset-xl-2">
                                         <div class="review-content">
-                                            <img src="{{r.pro_pic.url}}" alt=""
-                                                    class="review_img">
+                                            <img src="{{r.pro_pic.url}}" alt="" class="review_img">
                                             <p>
                                                 {{r.review}}
                                             </p>
                                             <div class="review-bio">
-                                                
+
                                                 <h5>{{r.name}}</h5>
                                                 <span>Founder</span>
                                                 <div class="review-rating d-flex align-items-center">
@@ -616,7 +677,7 @@
 
                         </div>
                         {% endfor %}
-                    </div> 
+                    </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -627,25 +688,6 @@
     <!-- End testimonials -->
 
 </main>
-
-
-<!-- video popup modal -->
-<div class="modal fade" id="video">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">
-                <video id="VisaChipCardVideo" width="100%" controls>
-                    <source src="{{last_video.video.url}}" type="video/mp4">
-                </video>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- video popup modal end -->
-
-
-
 
 
 

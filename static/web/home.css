@@ -127,11 +127,11 @@
     background-image: url(https://img.icons8.com/color/48/000000/sell-stock.png);
 }
 
-.onflap-apps-category1 ul li:hover {
+/* .onflap-apps-category1 ul li:hover {
     border-bottom: 1px solid #b71919;
 }
 
-/* .onflap-apps-category ul li:hover {
+.onflap-apps-category ul li:hover {
     border-bottom: 1px solid #0a3daa;
 } */
 
@@ -140,6 +140,12 @@
 
 .vertical {
     border-right: 1px solid #aaa7a7d5;
+}
+
+@media only screen and (max-width: 770px) {
+    .feature-box .feature-icon .pimage{
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 757px) {
@@ -152,6 +158,9 @@
         display: block;
         padding: 53px 7px 68px 0px;
         position: relative;
+    }
+    .feature-box .feature-icon .pimage{
+        margin-top: 10px;
     }
 
 }
@@ -209,6 +218,12 @@
 
     .fadeInUp {
         text-align: center;
+    }
+    
+}
+@media only screen and (min-width: 1000px) and (max-width: 1440px){
+    .feature-box .feature-icon .pimage{
+        margin-top: -72px;
     }
 }
 

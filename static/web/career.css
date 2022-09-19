@@ -6,7 +6,7 @@
 
 .card {
    
-    max-width: 315px;
+    max-width: 100%;
     min-height: 250px;
     background: white;
     padding: 30px;
@@ -16,10 +16,13 @@
     /* margin: 20px; */
     box-shadow: rgb(50 50 93 / 25%) 8px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
     margin-top: -20px;
+    margin-bottom: 98px;
+    /* height: 316px; */
+    max-width: 100%;
 }
 
 .card-title {
-    margin-top: 0;
+    margin-top: 67px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -36,36 +39,20 @@
     display: block;
     margin-left: auto;
     border: 2px solid #b71919;
-    padding: 10px 15px;
+    padding: 13px 43px;
     border-radius: 25px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
     transition: all 0.5s;
     cursor: pointer;
     letter-spacing: 1.2px;
     position: absolute;
     margin: 215px 0px 0px 149px;
+    background-color: #b71919;
+    color: #fff;
 }
-@media only screen and (min-width: 320px){
-    .card-btn {
-        position: absolute;
-        margin: 247px 0px 0px 122px;
-    }
 
-    .card {
-        height: 316px;
-    }
-}
-@media only screen and (min-width: 370px) and (max-width: 1044px) {
-    .card-btn {
-        position: absolute;
-        margin: 215px 0px 0px 247px;
-    }
 
-    .card {
-        height: 316px;
-    }
-}
 .job{
     margin-bottom: 0.5rem;
     padding: 2px 93px;
@@ -189,21 +176,9 @@ background-color: unset !important;
 }
 }
 
-.card {
-margin-bottom: 98px;
-height: 316px;
-}
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-.card-btn {
-    position: absolute;
-    margin: 234px 0px 0px 122px;
-}
 
-.card {
-    height: 316px;
-}
-}
+
 .job-redirect-button {
 padding: 15px 4px;
 border: 3px solid #0097a4;
@@ -232,5 +207,74 @@ width: 50%;
 background: #0097a4;
 padding: 10px;
 }
+@media only screen and (min-width: 320px){
+    .card.card1 {
+        height: 300px;
+    }
+    .card-title {
+        margin-top: -24px;
+    }
+    .card-btn {
+        position: absolute;
+        margin: 15px -9px 0px 95px;
+        padding: 8px 10px;
+    }
+}
+@media only screen and (min-width: 375px){
+    .card-btn {
+        position: absolute;
+        margin: 15px -9px 0px 140px;
+        padding: 8px 10px;
+    }
+}
+@media only screen and (min-width: 425px){
+    .card-btn {
+        position: absolute;
+        margin: 15px -9px 0px 195px;
+        padding: 8px 10px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .card.card1 {
+        height: 250px;
+    }
+    .card-btn {
+        position: absolute;
+        margin: 153px -9px 0px 88px;
+        padding: 8px 10px;
+    }
+    .card-title {
+        margin-top: 48px;
+    }
+}
+/* @media only screen and (min-width: 375px){
+    .card-btn {
+        position: absolute;
+        margin: 137px -34px 0px 76px;
+    }
+}
+@media screen and (max-width:435px) {
+    .card-title {
+        margin-top: -20px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+    }
+}
+@media only screen and (min-width: 375px)  {
+    .card-btn {
+        position: absolute;
+        margin: 137px -34px 0px 76px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card-btn {
+        position: absolute;
+        margin: 135px -16px 0px 35px;
+    }
+    
+    } */
 
 

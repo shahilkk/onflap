@@ -96,13 +96,21 @@
                         <div class="media single-job-details">
                             <div class="media-body">
                                 <h6 class="sub-title ">Job Responsibilities</h6>
-                                <span class="">{{d.job_responsibility|safe|title}}</span>
+                                <span class="">
+                                    <p>
+                                        {{d.job_responsibility|safe|title}}
+                                    </p>
+                                </span>
                             </div>
                         </div>
                         <div class="media single-job-details">
                             <div class="media-body">
                                 <h6 class="sub-title ">Educational Requirements</h6>
-                                <span class="">{{d.educational_requirments|safe|title}}</span>
+                                <span class="">
+                                    <p>
+                                        {{d.educational_requirments|safe|title}}
+                                    </p>
+                                </span>
                             </div>
                         </div>
                         <a href="{% url 'web:applynow' d.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply

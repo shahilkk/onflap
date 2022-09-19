@@ -88,6 +88,21 @@
     #clients img {
         transition: all 0.4s ease-in-out;
     }
+    @media only screen and (min-width: 1500) and (max-width:2000){
+        .about-right .about-padding-right{
+            padding-right: 7rem;
+        }
+    }
+    @media screen and (max-width:320) and (max-width:990) {
+        .feature-box .feature-icon{
+            margin-top: 44px;
+        }   
+    }
+    @media screen and (max-width:768) and (max-width:1440) {
+        img .pimage{
+            margin-top: -39px;
+        }
+    }
 </style>
 
 
@@ -102,7 +117,7 @@
                     <img src="{% static 'web/img/logo/2.png' %}" alt="thumb">
                 </div>
             </div>
-            <div class="about-right about-padding-right" style="padding-right: 7rem;">
+            <div class="about-right about-padding-right" style="">
                 <h2 style="color: black;" class="filterh6"> DELIVERING THE ULTIMATE EXPERIENCE TO THE END USER</h2>
                 <p style="color: rgb(51, 48, 48);">
                     <b>Our mission</b> is to Provide the market with innovative, flexible and smart software solutions which
@@ -123,7 +138,7 @@
                     </a>
                     <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
-                        <a href="https://www.youtube.com/c/OnFlapTechnologies" target="_blank">
+                        <a href="https://www.youtube.com/c/OnFlapTechnologies?app=desktop" target="_blank">
                             <i class="fas fa-play"></i>
                             <span class="how-txt">How we work</span>
                         </a>
@@ -154,22 +169,23 @@
 
                     <div class="feature-info ">
                         <a href="{% url 'web:productdetails' p.id %}" target="">
-                            <h5 class="text-center">{{p.product_name}}</h5>
-                            <p class="mb-0">
-                                {{p.product_fullname}}
-                            </p>
-                        </a>
-                        <div class="onflap-apps-category ">
-                            <ul style="margin: 30px 0 0;" class="test">
+                            <!-- <h5 class="text-center">{{p.product_name}}</h5> -->
+                            <ul style="margin: 0px 0 0;" class="test">
                                 <li>
                                     <a href="{% url 'web:productdetails' p.id %}" target="">
                                         <div class="feature-icon">
-                                            <img src="{{p.product_logo.url}}" alt="thumb">
+                                            <img src="{{p.product_logo.url}}" alt="thumb" style="" class="pimage">
                                         </div>
                                     </a>
                                 </li>
-
+                                <li>
+                                    <p class="mb-0">
+                                        {{p.product_fullname}}
+                                    </p>
+                                </li>
                             </ul>
+                        </a>
+                        <div class="onflap-apps-category ">
                             <ul class="list_4">
                                 <li>
                                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -285,31 +301,16 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/1.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">EDMS</h5>
+                            <h5 style="font-weight: 900;">R-POS(RESTO)</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">Electronic Data Management System</span><br>
-                                One point source to archive
-                                all your documents
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FORCE</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">FOR Clinical Efficiency</span><br>
-                                Quick overview of patient or doctor
-                                information and appointments or
-                                rooster management
+                                <span style="font-weight: bold;">RESTO - POS</span><br>
+                                Manage your restaurant business with
+                                our Resto-POS system
                             </p>
                         </div>
                     </div>
@@ -327,16 +328,19 @@
                             </p>
                         </div>
                     </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/1.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/6.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">R-POS(RESTO)</h5>
+                            <h5 style="font-weight: 900;">FIESTA</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">RESTO - POS</span><br>
-                                Manage your restaurant business with
-                                our Resto-POS system
+                                <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
+                                    Travel Accounting</span><br>
+                                It is our flagship premier product
+                                which is widely acknowledged in the
+                                travel industry for all back, mid and
+                                front office operations
                             </p>
                         </div>
                     </div>
@@ -357,31 +361,14 @@
                     </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/3.png' %}" alt="thumb">
+                            <img src="{% static 'web/img/product/12.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
-                            <h5 style="font-weight: 900;">ATOMS</h5>
+                            <h5 style="font-weight: 900;">EDMS</h5>
                             <p class="mb-0">
-                                <span style="font-weight: bold;">A Total Office Management Suite</span><br>
-                                Custom ERP comprising of multiple
-                                stand alone modules which helps to
-                                integrate different operations of your
-                                enterprise
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/product/4.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIIMS</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Inventory
-                                    Management System</span><br>
-                                Get up to date information of your
-                                business' inventory updated
-                                movements
+                                <span style="font-weight: bold;">Electronic Data Management System</span><br>
+                                One point source to archive
+                                all your documents
                             </p>
                         </div>
                     </div>
@@ -402,23 +389,6 @@
                     </div>
                     <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="feature-icon">
-                            <img src="{% static 'web/img/product/6.png' %}" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">FIESTA</h5>
-                            <p class="mb-0">
-                                <span style="font-weight: bold;">Fully Integrated Enterprise Suite for
-                                    Travel Accounting</span><br>
-                                It is our flagship premier product
-                                which is widely acknowledged in the
-                                travel industry for all back, mid and
-                                front office operations
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
                             <img src="{% static 'web/img/product/8.png' %}" alt="thumb">
                         </div>
                         <div class="feature-info">
@@ -429,10 +399,51 @@
                             </p>
                         </div>
                     </div>
-
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/14.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">FORCE</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">FOR Clinical Efficiency</span><br>
+                                Quick overview of patient or doctor
+                                information and appointments or
+                                rooster management
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/4.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">FIIMS</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">Fully Integrated Inventory
+                                    Management System</span><br>
+                                Get up to date information of your
+                                business' inventory updated
+                                movements
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="feature-icon">
+                            <img src="{% static 'web/img/product/3.png' %}" alt="thumb">
+                        </div>
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;">ATOMS</h5>
+                            <p class="mb-0">
+                                <span style="font-weight: bold;">A Total Office Management Suite</span><br>
+                                Custom ERP comprising of multiple
+                                stand alone modules which helps to
+                                integrate different operations of your
+                                enterprise
+                            </p>
+                        </div>
+                    </div>            
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -462,7 +473,7 @@
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">ERP Solutions</h4>
                         <p class="card-text">We provide Enterprise Resource Planning (ERP) systems customized for each
-                            industry based on Open Source Technologies with an unmatched service..</p>
+                            industry based on ASP.NET CORE.</p>
                     </div>
                 </div>
             </div>
