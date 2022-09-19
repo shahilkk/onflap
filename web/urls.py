@@ -18,7 +18,8 @@ urlpatterns = [
 
     path('contact',views.contact,name='contact'),
 
-    path('indianbenfits',views.indianBenfits,name="indianbenfits")
+    path('indianbenfits',views.indianBenfits,name="indianbenfits"),
+    path('kuwaitbenfits',views.kuwaitBenefits,name="kuwaitbenfits")
     
     
 ]

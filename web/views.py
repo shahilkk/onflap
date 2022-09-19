@@ -177,7 +177,11 @@ def indianBenfits(request):
     }
     return render(request,"web/indian_benefits.html",context)
 
-
+def kuwaitBenefits(request):
+    context = {
+        "is_benefits":True,
+    }
+    return render(request,"web/kuwait_benefits.html")
 
 # contact section
 def contact(request):
