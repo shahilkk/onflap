@@ -4,13 +4,18 @@
 
 <style>
     label {
-  color: #999;
+  color: #323338;
   cursor: pointer;
   font-size: 15px;
   font-weight: 400;
   margin-top: 15px;
   padding: 11px;
 }
+.input-style-2{
+    border: 1px solid #cdcdcd;
+}
+
+
 </style>
 
 <main class="main">
@@ -41,23 +46,23 @@
                     {% csrf_token %}
                     <div class="row g-4">
                         <div class="col-md-12">
-                            <label for="">Applicant Name</label>
+                            <label for="">Applicant Name <span class="text-danger">*</span> </label>
                             <input type="text" class="form-control input-style-2" required placeholder="Name" name='name'>
                         </div>
                         <div class="col-md-12">
-                            <label for="">Phone Number</label>
+                            <label for="">Phone Number <span class="text-danger">*</span> </label>
                             <input type="number" class="form-control input-style-2" required placeholder="phone" name='phone'>
                             <!-- {{form.phone.label}}
                             {{form.phone}} -->
                         </div>
                         <div class="col-md-12">
-                            <label for="">Email</label>
+                            <label for="">Email <span class="text-danger">*</span> </label>
                             <input type="email" class="form-control input-style-2" required placeholder="email" name='email'>
                             <!-- {{form.email.label}}
                             {{form.email}} -->
                         </div>
                         <div class="col-12">
-                            <label for="">CV</label>
+                            <label for="">CV <span class="text-danger">*</span> </label>
                             <input type="file" class="form-control input-style-2" required placeholder="cv" name='cv'><br>
                             <small>( File should be less than 1MB )</small>
                             <!-- {{form.cv.label}}

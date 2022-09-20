@@ -165,7 +165,8 @@ def applynow(request,id):
     form = Myform()
     context = {
         "is_applynow":True,
-        "form":form
+        "form":form,
+        "Jobdetails":Jobdetails,
     }
     return render(request,"web/applynow.html",context)
 
@@ -181,7 +182,7 @@ def kuwaitBenefits(request):
     context = {
         "is_benefits":True,
     }
-    return render(request,"web/kuwait_benefits.html")
+    return render(request,"web/kuwait_benefits.html",context)
 
 # contact section
 def contact(request):

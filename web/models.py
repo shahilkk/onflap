@@ -50,10 +50,10 @@ class JobDetails(models.Model):
 
 class ApplyNow(models.Model):
     job = models.ForeignKey(JobDetails,on_delete=models.CASCADE,null=True,blank=True)
-    applicant_name = models.CharField(max_length=100)
+    applicant_name = models.CharField(max_length=100,null=True,blank=True)
     phone = models.CharField(max_length=100,null=True,blank=True)
     email = models.EmailField()
-    cv = models.FileField(upload_to='cv')
+    cv = models.FileField(upload_to='cv',null=True,blank=True)
 
     class Meta:
         verbose_name_plural = ("Applications")
@@ -66,6 +66,7 @@ class Review(models.Model):
     review = models.TextField()
     name = models.CharField(max_length=50,null=True,blank=True)
     pro_pic = models.FileField(upload_to='review',null=True,default='default_test.jpg',blank=True)
+    position = models.CharField(max_length=100,null=True,blank=True)
     class Meta:
         verbose_name_plural = ("Reviews")
 

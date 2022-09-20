@@ -48,6 +48,7 @@
             margin-bottom: 3rem;
             margin-top: 120px;
         }
+
         .section-header h3 {
             font-size: 20px;
         }
@@ -88,19 +89,27 @@
     #clients img {
         transition: all 0.4s ease-in-out;
     }
-    @media only screen and (min-width: 1500) and (max-width:2000){
-        .about-right .about-padding-right{
+
+    @media only screen and (min-width: 1500) and (max-width:2000) {
+        .about-right .about-padding-right {
             padding-right: 7rem;
         }
     }
+
     @media screen and (max-width:320) and (max-width:990) {
-        .feature-box .feature-icon{
+        .feature-box .feature-icon {
             margin-top: 44px;
-        }   
+        }
     }
+
     @media screen and (max-width:768) and (max-width:1440) {
-        img .pimage{
+        img .pimage {
             margin-top: -39px;
+        }
+    }
+    @media only screen and (max-width: 767px){
+        .bsnav-mobile .navbar-nav .nav-item .nav-link {
+            padding-top: 0rem;
         }
     }
 </style>
@@ -118,15 +127,19 @@
                 </div>
             </div>
             <div class="about-right about-padding-right" style="">
-                <h2 style="color: black;" class="filterh6"> DELIVERING THE ULTIMATE EXPERIENCE TO THE END USER</h2>
+                <h2 style="color: black;" class="filterh6"> Delivering The Ultimate Experience To The End User</h2>
                 <p style="color: rgb(51, 48, 48);">
-                    <b>Our mission</b> is to Provide the market with innovative, flexible and smart software solutions which
+                    <b>Our mission</b> is to Provide the market with innovative, flexible and smart software solutions
+                    which
                     match the international standards for a greater convenience, safety and security Established with
                     the specific aim of empowering the IT industry in the region through distribution &
-                    development of powerful, cost effective and scalable IT solutions.. </p>
-                <p style="color: rgb(51, 48, 48);"><b>We are </b> the region's fastest growing software development house, encompassing some of the best
+                    development of powerful, cost effective and scalable IT solutions..
+                </p>
+                <p style="color: rgb(51, 48, 48);"><b>We are </b> the region's fastest growing software development
+                    house, encompassing some of the best
                     programmers in the industry. </p>
-                <p style="color: rgb(51, 48, 48);"> <b>We</b> enjoy a vast Clientele including multiple ERP and inventory solutions for various
+                <p style="color: rgb(51, 48, 48);"> <b>We</b> enjoy a vast Clientele including multiple ERP and
+                    inventory solutions for various
                     sectors like Travel & Tourism, BPOs, Retail & Manufacturing, Medical, Aggro Industries,
                     Courier, Rental, Online E-COM and Learning Platforms etc,.</p>
                 </p>
@@ -160,7 +173,7 @@
         <div class="container" style="margin-top: 10px;">
             <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
             <div class="section-header">
-                <h3 class="h3filter">Our Flagship Products</h3>
+                <h3 class="h3filter">Our FlagShip Products</h3>
             </div>
             <div class="feature-wpr grid-3" style="margin-top: 50px;">
 
@@ -203,51 +216,83 @@
                             data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo
                         </button>
 
+                        <style>
+                            .w-100{
+                                color: teal;
+                                font-size: 26px;
+                            }
+                            .close{
+                                background-color: white;
+                                border: none;
+                            }
+                            .modal-footer{
+                                background-color: teal;
+                            }
+                            .md-form label{
+                                color: #323338;
+                                font-size: 14px;
+                            }
+                            .md-form i{
+                                color: #383838;
+                            }
+                        </style>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal{{p.id}}" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content" style="border-radius: 15px;">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel"> Contact Us</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+
+                        <div class="modal fade" id="exampleModal{{p.id}}" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                    <div class="modal-body">
-                                        <form method="POST" action="{% url 'web:productenquiry' p.id %}">
-                                            {% csrf_token %}
-                                            <div class="mb-3">
-                                                <label for="name" class="col-form-label">Name:</label>
-                                                <input type="text" class="form-control" name="name" id="name">
+                                    <form method="POST" action="{% url 'web:productenquiry' p.id %}">
+                                        {% csrf_token %}
+                                        <div class="modal-body mx-3">
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-user prefix grey-text"></i>
+                                                <label data-error="wrong" data-success="right" for="name">Your
+                                                    name <span class="text-danger">*</span> </label>
+                                                <input type="text" id="form34" name="name" class="form-control validate">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="email" class="col-form-label">email:</label>
-                                                <input type="text" class="form-control" name="email" id="email">
+
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-envelope prefix grey-text"></i>
+                                                <label data-error="wrong" data-success="right"  for="email">Your
+                                                    email <span class="text-danger">*</span> </label>
+                                                <input type="email" id="email" name="email"  class="form-control validate">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="phone" class="col-form-label">Phone:</label>
-                                                <input type="text" class="form-control" name="phone" id="phone">
+
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-phone prefix grey-text"></i>
+                                                <label data-error="wrong" data-success="right"
+                                                    for="phone">Phone Number <span class="text-danger">*</span> </label>
+                                                <input type="text" class="form-control validate" name="phone" id="phone">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="address" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" name="address" id="address"></textarea>
+
+                                            <div class="md-form mb-5">
+                                                <i class="fas fa-pencil prefix grey-text"></i>
+                                                <label data-error="wrong" data-success="right" for="address">Your
+                                                    message <span class="text-danger">*</span> </label>
+                                                <textarea type="text" name="address" id="address" class="md-textarea form-control"
+                                                    rows="4"></textarea>
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="md-form mb-5">
                                                 {{form.captcha}}
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Send message</button>
-                                            </div>
-                                        </form>
-                                    </div>
 
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button class="btn btn-unique">Send <i
+                                                    class="fas fa-paper-plane-o ml-1"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal -->
                     </div>
                 </div>
                 {% endfor %}
@@ -353,9 +398,8 @@
                             <p class="mb-0">
                                 <span style="font-weight: bold;">RETAIL - POS</span><br>
 
-                                With all financial data in a single
-                                place accountants wont have to spend
-                                hours cross posting data
+                                Encourage contactless shopping with
+                                our custom POS Modules
                             </p>
                         </div>
                     </div>
@@ -442,7 +486,7 @@
                                 enterprise
                             </p>
                         </div>
-                    </div>            
+                    </div>
                 </div>
             </div>
         </div>
@@ -671,7 +715,7 @@
                                             <div class="review-bio">
 
                                                 <h5>{{r.name}}</h5>
-                                                <span>Founder</span>
+                                                <span>{{r.position}}</span>
                                                 <div class="review-rating d-flex align-items-center">
                                                     <i class="icofont-star"></i>
                                                     <i class="icofont-star"></i>
