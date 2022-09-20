@@ -92,7 +92,7 @@ def productdetails(request,id):
 
 def about(request):
     context = {
-        "is_about":True,
+        "is_house":True,
     }
     return render(request,"web/about.html",context)    
 
@@ -109,7 +109,7 @@ def career(request):
 
 def careerDetails(request,id):
     category = JobDetails.objects.filter(id=id)
-    print(category)
+    # print(category)
     context = {
         "is_careerDetails":True,
         # "careerdetails":career_details,
@@ -133,7 +133,7 @@ def applynow(request,id):
         form = Myform(request.POST)
 
         if form.is_valid():
-            print('print Valid')
+            # print('print Valid')
             new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
             new_application.save()
             # return redirect('web:career') 
@@ -141,22 +141,22 @@ def applynow(request,id):
             message = new_application.applicant_name
             email = 'mhdshd.ak@gmail.com'
             try:
-                print('try')
+                # print('try')
                 mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
-                print(cv.name, cv.read(), cv.content_type)
-                print(cv,'#'*10)
-                print(new_application.cv,'*'*10)
+                # print(cv.name, cv.read(), cv.content_type)
+                # print(cv,'#'*10)
+                # print(new_application.cv,'*'*10)
                 
                 file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
-                print(file_path,'%'*10)
+                # print(file_path,'%'*10)
                 mail.attach_file(file_path)
                 # mail.content_type
                 mail.send()
                 # return redirect('web:home')
                 messages.success(request,"Sucess")
             except Exception as e:
-                print('except')
-                print(str(e))
+                # print('except')
+                # print(str(e))
                 raise HTTPException(str(e))
         else:
             print('else')
