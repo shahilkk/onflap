@@ -216,22 +216,24 @@ padding: 10px;
     }
     .card-btn {
         position: absolute;
-        margin: 15px -9px 0px 95px;
-        padding: 8px 10px;
+    margin: 15px -9px 0px 141px;
+    padding: 4px 7px;
+    font-size: 10px;
     }
 }
 @media only screen and (min-width: 375px){
     .card-btn {
         position: absolute;
-        margin: 15px -9px 0px 140px;
-        padding: 8px 10px;
+        margin: 15px -9px 0px 190px;
+        padding: 3px 5px;
+        font-size: 11px;
     }
 }
 @media only screen and (min-width: 425px){
     .card-btn {
         position: absolute;
-        margin: 15px -9px 0px 195px;
-        padding: 8px 10px;
+        margin: 15px -9px 0px 223px;
+        padding: 5px 10px;
     }
 }
 @media only screen and (min-width: 768px){
@@ -242,6 +244,7 @@ padding: 10px;
         position: absolute;
         margin: 153px -9px 0px 88px;
         padding: 8px 10px;
+        font-size: 13px;
     }
     .card-title {
         margin-top: 48px;

@@ -4,8 +4,8 @@
 
 
 <style>
-    @media only screen and (max-width: 768px){
-        .contact-left h2{
+    @media only screen and (max-width: 768px) {
+        .contact-left h2 {
             line-height: 2.5rem;
             font-size: 2rem;
             padding: 29px;
@@ -13,105 +13,145 @@
             text-align: center;
         }
     }
+
     .input-style-2 {
         border: 1px solid #d5d5d5;
+    }
+
+    .contact-page-info.grid-2 {
+        grid-gap: 0rem;
     }
 </style>
 
 <main class="main">
-		
+
     <!-- Start Breadcrumb
     ============================================= -->
     <div class="site-breadcrumb">
-        <div class="container" >
+        <div class="container">
             <h2 class="breadcrumb-title">You Can Reach Us On...</h2>
         </div>
     </div>
     <!-- End  Breadcrumb -->
-    
+
     <!-- Start Blog-Content
     ============================================= -->
-   <div class="wrapper">
-    <div class="single-area de-padding">
-        <div class="container">
-            <div class="contact-page-info grid-2">
-                <div class="contact-left" >
-                    <!-- <h2 style="color: black;text-align: center;">
-                        You can reach on us...
-                    </h2><br> -->
-                    <ul class="text-center">
-                        <li>
-                            <h5 class="fz-18-5"  style="font-weight: 900;">INDIA:</h5>
-                            <span>ONFLAP TECHNOLOGIES PRIVATE LIMITED</span>
-                        </li><br>
-                        <li>
-                            <span> Inkel Tower 2, IIIrd Floor</span>
-                        </li><br>
-                        <li>
-                            <span> Angamaly South J1 A Business Park, Angamaly Ernakulam</span>
-                        </li><br>
-                        <li>
-                            <span>Kerala - 683572, India</span>
-                        </li>
-                    </ul><br><br>
-
-                    <ul class="text-center" style="color: #67676a;">
-                        <li>
-                            <h5 class="fz-18-5" style="font-weight: 900;">CANADA:</h5>
-                            <span>ONFLAP TECHNOLOGIES INC.</span>
-                        </li><br>
-                        <li>
-                            <span> 100 Consilium Place - SUITE 200</span>
-                        </li><br>
-                        <li>
-                            <span> Toronto ON M1H 3E3</span>
-                        </li><br>
-                        <!-- <li>
-                            <span>Kerala - 683572, India</span>
-                        </li> -->
-                    </ul>
-                    <h5 style="color: black;text-align: center;">
-                        CONTACT US @  
-                        <a href="https://wa.me/+91-6282307829/" target="_blank">
-                            <img src="{% static 'web/whatsapp.png' %}" alt="" height="25px" width="25px">
-                        </a>
-                    </h5>
-                </div>
-
-                
-
-                <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" >
-                    <form  method="POST">	
-                        {% csrf_token %}				
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                {{contactfrom.cust_name}}
-                            </div>
-                            <div class="col-md-6">
-                                {{contactfrom.phone}}                            
-                            </div>
-                            <div class="col-md-12">
-                                {{contactfrom.email}}
-                            </div>
-                            <div class="col-12">
-                                {{contactfrom.message}}                            
-                            </div>
-                            <div class="col-12">
-                                {{form.captcha}}
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="theme-btn mt-20">
-                                    Send Message
-                                </button>
-                            </div>							
+    <div class="wrapper">
+        <div class="single-area de-padding">
+            <div class="container">
+                <div class="contact-page-info grid-2">
+                    <div class="contact-left">
+                        <div class="video">
+                            <img src="{% static 'web/world map2-01.png' %}" alt="" class="" width="663px"
+                                height="500px">
+                            <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location" target="_blank">India</a>
+                            <a href="https://goo.gl/maps/aeEDpWF6crAiXvGJ8" class="location2" target="_blank">Kuwait</a>
                         </div>
-                    </form>
+
+
+                        <style>
+                            .video {
+                                position: relative;
+                            }
+
+                            .video .location {
+                                position: absolute;
+                                display: block;
+                                top: 204px;
+                                left: 423px;
+                            }
+
+                            .video .location2 {
+                                position: absolute;
+                                display: block;
+                                top: 160px;
+                                left: 356px;
+                            }
+                        </style>
+                    </div>
+
+
+
+                    <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    {{contactfrom.cust_name}}
+                                </div>
+                                <div class="col-md-6">
+                                    {{contactfrom.phone}}
+                                </div>
+                                <div class="col-md-12">
+                                    {{contactfrom.email}}
+                                </div>
+                                <div class="col-12">
+                                    {{contactfrom.message}}
+                                </div>
+                                <div class="col-12">
+                                    {{form.captcha}}
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="theme-btn mt-20">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-   </div>
     <!-- End  Blog-Content -->
-    
+
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-6">
+                <ul class="text-center">
+                    <li>
+                        <h5 class="fz-18-5" style="font-weight: 900;">INDIA:</h5>
+                        <span>ONFLAP TECHNOLOGIES PRIVATE LIMITED</span>
+                    </li><br>
+                    <li>
+                        <span> Inkel Tower 2, IIIrd Floor</span>
+                    </li><br>
+                    <li>
+                        <span> Angamaly South J1 A Business Park, Angamaly Ernakulam</span>
+                    </li><br>
+                    <li>
+                        <span>Kerala - 683572, India</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="text-center" style="color: #67676a;">
+                    <li>
+                        <h5 class="fz-18-5" style="font-weight: 900;">CANADA:</h5>
+                        <span>ONFLAP TECHNOLOGIES INC.</span>
+                    </li><br>
+                    <li>
+                        <span> 100 Consilium Place - SUITE 200</span>
+                    </li><br>
+                    <li>
+                        <span> Toronto ON M1H 3E3</span>
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h5 style="color: black;text-align: center;">
+                    CONTACT US @  
+                    <a href="https://wa.me/+91-6282307829/" target="_blank">
+                        <img src="{% static 'web/whatsapp.png' %}" alt="" height="25px" width="25px">
+                    </a>
+                </h5> 
+            </div>
+        </div>
+    </div>
+
 </main>
 {% endblock %}

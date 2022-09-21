@@ -133,7 +133,7 @@ def applynow(request,id):
         form = Myform(request.POST)
 
         if form.is_valid():
-            # print('print Valid')
+            print('print Valid')
             new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
             new_application.save()
             # return redirect('web:career') 
@@ -143,12 +143,12 @@ def applynow(request,id):
             try:
                 # print('try')
                 mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
-                # print(cv.name, cv.read(), cv.content_type)
-                # print(cv,'#'*10)
-                # print(new_application.cv,'*'*10)
+                print(cv.name, cv.read(), cv.content_type)
+                print(cv,'#'*10)
+                print(new_application.cv,'*'*10)
                 
                 file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
-                # print(file_path,'%'*10)
+                print(file_path,'%'*10)
                 mail.attach_file(file_path)
                 # mail.content_type
                 mail.send()

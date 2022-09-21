@@ -97,12 +97,17 @@ class Contact(models.Model):
     def __str__(self):
         return str(self.cust_name)
 
+class ProductImportantFeatures(models.Model):
+    features = models.CharField(max_length=1000,null=True,blank=True)
+
+    def __str__(self):
+        return str(self.features)
 
 class Product(models.Model):
     product_name = models.CharField(max_length=50,null=True,blank=True)
     product_fullname = models.CharField(max_length=100,null=True,blank=True)
     product_logo = models.FileField(upload_to='product_log',null=True,blank=True)
-    product_features = HTMLField()
+    product_features = models.ManyToManyField(ProductImportantFeatures,null=True,blank=True)
 
     class Meta:
         verbose_name_plural = ("Products")

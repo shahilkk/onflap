@@ -72,3 +72,8 @@ class ProductFeaturesAdmin(admin.ModelAdmin):
     list_display = ('features',)
     search_fields=('features',)
 admin.site.register(ProductFeatures,ProductFeaturesAdmin)
+
+class ProductImportantFeaturesAdmin(admin.ModelAdmin):
+    list_display = ('features',)
+    search_fields=('features',)
+admin.site.register(ProductImportantFeatures,ProductImportantFeaturesAdmin)
