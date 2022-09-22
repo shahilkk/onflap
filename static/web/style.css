@@ -2636,3 +2636,61 @@ footer .footer-shape img {
     font-size: 1rem;
   }
 }
+
+.btn1 {
+  all: unset;
+  display: block;
+  margin-left: auto;
+  border: 2px solid #b71919;
+  padding: 7px 7px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.5s;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  
+
+  background-color: #b71919;
+  color: #fff;
+}
+
+@media only screen and (max-width:768px) {
+
+  .review-wpr .swiper-button-next,
+  .review-wpr .swiper-container-rtl .swiper-button-prev {
+    right: 0rem;
+    left: auto;
+  }
+
+  .review-wpr .swiper-button-prev,
+  .review-wpr .swiper-container-rtl .swiper-button-next {
+    left: 0rem;
+    right: auto;
+  }
+
+  .mv-card {
+    max-width: 513px !important;
+    min-height: 125px !important;
+    padding: 11px !important;
+  }
+
+  .fun-fact .fun-icon {
+    height: 75px;
+    width: 75px;
+  }
+
+}
+
+.review_img {
+  width: 101px !important;
+  height: 101px !important;
+  border-radius: 5rem;
+  margin-top: -5rem;
+}
+
+.mv-card {
+  max-width: 513px !important;
+  min-height: 125px !important;
+  padding: 11px;
+}

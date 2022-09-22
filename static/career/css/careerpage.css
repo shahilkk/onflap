@@ -682,3 +682,8 @@
     margin-bottom: -45px;
         margin-left: -15px;
 }
+@media screen and (max-width:1024px) {
+  .btn1{
+    padding: 5px 9px;
+  }
+}

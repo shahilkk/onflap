@@ -4,9 +4,9 @@
 
 <link rel="stylesheet" href="{% static 'web/about.css' %}">
 <style>
-    .fun-fact .fun-icon {
-    height: 7.8rem;
-    width: 6.8rem;
+   .fun-fact .fun-icon {
+    height: 87px;
+    width: 87px;
 }
 .about-left .about-img img {
     margin-top: 119px;
@@ -15,10 +15,17 @@
   .about-left .about-img img {
     margin-top: 119px;
 }
+
 }
 @media screen and (min-width:770px) and (max-width:991px) {
     .about-left .about-img img {
     margin-top: -7px;
+}
+}
+@media only screen  and (min-width:320px) and (max-width:768px) {
+    .fun-fact .fun-icon {
+    height: 75px !important;
+    width: 75px !important;
 }
 }
 </style>
@@ -100,7 +107,7 @@
             <!-- <section class="mx-auto my-5" style="max-width: 23rem;"> -->
 
             <div class="col d-flex justify-content-center">
-                <div class="card">
+                <div class="card mv-card">
                     <div class="card-body">
                         <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
                             <div class="blockquote-custom-icon bg-info shadow-1-strong">
@@ -119,7 +126,7 @@
             </div>
 
             <div class="col d-flex justify-content-center">
-                <div class="card">
+                <div class="card mv-card">
                     <div class="card-body">
                         <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
                             <div class="blockquote-custom-icon bg-info shadow-1-strong">

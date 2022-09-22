@@ -93,130 +93,40 @@
                     top: 160px;
                     left: 356px;
                 }
-
-                @media screen and (min-width:320px) {
-                    .video .images1 {
+                @media screen and (max-width:320px) {
+                    .video .images1{
                         width: 290px;
                     }
-
                     .video .location2 {
                         position: absolute;
                         display: block;
                         top: 87px;
                         left: 155px;
                     }
-
                     .video .location {
                         position: absolute;
                         display: block;
                         top: 103px;
                         left: 188px;
                     }
-
                     .footer-social {
                         gap: 1rem;
                     }
-
-                    .g-5,
-                    .gy-5 {
+                    .g-5, .gy-5 {
                         --bs-gutter-y: 0rem;
                     }
-
-                    .g-5,
-                    .gx-5 {
+                    .g-5, .gx-5 {
                         --bs-gutter-x: 1rem;
                     }
-
                     .row {
-                        --bs-gutter-x: 1.5rem;
-                        --bs-gutter-y: 2.5rem;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 2.5rem;
                     }
-
                     ul {
-                        margin: 0;
-                        padding: 0;
-                        font-size: 10px;
-                    }
-                    .fz-18-5 {
-    font-size: 1.3rem;
-    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
 }
-.theme-btn {
-    padding: 1.5rem 2rem;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 500;}
-                }
-
-                @media screen and (min-width: 375px) {
-                    .video .images1 {
-                        width: 360px;
-                    }
-
-                    .video .location {
-                        position: absolute;
-                        display: block;
-                        top: 127px;
-                        left: 234px;
-                    }
-
-                    .video .location2 {
-                        position: absolute;
-                        display: block;
-                        top: 105px;
-                        left: 193px;
-                    }
-                }
-
-                @media screen and (min-width: 425px) {
-                    .video .images1 {
-                        width: 395px;
-                    }
-
-                    .video .location2 {
-                        position: absolute;
-                        display: block;
-                        top: 116px;
-                        left: 210px;
-                    }
-
-                    .video .location {
-                        position: absolute;
-                        display: block;
-                        top: 137px;
-                        left: 253px;
-                    }
-                }
-
-                @media screen and (min-width: 768px) {
-                    .video .images1 {
-                        width: 700px;
-                    }
-
-                    .video .location2 {
-                        position: absolute;
-                        display: block;
-                        top: 211px;
-                        left: 391px;
-                    }
-
-                    .video .location {
-                        position: absolute;
-                        display: block;
-                        top: 248px;
-                        left: 467px;
-                    }
-
-                    .footer-social {
-                        gap: 0.4rem;
-                    }
-                }
-
-                @media screen and (min-width: 768px) {
-                    .footer-social {
-                        gap: 1.5rem;
-                    }
                 }
             </style>
 
@@ -238,10 +148,12 @@
                         <div class="container">
                             <div class="contact-page-info grid-2">
                                 <div class="contact-left">
-                                    <div class="video d-flex justify-content-center">
+                                    <div class="video">
                                         <img src="{% static 'web/world map3-01.png' %}" alt="" class="images1">
-                                        <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location" target="_blank" style="color: #d5d5d500;">India</a>
-                                        <a href="https://goo.gl/maps/aeEDpWF6crAiXvGJ8" class="location2" target="_blank" style="color: #d5d5d500;">Kuwait</a>
+                                        <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location"
+                                            target="_blank">India</a>
+                                        <a href="https://goo.gl/maps/aeEDpWF6crAiXvGJ8" class="location2"
+                                            target="_blank">Kuwait</a>
                                     </div>
                                 </div>
 
@@ -345,7 +257,7 @@
                     <div class="container">
                         <div class="footer-widget-wrapper de-pb">
                             <div class="row g-5">
-                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-6">
+                                <div class="col-xl-3 col-sm-6 col-lg-6">
                                     <div class="footer-widget-box">
                                         <ul class="">
                                             <li>
@@ -364,7 +276,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-6">
+                                <div class="col-xl-3 col-sm-6 col-lg-6">
                                     <div class="footer-widget-box">
                                         <ul class="" style="color: #67676a;">
                                             <li>
@@ -380,43 +292,41 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-12">
+                                <div class="col-xl-3 col-sm-6 col-lg-6">
                                     <div class="footer-widget-box">
                                         <ul class="">
-                                            <li>
-                                                <h5 class="fz-18-5" style="font-weight: 900;">KUWAIT:</h5>
-                                                <span>ONFLAP TECHNOLOGIES </span>
-                                            </li><br>
+                                            <li><h5 class="fz-18-5" style="font-weight: 900;">KUWAIT:</h5>
+                                                <span>ONFLAP TECHNOLOGIES </span></li><br>
                                             <li><span>Anoud Complex</span></li><br>
                                             <li><span>Mekka Street</span></li><br>
                                             <li><span>Fahaheel</span></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-12">
+                                <div class="col-xl-3 col-sm-6 col-lg-6">
                                     <div class="footer-widget-box footer-gallery">
                                         <div class="">
                                             <div class="row">
-                                                <p class="text-center">© 2022, Onflap. All Rights Reserved.</p>
+                                                <p class="text-center">© 2020 All Right Reserved, Ailng</p>
                                             </div>
                                             <!-- <div class="row"> -->
-                                            <ul class="footer-social">
-                                                <li><a target="_blank" href="https://www.facebook.com/onflaptech/"><i
-                                                            class="fab fa-facebook-f"></i></a></li>
-                                                <li><a target="_blank"
-                                                        href="https://www.instagram.com/onflaptech/?igshid=1b8qlek00fuj"><i
-                                                            class="fab fa-instagram"></i></a></li>
-                                                <li><a target="_blank"
-                                                        href="https://www.linkedin.com/company/onflap-technologies/about/"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a target="_blank"
-                                                        href="https://www.youtube.com/c/OnFlapTechnologies?app=desktop"><i
-                                                            class="fab fa-youtube"></i></a></li>
-                                                <li><a target="_blank" href="https://twitter.com/OnflapT"><i
-                                                            class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://wa.me/+91-6282307829/" target="_blank"><i
-                                                            class="fab fa-whatsapp"></i></a></li>
-                                            </ul>
+                                                <ul class="footer-social">
+                                                    <li><a target="_blank"
+                                                            href="https://www.facebook.com/onflaptech/"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a target="_blank"
+                                                            href="https://www.instagram.com/onflaptech/?igshid=1b8qlek00fuj"><i
+                                                                class="fab fa-instagram"></i></a></li>
+                                                    <li><a target="_blank"
+                                                            href="https://www.linkedin.com/company/onflap-technologies/about/"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                    <li><a target="_blank"
+                                                            href="https://www.youtube.com/c/OnFlapTechnologies?app=desktop"><i
+                                                                class="fab fa-youtube"></i></a></li>
+                                                    <li><a target="_blank" href="https://twitter.com/OnflapT"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="https://wa.me/+91-6282307829/" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                                </ul>
                                             <!-- </div> -->
                                         </div>
                                     </div>

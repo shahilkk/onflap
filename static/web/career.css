@@ -5,7 +5,7 @@
 }
 
 .card {
-   
+
     max-width: 100%;
     min-height: 250px;
     background: white;
@@ -53,7 +53,7 @@
 }
 
 
-.job{
+.job {
     margin-bottom: 0.5rem;
     padding: 2px 93px;
     justify-content: center;
@@ -70,50 +70,7 @@ p {
     /* text-align: center; */
     font-size: 14px;
 }
-    .cw_loc_div {
-        opacity: .3;
-        margin: 0 15px;
-        width: 1px;
-        height: 22px;
-        background-color: #707070;
-        display: inline-flex;
-        position: relative;
-        align-items: center;
-    }
-    .subhead{
-        font-size: 20px;
-    }
-    .listtype {
-    padding-left: 13px;
-    position: relative;
-    margin-bottom: 4px;
-    list-style: none;
-    font-family: var(--zf-primary-regular) !important;
-    font-size: 17px;
-}
-.cw_jd_innr {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.text{
-    font-size: 15px !important;
-    letter-spacing: 0;
-    font-family: var(--zf-primary-regular);
-    line-height: 1.9;
-    color: var(--secondary-color);
-    background-color: unset !important;
-}
 
-
-
-.head{
-    margin-top: 78px;
-    font-size: 32px;
-    text-transform: capitalize;
-    color: var(--heading-color);
-    font-weight: bold;
-}
 .cw_loc_div {
     opacity: .3;
     margin: 0 15px;
@@ -124,104 +81,165 @@ p {
     position: relative;
     align-items: center;
 }
-.subhead{
+
+.subhead {
     font-size: 20px;
 }
+
 .listtype {
-padding-left: 13px;
-position: relative;
-margin-bottom: 4px;
-list-style: none;
-font-family: var(--zf-primary-regular) !important;
-font-size: 17px;
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 4px;
+    list-style: none;
+    font-family: var(--zf-primary-regular) !important;
+    font-size: 17px;
 }
+
 .cw_jd_innr {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.text{
-font-size: 15px !important;
-letter-spacing: 0;
-font-family: var(--zf-primary-regular);
-line-height: 1.9;
-color: var(--secondary-color);
-background-color: unset !important;
+
+.text {
+    font-size: 15px !important;
+    letter-spacing: 0;
+    font-family: var(--zf-primary-regular);
+    line-height: 1.9;
+    color: var(--secondary-color);
+    background-color: unset !important;
+}
+
+
+
+.head {
+    margin-top: 78px;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: var(--heading-color);
+    font-weight: bold;
+}
+
+.cw_loc_div {
+    opacity: .3;
+    margin: 0 15px;
+    width: 1px;
+    height: 22px;
+    background-color: #707070;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+}
+
+.subhead {
+    font-size: 20px;
+}
+
+.listtype {
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 4px;
+    list-style: none;
+    font-family: var(--zf-primary-regular) !important;
+    font-size: 17px;
+}
+
+.cw_jd_innr {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    font-size: 15px !important;
+    letter-spacing: 0;
+    font-family: var(--zf-primary-regular);
+    line-height: 1.9;
+    color: var(--secondary-color);
+    background-color: unset !important;
 }
 
 @media only screen and (max-width: 330px) {
-.brtitle {
-    margin-top: 60px;
-    font-size: 1.5rem;
-}
+    .brtitle {
+        margin-top: 60px;
+        font-size: 1.5rem;
+    }
 
-.height {
-    margin-top: -77px;
-}
+    .height {
+        margin-top: -77px;
+    }
 
-.head1 .brtitle {
-    font-size: 2rem;
-    font-weight: 600;
-}
+    .head1 .brtitle {
+        font-size: 2rem;
+        font-weight: 600;
+    }
 
 }
 
 @media only screen and (max-width: 430px) {
-.card {
-    margin-bottom: 98px;
-}
-.job{
-    padding: 2px 10px 46px;
-    text-align: center;
-}
+    .card {
+        margin-bottom: 98px;
+    }
+
+    .job {
+        padding: 2px 10px 46px;
+        text-align: center;
+    }
 }
 
 
 
 
 .job-redirect-button {
-padding: 15px 4px;
-border: 3px solid #0097a4;
-color: #fff;
-display: inline-block;
-font-size: 18px;
-margin-right: 20px;
-margin-bottom: 30px;
+    padding: 15px 4px;
+    border: 3px solid #0097a4;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    /* margin-right: 20px; */
+    margin-bottom: 30px;
 }
 
 .margin-top-10 {
-margin-top: 10px;
-}
-@media (min-width: 1200px){
-.col-lg-offset-3 {
-margin-left: 25%;
-}
+    margin-top: 10px;
 }
 
-@media (min-width: 1200px){
-.col-lg-6 {
-width: 50%;
+@media (min-width: 1200px) {
+    .col-lg-offset-3 {
+        margin-left: 25%;
+    }
 }
+
+@media (min-width: 1200px) {
+    .col-lg-6 {
+        width: 50%;
+    }
 }
+
 .job-redirect-button span {
-background: #0097a4;
-padding: 10px;
+    background: #0097a4;
+    /* padding: 10px; */
+    padding: 3px;
 }
-@media only screen and (min-width: 320px){
+
+@media only screen and (min-width: 320px) {
     .card.card1 {
         height: 300px;
     }
+
     .card-title {
         margin-top: -24px;
     }
+
     .card-btn {
         position: absolute;
-    margin: 15px -9px 0px 141px;
-    padding: 4px 7px;
-    font-size: 10px;
+        margin: 15px -9px 0px 141px;
+        padding: 4px 7px;
+        font-size: 10px;
     }
 }
-@media only screen and (min-width: 375px){
+
+@media only screen and (min-width: 375px) {
     .card-btn {
         position: absolute;
         margin: 15px -9px 0px 190px;
@@ -229,27 +247,32 @@ padding: 10px;
         font-size: 11px;
     }
 }
-@media only screen and (min-width: 425px){
+
+@media only screen and (min-width: 425px) {
     .card-btn {
         position: absolute;
         margin: 15px -9px 0px 223px;
         padding: 5px 10px;
     }
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (min-width: 768px) {
     .card.card1 {
         height: 250px;
     }
+
     .card-btn {
         position: absolute;
         margin: 153px -9px 0px 88px;
         padding: 8px 10px;
         font-size: 13px;
     }
+
     .card-title {
         margin-top: 48px;
     }
 }
+
 /* @media only screen and (min-width: 375px){
     .card-btn {
         position: absolute;
@@ -279,5 +302,3 @@ padding: 10px;
     }
     
     } */
-
-

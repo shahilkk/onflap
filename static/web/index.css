@@ -5,7 +5,8 @@
     }
 
     .about-right p {
-        padding: 0px 35px 0px 33px;
+        /* padding: 0px 35px 0px 33px; */
+        padding: 0px 12px 0px 12px;
     }
 
     .how-we-work {
@@ -15,12 +16,12 @@
     }
 
     .card {
-        margin-bottom: 98px;
+        margin-bottom: 1px;
     }
 }
 
 .card {
-    margin-bottom: 98px;
+    margin-bottom: 1px;
 }
 .review_img {
     width: 12rem;
