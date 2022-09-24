@@ -256,17 +256,14 @@
                         </style>
 
                         <!-- Modal -->
-
-                        <div class="modal fade" id="exampleModal{{p.id}}" tabindex="-1" role="dialog"
-                            aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header text-center">
-                                        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
+                        <div class="modal" tabindex="-1" id="exampleModal{{p.id}}">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title text-center">Contact Us</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
                                     <form method="POST" action="{% url 'web:productenquiry' p.id %}">
                                         {% csrf_token %}
                                         <div class="modal-body mx-3">
@@ -309,8 +306,9 @@
                                         </div>
                                     </form>
                                 </div>
+                              </div>
                             </div>
-                        </div>
+                          </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -765,7 +763,7 @@
 
 
 
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
     $(document).ready(function () {
