@@ -676,18 +676,18 @@
             </ul>
         </div>
         <br />
-        <div class="content grid row no-gutters clients-wrap">
+        <div class="content grid row">
             {% for items in client_details %}
-            <div class="col-md-3 col-lg-3 col-6 {{items.category.title|slugify}}  grid-item"
+            <div class="col-md-3  {{items.category.title|slugify}}  grid-item"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="" src="{{items.client_log.url}}"
-                        style="padding: 5px;height: 100px;width: 150px;" />
+                    <img class="port-image" src="{{items.client_log.url}}"
+                        style="padding: 5px;height: 80px;width: 80px;" />
                     <div class="centered">
                         <!-- <img src="{{items.client_log.url}}" alt=""> -->
                         <!-- <h4>{{items.Client_name}}</h4> -->
                     </div>
-                    <!-- <div class="cap1">
+                    <div class="cap1">
                         <h3>{{items.Client_name}}</h3>
                         <p>
                             {{items.description}}
@@ -695,7 +695,7 @@
                     </div>
                     <div class="cap2">
                         <p class="text-center">Visit</p>
-                    </div> -->
+                    </div>
 
                 </div>
             </div>
@@ -785,9 +785,4 @@
 </script>
 
 
-{% endblock %}
-
-
-
-{% block js %}
 {% endblock %}

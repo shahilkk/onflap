@@ -137,9 +137,9 @@ def applynow(request,id):
             new_application = ApplyNow(applicant_name=applicant_name,phone=phone,email=email,cv=cv,job=job)
             new_application.save()
             # return redirect('web:career') 
-            subject ='The application '
+            subject ='The new application is arrived'
             message = new_application.applicant_name
-            email = 'mhdshd.ak@gmail.com'
+            email = ' admin@onflap.com'
             try:
                 # print('try')
                 mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
