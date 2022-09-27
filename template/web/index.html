@@ -17,6 +17,9 @@
         #clients .client-logo {
             padding: 25px;
         }
+        .review-single .review-content .review-bio span {
+    line-height: 1.3rem !important;
+}
     }
 
     ul.list_4 {
@@ -110,6 +113,10 @@
             margin-top: -39px;
         }
     }
+
+    .review-single .review-content .review-bio span {
+    line-height: 2.2rem !important;
+}
     @media only screen and (max-width: 767px){
         .bsnav-mobile .navbar-nav .nav-item .nav-link {
             padding-top: 0rem;
@@ -727,11 +734,11 @@
                                             <img src="{{r.pro_pic.url}}" alt="" class="review_img">
                                             <p>
                                                 {{r.review}}
-                                            </p>
+                                            </p> <br>
                                             <div class="review-bio">
 
                                                 <h5>{{r.name}}</h5>
-                                                <span>{{r.position}}</span>
+                                                <span>{{r.position}} <br> {{r.company_name}} <br> {{r.location}}</span>
                                                 <div class="review-rating d-flex align-items-center">
                                                     <i class="icofont-star"></i>
                                                     <i class="icofont-star"></i>
