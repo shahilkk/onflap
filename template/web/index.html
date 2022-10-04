@@ -9,17 +9,23 @@
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
+
+
+
+
 <style>
-    .card2{
+    .card2 {
         min-height: 384px !important;
     }
+
     @media only screen and (max-width: 425px) {
         #clients .client-logo {
             padding: 25px;
         }
+
         .review-single .review-content .review-bio span {
-    line-height: 1.3rem !important;
-}
+            line-height: 1.3rem !important;
+        }
     }
 
     ul.list_4 {
@@ -61,7 +67,7 @@
     }
 
     #clients {
-        padding: 60px 0;
+        padding: 60px 0 0;
 
     }
 
@@ -115,9 +121,10 @@
     }
 
     .review-single .review-content .review-bio span {
-    line-height: 2.2rem !important;
-}
-    @media only screen and (max-width: 767px){
+        line-height: 2.2rem !important;
+    }
+
+    @media only screen and (max-width: 767px) {
         .bsnav-mobile .navbar-nav .nav-item .nav-link {
             padding-top: 0rem;
         }
@@ -132,6 +139,8 @@
     <div class="about-area" style="padding: 10rem 0rem;">
         <div class="about-wpr grid-2">
             <div class="about-left">
+
+
                 <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                     <img src="{% static 'web/img/logo/2.png' %}" alt="thumb">
                 </div>
@@ -179,7 +188,7 @@
 
     <!-- Start Products
 ============================================= -->
-    <div class="feature-area" style="margin-top: -5rem">
+    <div class="feature-area padngs" >
         <div class="container" style="margin-top: 10px;">
             <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
             <div class="section-header">
@@ -191,13 +200,14 @@
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
 
                     <div class="feature-info ">
-                        <a href="{% url 'web:productdetails' p.id %}" target="">
+                        <a href="#home_section" target="">
                             <!-- <h5 class="text-center">{{p.product_name}}</h5> -->
                             <ul style="margin: 0px 0 0;" class="test">
                                 <li>
-                                    <a href="{% url 'web:productdetails' p.id %}" target="">
+                                    <a href="#home_section" target="">
                                         <div class="feature-icon">
-                                            <img src="{{p.product_logo.url}}" alt="thumb" style="" class="pimage">
+                                            <img src="{{p.product_logo.url}}" alt="thumb"
+                                                style="width: 92px;height: 30px;" class="pimage">
                                         </div>
                                     </a>
                                 </li>
@@ -212,7 +222,7 @@
                             <ul class="list_4" style="margin-top: 20px;">
                                 <li>
                                     {% for feature in p.product_features.all %}
-                                    <table >
+                                    <table>
                                         <tr>
                                             <td>
                                                 <img src="{% static 'web/Tick Mark-01.png' %}" alt="" width="20px">
@@ -222,17 +232,6 @@
                                     </table>
                                     {% endfor %}
                                 </li>
-                                    
-                                    <!-- {{p.product_features|safe}} -->
-                                    <!-- {% for feature in p.product_features.all %}
-                                    <li class="text-center justify-content">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                        </svg>
-                                        {{feature.features}}
-                                    </li>
-                                    {% endfor %} -->
                             </ul>
                         </div>
 
@@ -242,22 +241,26 @@
                         </button>
 
                         <style>
-                            .w-100{
+                            .w-100 {
                                 color: teal;
                                 font-size: 26px;
                             }
-                            .close{
+
+                            .close {
                                 background-color: white;
                                 border: none;
                             }
-                            .modal-footer{
+
+                            .modal-footer {
                                 background-color: teal;
                             }
-                            .md-form label{
+
+                            .md-form label {
                                 color: #323338;
                                 font-size: 14px;
                             }
-                            .md-form i{
+
+                            .md-form i {
                                 color: #383838;
                             }
                         </style>
@@ -265,57 +268,61 @@
                         <!-- Modal -->
                         <div class="modal" tabindex="-1" id="exampleModal{{p.id}}">
                             <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title text-center">Contact Us</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-center">Contact Us</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" action="{% url 'web:productenquiry' p.id %}">
+                                            {% csrf_token %}
+                                            <div class="modal-body mx-3">
+                                                <div class="md-form mb-5">
+                                                    <i class="fas fa-user prefix grey-text"></i>
+                                                    <label data-error="wrong" data-success="right" for="name">Your
+                                                        name <span class="text-danger">*</span> </label>
+                                                    <input type="text" id="form34" name="name"
+                                                        class="form-control validate">
+                                                </div>
+
+                                                <div class="md-form mb-5">
+                                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                                    <label data-error="wrong" data-success="right" for="email">Your
+                                                        email <span class="text-danger">*</span> </label>
+                                                    <input type="email" id="email" name="email"
+                                                        class="form-control validate">
+                                                </div>
+
+                                                <div class="md-form mb-5">
+                                                    <i class="fas fa-phone prefix grey-text"></i>
+                                                    <label data-error="wrong" data-success="right" for="phone">Phone
+                                                        Number <span class="text-danger">*</span> </label>
+                                                    <input type="text" class="form-control validate" name="phone"
+                                                        id="phone">
+                                                </div>
+
+                                                <div class="md-form mb-5">
+                                                    <i class="fas fa-pencil prefix grey-text"></i>
+                                                    <label data-error="wrong" data-success="right" for="address">Your
+                                                        message <span class="text-danger">*</span> </label>
+                                                    <textarea type="text" name="address" id="address"
+                                                        class="md-textarea form-control" rows="4"></textarea>
+                                                </div>
+                                                <div class="md-form mb-5">
+                                                    {{form.captcha}}
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button class="btn btn-unique">Send <i
+                                                        class="fas fa-paper-plane-o ml-1"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <form method="POST" action="{% url 'web:productenquiry' p.id %}">
-                                        {% csrf_token %}
-                                        <div class="modal-body mx-3">
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-user prefix grey-text"></i>
-                                                <label data-error="wrong" data-success="right" for="name">Your
-                                                    name <span class="text-danger">*</span> </label>
-                                                <input type="text" id="form34" name="name" class="form-control validate">
-                                            </div>
-
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-envelope prefix grey-text"></i>
-                                                <label data-error="wrong" data-success="right"  for="email">Your
-                                                    email <span class="text-danger">*</span> </label>
-                                                <input type="email" id="email" name="email"  class="form-control validate">
-                                            </div>
-
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-phone prefix grey-text"></i>
-                                                <label data-error="wrong" data-success="right"
-                                                    for="phone">Phone Number <span class="text-danger">*</span> </label>
-                                                <input type="text" class="form-control validate" name="phone" id="phone">
-                                            </div>
-
-                                            <div class="md-form mb-5">
-                                                <i class="fas fa-pencil prefix grey-text"></i>
-                                                <label data-error="wrong" data-success="right" for="address">Your
-                                                    message <span class="text-danger">*</span> </label>
-                                                <textarea type="text" name="address" id="address" class="md-textarea form-control"
-                                                    rows="4"></textarea>
-                                            </div>
-                                            <div class="md-form mb-5">
-                                                {{form.captcha}}
-                                            </div>
-
-                                        </div>
-                                        <div class="modal-footer d-flex justify-content-center">
-                                            <button class="btn btn-unique">Send <i
-                                                    class="fas fa-paper-plane-o ml-1"></i></button>
-                                        </div>
-                                    </form>
-                                </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -335,7 +342,7 @@
 
     <div class="feature-areag de-pt">
         <div class="container">
-            <div class=" feature-2 grid-12 ml-5">
+            <div class=" feature-2 grid-12 ml-5" id="home_section">
                 <!-- <h6 class="text-center filterh6" style="font-weight: 900;">OUR RANGE OF PRODUCTS</h6> -->
                 <div class="section-header">
                     <h3 class="h3filter">Our Range Of Products</h3>
@@ -535,7 +542,9 @@
                 <div class="card card2 card-custom bg-white border-white border-0">
                     <div></div>
                     <div class="card-custom-avatar">
-                        <img class="img-fluid" src="{% static  'web/img/servies/oN-03.png' %}" alt="Avatar" />
+                        <a href="#home_section">
+                            <img class="img-fluid" src="{% static  'web/img/servies/oN-03.png' %}" alt="Avatar" />
+                        </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">ERP Solutions</h4>
@@ -548,7 +557,9 @@
                 <div class="card card-custom bg-white card2 border-white border-0">
                     <div></div>
                     <div class="card-custom-avatar">
-                        <img class="img-fluid" src="{% static  'web/img/servies/oN-02.png' %}" alt="Avatar" />
+                        <a href="#home_section">
+                            <img class="img-fluid" src="{% static  'web/img/servies/oN-02.png' %}" alt="Avatar" />
+                        </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Software Developments</h4>
@@ -562,7 +573,9 @@
                     <div></div>
 
                     <div class="card-custom-avatar">
-                        <img src="{% static  'web/img/servies/oN-01.png' %}" class="card-img-top" alt="...">
+                        <a href="#home_section">
+                            <img src="{% static  'web/img/servies/oN-01.png' %}" class="card-img-top" alt="...">
+                        </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Hardware Installation & Support</h4>
@@ -578,7 +591,9 @@
                     <div></div>
 
                     <div class="card-custom-avatar">
-                        <img src="{% static  'web/img/servies/oN-04.png' %}" class="card-img-top" alt="...">
+                        <a href="#home_section">
+                            <img src="{% static  'web/img/servies/oN-04.png' %}" class="card-img-top" alt="...">
+                        </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Web / Digital Marketing</h4>
@@ -596,8 +611,9 @@
                     <div></div>
 
                     <div class="card-custom-avatar">
-                        <img src="{% static  'web/img/servies/oN-05.png' %}" class="card-img-top" alt="...">
-
+                        <a href="#home_section">
+                            <img src="{% static  'web/img/servies/oN-05.png' %}" class="card-img-top" alt="...">
+                        </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Networking & Security</h4>
@@ -613,8 +629,9 @@
                     <div></div>
 
                     <div class="card-custom-avatar">
-                        <img src="{% static  'web/img/servies/oN-06.png' %}" class="card-img-top" alt="...">
-
+                        <a href="#home_section">
+                          <img src="{% static  'web/img/servies/oN-06.png' %}" class="card-img-top" alt="...">
+                        
                     </div>
                     <div class="card-body" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Mobile Applications</h4>
@@ -686,8 +703,7 @@
             <div class="col-md-3 col-lg-3 col-6 {{items.category.title|slugify}}  grid-item"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="" src="{{items.client_log.url}}"
-                        style="padding: 5px;height: 100px;width: 150px;" />
+                    <img class="" src="{{items.client_log.url}}" style="padding: 5px;height: 100px;width: 150px;" />
                     <div class="centered">
                         <!-- <img src="{{items.client_log.url}}" alt=""> -->
                         <!-- <h4>{{items.Client_name}}</h4> -->
@@ -707,67 +723,212 @@
             {% endfor %}
         </div>
     </div>
-    <!-- End Client Section -->
 
-    <!-- ------------------------------------------------ -->
-    <!-- ------------------------------------------------ -->
-
-
-    <!-- testimonials
-============================================= -->
+    <link rel="stylesheet" href="{% static 'web/css/testimonial.css' %}">
     <div class="container ">
+
+
+
         <div class="section-header" style="margin-top:80px ;">
             <h3 class="h3filter">Trusted by Businesses WorldWide</h3>
         </div>
-        <div class="review-area de-pb" style="margin-top:50px ;">
-            <div class="container">
-                <div class="swiper-container review-wpr">
-                    <div class="swiper-wrapper">
-                        {% for r in reviews %}
-                        <div class="swiper-slide">
 
-                            <div class="review-single text-center">
-                                <div class="row">
+        <div class="client-home-section wow fadeInUp">
+            <!-- Client Slider -->
+            <div class="client-slider-wrapper">
 
-                                    <div class="col-xl-8 offset-xl-2">
-                                        <div class="review-content">
-                                            <img src="{{r.pro_pic.url}}" alt="" class="review_img">
-                                            <p>
-                                                {{r.review}}
-                                            </p> <br>
-                                            <div class="review-bio">
+                <div id="sync1" class="owl-carousel owl-theme">
 
-                                                <h5>{{r.name}}</h5>
-                                                <span>{{r.position}} <br> {{r.company_name}} <br> {{r.location}}</span>
-                                                <div class="review-rating d-flex align-items-center">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                    {% for r in reviews %}
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="img-holder float-left">
+                                    <div>
+                                        <img src="{{r.pro_pic.url}}" width="250px" height="250px" alt="Image">
+
                                     </div>
 
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+                                <p class="float-right">“{{r.review}}”</p>
+                                <div class="text-center">
+                                    <h5>{{r.name}}</h5>
+                                    <p style="width:100% !important; margin-top: 0px; font-size: 14px;
+                                    line-height: 22px; margin-bottom: 0;">{{r.position}} <br>
+                                        {{r.company_name}}
+                                    </p>
+                                    <p class="float-right" style="margin-top: 0px;">{{r.location}}</p>
                                 </div>
                             </div>
 
+
+
                         </div>
-                        {% endfor %}
+
+                    </div> <!-- /#sync1 -->
+                    {% endfor %}
+
+                    <div class="thumbnail-wrapper">
+                        <div id="sync2" class="owl-carousel owl-theme">
+
+
+
+
+
+                        </div> <!-- /#sync2 -->
                     </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
+                    <!-- /.thumbnail-wrapper -->
+                </div> <!-- End .client-slider-wrapper -->
+            </div>
+
+
+
+
+            {% comment %}
+            <div class="review-area de-pb">
+                <div class="container">
+                    <div class="swiper-container review-wpr">
+                        <div class="swiper-wrapper">
+                            {% for r in reviews %}
+                            <div class="swiper-slide">
+
+                                <div class="review-single text-center">
+                                    <div class="row">
+
+                                        <div class="col-xl-8 offset-xl-2">
+                                            <div class="review-content">
+                                                <img src="{{r.pro_pic.url}}" alt="" class="review_img">
+                                                <p>
+                                                    {{r.review}}
+                                                </p> <br>
+                                                <div class="review-bio">
+
+                                                    <h5>{{r.name}}</h5>
+                                                    <span>{{r.position}} <br> {{r.company_name}} <br>
+                                                        {{r.location}}</span>
+                                                    <div class="review-rating d-flex align-items-center">
+                                                        <i class="icofont-star"></i>
+                                                        <i class="icofont-star"></i>
+                                                        <i class="icofont-star"></i>
+                                                        <i class="icofont-star"></i>
+                                                        <i class="icofont-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
             </div>
+            {% endcomment %}
+
+
+
         </div>
     </div>
-    <!-- End testimonials -->
+    </div>
 
 </main>
 
 
+
+
+<script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
+
+
+
+
+<script>
+    function clientSlider() {
+        if ($('#sync1').length && $('#sync2').length) {
+
+            var sync1 = $("#sync1");
+            var sync2 = $("#sync2");
+            var slidesPerPage = 3; //globaly define number of elements per page
+            var syncedSecondary = true;
+
+            sync1.owlCarousel({
+                items: 1,
+                slideSpeed: 5000,
+                nav: false,
+                dots: false,
+                // autoplay: true,
+                autoplayTimeout: 4000,
+                autoplaySpeed: 1200,
+                dots: false,
+                loop: true,
+                responsiveRefreshRate: 2000,
+            })
+
+            sync2
+                .owlCarousel({
+                    items: slidesPerPage,
+                    dots: false,
+                    nav: false,
+                    smartSpeed: 500,
+                    slideSpeed: 900,
+                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                    responsiveRefreshRate: 100
+                })
+            sync2.on("click", ".item", function (e) {
+                e.preventDefault();
+                sync1.trigger('to.owl.carousel', $(e.target).parents('.owl-item').index(), 300, true);
+            });
+        }
+    }
+
+
+
+    // DOM ready function
+    jQuery(document).on('ready', function () {
+        (function ($) {
+            clientSlider();
+        })(jQuery);
+    });
+
+
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{% if messages %}
+{% for message in messages %}
+{% if message.message == "Wrong Captcha" %}
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'The Captcha is wrong! Reenter the form ',
+    })
+</script>
+{% else %}
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Your Enquiry Sended Successfully',
+        showConfirmButton: false,
+        timer: 5000
+    })
+</script>
+{% endif %}
+{% endfor %}
+{% endif %}
 
 
 <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
@@ -790,9 +951,13 @@
 </script>
 
 
+
+
+
 {% endblock %}
 
 
 
 {% block js %}
+
 {% endblock %}

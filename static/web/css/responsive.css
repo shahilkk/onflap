@@ -97,7 +97,7 @@
 	/*	Feature*/
 	
 	.feature-area {
-		margin-top: -14rem;
+		margin-top: -10rem;
 	}
 	
 	.feature-wpr.feature-2 .feature-left p {
@@ -227,7 +227,7 @@
 	.bsnav-mobile .navbar-nav .nav-item .nav-link {
 		max-width: 100%;
 		display: inline-block;
-		padding-top: 1rem;
+		padding-top: 0rem;
 		line-height: 1;
 		height: 1px;
 		margin-right: 0;
@@ -772,6 +772,12 @@
   .navbar-nav .nav-item.active > .nav-link, .navbar-nav .nav-item:active:focus > .nav-link, .navbar-nav .nav-item:active > .nav-link, .navbar-nav .nav-item:focus > .nav-link, .navbar-nav .nav-item:hover > .nav-link {
     color: var(--theme-color) !important;
 }
+}
+@media only screen and(max-width:992px) {
+	.padngs {
+		padding: 60px 0 !important;
+	}
+	
 }
 
 

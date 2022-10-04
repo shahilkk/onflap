@@ -259,7 +259,7 @@
                                         <img src="{% static 'web/world map3-01.png' %}" alt="" class="images1">
                                         <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location" target="_blank"
                                             style="color: #d5d5d500;">India</a>
-                                        <a href="https://goo.gl/maps/8yak39ubmBq47UTv5" class="location2"
+                                        <a href="https://goo.gl/maps/aeEDpWF6crAiXvGJ8" class="location2"
                                             target="_blank" style="color: #d5d5d500;">Kuwait</a>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                                 {{form.captcha}}
                                             </div>
                                             <div class="col-12">
-                                                <button type="submit" class="theme-btn mt-20" onclick="sweet()">
+                                                <button type="submit" class="theme-btn mt-20">
                                                     Send Message
                                                 </button>
                                             </div>
@@ -480,37 +480,6 @@
     <!-- jQuery Frameworks 
 ============================================= -->
     {% block js %}
-
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-{% if messages %}
-    {% for message in messages %}
-        {% if message.message == "Wrong Captcha" %}
-
-            <script>
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'The Captcha is wrong! Re-enter the form ',
-                })
-            </script>
-
-        {% else %}
-
-            <script>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Your Enquiry Sended Successfully',
-                    showConfirmButton: false,
-                    timer: 5000
-                })
-            </script>
-
-        {% endif %}
-    {% endfor %}
-{% endif %}
-
-
     {% endblock %}
     <script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
