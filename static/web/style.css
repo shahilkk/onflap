@@ -2636,6 +2636,9 @@ footer .footer-shape img {
   .review-single .review-content .review-bio span {
     font-size: 1rem;
   }
+  .testimonial{
+    width: 237px;
+  }
 }
 
 .btn1 {
@@ -2676,6 +2679,13 @@ footer .footer-shape img {
     padding: 11px !important;
   }
 
+  .cardtest{
+    max-width: 513px !important;
+    min-height: 125px !important;
+    padding: 11px !important;
+  }
+  
+
   .fun-fact .fun-icon {
     height: 75px;
     width: 75px;
@@ -2694,4 +2704,13 @@ footer .footer-shape img {
   max-width: 513px !important;
   min-height: 125px !important;
   padding: 11px;
+}
+
+
+
+
+.mt-card {
+  max-width: 999px !important;
+  min-height: 200px !important;
+  padding: 56px;
 }
