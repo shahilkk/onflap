@@ -32,10 +32,156 @@
             width: 75px !important;
         }
     }
+
     .blockquote>:last-child {
-    margin-bottom: 0;
-    font-family: 'Font Awesome 5 Brands';
-}
+        margin-bottom: 0;
+        font-family: 'Font Awesome 5 Brands';
+    }
+</style>
+
+
+<style>
+    .testimonial {
+        border-right: 3px solid teal;
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
+        padding: 26px 4px 14px 19px;
+        margin: 0 15px 30px 15px;
+        overflow: hidden;
+        position: relative;
+        /* width: 317px; */
+        /* width: 260px; */
+        width: 100%;
+        height: 424px;
+    }
+
+    /* .testimonial:before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: -17px;
+        border-top: 25px solid teal;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        transform: rotate(45deg);
+    } */
+
+    /* .testimonial:after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -17px;
+        border-top: 25px solid #29d18b;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        transform: rotate(135deg);
+    } */
+
+    /* .testimonial .pic {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -1px;
+        position: absolute;
+        z-index: 25;
+        top: 2px;
+        left: 2px;
+    } */
+
+    .testimonial .pic {
+        display: inline-block;
+        width: 106px;
+        height: 106px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -1px;
+        position: absolute;
+        z-index: 25;
+        top: 4px;
+        left: 2px;
+    }
+
+    .testimonial .pic img {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonial .description {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #6f6f6f;
+        line-height: 19px;
+        text-align: justify;
+        /* padding: 60px 15px 0 0; */
+        padding: 90px 15px 0 0;
+        margin-bottom: 12px;
+        font-family: 'Jost', sans-serif;
+    }
+
+    .subdescription {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #6f6f6f;
+        line-height: 19px;
+        text-align: justify;
+        font-family: 'Jost', sans-serif;
+        margin-bottom: 12px;
+    }
+
+    .testimonial .title {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #b1181e;
+        margin: 0;
+        font-family: 'Jost', sans-serif;
+    }
+
+    .testimonial .post {
+        display: block;
+        font-size: 12px;
+        color: #959395;
+        font-family: 'Jost', sans-serif;
+    }
+
+    .cardtest {
+        max-width: 1500px !important;
+        min-height: 200px !important;
+    }
+
+    .t1,
+    .t3 {
+        /* background-color: yellow; */
+        position: relative;
+        top: -49px;
+        height: 470px;
+    }
+
+    @media screen and (max-width:991px) {
+
+        .t1,
+        .t3 {
+            /* background-color: yellow; */
+            position: relative;
+            top: 0px;
+        }
+
+        .testimonial {
+            border-right: 3px solid teal;
+            box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
+            padding: 26px 4px 14px 19px;
+            margin: 15px auto;
+            overflow: hidden;
+            position: relative;
+            /* width: 317px; */
+            /* width: 260px; */
+            width: 100%;
+
+        }
+    }
 </style>
 
 <main class="main">
@@ -108,200 +254,9 @@
     <!-- End About -->
 
 
-    <!-- mission vision -->
-
-    <div class="container">
-        <div class="row">
-            <!-- <section class="mx-auto my-5" style="max-width: 23rem;"> -->
-
-            <div class="col d-flex justify-content-center">
-                <div class="card mv-card">
-                    <div class="card-body">
-                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
-                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
-                                <i class="fa fa-quote-left text-white"></i>
-                            </div> -->
-                            <p class="para">
-                                "To establish long lasting client relationships and to be their No. I choice of
-                                businesses for all their software needs, and set new industry standards in quality and
-                                speed of delivery. Our vision is to help our clients grow their business with quality
-                                and style with ease always considering the changing market trends."
-                                <!-- <a href="#" class="text-info">@consequat</a>." -->
-                            </p>
-                            <footer class="blockquote-footer pt-4 mt-4 border-top">
-                                Our Vision
-                            </footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col d-flex justify-content-center">
-                <div class="card mv-card">
-                    <div class="card-body">
-                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
-                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
-                                <i class="fa fa-quote-left text-white"></i>
-                            </div> -->
-                            <p class="para">
-                                " Provide the market with innovative, flexible and smart software solutions which
-                                matches the international standards for a greater convenience, safety and security "
-                                <!-- <a href="#" class="text-info">@consequat</a>." -->
-                            </p>
-                            <footer class="blockquote-footer pt-4 mt-5 border-top">
-                                Our Mission
-                            </footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-            <!-- </section> -->
-        </div>
-    </div>
-    <!-- /mission vision -->
-
-    <!-- fonuders -->
-    <style>
-        .testimonial {
-            border-right: 3px solid teal;
-            box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
-            padding: 26px 4px 14px 19px;
-            margin: 0 15px 30px 15px;
-            overflow: hidden;
-            position: relative;
-            /* width: 317px; */
-            /* width: 260px; */
-            width: 100%;
-        }
-
-        .testimonial:before {
-            content: "";
-            position: absolute;
-            bottom: -4px;
-            left: -17px;
-            border-top: 25px solid teal;
-            border-left: 25px solid transparent;
-            border-right: 25px solid transparent;
-            transform: rotate(45deg);
-        }
-
-        /* .testimonial:after {
-            content: "";
-            position: absolute;
-            top: -4px;
-            left: -17px;
-            border-top: 25px solid #29d18b;
-            border-left: 25px solid transparent;
-            border-right: 25px solid transparent;
-            transform: rotate(135deg);
-        } */
-
-        /* .testimonial .pic {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-top: -1px;
-            position: absolute;
-            z-index: 25;
-            top: 2px;
-            left: 2px;
-        } */
-
-        .testimonial .pic {
-            display: inline-block;
-            width: 106px;
-            height: 106px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-top: -1px;
-            position: absolute;
-            z-index: 25;
-            top: 4px;
-            left: 2px;
-        }
-
-        .testimonial .pic img {
-            width: 100%;
-            height: auto;
-        }
-
-        .testimonial .description {
-            font-size: 14px;
-            letter-spacing: 1px;
-            color: #6f6f6f;
-            line-height: 19px;
-            text-align: justify;
-            /* padding: 60px 15px 0 0; */
-            padding: 90px 15px 0 0;
-            margin-bottom: 12px;
-            font-family: 'Jost', sans-serif;
-        }
-
-        .subdescription {
-            font-size: 14px;
-            letter-spacing: 1px;
-            color: #6f6f6f;
-            line-height: 19px;
-            text-align: justify;
-            font-family: 'Jost', sans-serif;
-            margin-bottom: 12px;
-        }
-
-        .testimonial .title {
-            display: inline-block;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #b1181e;
-            margin: 0;
-            font-family: 'Jost', sans-serif;
-        }
-
-        .testimonial .post {
-            display: block;
-            font-size: 12px;
-            color: #959395;
-            font-family: 'Jost', sans-serif;
-        }
-
-        .cardtest {
-            max-width: 1500px !important;
-            min-height: 200px !important;
-        }
-
-        .t1,
-        .t3 {
-            /* background-color: yellow; */
-            position: relative;
-            top: -32px;
-        }
-
-        @media screen and (max-width:991px) {
-
-            .t1,
-            .t3 {
-                /* background-color: yellow; */
-                position: relative;
-                top: 0px;
-            }
-
-            .testimonial {
-                border-right: 3px solid teal;
-                box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
-                padding: 26px 4px 14px 19px;
-                margin: 15px auto;
-                overflow: hidden;
-                position: relative;
-                /* width: 317px; */
-                /* width: 260px; */
-                width: 100%;
-            }
-        }
-    </style>
-    <div class="container">
+     <!-- fonuders -->
+   
+     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="">
@@ -353,28 +308,6 @@
 
                                 <div class="testimonial ">
                                     <div class="pic">
-                                        <img src="{% static 'web/img/team/ajil.jpeg' %}">
-                                    </div>
-                                    <p class="description">
-                                        "If you don’t build your dream, someone else will hire you to help them build
-                                        theirs.” <br> <br>
-
-                                        In ONFLAP we are building our dream everyday and helping all ONFLAPians to
-                                        acheive their dreams
-                                    </p>
-                                    <h3 class="title"> Ajil K.V,</h3>
-                                    <small class="post">- Director & CEO</small>
-                                </div>
-
-
-
-                            </div>
-
-
-                            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-
-                                <div class="testimonial t3">
-                                    <div class="pic">
                                         <img src="{% static 'web/img/team/emithiyas.png' %}">
                                     </div>
                                     <p class="description">
@@ -393,6 +326,30 @@
 
                             </div>
 
+                            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+
+                                <div class="testimonial t3">
+                                    <div class="pic">
+                                        <img src="{% static 'web/img/team/ajil.jpeg' %}">
+                                    </div>
+                                    <p class="description">
+                                        "If you don’t build your dream, someone else will hire you to help them build
+                                        theirs.” <br> <br>
+
+                                        In ONFLAP we are building our dream everyday and helping all ONFLAPians to
+                                        acheive their dreams
+                                    </p>
+                                    <h3 class="title"> Ajil K.V,</h3>
+                                    <small class="post">- Director & CEO</small>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
 
 
                         </div>
@@ -402,7 +359,61 @@
         </div>
 
     </div>
-    <!-- founders -->
+
+    <!-- mission vision -->
+
+    <div class="container">
+        <div class="row">
+            <!-- <section class="mx-auto my-5" style="max-width: 23rem;"> -->
+
+            <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
+                <div class="card mv-card">
+                    <div class="card-body">
+                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div> -->
+                            <p class="para">
+                                "To establish long lasting client relationships and to be their No. I choice of
+                                businesses for all their software needs, and set new industry standards in quality and
+                                speed of delivery. Our vision is to help our clients grow their business with quality
+                                and style with ease always considering the changing market trends."
+                                <!-- <a href="#" class="text-info">@consequat</a>." -->
+                            </p>
+                            <footer class="blockquote-footer pt-4 mt-4 border-top">
+                                Our Vision
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-12  d-flex justify-content-center">
+                <div class="card mv-card">
+                    <div class="card-body">
+                        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div> -->
+                            <p class="para">
+                                " Provide the market with innovative, flexible and smart software solutions which
+                                matches the international standards for a greater convenience, safety and security "
+                                <!-- <a href="#" class="text-info">@consequat</a>." -->
+                            </p>
+                            <footer class="blockquote-footer pt-4 mt-5 border-top">
+                                Our Mission
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <!-- </section> -->
+        </div>
+    </div>
+    
+
+   
+   
 
 
 

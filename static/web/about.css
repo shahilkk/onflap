@@ -121,3 +121,7 @@
     margin-top: 25px;
 }
 
+.mv-card {
+  border-right: 3px solid #b1181e;
+  border-radius: 1rem 0rem 0 1rem;
+}

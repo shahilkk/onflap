@@ -824,6 +824,8 @@
                 dots: false,
                 loop: true,
                 responsiveRefreshRate: 2000,
+                // navigationText: ["<",">"]
+
             })
 
             sync2
@@ -834,7 +836,9 @@
                     smartSpeed: 500,
                     slideSpeed: 900,
                     slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                    responsiveRefreshRate: 100
+                    responsiveRefreshRate: 100,
+                    // navigationText: ["<",">"]
+
                 })
             sync2.on("click", ".item", function (e) {
                 e.preventDefault();

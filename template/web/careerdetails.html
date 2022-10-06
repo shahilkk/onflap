@@ -89,28 +89,34 @@
                         </div>
                         <div class="media single-job-details">
                             <div class="media-body">
+                                {% if d.job_description %}
                                 <h6 class="sub-title">Job Description</h6>
                                 <span class="pad">{{d.job_description|safe}}</span>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="media single-job-details">
                             <div class="media-body">
+                                {% if d.job_responsibility %}
                                 <h6 class="sub-title ">Job Responsibilities</h6>
                                 <span class="">
                                     <p>
                                         {{d.job_responsibility|safe|title}}
                                     </p>
                                 </span>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="media single-job-details">
                             <div class="media-body">
+                                {% if d.educational_requirments %}
                                 <h6 class="sub-title ">Educational Requirements</h6>
                                 <span class="">
                                     <p>
                                         {{d.educational_requirments|safe|title}}
                                     </p>
                                 </span>
+                                {% endif %}
                             </div>
                         </div>
                         <a href="{% url 'web:applynow' d.id %}" class="job-apply-btn" style="margin-bottom: 20px;">Apply
@@ -125,29 +131,37 @@
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
                                 <div class="media-body">
+                                    {% if d.location %}
                                     <h6>Location</h6>
                                     <span>{{d.location|title}}</span>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
                                 <div class="media-body">
+                                    {% if d.work_mode %}
                                     <h6>Job Type</h6>
                                     <span>{{d.work_mode}}</span>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="media single-job-details">
                                 <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
                                 <div class="media-body">
+                                    {% if d.experience %}
                                     <h6>Experience</h6>
                                     <span>{{d.experience}} year{{d.experience|pluralize}}</span>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="media single-job-details mb-0">
                                 <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
                                 <div class="media-body">
+                                    {% if d.salary %}
                                     <h6>Salary</h6>
                                     <span>{{d.salary}}</span>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

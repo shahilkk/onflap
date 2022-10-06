@@ -224,5 +224,31 @@
 }
 .owl-next {
     position: absolute;
-    top: 0;
+    right: -55px;
+    top: 151px;
 }
+.owl-prev {
+    position: absolute;
+    left: -55px;
+    top: 151px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+    color: white;
+    font-size: 14px;
+    margin: 8px;
+    padding: 6px 9px;
+    background: #b1181e;
+    border-radius: 3px 63px 70px 5px;
+    display: inline-block;
+    cursor: pointer;
+    /* border-radius: 3px; */
+    border: none;
+}
+@media screen and (max-width:991px) {
+    .owl-prev {
+        position: absolute;
+        left: -9px;
+        top: 151px;
+    }
+}
+    
