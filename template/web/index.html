@@ -186,13 +186,19 @@
 
     <!-- Start Products
 ============================================= -->
-    <div class="feature-area padngs" >
+    <div class="feature-area padngs">
         <div class="container" style="margin-top: 10px;">
             <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
             <div class="section-header">
                 <h3 class="h3filter">Our FlagShip Products</h3>
             </div>
-            <div class="feature-wpr grid-3" style="margin-top: 50px;">
+            <style>
+                .vertical:nth-child(3) {
+                    border: none;
+                }
+            </style>
+            <div class="feature-wpr ffff grid-3" style="margin-top: 50px;">
+
 
                 {% for p in product_details %}
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
@@ -628,7 +634,7 @@
 
                     <div class="card-custom-avatar">
                         <a href="#home_section">
-                          <img src="{% static  'web/img/servies/oN-06.png' %}" class="card-img-top" alt="...">
+                            <img src="{% static  'web/img/servies/oN-06.png' %}" class="card-img-top" alt="...">
                         </a>
                     </div>
                     <div class="card-body" style="overflow-y: auto">
@@ -698,10 +704,10 @@
         <br />
         <div class="content grid row no-gutters clients-wrap">
             {% for items in client_details %}
-            <div class="col-md-3 col-lg-3 col-6 {{items.category.title|slugify}}  grid-item"
+            <div class="col-md-3 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="" src="{{items.client_log.url}}" style="padding: 5px;height: 100px;width: 150px;" />
+                    <img class="" src="{{items.client_log.url}}" width="280px" height="230px" style="width: 280px; height:233px; "/>
                     <div class="centered">
                         <!-- <img src="{{items.client_log.url}}" alt=""> -->
                         <!-- <h4>{{items.Client_name}}</h4> -->
@@ -756,12 +762,12 @@
                             <div class="col-lg-6">
                                 <p class="float-right">“{{r.review}}”</p>
                                 <div class="text-center">
-                                    <h5>{{r.name}}</h5>
+                                    <h5>{{r.name}} | {{r.position}} </h5>
                                     <p style="width:100% !important; margin-top: 0px; font-size: 14px;
-                                    line-height: 22px; margin-bottom: 0;">{{r.position}} <br>
-                                        {{r.company_name}}
+                                    line-height: 22px; margin-bottom: 0;">
+                                        {{r.company_name}} | {{r.location}}
                                     </p>
-                                    <p class="float-right" style="margin-top: 0px;">{{r.location}}</p>
+                                    <p class="float-right" style="margin-top: 0px;"></p>
                                 </div>
                             </div>
 
@@ -788,56 +794,6 @@
 
 
 
-
-            {% comment %}
-            <div class="review-area de-pb">
-                <div class="container">
-                    <div class="swiper-container review-wpr">
-                        <div class="swiper-wrapper">
-                            {% for r in reviews %}
-                            <div class="swiper-slide">
-
-                                <div class="review-single text-center">
-                                    <div class="row">
-
-                                        <div class="col-xl-8 offset-xl-2">
-                                            <div class="review-content">
-                                                <img src="{{r.pro_pic.url}}" alt="" class="review_img">
-                                                <p>
-                                                    {{r.review}}
-                                                </p> <br>
-                                                <div class="review-bio">
-
-                                                    <h5>{{r.name}}</h5>
-                                                    <span>{{r.position}} <br> {{r.company_name}} <br>
-                                                        {{r.location}}</span>
-                                                    <div class="review-rating d-flex align-items-center">
-                                                        <i class="icofont-star"></i>
-                                                        <i class="icofont-star"></i>
-                                                        <i class="icofont-star"></i>
-                                                        <i class="icofont-star"></i>
-                                                        <i class="icofont-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-            </div>
-            {% endcomment %}
-
-
-
         </div>
     </div>
     </div>
@@ -846,11 +802,7 @@
 
 
 
-
 <script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
-
-
-
 
 <script>
     function clientSlider() {
@@ -864,7 +816,7 @@
             sync1.owlCarousel({
                 items: 1,
                 slideSpeed: 5000,
-                nav: false,
+                nav: true,
                 dots: false,
                 // autoplay: true,
                 autoplayTimeout: 4000,
@@ -878,7 +830,7 @@
                 .owlCarousel({
                     items: slidesPerPage,
                     dots: false,
-                    nav: false,
+                    nav: true,
                     smartSpeed: 500,
                     slideSpeed: 900,
                     slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel

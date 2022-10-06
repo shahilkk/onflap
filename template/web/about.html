@@ -32,6 +32,10 @@
             width: 75px !important;
         }
     }
+    .blockquote>:last-child {
+    margin-bottom: 0;
+    font-family: 'Font Awesome 5 Brands';
+}
 </style>
 
 <main class="main">
@@ -42,7 +46,7 @@
             <div class="about-wpr grid-2">
                 <div class="about-left">
                     <div class="about-img">
-                        <img src="{% static 'web/img.jpg' %}" alt="thumb">
+                        <img src="{% static 'web/img/img copy.jpg' %}" alt="thumb">
                     </div>
                 </div>
                 <div class="about-right about-padding-right">
@@ -114,9 +118,9 @@
                 <div class="card mv-card">
                     <div class="card-body">
                         <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
-                            <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
                                 <i class="fa fa-quote-left text-white"></i>
-                            </div>
+                            </div> -->
                             <p class="para">
                                 "To establish long lasting client relationships and to be their No. I choice of
                                 businesses for all their software needs, and set new industry standards in quality and
@@ -125,7 +129,7 @@
                                 <!-- <a href="#" class="text-info">@consequat</a>." -->
                             </p>
                             <footer class="blockquote-footer pt-4 mt-4 border-top">
-                                Vision
+                                Our Vision
                             </footer>
                         </blockquote>
                     </div>
@@ -136,16 +140,16 @@
                 <div class="card mv-card">
                     <div class="card-body">
                         <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
-                            <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                            <!-- <div class="blockquote-custom-icon bg-info shadow-1-strong">
                                 <i class="fa fa-quote-left text-white"></i>
-                            </div>
+                            </div> -->
                             <p class="para">
                                 " Provide the market with innovative, flexible and smart software solutions which
                                 matches the international standards for a greater convenience, safety and security "
                                 <!-- <a href="#" class="text-info">@consequat</a>." -->
                             </p>
                             <footer class="blockquote-footer pt-4 mt-5 border-top">
-                                Mission
+                                Our Mission
                             </footer>
                         </blockquote>
                     </div>
@@ -166,7 +170,8 @@
             overflow: hidden;
             position: relative;
             /* width: 317px; */
-            width: 260px;
+            /* width: 260px; */
+            width: 100%;
         }
 
         .testimonial:before {
@@ -191,7 +196,7 @@
             transform: rotate(135deg);
         } */
 
-        .testimonial .pic {
+        /* .testimonial .pic {
             display: inline-block;
             width: 80px;
             height: 80px;
@@ -201,6 +206,19 @@
             position: absolute;
             z-index: 25;
             top: 2px;
+            left: 2px;
+        } */
+
+        .testimonial .pic {
+            display: inline-block;
+            width: 106px;
+            height: 106px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: -1px;
+            position: absolute;
+            z-index: 25;
+            top: 4px;
             left: 2px;
         }
 
@@ -215,7 +233,8 @@
             color: #6f6f6f;
             line-height: 19px;
             text-align: justify;
-            padding: 60px 15px 0 0;
+            /* padding: 60px 15px 0 0; */
+            padding: 90px 15px 0 0;
             margin-bottom: 12px;
             font-family: 'Jost', sans-serif;
         }
@@ -229,6 +248,7 @@
             font-family: 'Jost', sans-serif;
             margin-bottom: 12px;
         }
+
         .testimonial .title {
             display: inline-block;
             font-size: 15px;
@@ -251,16 +271,33 @@
             max-width: 1500px !important;
             min-height: 200px !important;
         }
-        .t1,.t3 {
+
+        .t1,
+        .t3 {
             /* background-color: yellow; */
             position: relative;
             top: -32px;
         }
+
         @media screen and (max-width:991px) {
-            .t1,.t3 {
-            /* background-color: yellow; */
-            position: relative;
-            top: 0px;
+
+            .t1,
+            .t3 {
+                /* background-color: yellow; */
+                position: relative;
+                top: 0px;
+            }
+
+            .testimonial {
+                border-right: 3px solid teal;
+                box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
+                padding: 26px 4px 14px 19px;
+                margin: 15px auto;
+                overflow: hidden;
+                position: relative;
+                /* width: 317px; */
+                /* width: 260px; */
+                width: 100%;
             }
         }
     </style>
@@ -277,11 +314,9 @@
                                         <img src="{% static 'web/img/team/anu.jpeg' %}">
                                     </div>
                                     <p class="description">
-                                        " ONFLAP signifies how a group of colleagues from
-                                        
-                                        
-                                        ONFLAP signifies how a group of colleagues from different work backgrounds,
-                                        tastes and opinions have come together to form this Soaring organization from scratch with
+                                        " ONFLAP signifies how a group of colleagues from different work backgrounds,
+                                        tastes and opinions have come together to form this Soaring organization from
+                                        scratch with
                                         the sole aim to provide the market with reliable, customizable & pocket friendly
                                         softwares to support your business ventures "
                                     </p>
@@ -301,7 +336,8 @@
                                         <img src="{% static 'web/img/team/lijesh.jpeg' %}">
                                     </div>
                                     <p class="description">
-                                        "Some people Dream of Success but other people get up Every Morning and make it Happen <br><br>
+                                        "Some people Dream of Success but other people get up Every Morning and make it
+                                        Happen <br><br>
                                         ONFLAP has a Team of that “Other People” who make Dreams Happen
                                         "
                                     </p>
@@ -320,9 +356,11 @@
                                         <img src="{% static 'web/img/team/ajil.jpeg' %}">
                                     </div>
                                     <p class="description">
-                                        "If you don’t build your dream, someone else will hire you to help them build theirs.” <br> <br>
-                                       
-                                        In ONFLAP we are building our dream everyday and helping all ONFLAPians to acheive their dreams
+                                        "If you don’t build your dream, someone else will hire you to help them build
+                                        theirs.” <br> <br>
+
+                                        In ONFLAP we are building our dream everyday and helping all ONFLAPians to
+                                        acheive their dreams
                                     </p>
                                     <h3 class="title"> Ajil K.V,</h3>
                                     <small class="post">- Director & CEO</small>
@@ -337,10 +375,14 @@
 
                                 <div class="testimonial t3">
                                     <div class="pic">
-                                        <img src="{% static 'web/img/team/anu.jpeg' %}">
+                                        <img src="{% static 'web/img/team/emithiyas.png' %}">
                                     </div>
                                     <p class="description">
-                                        "ONFLAP is where many dreams have come together with a single vision of enabling the future of businesses with tailored, affordable solutions. I am proud to be part of such a dedicated team of highly skilled professionals in this journey of success and inspiration, going forward from strength to strength every step of the way.
+                                        "ONFLAP is where many dreams have come together with a single vision of enabling
+                                        the future of businesses with tailored, affordable solutions. I am proud to be
+                                        part of such a dedicated team of highly skilled professionals in this journey of
+                                        success and inspiration, going forward from strength to strength every step of
+                                        the way.
                                         "
                                     </p>
                                     <h3 class="title"> Emitiyas N.M,</h3>

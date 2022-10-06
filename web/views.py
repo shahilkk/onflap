@@ -153,29 +153,24 @@ def kuwaitBenefits(request):
 # contact section
 def contact(request):
     contactfrom = ContactUsForm(request.POST)
-    form = Myform(request.POST)
+    # print("get"*10)
+    # form = Myform(request.POST)
     if request.method == 'POST':
-        if contactfrom.is_valid():
+        print("post"*10)
+        form = Myform(request.POST)
+        if form.is_valid():
+            # print("form valid"*10)
             # print('hello')
             # print(contactfrom.errors)
             contactfrom.save()
             messages.error(request, "SUCCESSFUL Captcha")
             # print('2'*12)
-            context = {
-                "is_contact": True,
-                "contactfrom": contactfrom,
-                "form": form
-            }
-            return render(request, "web/contact.html", context)
+            
         else:
+            print("form not valid"*10)
             messages.error(request, "Wrong Captcha")
-            context = {
-                "is_contact": True,
-                "contactfrom": contactfrom,
-                "form": form
-            }
-            return render(request, "web/contact.html", context)
     form = Myform()
+    # print("Lelse"*10)
     context = {
         "is_contact": True,
         "contactfrom": contactfrom,
