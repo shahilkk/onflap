@@ -110,12 +110,22 @@
 .border-top {
   font-size: 15px;
 }
-
+@media only screen and (min-width:993px) and (max-width:1200px) {
+  .custmbg {
+    background-image: url(/static/web/img/23.jpg);
+    background-position-x: -92px !important;
+    background-size: contain;
+    background-position-y: 85px;
+    background-repeat: no-repeat;
+}
+  
+}
 @media only screen and (max-width: 767px) {
   .about-title {
     font-size: 32px;
     margin-bottom: 3rem;
-    margin-top: 0px;
+    /* margin-top: 0px; */
+    margin-top: 66px;
   }
 }
 
@@ -137,4 +147,12 @@
   background-size: contain;
   background-position-y: 85px;
   background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width:992px) {
+  .custmbg {
+    background-image: none;
+    
+  }
 }
