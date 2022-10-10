@@ -220,6 +220,7 @@
         width: 122px;
         height: 122px;
     }
+    
 
 }
 .owl-next {
@@ -251,4 +252,33 @@
         top: 151px;
     }
 }
+@media screen and (max-width:768px){
+    .owl-theme .owl-nav [class*=owl-] {
+        color: white;
+        font-size: 14px;
+        margin: 37px 61px 0px 11px !important;
+        padding: 6px 9px;
+        background: #b1181e;
+        border-radius: 3px 63px 70px 5px;
+        display: inline-block;
+        cursor: pointer;
+        /* border-radius: 3px; */
+        border: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 768px){
+    .owl-theme .owl-nav [class*=owl-] {
+        color: white;
+        font-size: 14px;
+        margin: 165px 61px 0px 11px !important;
+        padding: 6px 9px;
+        background: #b1181e;
+        border-radius: 3px 63px 70px 5px;
+        display: inline-block;
+        cursor: pointer;
+        /* border-radius: 3px; */
+        border: none;
+    }
+}
+
     

@@ -1195,11 +1195,12 @@ button.theme-btn {
 }
 
 .fun-fact:first-child .fun-icon {
-  border: 1px solid #4d41e1;
+  /* border: 1px solid #4d41e1; */
+  border: 1px solid #c4001a
 }
 
 .fun-fact:nth-child(2) .fun-icon {
-  border: 1px solid #ff884e;
+  border: 1px solid teal;
 }
 
 .fun-fact:nth-child(3) .fun-icon {

@@ -704,7 +704,7 @@
         <br />
         <div class="content grid row no-gutters clients-wrap">
             {% for items in client_details %}
-            <div class="col-md-3 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item"
+            <div class="col-md-6 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
                     <img class="" src="{{items.client_log.url}}" width="280px" height="230px" style="width: 280px; height:233px; "/>
@@ -778,15 +778,15 @@
                     </div> <!-- /#sync1 -->
                     {% endfor %}
 
-                    <div class="thumbnail-wrapper">
+                    <!-- <div class="thumbnail-wrapper">
                         <div id="sync2" class="owl-carousel owl-theme">
 
 
 
 
 
-                        </div> <!-- /#sync2 -->
-                    </div>
+                        </div> /#sync2
+                    </div> -->
 
                     <!-- /.thumbnail-wrapper -->
                 </div> <!-- End .client-slider-wrapper -->
@@ -806,10 +806,10 @@
 
 <script>
     function clientSlider() {
-        if ($('#sync1').length && $('#sync2').length) {
+        if ($('#sync1').length) {
 
             var sync1 = $("#sync1");
-            var sync2 = $("#sync2");
+            // var sync2 = $("#sync2");
             var slidesPerPage = 3; //globaly define number of elements per page
             var syncedSecondary = true;
 
@@ -828,19 +828,19 @@
 
             })
 
-            sync2
-                .owlCarousel({
-                    items: slidesPerPage,
-                    dots: false,
-                    nav: true,
-                    smartSpeed: 500,
-                    slideSpeed: 900,
-                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                    responsiveRefreshRate: 100,
-                    // navigationText: ["<",">"]
+            // sync2
+            //     .owlCarousel({
+            //         items: slidesPerPage,
+            //         dots: false,
+            //         nav: true,
+            //         smartSpeed: 500,
+            //         slideSpeed: 900,
+            //         slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            //         responsiveRefreshRate: 100,
+            //         // navigationText: ["<",">"]
 
-                })
-            sync2.on("click", ".item", function (e) {
+            //     })
+            sync1.on("click", ".item", function (e) {
                 e.preventDefault();
                 sync1.trigger('to.owl.carousel', $(e.target).parents('.owl-item').index(), 300, true);
             });
