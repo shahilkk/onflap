@@ -239,7 +239,7 @@
     margin: 8px;
     padding: 6px 9px;
     background: #b1181e;
-    border-radius: 3px 63px 70px 5px;
+    /* border-radius: 3px 63px 70px 5px; */
     display: inline-block;
     cursor: pointer;
     /* border-radius: 3px; */
@@ -259,7 +259,7 @@
         margin: 37px 61px 0px 11px !important;
         padding: 6px 9px;
         background: #b1181e;
-        border-radius: 3px 63px 70px 5px;
+        /* border-radius: 3px 63px 70px 5px; */
         display: inline-block;
         cursor: pointer;
         /* border-radius: 3px; */
@@ -273,7 +273,7 @@
         margin: 165px 61px 0px 11px !important;
         padding: 6px 9px;
         background: #b1181e;
-        border-radius: 3px 63px 70px 5px;
+        /* border-radius: 3px 63px 70px 5px; */
         display: inline-block;
         cursor: pointer;
         /* border-radius: 3px; */

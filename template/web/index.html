@@ -4,6 +4,7 @@
 
 
 <!-- <link rel="stylesheet" href="{% static 'web/about.css' %}"> -->
+<link rel="stylesheet" href="{% static 'web/css/testimonial.css' %}">
 <link rel="stylesheet" href="{% static 'web/filters.css' %}">
 <link rel="stylesheet" href="{% static 'web/card.css' %}">
 <link rel="stylesheet" href="{% static 'web/index.css' %}">
@@ -14,8 +15,43 @@
 
 
 <style>
+    .description {
+        padding: 1rem 0rem;
+    }
+
+    .testi {
+        padding: 0px 21px;
+    }
+
     .card2 {
-        min-height: 320px !important;
+        min-height: 340px !important;
+    }
+
+    .vertical:nth-child(3) {
+        border: none;
+    }
+
+    .w-100 {
+        color: teal;
+        font-size: 26px;
+    }
+
+    .close {
+        background-color: white;
+        border: none;
+    }
+
+    .modal-footer {
+        background-color: teal;
+    }
+
+    .md-form label {
+        color: #323338;
+        font-size: 14px;
+    }
+
+    .md-form i {
+        color: #383838;
     }
 
     @media only screen and (max-width: 425px) {
@@ -49,7 +85,7 @@
         font-size: 32px;
         color: #050505;
         text-align: center;
-        font-weight: 5500;
+        font-weight: 900;
         position: relative;
         font-family: var(--font-2);
     }
@@ -134,13 +170,10 @@
 
 <main class="main">
 
-    <!-- Start Hero   
-============================================= -->
+    <!-- -------- Start Hero ---------------- -->
     <div class="about-area" style="padding: 10rem 0rem;">
         <div class="about-wpr grid-2">
             <div class="about-left">
-
-
                 <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                     <img src="{% static 'web/img/logo/2.png' %}" alt="thumb">
                 </div>
@@ -168,7 +201,6 @@
                     <a href="{% url 'web:about' %}" class="theme-btn text-center">
                         Explore More <i class="icofont-long-arrow-right"></i>
                     </a>
-                    <!-- <button type="button" class="btn btn-lg" style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal" data-bs-target="#video" data-bs-whatever="@mdo">Request Demo</button> -->
                     <div class="how-we-work">
                         <a href="https://www.youtube.com/watch?v=nXyVYuK9FTk" target="_blank">
                             <i class="fas fa-play"></i>
@@ -180,43 +212,33 @@
         </div>
     </div>
 
-    <!-- End Hero -->
 
 
-
-    <!-- Start Products
-============================================= -->
+    <!-- --------Start Products -------- -->
     <div class="feature-area padngs">
         <div class="container" style="margin-top: 10px;">
             <!-- <h6 class="text-center filterh6">OUR FLAGSHIP PRODUCTS</h6> -->
             <div class="section-header">
                 <h3 class="h3filter">Our FlagShip Products</h3>
             </div>
-            <style>
-                .vertical:nth-child(3) {
-                    border: none;
-                }
-            </style>
-            <div class="feature-wpr ffff grid-3" style="margin-top: 50px;">
+            <div class="feature-wpr ffff grid-3" style="margin-top: 65px;">
 
 
                 {% for p in product_details %}
                 <div class="feature-box wow fadeInUp vertical" data-wow-duration="1s" data-wow-delay=".2s">
-
                     <div class="feature-info ">
                         <a href="#home_section" target="">
-                            <!-- <h5 class="text-center">{{p.product_name}}</h5> -->
                             <ul style="margin: 0px 0 0;" class="test">
                                 <li>
                                     <a href="#home_section" target="">
                                         <div class="feature-icon">
                                             <img src="{{p.product_logo.url}}" alt="thumb"
-                                                style="width: 92px;height: 30px;" class="pimage">
+                                                style="width: 92px;height: 92px;" class="pimage">
                                         </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <p class="mb-0">
+                                    <p class="mb-0 text-start" style="font-weight: 600;">
                                         {{p.product_fullname}}
                                     </p>
                                 </li>
@@ -226,7 +248,7 @@
                             <ul class="list_4" style="margin-top: 20px;">
                                 <li>
                                     {% for feature in p.product_features.all %}
-                                    <table>
+                                    <table style="color: rgb(19, 18, 18);">
                                         <tr>
                                             <td>
                                                 <img src="{% static 'web/Tick Mark-01.png' %}" alt="" width="20px">
@@ -240,34 +262,11 @@
                         </div>
 
                         <button type="button" class="btn btn-lg"
-                            style="margin-top:15px;background-color: #b71919;color: white;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal{{p.id}}" data-bs-whatever="@mdo">Request Demo
+                            style="margin-top:15px;background-color: #b71919;color: white;display: block;margin-right: auto;"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal{{p.id}}"
+                            data-bs-whatever="@mdo">Request Demo
                         </button>
 
-                        <style>
-                            .w-100 {
-                                color: teal;
-                                font-size: 26px;
-                            }
-
-                            .close {
-                                background-color: white;
-                                border: none;
-                            }
-
-                            .modal-footer {
-                                background-color: teal;
-                            }
-
-                            .md-form label {
-                                color: #323338;
-                                font-size: 14px;
-                            }
-
-                            .md-form i {
-                                color: #383838;
-                            }
-                        </style>
 
                         <!-- Modal -->
                         <div class="modal" tabindex="-1" id="exampleModal{{p.id}}">
@@ -276,7 +275,8 @@
                                     <div class="modal-header">
                                         <h5 class="modal-title text-center">Contact Us</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Close">
+                                        </button>
                                     </div>
                                     <div class="modal-body">
                                         <form method="POST" action="{% url 'web:productenquiry' p.id %}">
@@ -330,20 +330,13 @@
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>
 
-    <!-- End Products -->
 
 
-    <!-- -------------------------------------------------------------- -->
-    <!-- ----------------------------------------- -->
-
-    <!-- Start Onflap range product
-============================================= -->
-
+    <!-- ------- Start Onflap range product -------- -->
     <div class="feature-areag de-pt">
         <div class="container">
             <div class=" feature-2 grid-12 ml-5" id="home_section">
@@ -526,22 +519,15 @@
         </div>
     </div>
 
-    <!-- End range product -->
-
-    <!-- ------------------------ -->
-    <!-- -------------------------- -->
 
 
-    <!-- Start services
-============================================= -->
-
+    <!-- -------- Start services --------- -->
     <div class="container">
         <!-- <h6 class="text-center filterh6" style="margin-top: 80px;">OUR SERVICES</h6> -->
         <div class="section-header">
             <h3 class="h3filter" style="margin-top: 80px;">Our Services</h3>
         </div>
         <div class="feature-wpr grid-3 grids" style="margin-top: 40px;">
-
             <div class="feature-box  ">
                 <div class="card card2 card-custom bg-white card-customs border-white border-0">
                     <div></div>
@@ -550,7 +536,7 @@
                             <img class="img-fluid" src="{% static  'web/img/servies/oN-03.png' %}" alt="Avatar" />
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">ERP Solutions</h4>
                         <p class="card-text">We provide Enterprise Resource Planning (ERP) systems customized for each
                             industry based on ASP.NET CORE.</p>
@@ -565,7 +551,7 @@
                             <img class="img-fluid" src="{% static  'web/img/servies/oN-02.png' %}" alt="Avatar" />
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Software Developments</h4>
                         <p class="card-text">Our expert team of Analysts, Designers and Developers can advice, study and
                             create customized applications that suit your needs.Work with all Platforms</p>
@@ -575,13 +561,12 @@
             <div class="feature-box  ">
                 <div class="card card-custom bg-white card-customs card2 border-white border-0">
                     <div></div>
-
                     <div class="card-custom-avatar">
                         <a href="#home_section">
                             <img src="{% static  'web/img/servies/oN-01.png' %}" class="card-img-top" alt="...">
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Hardware Installation & Support</h4>
                         <p class="card-text">
                             Be it installation of a brand new server, or supply and installation of
@@ -593,13 +578,12 @@
             <div class="feature-box  ">
                 <div class="card card-custom bg-white card-customs card2 border-white border-0">
                     <div></div>
-
                     <div class="card-custom-avatar">
                         <a href="#home_section">
                             <img src="{% static  'web/img/servies/oN-04.png' %}" class="card-img-top" alt="...">
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Web / Digital Marketing</h4>
                         <p class="card-text">
                             Total solutions for any kind of requirements, whether it be design
@@ -613,13 +597,12 @@
             <div class="feature-box  ">
                 <div class="card card-custom bg-white card-customs card2 border-white border-0">
                     <div></div>
-
                     <div class="card-custom-avatar">
                         <a href="#home_section">
                             <img src="{% static  'web/img/servies/oN-05.png' %}" class="card-img-top" alt="...">
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Networking & Security</h4>
                         <p class="card-text">Long years of expertise in installing & maintaining internal/external
                             networks, data servers and applications by providing security reviews, audits, penetration
@@ -631,13 +614,12 @@
             <div class="feature-box  ">
                 <div class="card card-custom bg-white card-customs card2 border-white border-0">
                     <div></div>
-
                     <div class="card-custom-avatar">
                         <a href="#home_section">
                             <img src="{% static  'web/img/servies/oN-06.png' %}" class="card-img-top" alt="...">
                         </a>
                     </div>
-                    <div class="card-body" style="overflow-y: auto">
+                    <div class="card-body description" style="overflow-y: auto">
                         <h4 class="card-title" style="color: #ef6363;">Mobile Applications</h4>
                         <p class="card-text">
                             Looking for building Fast and Easy native iOS, Android or Windows app? or a
@@ -650,16 +632,10 @@
             </div>
         </div>
     </div>
-    <!-- End services -->
 
 
-    <!-- ------------------------------------------------ -->
-    <!-- -------------------------------------------- -->
 
-
-    <!-- Start Partners
-============================================= -->
-
+    <!-- -------- Start Partners ---------- -->
     <section id="clients" class="section-bg">
         <div class="container">
             <div class="section-header">
@@ -677,20 +653,14 @@
             </div>
         </div>
     </section>
-    <!-- End Partners -->
-
-    <!-- ------------------------------------------------ -->
-    <!-- ------------------------------------------------ -->
 
 
-    <!-- Client Section
-============================================= -->
+    <!-- --------- Client Section -------- -->
     <div class="container">
         <!-- <h6 class="text-center filterh6" style="margin-top: 80px;">We Cater To</h6> -->
         <div class="section-header">
             <h3 class="h3filter">We Cater To</h3>
         </div>
-
         <div class="filters filter-button-group">
             <ul class="ul">
                 <h4>
@@ -702,64 +672,60 @@
             </ul>
         </div>
         <br />
+        <style>
+            .wrapper {
+                display: inline-grid;
+                /* grid-template-columns: 50px 50px 50px 50px; */
+                border: 1px solid #b7a7a752;
+                grid-gap: 0px;
+                /* background-color: black; */
+            }
+
+            .wrapper>div {
+                background-color: white;
+                /* padding: 15px; */
+                /* text-align: center; */
+            }
+        </style>
         <div class="content grid row no-gutters clients-wrap">
             {% for items in client_details %}
-            <div class="col-md-6 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item"
+            <div class="col-md-6 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item wrapper"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="" src="{{items.client_log.url}}" width="280px" height="230px" style="width: 280px; height:233px; "/>
+                    <img class="" src="{{items.client_log.url}}" width="220px" height="100px"
+                        style="width: 220px; height:100px; " />
                     <div class="centered">
-                        <!-- <img src="{{items.client_log.url}}" alt=""> -->
-                        <!-- <h4>{{items.Client_name}}</h4> -->
                     </div>
-                    <!-- <div class="cap1">
-                        <h3>{{items.Client_name}}</h3>
-                        <p>
-                            {{items.description}}
-                        </p>
-                    </div>
-                    <div class="cap2">
-                        <p class="text-center">Visit</p>
-                    </div> -->
-
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
 
-    <link rel="stylesheet" href="{% static 'web/css/testimonial.css' %}">
+
+    <!-- ----------- testimonial ---------- -->
     <div class="container ">
-
-
-
         <div class="section-header" style="margin-top:80px ;">
             <h3 class="h3filter">Trusted by Businesses WorldWide</h3>
         </div>
 
+        <!-- testimonial Slider -->
         <div class="client-home-section wow fadeInUp">
-            <!-- Client Slider -->
             <div class="client-slider-wrapper">
-
                 <div id="sync1" class="owl-carousel owl-theme">
 
                     {% for r in reviews %}
                     <div class="item">
                         <div class="row">
-                            <div class="col-lg-6">
-
+                            <div class="col-lg-5">
                                 <div class="img-holder float-left">
                                     <div>
                                         <img src="{{r.pro_pic.url}}" width="250px" height="250px" alt="Image">
-
                                     </div>
-
-
                                 </div>
-
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-7 testi">
                                 <p class="float-right">“{{r.review}}”</p>
                                 <div class="text-center">
                                     <h5>{{r.name}} | {{r.position}} </h5>
@@ -770,32 +736,12 @@
                                     <p class="float-right" style="margin-top: 0px;"></p>
                                 </div>
                             </div>
-
-
-
                         </div>
-
-                    </div> <!-- /#sync1 -->
+                    </div>
                     {% endfor %}
-
-                    <!-- <div class="thumbnail-wrapper">
-                        <div id="sync2" class="owl-carousel owl-theme">
-
-
-
-
-
-                        </div> /#sync2
-                    </div> -->
-
-                    <!-- /.thumbnail-wrapper -->
-                </div> <!-- End .client-slider-wrapper -->
+                </div>
             </div>
-
-
-
         </div>
-    </div>
     </div>
 
 </main>
@@ -824,7 +770,7 @@
                 dots: false,
                 loop: true,
                 responsiveRefreshRate: 2000,
-                // navigationText: ["<",">"]
+                navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
 
             })
 

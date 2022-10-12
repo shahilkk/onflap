@@ -178,7 +178,7 @@
     margin-bottom: 10px;
   }
   .job-details-area span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.16px;
@@ -199,12 +199,13 @@
     list-style: none;
   }
   .job-details-area ul li {
-    font-size: var(--font-2);
+    /* font-size: var(--font-2); */
     line-height: var(--line-height30);
     letter-spacing: 0.3px;
-    color: #5B6880;
+    color: #37383a;
     position: relative;
     padding-left: 18px;
+    font-size: 16px;
   }
   .job-details-area ul li:after {
     content: "";
@@ -686,4 +687,17 @@
   .btn1{
     padding: 5px 9px;
   }
+}
+
+@media screen and (max-width:768px){
+  .job-details-area ul li {
+    /* font-size: var(--font-2); */
+    line-height: var(--line-height30);
+    letter-spacing: 0.3px;
+    color: #37383a;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 17px;
+    font-size: 14px;
+}
 }

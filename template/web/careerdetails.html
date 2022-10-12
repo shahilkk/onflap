@@ -54,8 +54,12 @@
             margin-bottom: -3px;
             padding: -1px;
         }
+        .career{
+    padding: 0px 0px 0px 22px;
+}
         
     }
+
 </style>
 
 <main class="main">
@@ -78,7 +82,7 @@
         <div class="job-details-area pd-top-112">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-8 offset-xl-1">
+                    <div class="col-xl-6 col-lg-8 offset-xl-1 career">
                         <div class="section-title">
                             <h2 class="title">Job Details</h2>
                         </div>
@@ -129,40 +133,48 @@
                         <div class="widget widget-job-details">
                             <h3 class="widget-title">Job Details</h3>
                             <div class="media single-job-details">
+                                {% if d.location %}
                                 <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    {% if d.location %}
+                                    
                                     <h6>Location</h6>
                                     <span>{{d.location|title}}</span>
-                                    {% endif %}
+                                    
                                 </div>
+                                {% endif %}
                             </div>
                             <div class="media single-job-details">
+                                {% if d.work_mode %}
                                 <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    {% if d.work_mode %}
+                                    
                                     <h6>Job Type</h6>
                                     <span>{{d.work_mode}}</span>
-                                    {% endif %}
+                                    
                                 </div>
+                                {% endif %}
                             </div>
                             <div class="media single-job-details">
+                                {% if d.experience %}
                                 <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    {% if d.experience %}
+                                    
                                     <h6>Experience</h6>
                                     <span>{{d.experience}} year{{d.experience|pluralize}}</span>
-                                    {% endif %}
+                                    
                                 </div>
+                                {% endif %}
                             </div>
                             <div class="media single-job-details mb-0">
+                                {% if d.salary %}
                                 <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    {% if d.salary %}
+                                    
                                     <h6>Salary</h6>
                                     <span>{{d.salary}}</span>
-                                    {% endif %}
+                                    
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
