@@ -224,6 +224,9 @@
 @media only screen and (min-width: 1000px) and (max-width: 1440px){
     .feature-box .feature-icon .pimage{
         margin-top: -72px;
+        position: relative;
+   
+    left: -15px;
     }
 }
 

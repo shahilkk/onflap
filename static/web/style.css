@@ -1195,8 +1195,7 @@ button.theme-btn {
   text-align: center;
 }
 
-.fun-fact:first-child .fun-icon {
-  /* border: 1px solid #4d41e1; */
+/* .fun-fact:first-child .fun-icon {
   border: 1px solid #c4001a
 }
 
@@ -1206,7 +1205,7 @@ button.theme-btn {
 
 .fun-fact:nth-child(3) .fun-icon {
   border: 1px solid #38c1eb;
-}
+} */
 
 .fun-fact .fun-icon {
   height: 12.8rem;
@@ -1231,7 +1230,7 @@ button.theme-btn {
   position: relative;
   z-index: 1;
   display: inline-block;
-  padding-right: 1.6rem;
+  padding-right: 3.2rem;
   color: var(--heading-color);
   margin-bottom: 0;
 }
@@ -1242,14 +1241,15 @@ button.theme-btn {
   content: '+';
   right: 0;
   top: 50%;
-  font-size: 2.4rem;
+  font-size: 4.4rem;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: currentColor;
 }
 
 .fun-fact .fun-desc {
-  margin-top: 1.6rem;
+  margin-top: 0rem;
+  margin-bottom: 23px;
 }
 
 .fun-fact .fun-desc .medium {
