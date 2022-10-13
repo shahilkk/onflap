@@ -7,6 +7,7 @@
     .about-right p {
         /* padding: 0px 35px 0px 33px; */
         padding: 0px 12px 0px 12px;
+        font-size: 14px;
     }
 
     .how-we-work {
@@ -17,6 +18,9 @@
 
     .card {
         margin-bottom: 1px;
+    }
+    h5 {
+        font-size: 15px;
     }
 }
 

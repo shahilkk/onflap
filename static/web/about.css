@@ -255,5 +255,50 @@
   .team-title {
     font-size: 17px;
   }
+  .para {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.7;
+    /* justify-content: center; */
+    padding: 0px 10px 0px 10px;
+}
+
   
+}
+
+@media only screen and (min-width: 325px) and (max-width: 430px) {
+  .frst_des {
+    margin-bottom: 1.5rem;
+    color: #3e3e40;
+    line-height: 1.7;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+}
+.secnd_row {
+  margin-top: 330px;
+}
+.fun-fact .fun-icon .timer {
+  font-size: 3.4rem;
+}
+.first_row {
+  margin-top: 370px;
+  /* padding: 0px 0px 0px 0px; */
+}
+}
+
+@media only screen and (min-width: 430px) and (max-width: 1024px) {
+  .secnd_row {
+    margin-top: 154px;
+}
+.frst_des {
+  line-height: 1.7;
+  text-align: center;
+}
+.para {
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.7;
+  /* justify-content: center; */
+  /* padding: 22px 5px 0px 40px; */
+}
 }

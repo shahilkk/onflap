@@ -157,7 +157,13 @@
 /*(max-width: 767px)*/
 
 
-
+p.comp{
+    width:100% !important; 
+    margin-top: 0px; 
+    font-size: 14px;
+    line-height: .7rem; 
+    margin-bottom: 0;
+}
 
 
 @media (max-width: 500px) {
@@ -166,10 +172,15 @@
         height: 120px;
     }
 
+    p.comp{
+        font-size: 12px !important;
+    }
+
     #sync1 p {
         width: 100%;
         text-align: center;
         margin: 39px 0;
+        font-size: 14px;
     }
 
     /* #sync2 .item {

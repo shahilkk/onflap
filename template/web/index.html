@@ -19,6 +19,7 @@
         padding: 1rem 0rem;
     }
 
+    
     .testi {
         padding: 0px 21px;
     }
@@ -62,6 +63,23 @@
         .review-single .review-content .review-bio span {
             line-height: 1.3rem !important;
         }
+
+        .wrapper {
+            display: inline-grid;
+            /* grid-template-columns: 50px 50px 50px 50px; */
+            border: 1px solid #b7a7a752 !important;
+            grid-gap: 0px;
+            /* background-color: black; */
+        }
+
+        .card-text {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+        }
+        .cl_logo{
+    width: 136px !important;
+    height: 100px !important;
+}
     }
 
     ul.list_4 {
@@ -686,14 +704,19 @@
                 /* padding: 15px; */
                 /* text-align: center; */
             }
+
+            .cl_logo {
+                width: 220px;
+                height: 100px;
+            }
+
         </style>
         <div class="content grid row no-gutters clients-wrap">
             {% for items in client_details %}
-            <div class="col-md-6 col-lg-3 col-12 {{items.category.title|slugify}}  grid-item wrapper"
+            <div class="col-md-6 col-lg-3 col-sm-6 col-6 {{items.category.title|slugify}}  grid-item wrapper"
                 style="position: absolute;left: 160px;top: 0px;">
                 <div class="each-item">
-                    <img class="" src="{{items.client_log.url}}" width="220px" height="100px"
-                        style="width: 220px; height:100px; " />
+                    <img class="cl_logo" src="{{items.client_log.url}}" />
                     <div class="centered">
                     </div>
                 </div>
@@ -729,8 +752,7 @@
                                 <p class="float-right">“{{r.review}}”</p>
                                 <div class="text-center">
                                     <h5>{{r.name}} | {{r.position}} </h5>
-                                    <p style="width:100% !important; margin-top: 0px; font-size: 14px;
-                                    line-height: 22px; margin-bottom: 0;">
+                                    <p style="" class="comp">
                                         {{r.company_name}} | {{r.location}}
                                     </p>
                                     <p class="float-right" style="margin-top: 0px;"></p>
