@@ -102,12 +102,15 @@
     background-position-y: 85px;
     background-repeat: no-repeat;
   }
+  h4 {
+    font-size: 17px;
+}
 
 }
 
 @media only screen and (max-width: 767px) {
   .about-title {
-    font-size: 32px;
+    /* font-size: 32px; */
     margin-bottom: 3rem;
     /* margin-top: 0px; */
     margin-top: 66px;
@@ -221,7 +224,7 @@
   font-size: 3.4rem;
 }
 .about-title {
-  font-size: 28px;
+  /* font-size: 28px; */
   margin-bottom: 3rem;
   /* margin-top: 0px; */
   margin-top: 18px;
@@ -253,7 +256,7 @@
     padding: 0 20px;
   }
   .team-title {
-    font-size: 17px;
+    font-size: 15px;
   }
   .para {
     font-size: 14px;
@@ -283,6 +286,11 @@
 .first_row {
   margin-top: 370px;
   /* padding: 0px 0px 0px 0px; */
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) !important;
+  /* grid-gap: 3rem; */
 }
 }
 
