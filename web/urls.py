@@ -12,6 +12,7 @@ urlpatterns = [
 
     path('about', views.about, name='about'),
 
+    path('careers', views.careers, name='careers'),
     path('career', views.career, name='career'),
     path('careerdetails/<int:id>', views.careerDetails, name='careerdetails'),
     path('applynow/<int:id>', views.applynow, name='applynow'),

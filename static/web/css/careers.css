@@ -1,0 +1,141 @@
+.first_row {
+  margin-top: 480px;
+  /* padding: 0px 0px 0px 0px; */
+
+}
+
+.first_desc {
+  margin-bottom: 1.5rem;
+  color: #2a2a2c;
+  line-height: 1.7;
+  /* text-align: center; */
+  text-align: justify;
+  padding: 17px 0px 0px 135px;
+  align-items: center;
+}
+
+.second_row {
+  margin-top: 260px;
+}
+
+.feature-info {
+  text-align: center;
+}
+
+.valu_row2 {
+  margin-top: 50px;
+}
+
+.expect_row1 {
+  margin-top: 45px;
+}
+
+.expect_row2 {
+  margin-top: 45px;
+}
+
+.valuecard {
+  text-align: center;
+  padding: 39px 0px 29px 0px;
+  max-height: 426px;
+  min-height: 400px;
+  margin: 0 13px;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.job-redirect-button {
+  padding: 15px 4px;
+  border: 3px solid #0097a4;
+  color: #fff;
+  display: inline-block;
+  background: #2b97a4;
+  font-size: 15px;
+  /* margin-right: 20px; */
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.descriptions {
+  font-size: 22px;
+  padding: 45px 120px 10px 120px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 320px) {
+  .first_row {
+    /* margin-top: 640px !important; */
+    padding: 196px 10px 0px 10px;
+    font-size: 14px;
+    /* text-align: center; */
+  }
+
+  .descriptions {
+    font-size: 18px;
+    padding: 45px 12px 10px 12px;
+    text-align: center;
+  }
+
+  .first_desc {
+    margin-bottom: 1.5rem;
+    color: #2a2a2c;
+    line-height: 1.7;
+    /* text-align: center; */
+    text-align: justify;
+    padding: 17px 0px 0px 0px;
+    align-items: center;
+  }
+
+  .second_row {
+    /* margin-top: 630px; */
+    margin-top: 441px;
+  }
+}
+
+@media only screen and (min-width: 325px) and (max-width: 430px) {
+  .first_row {
+    margin-top: 483px;
+    /* padding: 0px 0px 0px 0px; */
+
+  }
+}
+
+.pt-67 {
+  padding-top: 20px;
+}
+
+.customrow333 {
+  margin-top: 310px !important;
+}
+
+@media screen and (max-width:768px) {
+  .customrow333 {
+    margin-top: 441px !important;
+  }
+
+  .descriptions {
+    font-size: 20px;
+    padding: 45px 27px 10px 17px;
+    text-align: center;
+  }
+
+  .first_desc {
+    margin-bottom: 1.5rem;
+    color: #2a2a2c;
+    line-height: 1.7;
+    /* text-align: center; */
+    text-align: justify;
+    padding: 17px 11px 0px 11px;
+    align-items: center;
+  }
+  .valuecard {
+    text-align: center;
+    padding: 39px 0px 29px 0px;
+    max-height: 426px;
+    min-height: 400px;
+    margin: 2rem auto;
+}
+
+}

@@ -23,7 +23,7 @@
                             <a class="nav-link" href="">Products & Services</a>
                         </li>
                         <li {% if is_career %} class="active nav-item" {% elif is_careerDetails %} class="active nav-item" {% elif is_applynow %} class="active nav-item" {% elif is_benefits%} class="active nav-item" {% endif %}>
-                            <a class="nav-link" href="{% url 'web:career' %}">Career</a>
+                            <a class="nav-link" href="{% url 'web:careers' %}">Career</a>
                         </li>
                         <li {% if is_contact %} class="active nav-item" {% endif %}>
                             <a class="nav-link" href="{% url 'web:contact' %}">Contact</a>

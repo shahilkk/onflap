@@ -72,6 +72,13 @@ def about(request):
 
 
 # Career section
+def careers(request):
+    context = {
+        "is_career": True,
+    }
+    return render(request, "web/careers.html",context)
+
+
 def career(request):
     jobs = JobDetails.objects.all().order_by()
     context = {
