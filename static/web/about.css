@@ -256,7 +256,7 @@
     padding: 0 20px;
   }
   .team-title {
-    font-size: 15px;
+    font-size: 14px !important;
   }
   .para {
     font-size: 14px;
@@ -275,7 +275,8 @@
     color: #3e3e40;
     line-height: 1.7;
     text-align: center;
-    padding: 0px 16px 0px 16px;
+    padding: 0px 24px 0px 24px;
+    font-size: 14px !important;
 }
 .secnd_row {
   margin-top: 330px;

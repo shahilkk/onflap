@@ -5,21 +5,23 @@
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
 
 <style>
-     @media only screen and (max-width: 1440px) {
-        
+    @media only screen and (max-width: 1440px) {
+
         p {
             margin-top: 20px;
         }
-     }
+    }
 
     @media only screen and (max-width: 768px) {
         .heading .subhead {
             font-size: 13px;
             font-weight: 800;
         }
-        .heading{
+
+        .heading {
             margin-top: 10px;
         }
+
         .value .department {
             font-size: 20px;
         }
@@ -54,19 +56,25 @@
             margin-bottom: -3px;
             padding: -1px;
         }
-        .career{
+
+        .career {
             padding: 0px 20px 0px 20px;
-}
-        
+        }
+
     }
 
+    @media screen and (min-width:768px) and (max-width:1550px) {
+        .pd {
+            padding: 0px 0px 70px 0px !important;
+        }
+    }
 </style>
 
 <main class="main">
     <div class="site-breadcrumb">
         <div class="container value">
             {% for d in category %}
-            
+
             <h2 class="breadcrumb-title department" style="margin-top: 170px;">{{d.job_title|upper}}</h2>
             <p class="heading">
                 <span class="subhead "> {{d.location|title}}</span>
@@ -77,7 +85,7 @@
         </div>
     </div>
 
-    <div class="contact-section ptb-120">
+    <div class="contact-section ptb-120 pd">
 
         <div class="job-details-area pd-top-112">
             <div class="container">
@@ -136,10 +144,10 @@
                                 {% if d.location %}
                                 <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    
+
                                     <h6>Location</h6>
                                     <span>{{d.location|title}}</span>
-                                    
+
                                 </div>
                                 {% endif %}
                             </div>
@@ -147,10 +155,10 @@
                                 {% if d.work_mode %}
                                 <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    
+
                                     <h6>Job Type</h6>
                                     <span>{{d.work_mode}}</span>
-                                    
+
                                 </div>
                                 {% endif %}
                             </div>
@@ -158,10 +166,10 @@
                                 {% if d.experience %}
                                 <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    
+
                                     <h6>Experience</h6>
                                     <span>{{d.experience}} year{{d.experience|pluralize}}</span>
-                                    
+
                                 </div>
                                 {% endif %}
                             </div>
@@ -169,10 +177,10 @@
                                 {% if d.salary %}
                                 <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
                                 <div class="media-body">
-                                    
+
                                     <h6>Salary</h6>
                                     <span>{{d.salary}}</span>
-                                    
+
                                 </div>
                                 {% endif %}
                             </div>
