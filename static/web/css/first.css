@@ -1,12 +1,35 @@
-.description{
+.wrapper {
+    display: inline-grid;
+    /* grid-template-columns: 50px 50px 50px 50px; */
+    border: 1px solid #b7a7a752;
+    grid-gap: 0px;
+    /* background-color: black; */
+}
+
+.wrapper>div {
+    background-color: white;
+    /* padding: 15px; */
+    /* text-align: center; */
+}
+
+@media screen and (min-width:1024px) and (max-width:1550px) {
+    .cl_logo {
+        /* width: 220px; */
+        height: 100px;
+    }
+}
+
+.description {
     padding: 1rem 0rem;
 }
+
+
 .testi {
     padding: 0px 21px;
 }
 
 .card2 {
-    min-height: 300px !important;
+    min-height: 340px !important;
 }
 
 .vertical:nth-child(3) {
@@ -44,6 +67,24 @@
     .review-single .review-content .review-bio span {
         line-height: 1.3rem !important;
     }
+
+    .wrapper {
+        display: inline-grid;
+        /* grid-template-columns: 50px 50px 50px 50px; */
+        border: 1px solid #b7a7a752 !important;
+        grid-gap: 0px;
+        /* background-color: black; */
+    }
+
+    .card-text {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* .cl_logo{
+    width: 100% !important;
+    height: 100px !important;
+} */
 }
 
 ul.list_4 {
@@ -67,7 +108,7 @@ ul.list_4 li {
     font-size: 32px;
     color: #050505;
     text-align: center;
-    font-weight: 5500;
+    font-weight: 900;
     position: relative;
     font-family: var(--font-2);
 }

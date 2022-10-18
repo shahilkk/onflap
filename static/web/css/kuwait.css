@@ -1,0 +1,184 @@
+@media screen and (min-width:320px) and (max-width:1550px) {
+    .pd {
+        padding: 0px 0px 70px 0px !important;
+    }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 1024px) {
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 255px;
+    }
+
+    .head {
+        margin-top: 200px;
+    }
+
+    .c1 {
+        margin-top: 140px
+    }
+
+    p.benefits {
+        font-size: 15px;
+        padding: 0px 35px 0px 35px;
+        text-align: center;
+    }
+
+    .sec h6 {
+        padding: 54px 14px 10px 10px;
+        font-size: 20px;
+    }
+
+    .feature-box {
+        padding: 0px 33px 0px 31px;
+    }
+
+    .feature-info h5 {
+        font-size: 15px;
+    }
+
+    .h1 {
+        margin-top: 125px;
+        font-weight: 900;
+    }
+
+    .bene {
+        color: teal;
+        font-size: 15px;
+        line-height: 2rem;
+        font-family: var(--font-2);
+        text-align: center;
+        padding: 0px 20px;
+    }
+
+    .mt {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 760px) {
+    .mt {
+        margin-top: 14px;
+    }
+
+    .site-breadcrumb .breadcrumb-title {
+        /* margin-top: 350px; */
+        font-size: 20px;
+    }
+
+    p.benefits {
+        font-size: 14px;
+        line-height: 2.5rem;
+        padding: 0px 32px 0px 32px;
+    }
+
+    .head {
+        margin-top: 200px;
+    }
+
+    .sec h6 {
+        padding: 58px 14px 10px 10px;
+        font-size: 20px;
+    }
+
+    .c1 {
+        margin-top: 240px
+    }
+
+    .feature-box {
+        padding: 0px 33px 0px 31px;
+    }
+
+    .feature-info h5 {
+        font-size: 15px;
+    }
+
+    .h1 {
+        margin-top: 240px;
+        font-weight: 900;
+    }
+
+    .bene {
+        color: teal;
+        font-size: 15px;
+        line-height: 2rem;
+        font-family: var(--font-2);
+        text-align: center;
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (min-width:1024) and (max-width:1200) {
+    .h1 {
+        font-size: 20px !important;
+        margin-top: 100px;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    .benefits {
+        padding: 0px 125px;
+    }
+
+    .head {
+        margin-top: 160px;
+    }
+
+    .sec h6 {
+        padding: 54px 14px 10px 10px;
+        font-size: 32px;
+    }
+
+    .c1 {
+        margin-top: 140px
+    }
+
+    .feature-box {
+        padding: 0px 50px 0px 50px;
+        margin: 0px 30px;
+    }
+
+    .feature-info h5 {
+        font-size: 15px;
+    }
+
+    .h1 {
+        font-size: 20px !important;
+        margin-top: 100px;
+        font-weight: 900;
+    }
+
+    .bene {
+        color: teal;
+        font-size: 17px;
+        line-height: 3rem;
+        font-family: var(--font-2);
+        text-align: center;
+        padding: 0px 20px;
+    }
+}
+
+.grid-4 {
+    grid-gap: 0.2rem;
+}
+
+/* .bene{
+    color: teal;
+    font-size: 22px;
+    line-height: 3rem;
+    font-family: var(--font-2);
+    text-align: center;
+    } */
+
+@media only screen and (min-width: 320px) and (max-width: 380px) {
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 350px;
+        font-size: 20px;
+    }
+
+    .mt {
+        /* margin-top: 53px; */
+        padding: 150px 0px 0px 0px !important;
+
+    }
+}

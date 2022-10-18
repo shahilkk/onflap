@@ -168,6 +168,7 @@
 }
 .fun-fact .fun-icon .timer {
   font-size: 4.4rem;
+  color: #b71919;
 }
 .secnd_row{
   margin-top: 95px;
@@ -279,14 +280,15 @@
     font-size: 14px !important;
 }
 .secnd_row {
-  margin-top: 330px;
+  /* margin-top: 330px; */
+  padding: 33px 0px 0px 0px;
 }
 .fun-fact .fun-icon .timer {
   font-size: 3.4rem;
 }
 .first_row {
-  margin-top: 370px;
-  /* padding: 0px 0px 0px 0px; */
+  /* margin-top: 370px; */
+  padding: 0px 0px 0px 0px;
 }
 .grid-3 {
   display: grid;

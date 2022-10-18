@@ -1,0 +1,159 @@
+.btn:hover {
+    color: #f8f9fa;
+}
+
+@media only screen and (max-width: 1440px) {
+    .row {
+        margin-top: -19px;
+    }
+}
+
+
+@media only screen and (max-width: 330px) {
+    .brtitle {
+        margin-top: 160px;
+        font-size: 1.5rem;
+    }
+
+    .height {
+        margin-top: -77px;
+    }
+
+    .head1 .brtitle {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+    .card .card1 {
+        margin-bottom: 98px;
+    }
+
+    h6 .sec1 {
+        font-size: 19px;
+    }
+}
+
+.card .card1 {
+    margin-bottom: 98px;
+    width: 100%;
+}
+
+.job-redirect-button {
+    padding: 15px 4px;
+    border: 3px solid #0097a4;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    /* margin-right: 20px; */
+    margin-bottom: 30px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+    .col-lg-offset-3 {
+        margin-left: 25%;
+    }
+
+    h6 .sec1 {
+        font-size: 26px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-6 {
+        width: 50%;
+    }
+}
+
+.job-redirect-button span {
+    background: #0097a4;
+    padding: 10px;
+}
+
+
+
+@media only screen and (max-width: 730px) {
+
+    /* .div1,
+        .div2 {
+            justify-content: center !important;
+        } */
+
+}
+
+.para {
+    text-align: center;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+    font-size: 14px;
+    margin-top: -65px;
+}
+
+@media only screen and (min-width: 730px) and (max-width:1440px) {
+    .para {
+        font-size: 15px;
+    }
+}
+
+
+.single-job-details .media-body {
+    margin-left: 26.25px;
+    margin-top: -24px;
+    font-size: 13px;
+}
+
+.card1 {
+    margin-bottom: 98px;
+    /* height: 316px; */
+}
+
+@media only screen and (min-width: 320px) {
+    .card1 {
+        /* height: 316px; */
+    }
+}
+
+.card1 {
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: black;
+    /* margin: 20px; */
+    box-shadow: rgb(50 50 93 / 25%) 8px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    margin-top: -20px;
+    height: 235px;
+}
+
+
+.single-job-details {
+    margin-bottom: 5px;
+}
+
+.single-job-details .media-body {
+    margin-left: 34.25px;
+    margin-top: -24px
+}
+
+.single-job-details .media-body h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #535764;
+    margin-bottom: 0px;
+}
+
+.single-job-details .media-body span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: #97A1B3;
+}
