@@ -1,3 +1,9 @@
+@media screen and (min-width:320px) and (max-width:1550px) {
+    .pd {
+        padding: 0px 0px 70px 0px !important;
+    }
+}
+
 @media only screen and (min-width: 765px) and (max-width: 1024px) {
     .site-breadcrumb .breadcrumb-title {
         margin-top: 255px;
@@ -55,7 +61,7 @@
     }
 
     .site-breadcrumb .breadcrumb-title {
-        margin-top: 350px;
+        /* margin-top: 350px; */
         font-size: 20px;
     }
 
@@ -163,3 +169,16 @@
     font-family: var(--font-2);
     text-align: center;
     } */
+
+@media only screen and (min-width: 320px) and (max-width: 380px) {
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 350px;
+        font-size: 20px;
+    }
+
+    .mt {
+        /* margin-top: 53px; */
+        padding: 150px 0px 0px 0px !important;
+
+    }
+}

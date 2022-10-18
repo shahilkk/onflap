@@ -100,25 +100,25 @@
             .video .location2 {
                 position: absolute;
                 display: block;
-                top: 95px;
-                left: 168px;
-                font-size: 6px;
+                top: 41px;
+                left: 172px;
+                font-size: 5px;
             }
 
             .video .location {
                 position: absolute;
                 display: block;
-                top: 103px;
+                top: 48px;
                 left: 204px;
-                font-size: 5px;
+                font-size: 4px;
             }
 
             .video .location3 {
                 position: absolute;
                 display: block;
-                top: 79px;
-                left: 50px;
-                font-size: 8px;
+                top: 25px;
+                left: 52px;
+                font-size: 4px;
             }
 
             .footer-social {
@@ -168,26 +168,27 @@
             .video .location {
                 position: absolute;
                 display: block;
-                top: 129px;
-                left: 242px;
-                font-size: 7px;
+                top: 62px;
+                left: 247px;
+                font-size: 11px;
             }
+        
 
-            .video .location2 {
-                position: absolute;
-                display: block;
-                top: 120px;
-                left: 205px;
-                font-size: 7px;
-            }
+        .video .location2 {
+            position: absolute;
+            display: block;
+            top: 52px;
+            left: 206px;
+            font-size: 11px;
+        }
 
-            .video .location3 {
-                position: absolute;
-                display: block;
-                top: 99px;
-                left: 55px;
-                font-size: 6px;
-            }
+        .video .location3 {
+            position: absolute;
+            display: block;
+            top: 32px;
+            left: 62px;
+            font-size: 5px;
+        }
         }
 
         @media screen and (min-width: 425px) {
@@ -198,7 +199,7 @@
             .video .location2 {
                 position: absolute;
                 display: block;
-                top: 134px;
+                top: 56px;
                 left: 235px;
                 font-size: 5px;
             }
@@ -206,45 +207,55 @@
             .video .location {
                 position: absolute;
                 display: block;
-                top: 144px;
-                font-size: 7px;
-                left: 274px;
+                top: 68px;
+                font-size: 6px;
+                left: 276px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 68px;
+                font-size: 6px;
+                left: 276px;
             }
 
             .video .location3 {
                 position: absolute;
                 display: block;
-                top: 83px;
-                left: 72px;
-                font-size: 8px;
+                top: 36px;
+                left: 66px;
+                font-size: 6px;
             }
         }
 
         @media screen and (min-width: 768px) {
             .video .images1 {
                 width: 700px;
+                padding: 0px 20px;
             }
 
             .video .location2 {
                 position: absolute;
                 display: block;
-                top: 242px;
-                left: 409px;
+                top: 108px;
+                left: 402px;
                 font-size: 10px;
             }
 
             .video .location {
                 position: absolute;
                 display: block;
-                top: 256px;
-                left: 477px;
+                top: 124px;
+                left: 479px;
+                font-size: 12px;
             }
 
             .video .location3 {
                 position: absolute;
                 display: block;
-                top: 205px;
-                left: 114px;
+                top: 70px;
+                left: 112px;
             }
 
             .footer-social {
@@ -264,6 +275,13 @@
                 gap: 1.5rem;
             }
         }
+
+        /* @media screen and (min-width:320px) and (max-width:390px) {
+            .video .images1 {
+                margin-top: -73px !important;
+                margin-bottom: 0px;
+            }
+        } */
     </style>
     <!-- ========== End Stylesheet ========== -->
 </head>
@@ -297,17 +315,17 @@
                 </div>
                 <!-- End  Breadcrumb -->
 
-                <!-- Start Blog-Content 
+                <!-- Start Blog-Content #d5d5d500;
     ============================================= -->
                 <div class="wrapper">
                     <div class="single-area de-padding pb-3">
-                        <div class="container">
+                        <div class="container map">
                             <div class="contact-page-info grid-2">
                                 <div class="contact-left">
                                     <div class="video d-flex justify-content-center">
-                                        <img src="{% static 'web/Map .jpg' %}" alt="" class="images1">
+                                        <img src="{% static 'web/Map.jpg' %}" alt="" class="images1">
                                         <a href="https://goo.gl/maps/bSdqMC3amHuhd2ug6" class="location3"
-                                            target="_blank" style="color: #d5d5d500;;">Canada</a>
+                                            target="_blank" style="color: #d5d5d500;">Canada</a>
                                         <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location" target="_blank"
                                             style="color: #d5d5d500;;">India</a>
                                         <a href="https://goo.gl/maps/8yak39ubmBq47UTv5" class="location2"

@@ -30,7 +30,7 @@
     .section-title {
         text-align: center;
 
-        margin-top: 138px;
+        margin-top: 80px;
     }
 
     .job-details-area span {
@@ -55,3 +55,16 @@
     }
 
 }
+
+@media screen and (min-width:768px) and (max-width:1550px) {
+    .pd {
+        padding: 0px 0px 70px 0px !important;
+    }
+}
+@media only screen and (min-width:300px) and (max-width: 700px){
+    .section-title {
+        text-align: center;
+        margin-top: 0px;
+    }
+}
+

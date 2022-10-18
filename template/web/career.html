@@ -4,112 +4,23 @@
 
 
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/jobs.css' %}">
+<link rel="stylesheet" href="{% static 'web/career.css' %}">
 <style>
-    .btn:hover {
-        color: #f8f9fa;
-    }
-    @media only screen and (max-width: 1440px){
-        .row {
-    margin-top: -19px;
-}
-    }
-
-
-    @media only screen and (max-width: 330px) {
-        .brtitle {
-            margin-top: 160px;
-            font-size: 1.5rem;
-        }
-
-        .height {
-            margin-top: -77px;
-        }
-
-        .head1 .brtitle {
-            font-size: 2rem;
-            font-weight: 600;
-        }
-
-    }
-
-    @media only screen and (max-width: 430px) {
-        .card .card1 {
-            margin-bottom: 98px;
-        }
-
-        h6 .sec1 {
-            font-size: 19px;
-        }
-    }
-
-    .card .card1 {
-        margin-bottom: 98px;
-        width: 100%;
-    }
-
-    .job-redirect-button {
-        padding: 15px 4px;
-        border: 3px solid #0097a4;
-        color: #fff;
-        display: inline-block;
-        font-size: 18px;
-        /* margin-right: 20px; */
-        margin-bottom: 30px;
-    }
-
-    .margin-top-10 {
-        margin-top: 10px;
-    }
-
-    @media (min-width: 1200px) {
-        .col-lg-offset-3 {
-            margin-left: 25%;
-        }
-
-        h6 .sec1 {
-            font-size: 26px !important;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .col-lg-6 {
-            width: 50%;
-        }
-    }
-
-    .job-redirect-button span {
-        background: #0097a4;
-        padding: 10px;
-    }
-
-
-
-    @media only screen and (max-width: 730px) {
-
-        /* .div1,
-        .div2 {
-            justify-content: center !important;
-        } */
-
-    }
-
-    .para {
-        text-align: center;
-        justify-content: center;
-        padding: 0px 5px 0px 5px;
-        font-size: 14px;
-        margin-top: -65px;
-    }
-
-    @media only screen and (min-width: 730px) and (max-width:1440px) {
-        .para {
-            font-size: 15px;
+    @media screen and (min-width:320px) and (max-width:425px) {
+        .site-breadcrumb {
+            height: 40.5vh;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
     }
 </style>
-
-<link rel="stylesheet" href="{% static 'web/career.css' %}">
-
 
 <main class="main">
     <div class="site-breadcrumb head1">
@@ -118,147 +29,147 @@
         </div>
     </div>
 
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="row">
+                        {% for job in jobs %}
+                        <div class="col-lg-12 col-sm-12 col-md-12">
+                            <div class="card card1 justify-content-center">
+                                <div class="row ">
+                                    <div class="col-lg-3 col-md-3 d-flex justify-content-center">
+                                        <h3 class="card-title">{{job.job_title}}</h3><br><br>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">
 
-    <div class="container" style="margin-top: 50px;">
-        <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="row">
-                    {% for job in jobs %}
-                    <div class="col-lg-12 col-sm-12 col-md-12">
-                        <div class="card card1 justify-content-center">
-                            <div class="row ">
-                                <div class="col-lg-3 col-md-3 d-flex justify-content-center">
-                                    <h3 class="card-title">{{job.job_title}}</h3><br><br>
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>Location</h6>
+                                                <span>{{job.location|title}}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>Job Type</h6>
+                                                <span>{{job.work_mode}}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>Experience</h6>
+                                                <span>{{job.experience}} year{{job.experience|pluralize}}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="media single-job-details">
+                                            <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
+                                            <div class="media-body">
+                                                <h6>Vacancy</h6>
+                                                <span>{{job.vaccancy}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 d-flex align-items-end">
+                                        <a href="{% url 'web:careerdetails' job.id %}" class="btn btn1">Read More</a>
+                                    </div>
+
                                 </div>
-                                <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">
-
-                                    <div class="media single-job-details">
-                                        <img src="{% static 'career/images/riyastemp/2.svg' %}" alt="icon">
-                                        <div class="media-body">
-                                            <h6>Location</h6>
-                                            <span>{{job.location|title}}</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="media single-job-details">
-                                        <img src="{% static 'career/images/riyastemp/3.svg' %}" alt="icon">
-                                        <div class="media-body">
-                                            <h6>Job Type</h6>
-                                            <span>{{job.work_mode}}</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="media single-job-details">
-                                        <img src="{% static 'career/images/riyastemp/4.svg' %}" alt="icon">
-                                        <div class="media-body">
-                                            <h6>Experience</h6>
-                                            <span>{{job.experience}} year{{job.experience|pluralize}}</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="media single-job-details">
-                                        <img src="{% static 'career/images/riyastemp/5.svg' %}" alt="icon">
-                                        <div class="media-body">
-                                            <h6>Vacancy</h6>
-                                            <span>{{job.vaccancy}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12 d-flex align-items-end">
-                                    <a href="{% url 'web:careerdetails' job.id %}" class="btn btn1">Read More</a>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
-
-                </div>
-            </div>
-            {% comment %}
-            <div class="col-lg-6 d-lg-block d-sm-none d-md-none d-none">
-                <div class="row sec">
-                    <h6 class="text-center sec1">World-Class Benefits for a World-Class Team</h6>
-                    <div class="grid-4 " style="margin-top: 20px;">
-
-
-                        <div class="feature-box fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-01.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">100% Paid Medical Insurance</h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-02.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Retirement Planning</h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-03.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Paid Vacation & Time Off</h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-04.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Subsidized Housing Rent
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-05.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Learning and Skill Development</h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-06.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Swift Growth Opportunities</h5>
-                            </div>
-                        </div>
-                        <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-07.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Loyalty & Gratuity Bonuses</h5>
-                            </div>
-                        </div>
-                        <!-- <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="feature-icon">
-                            <img src="{% static 'web/img/icons/icons ai-08.png' %}" width="45px" alt="thumb">
-                        </div>
-                        <div class="feature-info">
-                            <h5 style="font-weight: 900;">Charity Participation</h5>
-                        </div>
-                    </div> -->
-
+                        {% endfor %}
 
                     </div>
                 </div>
+                {% comment %}
+                <div class="col-lg-6 d-lg-block d-sm-none d-md-none d-none">
+                    <div class="row sec">
+                        <h6 class="text-center sec1">World-Class Benefits for a World-Class Team</h6>
+                        <div class="grid-4 " style="margin-top: 20px;">
+
+
+                            <div class="feature-box fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-01.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">100% Paid Medical Insurance</h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-02.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Retirement Planning</h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-03.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Paid Vacation & Time Off</h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-04.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Subsidized Housing Rent
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-05.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Learning and Skill Development</h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-06.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Swift Growth Opportunities</h5>
+                                </div>
+                            </div>
+                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                                <div class="feature-icon">
+                                    <img src="{% static 'web/img/icons/icons ai-07.png' %}" width="45px" alt="thumb">
+                                </div>
+                                <div class="feature-info">
+                                    <h5 style="font-weight: 900;">Loyalty & Gratuity Bonuses</h5>
+                                </div>
+                            </div>
+                            <!-- <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <div class="feature-icon">
+                                <img src="{% static 'web/img/icons/icons ai-08.png' %}" width="45px" alt="thumb">
+                            </div>
+                            <div class="feature-info">
+                                <h5 style="font-weight: 900;">Charity Participation</h5>
+                            </div>
+                        </div> -->
+
+
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
             </div>
-            {% endcomment %}
+
+
         </div>
-
-
-    </div>
-
+    </section>
 </main>
 
 
