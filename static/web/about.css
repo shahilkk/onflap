@@ -278,14 +278,15 @@
     padding: 0px 16px 0px 16px;
 }
 .secnd_row {
-  margin-top: 330px;
+  /* margin-top: 330px; */
+  padding: 33px 0px 0px 0px;
 }
 .fun-fact .fun-icon .timer {
   font-size: 3.4rem;
 }
 .first_row {
-  margin-top: 370px;
-  /* padding: 0px 0px 0px 0px; */
+  /* margin-top: 370px; */
+  padding: 22px 0px 0px 0px !important;
 }
 .grid-3 {
   display: grid;

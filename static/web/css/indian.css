@@ -1,0 +1,69 @@
+@media only screen and (min-width: 765px) and (max-width: 1024px) {
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 255px;
+    }
+
+    .head {
+        margin-top: 200px;
+    }
+
+    p.benefits {
+        font-size: 15px;
+    }
+
+    .mt {
+        margin-top: 150px;
+    }
+
+    .card {
+        margin-top: 50px;
+    }
+
+    .card-content {
+        font-size: 13px;
+    }
+
+    .card-title {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 760px) {
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 350px;
+        font-size: 20px;
+    }
+
+    p.benefits {
+        font-size: 14px;
+        line-height: 2.5rem;
+        padding: 0px 32px 0px 32px;
+    }
+
+    .card {
+        margin-top: 30px;
+        height: 428px;
+    }
+
+    .card-content {
+        font-size: 13px;
+    }
+
+    .card-title {
+        font-size: 19px;
+    }
+
+    .mt {
+        margin-top: 222px;
+    }
+
+    .head {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    .head {
+        margin-top: 160px;
+    }
+}
