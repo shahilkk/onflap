@@ -59,10 +59,11 @@
         font-size: 14px !important;
         line-height: 1.7 !important;
     }
-    .cl_logo{
-width: 136px !important;
-height: 100px !important;
-}
+
+    /* .cl_logo{
+    width: 100% !important;
+    height: 100px !important;
+} */
 }
 
 ul.list_4 {
@@ -166,6 +167,7 @@ ul.list_4 li {
         padding-top: 0rem;
     }
 }
+
 .wrapper {
     display: inline-grid;
     /* grid-template-columns: 50px 50px 50px 50px; */
@@ -180,7 +182,9 @@ ul.list_4 li {
     /* text-align: center; */
 }
 
-.cl_logo {
-    width: 220px;
-    height: 100px;
+@media screen and (min-width:1024px) and (max-width:1550px) {
+    .cl_logo {
+        /* width: 220px; */
+        height: 100px;
+    }
 }

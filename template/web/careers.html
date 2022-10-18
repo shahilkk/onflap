@@ -5,11 +5,64 @@
 <link rel="stylesheet" href="{% static 'web/css/careers.css' %}">
 <!-- <link rel="stylesheet" href="{% static 'web/career.css' %}"> -->
 
+<style>
+    @media screen and (min-width:320px) and (max-width:425px) {
+        .belifs {
+            font-size: 15px;
+        }
+
+        .pfilter {
+            font-size: 14px;
+        }
+    }
+</style>
+
+
 <main class="main">
 
+    <div class="site-breadcrumb head1 ">
+        <div class="container d-md-block d-sm-block d-block d-lg-none">
+            <!-- <h2 class="breadcrumb-title brtitle head">Why Join ONFLAP?</h2> -->
+            <div class="row first_row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <img src="{% static 'web/mission.jpg' %}" alt="" width="100%">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class=" filterh6 " style="color: black;">Why Join ONFLAP?</h2>
+                    <p class="first_desc">
+                        Onflap is now presenting exciting career opportunities for technical heads to hone their passion
+                        and
+                        dexterities for advanced technology. built on a strong vision and corporate philosophy of
+                        continuous
+                        adaptation, client service, and professional growth. Our Onflap Family is always growing, and we
+                        look
+                        forward to welcoming new members who are looking to expand their potential and place their
+                        careers on a
+                        path to success. We are looking for smart people who enjoy working with each other in a fun,
+                        collaborative, and dynamic environment. If that's you, it's time for you to build your career
+                        with the
+                        vibrant team of Onflap.
+                    </p>
+                    <div class="row d-flex">
+                        <div class="col-xs-6 col-md-6 col-lg-6  col-6 d-flex justify-content-end  div1">
+                            <a href="{% url 'web:kuwaitbenfits' %}" class="job-redirect-button margin-top-10  ">
+                                <span>Kuwait Benefits </span>
+                            </a>
+                        </div>
 
-    <div class="site-breadcrumb head1">
-        <div class="container">
+                        <div class="col-xs-6 col-md-6  col-lg-6 col-6 div2 d-flex ">
+                            <a href="{% url 'web:indianbenfits' %}" class="job-redirect-button margin-top-10">
+                                <span>India Benefits </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container d-sm-none d-xs-none d-md-none d-lg-block d-none">
             <!-- <h2 class="breadcrumb-title brtitle head">Why Join ONFLAP?</h2> -->
             <div class="row first_row">
                 <div class="col-lg-6">
@@ -29,18 +82,15 @@
                         vibrant team of Onflap.
                     </p>
                     <div class="row d-flex">
-                        <div 
-                            class="col-xs-6 col-md-6 col-lg-6  col-6 d-flex justify-content-end  div1">
-                            <a  href="{% url 'web:kuwaitbenfits' %}"
-                                class="job-redirect-button margin-top-10  ">
-                                <span >Kuwait Benefits </span>
+                        <div class="col-xs-6 col-md-6 col-lg-6  col-6 d-flex justify-content-end  div1">
+                            <a href="{% url 'web:kuwaitbenfits' %}" class="job-redirect-button margin-top-10  ">
+                                <span>Kuwait Benefits </span>
                             </a>
                         </div>
 
-                        <div  class="col-xs-6 col-md-6  col-lg-6 col-6 div2 d-flex ">
-                            <a  href="{% url 'web:indianbenfits' %}"
-                                class="job-redirect-button margin-top-10">
-                                <span >India Benefits </span>
+                        <div class="col-xs-6 col-md-6  col-lg-6 col-6 div2 d-flex ">
+                            <a href="{% url 'web:indianbenfits' %}" class="job-redirect-button margin-top-10">
+                                <span>India Benefits </span>
                             </a>
                         </div>
                     </div>
@@ -55,148 +105,151 @@
 
     <section class="pt-67">
 
-    <div class="container-fluid" style="background-color: #f8f7f67a!important;">
-        <div class="row customrow333">
-            <div class="col-lg-12 text-center">
-                <h2 class="filterh6" style="color: #000 !important;">Onflap Values</h2>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
-
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
-
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
-
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
-                    </div>
+        <div class="container-fluid" style="background-color: #f8f7f67a!important;">
+            <div class="row customrow333">
+                <div class="col-lg-12 text-center">
+                    <h2 class="filterh6" style="color: #000 !important;">ONFLAP beliefs </h2>
                 </div>
             </div>
-            <div class="row valu_row2">
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
 
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 mt-3 ">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">100% customer Satisfaction</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
+
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">Inspire Integrity & Trust</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
+
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">Nothing is Impossible in IT</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
+
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div class="row valu_row2">
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">No Age limits to Learn</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
 
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
-
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="feature-info">
-                        <h5 style="font-weight: 900;">FIRST</h5>
-                        <p class="mb-0  pfilter">
-                            <span style="font-weight: bold;">Financial Reporting System</span><br>
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">No Age limits to Learn</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
 
-                            With all financial data in a single
-                            place accountants wont have to spend
-                            hours cross posting data
-                        </p>
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <div class="feature-info">
+                            <h5 style="font-weight: 900;" class="belifs">No Age limits to Learn</h5>
+                            <p class="mb-0  pfilter">
+                                <!-- <span style="font-weight: bold;">Financial Reporting System</span><br> -->
+
+                                Lorem, ipsum dolor sit commodi rerum autem dolore nam. Rem, est officiis pariatur
+                                tempore accusantium illum optio minus libero!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
 
     <div class="container">
         <div class="row expect_row1">
             <div class="col-lg-12">
-                <h2 class=" filterh6 text-center" style="color: black !important;">What to Expect when your Join ONFLAP</h2>
+                <h2 class=" filterh6 text-center" style="color: black !important;">What to Expect when your Join ONFLAP
+                </h2>
             </div>
         </div>
 
         <div class="row expect_row2">
-            <div class="col-lg-3" style="padding: 0px;">
+            <div class="col-lg-3 col-md-6" style="padding: 0px;">
                 <div class="card valuecard bg-white   border-white border-0">
                     <div class="card-body description description" style="overflow-y: auto">
                         <h4 class="card-title">Realization of your Personal and Career Goals</h4>
                         <p class="card-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae! Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est dolores! Quos sapiente dolorum animi?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae!
+                            Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est
+                            dolores! Quos sapiente dolorum animi?
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3" style="padding: 0px;">
+            <div class="col-lg-3 col-md-6" style="padding: 0px;">
                 <div class="card valuecard bg-white   border-white border-0">
                     <div class="card-body description description" style="overflow-y: auto">
                         <h4 class="card-title">Positive Work Environment</h4>
                         <p class="card-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae! Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est dolores! Quos sapiente dolorum animi?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae!
+                            Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est
+                            dolores! Quos sapiente dolorum animi?
                         </p>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-lg-3" style="padding: 0px;">
+            <div class="col-lg-3 col-md-6" style="padding: 0px;">
                 <div class="card valuecard bg-white   border-white border-0">
                     <div class="card-body description description" style="overflow-y: auto">
                         <h4 class="card-title">Global Exposure</h4>
                         <p class="card-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae! Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est dolores! Quos sapiente dolorum animi?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae!
+                            Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est
+                            dolores! Quos sapiente dolorum animi?
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3" style="padding: 0px;">
+            <div class="col-lg-3 col-md-6" style="padding: 0px;">
                 <div class="card valuecard bg-white   border-white border-0">
                     <div class="card-body description description" style="overflow-y: auto">
                         <h4 class="card-title">Secure Growth beyond your Expectations</h4>
                         <p class="card-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae! Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est dolores! Quos sapiente dolorum animi?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim esse minus maxime recusandae!
+                            Nostrum obcaecati dolorem quaerat quis tenetur, rerum eligendi hic molestiae unde, est
+                            dolores! Quos sapiente dolorum animi?
                         </p>
                     </div>
                 </div>
@@ -204,12 +257,13 @@
         </div>
     </div>
 
-    <section>
+    <section style="padding: 0px 0px 60px 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="description">
-                        <p class="descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, necessitatibus laboriosam iure voluptate magni.</p>
+                        <p class="descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+                            necessitatibus laboriosam iure voluptate magni.</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +271,7 @@
             <div class="row ">
                 <div class="col-lg-12 col-12 text-center">
                     <a href="{% url 'web:career' %}" class="theme-btn ">
-                        See Our OPtion Positions <i class="icofont-long-arrow-right"></i>
+                        See Our Option Positions <i class="icofont-long-arrow-right"></i>
                     </a>
                 </div>
             </div>

@@ -92,13 +92,33 @@
     /* margin-top: 630px; */
     margin-top: 441px;
   }
+
+  .customrow333 {
+    margin-top: 535px !important;
+  }
+
+  .valu_row2 {
+    margin-top: 15px;
+  }
+
+  .valuecard {
+    text-align: center;
+    padding: 39px 0px 29px 0px;
+    max-height: 426px;
+    min-height: 310px !important;
+    margin: 2rem auto;
+  }
 }
 
 @media only screen and (min-width: 325px) and (max-width: 430px) {
   .first_row {
-    margin-top: 483px;
+    margin-top: 630px;
     /* padding: 0px 0px 0px 0px; */
 
+  }
+
+  .customrow333 {
+    margin-top: 540px !important;
   }
 }
 
@@ -106,14 +126,14 @@
   padding-top: 20px;
 }
 
-.customrow333 {
+/* .customrow333 {
   margin-top: 310px !important;
-}
+} */
 
 @media screen and (max-width:768px) {
-  .customrow333 {
+  /* .customrow333 {
     margin-top: 441px !important;
-  }
+  } */
 
   .descriptions {
     font-size: 20px;
@@ -130,12 +150,48 @@
     padding: 17px 11px 0px 11px;
     align-items: center;
   }
+
   .valuecard {
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
-    min-height: 400px;
+    min-height: 350px !important;
     margin: 2rem auto;
+  }
+
 }
+
+@media screen and (min-width:765px) and (max-width:1024px) {
+  .first_row {
+    margin-top: 600px;
+    text-align: center;
+  }
+
+  .customrow333 {
+    margin: 546px 0px 0px 0px;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1440px) {
+  .customrow333 {
+    margin: 438px 0px 0px 0px !important;
+  }
+
+  .first_desc {
+    padding: 17px 0px 0px 80px;
+  }
+
+  .card-text {
+    /* padding: 20px; */
+    padding: 10px 0px 0px 0px;
+  }
+
+
+}
+
+@media screen and (min-width:1440px) and (max-width:1550px) {
+  .customrow333 {
+    margin: 374px 0px 0px 0px !important;
+  }
 
 }
