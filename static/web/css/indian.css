@@ -18,7 +18,7 @@
     }
 
     .mt {
-        margin-top: 63px;
+        margin-top: 80px;
     }
 
     .card {
@@ -33,37 +33,6 @@
         font-size: 19px;
     }
 }
-<<<<<<< HEAD
-@media only screen and (min-width: 320px) and (max-width: 760px) {
-    .site-breadcrumb .breadcrumb-title {
-        margin-top: 350px;
-        font-size: 20px;
-    }
-    p.benefits {
-        font-size: 14px;
-    line-height: 2.5rem;
-    padding: 0px 32px 0px 32px;
-    }
-    .card{
-        margin-top: 30px;
-        height: 428px;
-    }
-    .card-content {
-        font-size: 13px;
-    }
-    .card-title {
-        font-size: 19px;
-    }
-    .mt{
-        margin-top: 222px;
-    }
-    .head{
-        margin-top: 200px;
-    }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1500px) {
-    .head{
-=======
 
 @media only screen and (min-width: 320px) and (max-width: 760px) {
     .site-breadcrumb .breadcrumb-title {
@@ -101,7 +70,16 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
     .head {
->>>>>>> 2f9cf9cb2c22020255c0385d8aef316022b98048
         margin-top: 160px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+    .site-breadcrumb .breadcrumb-title {
+        margin-top: 350px;
+        font-size: 20px;
+    }
+    .mt {
+        margin-top: 222px;
     }
 }

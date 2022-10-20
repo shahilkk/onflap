@@ -110,6 +110,34 @@
   }
 }
 
+@media only screen and (min-width: 325px) and (max-width: 375px){
+  .customrow333 {
+    margin-top: 530px !important;
+}
+}
+@media only screen and (min-width: 376px) and (max-width: 390px){
+  .customrow333 {
+    margin-top: 450px !important;
+    /* padding: 450px 0px 0px 0xp !important; */
+  }
+}
+@media only screen and (min-width: 391px) and (max-width: 430px){
+  .customrow333 {
+    margin-top: 435px !important;
+    /* padding: 450px 0px 0px 0xp !important; */
+  }
+}
+
+@media only screen and (min-width: 1445px) and (max-width: 2560px){
+  .customrow333 {
+    /* margin-top: 435px  */
+    
+    padding: 180px 0px 0px 0px !important;
+  }
+}
+
+
+
 @media only screen and (min-width: 325px) and (max-width: 430px) {
   .first_row {
     margin-top: 630px;
@@ -117,10 +145,7 @@
 
   }
 
-  .customrow333 {
-    margin-top: 458px !important;
-    /* padding: 450px 0px 0px 0xp !important; */
-  }
+  
 }
 
 .pt-67 {
@@ -156,26 +181,33 @@
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
-    min-height: 350px !important;
+    min-height: 452px !important;
     margin: 2rem auto;
   }
 
 }
 
-@media screen and (min-width:765px) and (max-width:1024px) {
+@media screen and (min-width:765px) and (max-width:1020px) {
   .first_row {
     margin-top: 600px;
     text-align: center;
   }
 
   .customrow333 {
-    margin: 546px 0px 0px 0px;
+    margin: 500px 0px 0px 0px;
   }
 }
 
-@media screen and (min-width:1024px) and (max-width:1440px) {
+@media screen and (min-width: 1020px) and (max-width: 1024px){
   .customrow333 {
-    margin: 438px 0px 0px 0px !important;
+    margin: 410px 0px 0px 0px !important;
+}
+}
+
+
+@media screen and (min-width:1025px) and (max-width:1440px) {
+  .customrow333 {
+    margin: 330px 0px 0px 0px !important;
   }
 
   .first_desc {
@@ -190,7 +222,7 @@
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
-    min-height: 388px;
+    min-height: 492px;
     margin: 0 13px;
 }
 
@@ -200,7 +232,7 @@
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
-    min-height: 350px;
+    min-height: 420px;
     margin: 0 13px;
 }
 }
