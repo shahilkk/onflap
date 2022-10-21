@@ -1,10 +1,14 @@
 from http.client import HTTPException
+import json
 from django.shortcuts import render, redirect
 from web.forms import ContactUsForm, Myform
 from web.models import ApplyNow, ClientCategory, ClientList, JobDetails, Partners, Product, ProductDetails, ProductEnquiry, Review
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+
 
 
 # Create your views here.
@@ -81,11 +85,51 @@ def careers(request):
 
 def career(request):
     jobs = JobDetails.objects.all().order_by()
+    # job = jobs
+    location = JobDetails.objects.all().values("location").order_by("location").distinct()
+
+
+    # global search
+    search_term = ''
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        jobs = JobDetails.objects.all().filter(job_title__icontains=search_term)
+        context = {
+            "is_career": True,
+            "jobs": jobs,
+        }
+        return render(request, "web/career.html", context)
+
+
     context = {
         "is_career": True,
         "jobs": jobs,
+        "locations":location,
     }
     return render(request, "web/career.html", context)
+
+
+@csrf_exempt
+def searchjob(request):
+    if request.method == 'POST':
+
+        jobtype = request.POST['jobtype']
+        joblocation = request.POST['joblocation']
+        jobs = JobDetails.objects.filter(work_mode=jobtype,location=joblocation)
+        data = []
+
+        for job in jobs:
+            jobitem = {
+                "id" : job.id,
+                "location" : job.location,
+                "work_mode" : job.work_mode,
+                "experience" : job.experience,
+                "vaccancy" : job.vaccancy,
+            }
+            
+            data.append(jobitem)
+        print(data)    
+        return JsonResponse({'data':data,})
 
 
 def careerDetails(request, id):

@@ -5,7 +5,10 @@
 
 <link rel="stylesheet" href="{% static 'career/css/careerpage.css' %}">
 <link rel="stylesheet" href="{% static 'web/css/jobs.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/search.css' %}">
 <link rel="stylesheet" href="{% static 'web/career.css' %}">
+
+
 <style>
     .site-breadcrumb {
         padding: 0px 0px 30px 0px !important;
@@ -13,129 +16,73 @@
 
     @media screen and (min-width:320px) and (max-width:425px) {
         .site-breadcrumb {
-            height: 120.5vh;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            background-position: center center !important;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            height: 60.5vh;
         }
     }
 
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
-
-
-    .height {
-        padding: 0px 0px 23px 0px;
-    }
-
-    .search {
-        position: relative;
-        box-shadow: 0 0 40px rgba(51, 51, 51, .1);
-
-    }
-
-    .search input {
-
-        height: 60px;
-        text-indent: 25px;
-        border: 2px solid #d6d4d4;
-
-
-    }
-
-
-    .search input:focus {
-
-        box-shadow: none;
-        border: 2px solid #b71919;
-
-
-    }
-
-    .search button:hover {
-
-        box-shadow: none;
-        border: 2px solid #b71919;
-        background-color: #b71919;
-
-
-    }
-
-    .search .fa-search {
-
-        position: absolute;
-        top: 20px;
-        left: 16px;
-
-    }
-
-    .search button {
-
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        height: 50px;
-        width: 110px;
-        background: #b71919;
-
-    }
-
-    @media screen and (min-width:430px) and (max-width:1500px) {
+    @media screen and (min-width:425px) and (max-width:1500px) {
         .site-breadcrumb {
-            height: 90.5vh;
+            height: 90.5vh !important;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:375px) {
+        .site-breadcrumb {
+            height: 108.5vh;
         }
     }
 </style>
 
+
+
 <main class="main">
     <div class="site-breadcrumb head1">
         <div class="container">
-            <h2 class="breadcrumb-title brtitle head">Open Positions</h2>
-        </div>
 
-        <div class="container">
+            <div class="row headings">
+                <h2 class="breadcrumb-title brtitle head">Open Positions</h2>
+            </div>
+
+
             <div class="row height d-flex justify-content-center align-items-center">
-
                 <div class="col-md-8">
-
-                    <div class="search">
-                        <i class="fa fa-search"></i>
-                        <input type="text" class="form-control" placeholder="Have a question? Ask Now">
-                        <button class="btn btn-primary">Search</button>
-                    </div>
-
+                    <form action="" method="GET" class="add_your_class">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control add_your_class" placeholder="Search jobs"
+                                name="search">
+                            <button class="btn btn-primary add_your_class">Search</button>
+                        </div>
+                    </form>
                 </div>
-
             </div>
 
+            <!-- {% for article in search_results %}
+            <a> {{article.job_title}} </a> 
+            {% endfor %} -->
+
+            <!-- <form action="" method=""> -->
             <div class="row height d-flex justify-content-center align-items-center mt-5">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                <div class="col-lg-2 d-sm-none d-lg-block"></div>
+                <div class="col-lg-4 col-sm-6 col-md-6 col-6">
+                    <select class="form-select" aria-label="Default select example" id="jobtype">
+                        <option selected>Job type</option>
+                        <option value="On-site ">On-site</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Remote">Remote</option>
                     </select>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                <div class="col-lg-4 col-sm-6 col-md-6 col-6">
+                    <select class="form-select" aria-label="Default select example" id="joblocation">
+                        <option selected>Location</option>
+                        {% for location in locations %}
+                        <option value="{{location.location}}">{{location.location}}</option>
+                        {% endfor %}
                     </select>
                 </div>
-                <div class="col-lg-2"></div>
+                <div class="col-lg-2 d-sm-none d-lg-block"></div>
             </div>
-
-        </div>
-
-        <div class="container">
+            <!-- </form> -->
 
         </div>
     </div>
@@ -146,9 +93,10 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-12">
-                    <div class="row">
-                        {% for job in jobs %}
+                <div class="col-lg-12 col-12" id="appendjobcard">
+                    <!-- <div classid="appendjobcard"> -->
+                       
+                        <!-- {% for job in jobs %}
                         <div class="col-lg-12 col-sm-12 col-md-12">
                             <div class="card card1 justify-content-center">
                                 <div class="row ">
@@ -197,9 +145,9 @@
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
+                        {% endfor %} -->
 
-                    </div>
+                    <!-- </div> -->
                 </div>
                 {% comment %}
                 <div class="col-lg-6 d-lg-block d-sm-none d-md-none d-none">
@@ -286,5 +234,112 @@
     </section>
 </main>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    // $(document).ready(function(){
+    //     alert()
+    // })
+    // function jobtype(){
+    //     alert()
+    //     console.log("DDDDDDDDDDDDDDDDDDDD")
+    //     var jobtype = $('#jobtype').val()
+    //     var location = $('#location').val()
+    //     alert(jobtype)
+    // }
+    $('#joblocation').on('change', function () {
+        // alert(this.value)
+        var jobtype = $('#jobtype').val()
+        var location = $('#joblocation').val()
+        $.ajax({
+            url: 'jobsearches',
+            type: 'POST',
+            data: {
+                'jobtype': jobtype,
+                'joblocation': location,
+
+            },
+            success: function (response) {
+                // alert((response.data).length)
+                var len = (response.data).length
+                // alert(len)
+                var html = ""
+                // for (i = 1; i <= len; i++) {
+                for (var datas in response.data) {
+                    // alert(response.data[datas].vaccancy)
+                    $("#appendjobcard").append('<div class="row">\
+                        <div class="card card1 justify-content-center">\
+                            <div class="row ">\
+                                <div class="col-lg-3 col-md-3 d-flex justify-content-center">\
+                                    <h3 class="card-title"></h3><br><br>\
+                                    </div>\
+                                        <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">\
+                                            <div class="media single-job-details">\
+                                                <img src="static/web/Tick Mark-01.png" alt="icon">\
+                                                    <div class="media-body">\
+                                                        <h6>Location</h6>\
+                                                        <span id="locationsp">'+response.data[datas].location+'</span>\
+                                                    </div>\
+                                            </div>\
+                                            <div class="media single-job-details">\
+                                                    <div class="media-body">\
+                                                        <h6>Job Type</h6>\
+                                                        <span>'+response.data[datas].work_mode+'</span>\
+                                                    </div>\
+                                            </div>\
+                                            <div class="media single-job-details">\
+                                                    <div class="media-body">\
+                                                        <h6>Experience</h6>\
+                                                        <span>'+response.data[datas].experience+'</span>\
+                                                    </div>\
+                                            </div>\
+                                            <div class="media single-job-details">\
+                                                    <div class="media-body">\
+                                                        <h6>Vacancy</h6>\
+                                                        <span>'+response.data[datas].vaccancy+'</span>\
+                                                    </div>\
+                                            </div>\
+                                        </div>\
+                                        <div class="col-lg-12 col-md-12 d-flex align-items-end">\
+                                            <a href="" class="btn btn1">Read More</a>\
+                                        </div>\
+                                </div>\
+                            </div>\
+                    </div >')
+                }
+                // alert(response.data[0].location)
+                // $("#locationsp").html(response.data[0].location)
+
+                // $("#appendjobcard").append(html)
+
+
+            }
+        })
+
+    });
+</script>
+
 
 {% endblock %}
+
+<!-- 
+    <h6 class="card-title d-flex justify-content-between">\
+                <span> Question Number : </span>\
+                <span> Mark : '+ response.data[datas].vaccancy + '</span>\
+            </h6><br>\
+                <div id="answerDiv">\
+                </div>\
+                <div class="row">\
+                <div class="col-lg-12">\
+                    <div class="btn-toolbar text-center">\
+                        <div class="d-grid gap-2 d-md-flex text-end" >\
+                            <button type="submit" class="btn btn-success">Save &\
+                                Next</button>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>
+ -->
+
+
+<!-- $("#appendjobcard").append(html) -->

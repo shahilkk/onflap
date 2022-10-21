@@ -1,0 +1,609 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> onflap </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'web/img/logo/shorticon_logo.png' %}">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="{% static 'web/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/fontawesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/bsnav.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/slick.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/themify-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/swiper-bundle.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/icofont.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/splitting.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/css/splitting-cells.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/style.css' %}" rel="stylesheet">
+    <link href="{% static 'web/css/responsive.css' %}" rel="stylesheet" />
+    <style>
+        .bsnav {
+            background: #fff;
+            padding-top: 11px;
+            padding-bottom: 12px;
+            z-index: 50;
+        }
+
+        .de-padding {
+            padding: 1rem 0;
+            margin-top: -105px;
+        }
+
+        .fff {
+            margin: 0px 0 0rem 0 !important;
+
+        }
+
+        @media only screen and (max-width: 767px) {
+            .site-breadcrumb .breadcrumb-title {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .contact-left h2 {
+                line-height: 2.5rem;
+                font-size: 2rem;
+                padding: 29px;
+                margin-top: -63px;
+                text-align: center;
+            }
+        }
+
+        .rights {
+            font-size: 13px;
+        }
+
+        .input-style-2 {
+            border: 1px solid #d5d5d5;
+        }
+
+        .contact-page-info.grid-2 {
+            grid-gap: 0rem;
+        }
+
+        .video {
+            position: relative;
+        }
+
+        .video .location {
+            position: absolute;
+            display: block;
+            top: 204px;
+            left: 423px;
+        }
+
+        .video .location2 {
+            position: absolute;
+            display: block;
+            top: 160px;
+            left: 356px;
+        }
+
+        @media screen and (min-width:320px) {
+            .video .images1 {
+                width: 290px;
+            }
+
+            .video .location2 {
+                position: absolute;
+                display: block;
+                top: 41px;
+                left: 172px;
+                font-size: 5px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 48px;
+                left: 204px;
+                font-size: 4px;
+            }
+
+            .video .location3 {
+                position: absolute;
+                display: block;
+                top: 25px;
+                left: 52px;
+                font-size: 4px;
+            }
+
+            .footer-social {
+                gap: 1rem;
+            }
+
+            .g-5,
+            .gy-5 {
+                --bs-gutter-y: 0rem;
+            }
+
+            .g-5,
+            .gx-5 {
+                --bs-gutter-x: 1rem;
+            }
+
+            .row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 2.5rem;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                font-size: 10px;
+            }
+
+            .fz-18-5 {
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+
+            .theme-btn {
+                padding: 1.5rem 2rem;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        @media screen and (min-width: 375px) {
+            .video .images1 {
+                width: 360px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 62px;
+                left: 247px;
+                font-size: 11px;
+            }
+        
+
+        .video .location2 {
+            position: absolute;
+            display: block;
+            top: 52px;
+            left: 206px;
+            font-size: 11px;
+        }
+
+        .video .location3 {
+            position: absolute;
+            display: block;
+            top: 32px;
+            left: 62px;
+            font-size: 5px;
+        }
+        }
+
+        @media screen and (min-width: 425px) {
+            .video .images1 {
+                width: 395px;
+            }
+
+            .video .location2 {
+                position: absolute;
+                display: block;
+                top: 56px;
+                left: 235px;
+                font-size: 5px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 68px;
+                font-size: 6px;
+                left: 276px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 68px;
+                font-size: 6px;
+                left: 276px;
+            }
+
+            .video .location3 {
+                position: absolute;
+                display: block;
+                top: 36px;
+                left: 66px;
+                font-size: 6px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .video .images1 {
+                width: 700px;
+                padding: 0px 20px;
+            }
+
+            .video .location2 {
+                position: absolute;
+                display: block;
+                top: 108px;
+                left: 402px;
+                font-size: 10px;
+            }
+
+            .video .location {
+                position: absolute;
+                display: block;
+                top: 124px;
+                left: 479px;
+                font-size: 12px;
+            }
+
+            .video .location3 {
+                position: absolute;
+                display: block;
+                top: 70px;
+                left: 112px;
+            }
+
+            .footer-social {
+                gap: 0.4rem;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .footer-social {
+                gap: 1.5rem;
+            }
+        }
+
+        /* @media screen and (min-width:320px) and (max-width:390px) {
+            .video .images1 {
+                margin-top: -73px !important;
+                margin-bottom: 0px;
+            }
+        } */
+    </style>
+    <!-- ========== End Stylesheet ========== -->
+</head>
+
+<body class="demo-1" id="bdy">
+
+    <!-- Start PreLoader
+        ============================================= -->
+    <div class="se-pre-con"></div>
+    <!-- Start PreLoader-->
+
+    <div class="theme_all_wrap" data-magic-cursor=" " data-color="crimson">
+
+        <!-- Document Wrapper   
+    =============================== -->
+        <div id="main-wrapper">
+
+            <!-- Start header
+        ============================================= -->
+            {% include 'web/partials/header.html' %}
+            <!-- End header -->
+
+            <main class="main">
+
+                <!-- Start Breadcrumb
+    ============================================= -->
+                <div class="site-breadcrumb">
+                    <div class="container">
+                        <h2 class="breadcrumb-title">You Can Reach Us On...</h2>
+                    </div>
+                </div>
+                <!-- End  Breadcrumb -->
+
+                <!-- Start Blog-Content #d5d5d500;
+    ============================================= -->
+                <div class="wrapper">
+                    <div class="single-area de-padding pb-3">
+                        <div class="container map">
+                            <div class="contact-page-info grid-2">
+                                <div class="contact-left">
+                                    <div class="video d-flex justify-content-center">
+                                        <img src="{% static 'web/Map.jpg' %}" alt="" class="images1">
+                                        <a href="https://goo.gl/maps/bSdqMC3amHuhd2ug6" class="location3"
+                                            target="_blank" style="color: #d5d5d500;">Canada</a>
+                                        <a href="https://goo.gl/maps/Bf2PjJ5ckebML9jV8" class="location" target="_blank"
+                                            style="color: #d5d5d500;;">India</a>
+                                        <a href="https://goo.gl/maps/8yak39ubmBq47UTv5" class="location2"
+                                            target="_blank" style="color: #d5d5d500;;">Kuwait</a>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="contact-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                {{contactfrom.cust_name}}
+                                            </div>
+                                            <div class="col-md-6">
+                                                {{contactfrom.phone}}
+                                            </div>
+                                            <div class="col-md-12">
+                                                {{contactfrom.email}}
+                                            </div>
+                                            <div class="col-12">
+                                                {{contactfrom.message}}
+                                            </div>
+                                            <div class="col-12">
+                                                {{form.captcha}}
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="theme-btn mt-20" onclick="sweet()">
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End  Blog-Content -->
+
+                <!-- <div class="container">
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-lg-6">
+                            <ul class="text-center">
+                                <li>
+                                    <h5 class="fz-18-5" style="font-weight: 900;">INDIA:</h5>
+                                    <span>ONFLAP TECHNOLOGIES PRIVATE LIMITED</span>
+                                </li><br>
+                                <li>
+                                    <span> Inkel Tower 2, IIIrd Floor</span>
+                                </li><br>
+                                <li>
+                                    <span> Angamaly South J1 A Business Park, Angamaly Ernakulam</span>
+                                </li><br>
+                                <li>
+                                    <span>Kerala - 683572, India</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="text-center" style="color: #67676a;">
+                                <li>
+                                    <h5 class="fz-18-5" style="font-weight: 900;">CANADA:</h5>
+                                    <span>ONFLAP TECHNOLOGIES INC.</span>
+                                </li><br>
+                                <li>
+                                    <span> 100 Consilium Place - SUITE 200</span>
+                                </li><br>
+                                <li>
+                                    <span> Toronto ON M1H 3E3</span>
+                                </li><br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-top: 50px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 style="color: black;text-align: center;">
+                                CONTACT US @
+                                <a href="https://wa.me/+91-6282307829/" target="_blank">
+                                    <img src="{% static 'web/whatsapp.png' %}" alt="" height="25px" width="25px">
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div> -->
+
+            </main>
+
+
+
+
+
+            <!-- Start Footer
+	============================================= -->
+            <section class="mt-5">
+                <div class="container-fluid" style="background-color: #a8a7ac;">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <div class="content d-flex justify-content-center">
+                                <p class="px-4" style="font-weight:600;">Contact us @ </p>
+                                <a href="https://wa.me/916282307829/" target="_blank">
+
+                                    <img src="{% static 'web/whatsapp.png' %}" width="25px" height="25px" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <footer class="py-4">
+                <!-- <div class="footer-shape">
+                    <img src="assets/img/footer/footer-bg.png" alt="thumb">
+                </div> -->
+                <div class="footer-widget">
+                    <div class="container">
+                        <div class="footer-widget-wrapper de-pb">
+                            <div class="row g-5">
+                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-6">
+                                    <div class="footer-widget-box">
+                                        <ul class="">
+                                            <li>
+                                                <h5 class="fz-18-5 fff" style="font-weight: 900;">INDIA:</h5>
+                                                <!-- <span>ONFLAP TECHNOLOGIES PRIVATE LIMITED</span> -->
+                                            </li><br>
+                                            <li>
+                                                <span> Inkel Tower 2, IIIrd Floor</span>
+                                            </li><br>
+                                            <li>
+                                                <span> Angamaly South J1 A Business Park, Angamaly Ernakulam</span>
+                                            </li><br>
+                                            <li>
+                                                <span>Kerala - 683572, India</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-6">
+                                    <div class="footer-widget-box">
+                                        <ul class="" style="">
+                                            <li>
+                                                <h5 class="fz-18-5 fff" style="font-weight: 900;">CANADA:</h5>
+                                                <!-- span>ONFLAP TECHNOLOGIES INC.</span> -->
+                                            </li><br>
+                                            <li>
+                                                <span> 100 Consilium Place - SUITE 200</span>
+                                            </li><br>
+                                            <li>
+                                                <span> Toronto ON M1H 3E3</span>
+                                            </li><br>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-12">
+                                    <div class="footer-widget-box">
+                                        <ul class="fff">
+                                            <li>
+                                                <h5 class="fz-18-5 fff" style="font-weight: 900;">KUWAIT:</h5>
+                                                <!-- <span>ONFLAP TECHNOLOGIES </span> -->
+                                            </li><br>
+                                            <li><span>Anoud Complex</span></li><br>
+                                            <li><span>Mekka Street</span></li><br>
+                                            <li><span>Fahaheel</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 col-lg-3 col-xs-6 col-12">
+                                    <div class="footer-widget-box footer-gallery">
+                                        <div class="">
+                                            <div class="row">
+                                                <p class="text-center text-dark rights">© 2022, Onflap. All Rights
+                                                    Reserved.</p>
+                                            </div>
+                                            <!-- <div class="row"> -->
+                                            <ul class="footer-social">
+                                                <li><a target="_blank" href="https://www.facebook.com/onflaptech/"><i
+                                                            class="fab fa-facebook-f"></i></a></li>
+                                                <li><a target="_blank"
+                                                        href="https://www.instagram.com/onflaptech/?igshid=1b8qlek00fuj"><i
+                                                            class="fab fa-instagram"></i></a></li>
+                                                <li><a target="_blank"
+                                                        href="https://www.linkedin.com/company/onflap-technologies/about/"><i
+                                                            class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a target="_blank"
+                                                        href="https://www.youtube.com/c/OnFlapTechnologies?app=desktop"><i
+                                                            class="fab fa-youtube"></i></a></li>
+                                                <li><a target="_blank" href="https://twitter.com/OnflapT"><i
+                                                            class="fab fa-twitter"></i></a></li>
+                                                <!-- <li><a href="https://wa.me/916282307829/" target="_blank"><i
+                                                            class="fab fa-whatsapp"></i></a></li> -->
+                                            </ul>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer-->
+
+            <!-- Start Scroll top
+============================================= -->
+            <a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
+            <!-- End Scroll top-->
+
+
+            <!-- CURSOR -->
+            <!-- <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div> -->
+            <!-- /CURSOR -->
+        </div>
+    </div> <!-- Mouse Cursor End -->
+
+    <!-- jQuery Frameworks 
+============================================= -->
+    {% block js %}
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.message == "Wrong Captcha" %}
+
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'The Captcha is wrong! Re-enter the form ',
+        })
+    </script>
+
+    {% else %}
+
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Your Enquiry Sended Successfully',
+            showConfirmButton: false,
+            timer: 5000
+        })
+    </script>
+
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+
+    {% endblock %}
+    <script src="{% static 'web/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.appear.js' %}"></script>
+    <script src="{% static 'web/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'web/js/progress-bar.min.js' %}"></script>
+    <script src="{% static 'web/js/modernizr.custom.13711.js' %}"></script>
+    <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/js/count-to.js' %}"></script>
+    <script src="{% static 'web/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/js/text.js' %}"></script>
+    <script src="{% static 'web/js/YTPlayer.min.js' %}"></script>
+    <script src="{% static 'web/js/slick.min.js' %}"></script>
+    <script src="{% static 'web/js/bsnav.min.js' %}"></script>
+    <script src="{% static 'web/js/splitting.min.js' %}"></script>
+    <script src="{% static 'web/js/splitting-animation.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+</body>
+
+</html>

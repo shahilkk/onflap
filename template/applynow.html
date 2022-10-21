@@ -1,0 +1,111 @@
+{% extends 'web/partials/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    label {
+  color: #323338;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 15px;
+  padding: 11px;
+}
+.input-style-2{
+    border: 1px solid #cdcdcd;
+}
+
+@media only screen and (max-width: 375px){
+    .row .breadcrumb-title{
+    margin-top: -50px;
+}
+}
+
+</style>
+
+<main class="main">
+    <div class="container">
+        <div class="site-breadcrumb">
+            <div class="row">
+                <h2 class="breadcrumb-title">Apply For <br> {{Jobdetails}}</h2>
+            </div>
+        </div>
+
+        <!-- Start Blog-Content
+    ============================================= -->
+
+        <div class="row" style="margin-top: -120px;">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8">
+                {% if messages %}
+                    {% for message in messages %}
+
+
+                    <div class="alert alert-danger alert-dismissible fade show text-center">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        <strong>{{message}}!</strong> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
+                        </button>
+                    </div>
+                    <!-- <div class="alert text-center mt-5 alert-{{message.tags}}">
+                        <p><b style="color: #b71919;">{{message}}</b></p>
+                    </div> -->
+                    {% endfor %}
+                    {% endif %}
+                
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row g-4">
+                        <div class="col-md-12">
+                            <label for="">Applicant Name <span class="text-danger">*</span> </label>
+                            <input type="text" class="form-control input-style-2" required placeholder="Name" name='name'>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Phone Number <span class="text-danger">*</span> </label>
+                            <input type="number" class="form-control input-style-2" required placeholder="phone" name='phone'>
+                            <!-- {{form.phone.label}}
+                            {{form.phone}} -->
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Email <span class="text-danger">*</span> </label>
+                            <input type="email" class="form-control input-style-2" required placeholder="email" name='email'>
+                            <!-- {{form.email.label}}
+                            {{form.email}} -->
+                        </div>
+                        <div class="col-12">
+                            <label for="">CV <span class="text-danger">*</span> </label>
+                            <input type="file" class="form-control input-style-2" required placeholder="cv" name='cv'><br>
+                            <small>( File should be less than 1MB )</small>
+                            <!-- {{form.cv.label}}
+                            {{form.cv}} -->
+                        </div>
+                        <div class="col-12">
+                         
+                        
+                            {{form.captcha}}
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="theme-btn mt-20">
+                                Send Message
+                            </button>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="form-message"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+    <!-- End  Blog-Content -->
+
+
+
+</main>
+
+
+
+{% endblock %}

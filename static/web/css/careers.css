@@ -62,6 +62,7 @@
   font-size: 22px;
   padding: 45px 120px 10px 120px;
   text-align: center;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 320px) {
@@ -110,28 +111,30 @@
   }
 }
 
-@media only screen and (min-width: 325px) and (max-width: 375px){
+@media only screen and (min-width: 325px) and (max-width: 375px) {
   .customrow333 {
     margin-top: 530px !important;
+  }
 }
-}
-@media only screen and (min-width: 376px) and (max-width: 390px){
+
+@media only screen and (min-width: 376px) and (max-width: 390px) {
   .customrow333 {
     margin-top: 450px !important;
     /* padding: 450px 0px 0px 0xp !important; */
   }
 }
-@media only screen and (min-width: 391px) and (max-width: 430px){
+
+@media only screen and (min-width: 391px) and (max-width: 430px) {
   .customrow333 {
     margin-top: 435px !important;
     /* padding: 450px 0px 0px 0xp !important; */
   }
 }
 
-@media only screen and (min-width: 1445px) and (max-width: 2560px){
+@media only screen and (min-width: 1445px) and (max-width: 2560px) {
   .customrow333 {
     /* margin-top: 435px  */
-    
+
     padding: 180px 0px 0px 0px !important;
   }
 }
@@ -145,7 +148,7 @@
 
   }
 
-  
+
 }
 
 .pt-67 {
@@ -162,9 +165,10 @@
   } */
 
   .descriptions {
-    font-size: 20px;
+    font-size: 15px;
     padding: 45px 27px 10px 17px;
     text-align: center;
+    font-weight: 900;
   }
 
   .first_desc {
@@ -198,10 +202,10 @@
   }
 }
 
-@media screen and (min-width: 1020px) and (max-width: 1024px){
+@media screen and (min-width: 1020px) and (max-width: 1024px) {
   .customrow333 {
     margin: 410px 0px 0px 0px !important;
-}
+  }
 }
 
 
@@ -218,15 +222,17 @@
     /* padding: 20px; */
     padding: 10px 0px 0px 0px;
   }
+
   .valuecard {
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
     min-height: 492px;
     margin: 0 13px;
-}
+  }
 
 }
+
 @media screen and (min-width:1200px) and (max-width:14450px) {
   .valuecard {
     text-align: center;
@@ -234,7 +240,7 @@
     max-height: 426px;
     min-height: 420px;
     margin: 0 13px;
-}
+  }
 }
 
 @media screen and (min-width:1440px) and (max-width:1550px) {
