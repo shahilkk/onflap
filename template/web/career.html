@@ -94,9 +94,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12" id="appendjobcard">
-                    <!-- <div classid="appendjobcard"> -->
-                       
-                        <!-- {% for job in jobs %}
+
+                    <div class="row">
+                        {% for job in jobs %}
                         <div class="col-lg-12 col-sm-12 col-md-12">
                             <div class="card card1 justify-content-center">
                                 <div class="row ">
@@ -145,91 +145,11 @@
                                 </div>
                             </div>
                         </div>
-                        {% endfor %} -->
+                        {% endfor %}
+                    </div> 
 
-                    <!-- </div> -->
                 </div>
-                {% comment %}
-                <div class="col-lg-6 d-lg-block d-sm-none d-md-none d-none">
-                    <div class="row sec">
-                        <h6 class="text-center sec1">World-Class Benefits for a World-Class Team</h6>
-                        <div class="grid-4 " style="margin-top: 20px;">
-
-
-                            <div class="feature-box fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-01.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">100% Paid Medical Insurance</h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-02.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Retirement Planning</h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-03.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Paid Vacation & Time Off</h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-04.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Subsidized Housing Rent
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-05.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Learning and Skill Development</h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-06.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Swift Growth Opportunities</h5>
-                                </div>
-                            </div>
-                            <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div class="feature-icon">
-                                    <img src="{% static 'web/img/icons/icons ai-07.png' %}" width="45px" alt="thumb">
-                                </div>
-                                <div class="feature-info">
-                                    <h5 style="font-weight: 900;">Loyalty & Gratuity Bonuses</h5>
-                                </div>
-                            </div>
-                            <!-- <div class="feature-box wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="feature-icon">
-                                <img src="{% static 'web/img/icons/icons ai-08.png' %}" width="45px" alt="thumb">
-                            </div>
-                            <div class="feature-info">
-                                <h5 style="font-weight: 900;">Charity Participation</h5>
-                            </div>
-                        </div> -->
-
-
-                        </div>
-                    </div>
-                </div>
-                {% endcomment %}
             </div>
-
-
         </div>
     </section>
 </main>
@@ -271,43 +191,46 @@
                         <div class="card card1 justify-content-center">\
                             <div class="row ">\
                                 <div class="col-lg-3 col-md-3 d-flex justify-content-center">\
-                                    <h3 class="card-title"></h3><br><br>\
+                                    <h3 class="card-title">'+ response.data[datas].job_title +'</h3><br><br>\
                                     </div>\
                                         <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">\
                                             <div class="media single-job-details">\
-                                                <img src="static/web/Tick Mark-01.png" alt="icon">\
+                                                    <img src="static/career/images/riyastemp/2.svg" alt="icon">\
                                                     <div class="media-body">\
                                                         <h6>Location</h6>\
-                                                        <span id="locationsp">'+response.data[datas].location+'</span>\
+                                                        <span id="locationsp">'+ response.data[datas].location + '</span>\
                                                     </div>\
                                             </div>\
                                             <div class="media single-job-details">\
+                                                <img src="static/career/images/riyastemp/3.svg" alt="icon">\
                                                     <div class="media-body">\
                                                         <h6>Job Type</h6>\
-                                                        <span>'+response.data[datas].work_mode+'</span>\
+                                                        <span>'+ response.data[datas].work_mode + '</span>\
                                                     </div>\
                                             </div>\
                                             <div class="media single-job-details">\
+                                                <img src="static/career/images/riyastemp/4.svg" alt="icon">\
                                                     <div class="media-body">\
                                                         <h6>Experience</h6>\
-                                                        <span>'+response.data[datas].experience+'</span>\
+                                                        <span>'+ response.data[datas].experience + '</span>\
                                                     </div>\
                                             </div>\
                                             <div class="media single-job-details">\
+                                                <img src="static/career/images/riyastemp/5.svg" alt="icon">\
                                                     <div class="media-body">\
                                                         <h6>Vacancy</h6>\
-                                                        <span>'+response.data[datas].vaccancy+'</span>\
+                                                        <span>'+ response.data[datas].vaccancy + '</span>\
                                                     </div>\
                                             </div>\
                                         </div>\
                                         <div class="col-lg-12 col-md-12 d-flex align-items-end">\
-                                            <a href="" class="btn btn1">Read More</a>\
+                                            <a href="/careerdetails/'+response.data[datas].jobid+'" class="btn btn1">Read More</a>\
                                         </div>\
                                 </div>\
                             </div>\
                     </div >')
                 }
-                // alert(response.data[0].location)
+                // alert(response.data[0].id)
                 // $("#locationsp").html(response.data[0].location)
 
                 // $("#appendjobcard").append(html)

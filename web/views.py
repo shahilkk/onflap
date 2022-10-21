@@ -120,15 +120,16 @@ def searchjob(request):
 
         for job in jobs:
             jobitem = {
-                "id" : job.id,
+                "jobid" : job.id,
                 "location" : job.location,
                 "work_mode" : job.work_mode,
                 "experience" : job.experience,
                 "vaccancy" : job.vaccancy,
+                "job_title": job.job_title,
             }
-            
+            print(id) 
             data.append(jobitem)
-        print(data)    
+        print(id)    
         return JsonResponse({'data':data,})
 
 
