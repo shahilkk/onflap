@@ -18,27 +18,11 @@
             <!-- <h2 class="breadcrumb-title brtitle head">Why Join ONFLAP?</h2> -->
             <div class="row first_row">
                 <div class="col-lg-6">
-                    <h2 class=" filterh6 " style="color: black;">Who We Are</h2>
+                    <h2 class=" filterh6 " style="color: black;">{{about_banner.title}}</h2>
                 </div>
                 <div class="col-lg-6">
                     <p class="frst_des">
-                        Established with the specific aim of
-                        empowering the IT industry
-                        in the region through the distribution &
-                        development
-                        of powerful, cost-effective and scalable IT
-                        solutions. <br>
-                        <b>WE ARE</b> the region's fastest growing
-                        software development
-                        house, encompassing some of the best
-                        programmers in the
-                        industry. <br>
-                        WE enjoy a vast Clientele including multiple
-                        ERP and inventory solutions for various
-                        sectors like Travel & Tourism, BPOs, Retail
-                        & Manufacturing, Medical, Agro Industries,
-                        Couriers, Rental, Online E-COM and Learning
-                        Platforms.
+                        {{about_banner.description}}
                     </p>
                 </div>
             </div>
@@ -87,16 +71,10 @@
             </div>
             <div class="col-lg-6">
                 <p class="para">
-                    " To establish long-lasting client relationships and to be their No. 1 choice of
-                    businesses for all their software needs, and set new industry standards in quality and
-                    speed of delivery. Our vision is to help our clients grow their business with quality
-                    and style with ease always considering the changing market trends."
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
+                   {{about_banner.Mission}}
                 </p>
                 <p class="para">
-                    "Provide the market with innovative, flexible and smart software solutions which
-                    matches the international standards for a greater convenience, safety and security "
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
+                    {{about_banner.Vision}}
                 </p>
 
                 <div class="row">
@@ -118,16 +96,10 @@
             </div>
             <div class="col-lg-6">
                 <p class="para">
-                    " To establish long lasting client relationships and to be their No. I choice of
-                    businesses for all their software needs, and set new industry standards in quality and
-                    speed of delivery. Our vision is to help our clients grow their business with quality
-                    and style with ease always considering the changing market trends."
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
+                    {{about_banner.Mission}}
                 </p>
                 <p class="para">
-                    "Provide the market with innovative, flexible and smart software solutions which
-                    matches the international standards for a greater convenience, safety and security "
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
+                    {{about_banner.Vision}}
                 </p>
 
                 <div class="row">
@@ -146,9 +118,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class=" filterh6" style="color: black;">Meet Our Team</h2>
+                    <h2 class=" filterh6" style="color: black;">{{team_title.title}}</h2>
                 </div>
+                {% for member in team %}
                 <div class="col-lg-6 mt-3">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-3 col-3">
+                            <div class="team-img-bx">
+                                <img src="{{member.image.url}}" alt="" class="team-pic">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-9 d-flex align-items-center">
+                            <div class="desc-bx">
+                                <h4 class="mt0 team-title"><b>{{member.Member_name}}</b> • {{}}</h4>
+
+                                <p class="fontsz">
+                                    " ONFLAP signifies how a group of colleagues from different work backgrounds,
+                                    tastes and opinions have come together to form this Soaring organization from
+                                    scratch with
+                                    the sole aim to provide the market with reliable, customizable & pocket friendly
+                                    softwares to support your business ventures "
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- <div class="col-lg-6 mt-3">
                     <div class="row">
                         <div class="col-lg-4 col-sm-3 col-3">
                             <div class="team-img-bx">
@@ -215,7 +212,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- --------------------------- -->
 
 
                 <div class="col-lg-6 mt-3">
@@ -238,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import ApplyNow, ClientCategory, ClientList, Contact, JobDetails, Partners, Product, ProductDetails, ProductEnquiry, ProductFeatures, ProductImportantFeatures, Review
+from web.models import AboutBanner, ApplyNow, Belifs, BelifsTitle, CareerBanner, ClientCategory, ClientList, Contact, IndianBanner, IndianBenefits, JobDetails, KuwaitBanner, KuwaitBenefits, MissionVision, Partners, Product, ProductDetails, ProductEnquiry, ProductFeatures, ProductImportantFeatures, RangeOfProduct, Review, BannerDescription, Services, Team, TeamTitle, WhatToExpect
 
 # Register your models here.
 
@@ -102,3 +102,115 @@ class ProductImportantFeaturesAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProductImportantFeatures, ProductImportantFeaturesAdmin)
+
+
+class BannerDescriptionAdmin(admin.ModelAdmin):
+    list_display = ('title', )
+    search_fields = ('title', )
+
+
+admin.site.register(BannerDescription, BannerDescriptionAdmin)
+
+
+class RangeOfProductAdmin(admin.ModelAdmin):
+    list_display = ('short_form','title','icon' )
+    search_fields = ('short_form','title' )
+
+
+admin.site.register(RangeOfProduct, RangeOfProductAdmin)
+
+
+class ServicesAdmin(admin.ModelAdmin):
+    list_display = ('title','icon' )
+    search_fields = ('title',)
+
+
+admin.site.register(Services, ServicesAdmin)
+
+
+class AboutBannerAdmin(admin.ModelAdmin):
+    list_display = ('title','description' )
+    search_fields = ('title',)
+
+
+admin.site.register(AboutBanner, AboutBannerAdmin)
+
+
+class MissionVisionAdmin(admin.ModelAdmin):
+    list_display = ('title','Mission','Vision' )
+    search_fields = ('title',)
+
+
+admin.site.register(MissionVision, MissionVisionAdmin)
+
+
+
+admin.site.register(TeamTitle)
+
+
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('Member_name','Designation','image' )
+    search_fields = ('Member_name','Designation')
+
+
+admin.site.register(Team, TeamAdmin)
+
+
+class CareerBannerAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(CareerBanner, CareerBannerAdmin)
+
+
+admin.site.register(BelifsTitle)
+
+
+class BelifsAdmin(admin.ModelAdmin):
+    list_display = ('Title','icons' )
+    search_fields = ('Title','icons')
+
+
+admin.site.register(Belifs, BelifsAdmin)
+
+
+class WhatToExpectAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(WhatToExpect, WhatToExpectAdmin)
+
+
+class KuwaitBannerAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(KuwaitBanner, KuwaitBannerAdmin)
+
+
+class KuwaitBenefitsAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(KuwaitBenefits, KuwaitBenefitsAdmin)
+
+
+
+class IndianBannerAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(IndianBanner, IndianBannerAdmin)
+
+
+class IndianBenefitsAdmin(admin.ModelAdmin):
+    list_display = ('Title','Description' )
+    search_fields = ('Title','Description')
+
+
+admin.site.register(IndianBenefits, IndianBenefitsAdmin)

@@ -1,5 +1,5 @@
 .first_row {
-  margin-top: 480px;
+  margin-top: 410px;
   /* padding: 0px 0px 0px 0px; */
 
 }
@@ -204,7 +204,7 @@
 
 @media screen and (min-width: 1020px) and (max-width: 1024px) {
   .customrow333 {
-    margin: 410px 0px 0px 0px !important;
+    margin: 370px 0px 0px 0px !important;
   }
 }
 
@@ -238,7 +238,7 @@
     text-align: center;
     padding: 39px 0px 29px 0px;
     max-height: 426px;
-    min-height: 420px;
+    min-height: 426px;
     margin: 0 13px;
   }
 }

@@ -19,7 +19,7 @@
                         <li {% if is_house %} class="active nav-item" {% elif is_productdetails %} class="active nav-item" {% endif %}>
                             <a class="nav-link" href="{% url 'web:home' %}">Home</a>
                         </li>
-                        <li {% if is_productdetails %} class=" nav-item" {% endif %}>
+                        <li {% if is_productdetails %} class=" nav-item" {% endif %} hidden>
                             <a class="nav-link" href="">Products & Services</a>
                         </li>
                         <li {% if is_career %} class="active nav-item" {% elif is_careerDetails %} class="active nav-item" {% elif is_applynow %} class="active nav-item" {% elif is_benefits%} class="active nav-item" {% endif %}>

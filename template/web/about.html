@@ -18,28 +18,12 @@
             <!-- <h2 class="breadcrumb-title brtitle head">Why Join ONFLAP?</h2> -->
             <div class="row first_row">
                 <div class="col-lg-6">
-                    <h2 class=" filterh6 " style="color: black;">Who We Are</h2>
+                    <h2 class=" filterh6 " style="color: black;">{{about_banner.title}}</h2>
                 </div>
                 <div class="col-lg-6">
-                    <p class="frst_des">
-                        Established with the specific aim of
-                        empowering the IT industry
-                        in the region through the distribution &
-                        development
-                        of powerful, cost-effective and scalable IT
-                        solutions. <br>
-                        <b>WE ARE</b> the region's fastest growing
-                        software development
-                        house, encompassing some of the best
-                        programmers in the
-                        industry. <br>
-                        WE enjoy a vast Clientele including multiple
-                        ERP and inventory solutions for various
-                        sectors like Travel & Tourism, BPOs, Retail
-                        & Manufacturing, Medical, Agro Industries,
-                        Couriers, Rental, Online E-COM and Learning
-                        Platforms.
-                    </p>
+                    <span class="frst_des">
+                        {{about_banner.description|safe}}
+                    </span>
                 </div>
             </div>
         </div>
@@ -83,21 +67,15 @@
     <div class="container d-md-block d-sm-block d-block d-lg-none">
         <div class="row third_row">
             <div class="col-lg-6 ">
-                <h2 class="filterh6 text-center " style="color: black;">Our Mission And Mission</h2>
+                <h2 class="filterh6 text-center " style="color: black;">Our Mission And Vssh root@64.227.99.27ision</h2>
             </div>
             <div class="col-lg-6">
-                <p class="para">
-                    " To establish long-lasting client relationships and to be their No. 1 choice of
-                    businesses for all their software needs, and set new industry standards in quality and
-                    speed of delivery. Our vision is to help our clients grow their business with quality
-                    and style with ease always considering the changing market trends."
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
-                </p>
-                <p class="para">
-                    "Provide the market with innovative, flexible and smart software solutions which
-                    matches the international standards for a greater convenience, safety and security "
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
-                </p>
+                <span class="para">
+                   {{mission_vission.Mission|safe}}
+                </span>
+                <span class="para">
+                    {{mission_vission.Vision|safe}}
+                </span>
 
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -114,21 +92,15 @@
     <div class="container d-sm-none d-xs-none d-md-none d-lg-block d-none">
         <div class="row third_row">
             <div class="col-lg-6 ">
-                <h2 class="filterh6 text-center" style="color: black;">Our Mission <br> And Mission</h2>
+                <h2 class="filterh6 text-center" style="color: black;">Our Mission <br> And Vision</h2>
             </div>
             <div class="col-lg-6">
-                <p class="para">
-                    " To establish long lasting client relationships and to be their No. I choice of
-                    businesses for all their software needs, and set new industry standards in quality and
-                    speed of delivery. Our vision is to help our clients grow their business with quality
-                    and style with ease always considering the changing market trends."
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
-                </p>
-                <p class="para">
-                    "Provide the market with innovative, flexible and smart software solutions which
-                    matches the international standards for a greater convenience, safety and security "
-                    <!-- <a href="#" class="text-info">@consequat</a>." -->
-                </p>
+                <span class="para">
+                    {{mission_vission.Mission|safe}}
+                </span>
+                <span class="para">
+                    {{mission_vission.Vision|safe}}
+                </span>
 
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -146,99 +118,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class=" filterh6" style="color: black;">Meet Our Founding Team</h2>
+                    <h2 class=" filterh6" style="color: black;">{{team_title.title}}</h2>
                 </div>
+
+            {% for member in team %}
                 <div class="col-lg-6 mt-3">
                     <div class="row">
                         <div class="col-lg-4 col-sm-3 col-3">
                             <div class="team-img-bx">
-                                <img src="{% static 'web/img/team/anu.jpeg' %}" alt="" class="team-pic">
+                                <img src="{{member.image.url}}" alt="" class="team-pic">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-9 col-9 d-flex align-items-center">
                             <div class="desc-bx">
-                                <h4 class="mt0 team-title"><b>Anu Rosebell</b> • Co-Founders & Director</h4>
+                                <h4 class="mt0 team-title"><b>{{member.Member_name}}</b> • {{member.Designation}}</h4>
 
-                                <p class="fontsz">
-                                    " ONFLAP signifies how a group of colleagues from different work backgrounds,
-                                    tastes and opinions have come together to form this Soaring organization from
-                                    scratch with
-                                    the sole aim to provide the market with reliable, customizable & pocket friendly
-                                    softwares to support your business ventures "
-                                </p>
+                                <span class="fontsz">
+                                    {{member.review|safe}}
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mt-3">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-3 col-3">
-                            <div class="team-img-bx">
-                                <img src="{% static 'web/img/team/emithiyas.jpg' %}" alt="" class="team-pic">
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-sm-9 col-9  d-flex align-items-center">
-                            <div class="desc-bx">
-                                <h4 class="mt0 team-title"><b> Emitiyas N.M</b> • Co-Founders & Director</h4>
-                                <p class="fontsz">
-                                    "ONFLAP is where many dreams have come together with a single vision of enabling
-                                    the future of businesses with tailored, affordable solutions. I am proud to be
-                                    part of such a dedicated team of highly skilled professionals in this journey of
-                                    success and inspiration, going forward from strength to strength every step of
-                                    the way. "
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-6 mt-3">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-3 col-3">
-                            <div class="team-img-bx">
-                                <img src="{% static 'web/img/team/lijesh.jpg' %}" alt="" class="team-pic">
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-sm-9 col-9  d-flex align-items-center">
-                            <div class="desc-bx">
-                                <h4 class="mt0 team-title"><b>Lijesh Paul</b> • Co-Founders & Director</h4>
-                                <p class="fontsz">
-                                    "Some people Dream of Success but other people get up Every Morning and make it
-                                    Happen <br>
-                                    ONFLAP has a Team of “Other People” who make Dreams Happen
-                                    "
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- --------------------------- -->
-
-
-                <div class="col-lg-6 mt-3">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-3 col-3">
-                            <div class="team-img-bx">
-                                <img src="{% static 'web/img/team/ajil.jpg' %}" alt="" class="team-pic">
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-sm-9 col-9  d-flex align-items-center">
-                            <div class="desc-bx">
-                                <h4 class="mt0 team-title"><b> Ajil K.V</b> • Director & CEO</h4>
-                                <p class="fontsz">
-                                    "If you don’t build your dream, someone else will hire you to help them build
-                                    theirs.” <br>
-
-                                    In ONFLAP we are building our dream everyday and helping all ONFLAPians to
-                                    acheive their dreams.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
 
 
 

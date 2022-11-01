@@ -5,25 +5,29 @@
 <link rel="stylesheet" href="{% static 'web/benefits.css' %}">
 <link rel="stylesheet" href="{% static 'web/css/kuwait.css' %}">
 
+<style>
+    @media only screen and (min-width: 320px) and (max-width: 760px) {
+        #kuwaithbnfs p {
+            font-size: 14px;
+            line-height: 2.5rem;
+            padding: 0px 32px 0px 32px;
+        }
+    }
+</style>
+
 
 <main class="main">
     <div class="site-breadcrumb head1">
         <div class="container">
-            <h2 class="breadcrumb-title brtitle head" style="">Kuwait Benefits</h2>
+            <h2 class="breadcrumb-title brtitle head" style="">{{kuwait_banner.Title}}</h2>
 
         </div>
         <p class="benefits">
-            Rated amongst the fastest-growing companies, Onflap is built on a strong vision and corporate philosophy
-            of continuous adaptation, client service, and professional growth. With one of the lowest attrition
-            rates in the industry, onflap’s investment in its team members provides an ideal working environment that
-            fosters opportunities to innovate, learn, and excel. Our onflap Family is always growing, and we look
-            forward to welcoming new members who are looking to expand their potential and place their careers on a
-            path to success.
-
+            {{kuwait_banner.Description|safe}}
         </p>
     </div>
 
-    
+
 
 
     <div class="container">
@@ -37,46 +41,28 @@
             </p>
         </div>
     </div>
-<section class=" pd">
+    <section class=" pd">
 
-    <div class="container">
-        <div class="row mt">
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+        <div class="container">
+            <div class="row mt">
+                {% for b in kuwait_benefits %}
+                <div class="col-lg-4 col-md-6 d-flex justify-content-center">
 
-                <div class="card height d-flex justify-content-center bluecard bcard">
-                    <h3 class="card-title">
-                        Loyalty Bonus & Swift, Growth Opportunities
-                    </h3>
-                    <p class="card-content">
-                        We believe that dedication and hard work paves the path to success. In recognition of your contribution to Onflap's success, you'll receive a one-time bonus following your annual employee performance review. We also offer plenty of opportunities for career advancement along with this bonus.
-                    </p>
+                    <div class="card height d-flex justify-content-center bluecard bcard"
+                        style="background-color: {% cycle '#e8f7fa' 'white' %};">
+                        <h3 class="card-title">
+                            {{b.Title}}
+                        </h3>
+                        <span class="card-content">
+                            {{b.Description|safe}}
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <div class="card height d-flex justify-content-center bcard">
-                    <h3 class="card-title">
-                        Paid Vacation, Floating Days & PTO
-                    </h3>
-                    <p class="card-content">
-                        We pride ourselves on working hard, as well as playing hard and we believe that taking time off from the workplace is important for every employee. In order to facilitate this, we offer paid vacations, floating holiday pay, and paid time off (PTO) benefits to reduce stress and raise the productivity of work.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <div class="card height d-flex justify-content-center bluecard bcard">
-                    <h3 class="card-title">
-                        Travel Reimbursement
 
-                    </h3>
-                    <p class="card-content">
-                        As part of Onflap’sreimbursement program, the company reimburses employees who travel for any expenses they incur, including meals, lodging, car mileage, and flight costs. We always strive to deliver the best working experience and allowances to our employees for their best experience in the profession.
-                    </p>
-                </div>
+                {% endfor %}
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
 
 </main>

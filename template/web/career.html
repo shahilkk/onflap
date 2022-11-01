@@ -66,12 +66,14 @@
                 <div class="col-lg-2 d-sm-none d-lg-block"></div>
                 <div class="col-lg-4 col-sm-6 col-md-6 col-6">
                     <select class="form-select" aria-label="Default select example" id="jobtype">
-                        <option selected>Job type</option>
+                        <option selected value="">Job type</option>
                         <option value="On-site ">On-site</option>
                         <option value="Hybrid">Hybrid</option>
                         <option value="Remote">Remote</option>
                     </select>
+                    <span hidden id="jobtypespn" style="color: red;">* Please Select your jobtype * </span>
                 </div>
+                
                 <div class="col-lg-4 col-sm-6 col-md-6 col-6">
                     <select class="form-select" aria-label="Default select example" id="joblocation">
                         <option selected>Location</option>
@@ -97,7 +99,7 @@
 
                     <div class="row">
                         {% for job in jobs %}
-                        <div class="col-lg-12 col-sm-12 col-md-12">
+                        <div class="col-lg-12 col-sm-12 col-md-12 firstsetjob">
                             <div class="card card1 justify-content-center">
                                 <div class="row ">
                                     <div class="col-lg-3 col-md-3 d-flex justify-content-center">
@@ -155,114 +157,86 @@
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    // $(document).ready(function(){
-    //     alert()
-    // })
-    // function jobtype(){
-    //     alert()
-    //     console.log("DDDDDDDDDDDDDDDDDDDD")
-    //     var jobtype = $('#jobtype').val()
-    //     var location = $('#location').val()
-    //     alert(jobtype)
-    // }
     $('#joblocation').on('change', function () {
         // alert(this.value)
         var jobtype = $('#jobtype').val()
         var location = $('#joblocation').val()
-        $.ajax({
-            url: 'jobsearches',
-            type: 'POST',
-            data: {
-                'jobtype': jobtype,
-                'joblocation': location,
+        if(jobtype != ''){
+            $.ajax({
+                url: 'jobsearches',
+                type: 'POST',
+                data: {
+                    'jobtype': jobtype,
+                    'joblocation': location,
 
-            },
-            success: function (response) {
-                // alert((response.data).length)
-                var len = (response.data).length
-                // alert(len)
-                var html = ""
-                // for (i = 1; i <= len; i++) {
-                for (var datas in response.data) {
-                    // alert(response.data[datas].vaccancy)
-                    $("#appendjobcard").append('<div class="row">\
-                        <div class="card card1 justify-content-center">\
-                            <div class="row ">\
-                                <div class="col-lg-3 col-md-3 d-flex justify-content-center">\
-                                    <h3 class="card-title">'+ response.data[datas].job_title +'</h3><br><br>\
+                },
+                success: function (response) {
+                    // alert((response.data).length)
+                    $(".firstsetjob").hide()
+                    $('.secondset').hide()
+                    $('#jobtypespn').hide()
+                    var len = (response.data).length
+                    // alert(len)
+                    var html = ""
+                    for (var datas in response.data) {
+                        $("#appendjobcard").append('<div class="col-lg-12 col-sm-12 col-md-12 secondset">\
+                            <div class="card card1 justify-content-center">\
+                                <div class="row ">\
+                                    <div class="col-lg-3 col-md-3 d-flex justify-content-center">\
+                                        <h3 class="card-title">'+ response.data[datas].job_title +'</h3><br><br>\
                                     </div>\
-                                        <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">\
-                                            <div class="media single-job-details">\
-                                                    <img src="static/career/images/riyastemp/2.svg" alt="icon">\
-                                                    <div class="media-body">\
-                                                        <h6>Location</h6>\
-                                                        <span id="locationsp">'+ response.data[datas].location + '</span>\
-                                                    </div>\
+                                            <div class="col-lg-9 col-md-9 justify-content-around d-lg-flex d-md-flex">\
+                                                <div class="media single-job-details">\
+                                                        <img src="static/career/images/riyastemp/2.svg" alt="icon">\
+                                                        <div class="media-body">\
+                                                            <h6>Location</h6>\
+                                                            <span id="locationsp">'+ response.data[datas].location + '</span>\
+                                                        </div>\
+                                                </div>\
+                                                <div class="media single-job-details">\
+                                                    <img src="static/career/images/riyastemp/3.svg" alt="icon">\
+                                                        <div class="media-body">\
+                                                            <h6>Job Type</h6>\
+                                                            <span>'+ response.data[datas].work_mode + '</span>\
+                                                        </div>\
+                                                </div>\
+                                                <div class="media single-job-details">\
+                                                    <img src="static/career/images/riyastemp/4.svg" alt="icon">\
+                                                        <div class="media-body">\
+                                                            <h6>Experience</h6>\
+                                                            <span>'+ response.data[datas].experience + '</span>\
+                                                        </div>\
+                                                </div>\
+                                                <div class="media single-job-details">\
+                                                    <img src="static/career/images/riyastemp/5.svg" alt="icon">\
+                                                        <div class="media-body">\
+                                                            <h6>Vacancy</h6>\
+                                                            <span>'+ response.data[datas].vaccancy + '</span>\
+                                                        </div>\
+                                                </div>\
                                             </div>\
-                                            <div class="media single-job-details">\
-                                                <img src="static/career/images/riyastemp/3.svg" alt="icon">\
-                                                    <div class="media-body">\
-                                                        <h6>Job Type</h6>\
-                                                        <span>'+ response.data[datas].work_mode + '</span>\
-                                                    </div>\
+                                            <div class="col-lg-12 col-md-12 d-flex align-items-end">\
+                                                <a href="/careerdetails/'+response.data[datas].jobid+'" class="btn btn1">Read More</a>\
                                             </div>\
-                                            <div class="media single-job-details">\
-                                                <img src="static/career/images/riyastemp/4.svg" alt="icon">\
-                                                    <div class="media-body">\
-                                                        <h6>Experience</h6>\
-                                                        <span>'+ response.data[datas].experience + '</span>\
-                                                    </div>\
-                                            </div>\
-                                            <div class="media single-job-details">\
-                                                <img src="static/career/images/riyastemp/5.svg" alt="icon">\
-                                                    <div class="media-body">\
-                                                        <h6>Vacancy</h6>\
-                                                        <span>'+ response.data[datas].vaccancy + '</span>\
-                                                    </div>\
-                                            </div>\
-                                        </div>\
-                                        <div class="col-lg-12 col-md-12 d-flex align-items-end">\
-                                            <a href="/careerdetails/'+response.data[datas].jobid+'" class="btn btn1">Read More</a>\
-                                        </div>\
                                 </div>\
                             </div>\
-                    </div >')
+                        </div >')
+                    }
                 }
-                // alert(response.data[0].id)
-                // $("#locationsp").html(response.data[0].location)
+            })
+        }
+        else {
+            Swal.fire(' Please select your jobtype first ')
 
-                // $("#appendjobcard").append(html)
+            $('#joblocation').prop('selectedIndex',0)
 
-
-            }
-        })
+        }
+        
 
     });
 </script>
 
 
 {% endblock %}
-
-<!-- 
-    <h6 class="card-title d-flex justify-content-between">\
-                <span> Question Number : </span>\
-                <span> Mark : '+ response.data[datas].vaccancy + '</span>\
-            </h6><br>\
-                <div id="answerDiv">\
-                </div>\
-                <div class="row">\
-                <div class="col-lg-12">\
-                    <div class="btn-toolbar text-center">\
-                        <div class="d-grid gap-2 d-md-flex text-end" >\
-                            <button type="submit" class="btn btn-success">Save &\
-                                Next</button>\
-                        </div>\
-                    </div>\
-                </div>\
-            </div>
- -->
-
-
-<!-- $("#appendjobcard").append(html) -->

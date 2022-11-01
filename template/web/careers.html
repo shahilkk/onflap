@@ -15,6 +15,8 @@
             font-size: 14px;
         }
     }
+
+
 </style>
 
 
@@ -28,11 +30,10 @@
                     <img src="{% static 'web/img/about/about.jpg' %}" alt="" width="100%">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class=" filterh6 " style="color: black;">Why Join ONFLAP?</h2>
-                    <p class="first_desc">
-                        Onflap is now presenting exciting career opportunities for technical heads to hone their passion and dexterities for advanced technology. built on a strong vision and corporate philosophy of continuous adaptation, client service, and professional growth. Our Onflap Family is always growing, and we look forward to welcoming new members who are looking to expand their potential and place their careers on a path to success. We are looking for smart people who enjoy working with each other in a fun, collaborative, and dynamic environment. If that's you, it's time for you to build your career with the vibrant team of Onflap.
-
-                    </p>
+                    <h2 class=" filterh6 " style="color: black;">{{career_Banner.Title}}</h2>
+                    <span class="first_desc" id="qwerty">
+                        {{career_Banner.Description|safe}}
+                    </span>
                     <div class="row d-flex">
                         <div class="col-xs-6 col-md-6 col-lg-6  col-6 d-flex justify-content-end  div1">
                             <a href="{% url 'web:kuwaitbenfits' %}" class="job-redirect-button margin-top-10  ">
@@ -56,10 +57,9 @@
             <!-- <h2 class="breadcrumb-title brtitle head">Why Join ONFLAP?</h2> -->
             <div class="row first_row">
                 <div class="col-lg-6">
-                    <h2 class=" filterh6 " style="color: black;">Why Join ONFLAP?</h2>
-                    <p class="first_desc">
-                        Onflap is now presenting exciting career opportunities for technical heads to hone their passion and dexterities for advanced technology. built on a strong vision and corporate philosophy of continuous adaptation, client service, and professional growth. Our Onflap Family is always growing, and we look forward to welcoming new members who are looking to expand their potential and place their careers on a path to success. We are looking for smart people who enjoy working with each other in a fun, collaborative, and dynamic environment. If that's you, it's time for you to build your career with the vibrant team of Onflap.
-
+                    <h2 class=" filterh6 " style="color: black;">{{career_Banner.Title}}</h2>
+                    <p class="first_desc" id="bannerdesc">
+                        {{career_Banner.Description|safe}}
                     </p>
                     <div class="row d-flex">
                         <div class="col-xs-6 col-md-6 col-lg-6  col-6 d-flex justify-content-end  div1">
@@ -88,35 +88,21 @@
         <div class="container-fluid" style="background-color: #f8f7f67a!important;">
             <div class="row customrow333">
                 <div class="col-lg-12 text-center">
-                    <h2 class="filterh6" style="color: #000 !important;">ONFLAP beliefs </h2>
+                    <h2 class="filterh6" style="color: #000 !important;">{{belif_title.title}} </h2>
                 </div>
             </div>
 
             <div class="container">
                 <div class="row">
 
+                    {% for b in onflap_belif %}
                     <div class="col-lg-4 col-md-4 mt-3 ">
                         <div class="feature-info">
-                            <img src="{% static 'web/img/icons/Customer Satisfaction-01.png' %}" width="45px"
-                                alt="thumb">
-                            <h5 style="font-weight: 900;line-height: 4.5rem;" class="belifs">100% customer Satisfaction</h5>
+                            <img src="{{b.icons.url}}" width="45px" alt="thumb">
+                            <h5 style="font-weight: 900;line-height: 4.5rem;" class="belifs">{{b.Title}}</h5>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-4 mt-3">
-                        <div class="feature-info">
-                            <img src="{% static 'web/img/icons/Integrity n Trust-01.png' %}" width="45px" alt="thumb">
-                            <h5 style="font-weight: 900;line-height: 4.5rem;" class="belifs">Inspire Integrity & Trust</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 mt-3">
-                        <div class="feature-info">
-                            <img src="{% static 'web/img/icons/Nothing is Impossible-01.png' %}" width="45px"
-                                alt="thumb">
-                            <h5 style="font-weight: 900;line-height:4.5rem;" class="belifs">Nothing is Impossible in IT</h5>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -132,62 +118,21 @@
         </div>
 
         <div class="row expect_row2">
+
+            {% for w in what_to_expect%}
             <div class="col-lg-3 col-md-6" style="padding: 0px;">
                 <div class="card valuecard bg-white   border-white border-0">
                     <div class="card-body description description" style="overflow-y: auto">
-                        <h4 class="card-title">Realization of your Personal and Career Goals
+                        <h4 class="card-title">
+                            {{w.Title}}
                         </h4>
                         <p class="card-text">
-                            In ONFLAP we believe in helping our team members to grow in both their personal as well as
-                            career lives to the fullest in order for them to become future leaders.
-                            We push for growth from within, allowing each team member to assume different roles and
-                            responsibilities. This preserves our company culture and continuity in leadership.
-
+                            {{w.Description}}
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6" style="padding: 0px;">
-                <div class="card valuecard bg-white   border-white border-0">
-                    <div class="card-body description description" style="overflow-y: auto">
-                        <h4 class="card-title">Positive and Fun Work Environment</h4>
-                        <p class="card-text">
-                            We strongly believe that the right environment is what brings out the best in an individual.
-
-                            <br> Our sense of openness and passion for growth welcomes new ideas and innovation. We try our best to offer a well-balanced professional life.
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-6" style="padding: 0px;">
-                <div class="card valuecard bg-white   border-white border-0">
-                    <div class="card-body description description" style="overflow-y: auto">
-                        <h4 class="card-title">Global Exposure</h4>
-                        <p class="card-text">
-                            We provide services across the World to various different sectors of Businesses so we can provide you with a chance to showcase your talent at the International level. <br>
-                            You can become a part of our Global Team to experience a different level of exposure to Clients and situations.
-
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6" style="padding: 0px;">
-                <div class="card valuecard bg-white   border-white border-0">
-                    <div class="card-body description description" style="overflow-y: auto">
-                        <h4 class="card-title">Secure Growth beyond your Expectations</h4>
-                        <p class="card-text">
-                            At ONFLAP you can expect to grow exponentially not only in your skillsets but also in your Career irrespective of your background or culture or age. We recognize and appreciate Talent and provide all our resources and guidance to hone it.
-
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
@@ -197,9 +142,9 @@
                 <div class="col-lg-12 col-12">
                     <div class="description">
                         <p class="descriptions"><b>
-                            Become an ONFLAPian, See all our available opportunities for your to
-                            Apply
-                        </b></p>
+                                Become an ONFLAPian, See all our available opportunities for your to
+                                Apply
+                            </b></p>
                     </div>
                 </div>
             </div>
@@ -218,3 +163,9 @@
 
 
 {% endblock %}
+
+<!-- <script>
+    $(document).ready(function(){
+        $('#bannerdesc').
+    })
+</script> -->

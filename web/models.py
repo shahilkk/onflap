@@ -154,3 +154,157 @@ class ClientList(models.Model):
 
     class Meta:
         verbose_name_plural = ("Client Lists")
+
+
+class BannerDescription(models.Model):
+    title = models.CharField(max_length=300, null=True, blank=True)
+    description = HTMLField(max_length=820, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Banner Description")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class RangeOfProduct(models.Model):
+    short_form = models.CharField(max_length=50, null=True, blank=True)
+    title = models.CharField(max_length=300, null=True, blank=True)
+    icon = models.FileField(upload_to='rangeof_products', null=True, blank=True)
+    description = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Range of Product")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class Services(models.Model):
+    icon = models.FileField(upload_to='services', null=True, blank=True)
+    title = models.CharField(max_length=300, null=True, blank=True)
+    description = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Services")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class AboutBanner(models.Model):
+    title = models.CharField(max_length=300, null=True, blank=True)
+    description = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("About Banner")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class MissionVision(models.Model):
+    title = models.CharField(max_length=300, null=True, blank=True)
+    Mission = HTMLField(null=True, blank=True)
+    Vision = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Mission Vision")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class TeamTitle(models.Model):
+    title = models.CharField(max_length=300, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Team Title")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class Team(models.Model):
+    image = models.FileField(upload_to='Team', null=True, blank=True)
+    Member_name = models.CharField(max_length=300, null=True, blank=True)
+    Designation = models.CharField(max_length=300, null=True, blank=True)
+    review = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Team")
+
+    def __str__(self):
+        return str(self.Member_name)
+
+
+class CareerBanner(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description = HTMLField(null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Career Banner")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class BelifsTitle(models.Model):
+    title = models.CharField(max_length=300, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Belifs Title")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class Belifs(models.Model):
+    icons = models.FileField(upload_to='Belifs', null=True, blank=True)
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Onflap Belifs")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class WhatToExpect(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description = models.CharField(max_length=335, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("What To Expect")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class KuwaitBanner(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description =  models.CharField(max_length=550, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Kuwait Banner")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class KuwaitBenefits(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description = HTMLField(max_length=550, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Kuwait Benefits")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class IndianBanner(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description = models.CharField(max_length=550, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Indian Banner")
+
+    def __str__(self):
+        return str(self.Title)
+
+
+class IndianBenefits(models.Model):
+    Title = models.CharField(max_length=300, null=True, blank=True)
+    Description = HTMLField(max_length=550, null=True, blank=True)
+    class Meta:
+        verbose_name_plural = ("Indain Benefits")
+
+    def __str__(self):
+        return str(self.Title)

@@ -2,7 +2,7 @@ from http.client import HTTPException
 import json
 from django.shortcuts import render, redirect
 from web.forms import ContactUsForm, Myform
-from web.models import ApplyNow, ClientCategory, ClientList, JobDetails, Partners, Product, ProductDetails, ProductEnquiry, Review
+from web.models import AboutBanner, ApplyNow, BannerDescription, Belifs, BelifsTitle, CareerBanner, ClientCategory, ClientList, IndianBanner, IndianBenefits, JobDetails, KuwaitBanner, KuwaitBenefits, MissionVision, Partners, Product, ProductDetails, ProductEnquiry, RangeOfProduct, Review, Services, Team, TeamTitle, WhatToExpect
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.contrib import messages
@@ -22,6 +22,9 @@ def home(request):
     product_details = Product.objects.all().order_by()
     clients = ClientCategory.objects.filter(is_active=True)
     client_details = ClientList.objects.all()
+    banner = BannerDescription.objects.all().last()
+    range_product = RangeOfProduct.objects.all().order_by('id')
+    services = Services.objects.all().order_by('id')
     form = Myform()
     context = {
         "is_house": True,
@@ -30,7 +33,10 @@ def home(request):
         "product_details": product_details,
         "clients": clients,
         "client_details": client_details,
-        "form": form
+        "form": form,
+        "banner":banner,
+        "range_product":range_product,
+        "services":services,
     }
     return render(request, "web/index.html", context)
 
@@ -69,16 +75,33 @@ def productdetails(request, id):
 
 
 def about(request):
+    about_banner = AboutBanner.objects.all().last()
+    mission_vission = MissionVision.objects.all().last()
+    team_title = TeamTitle.objects.all().last()
+    team = Team.objects.all()
+    print(mission_vission)
     context = {
         "is_house": True,
+        "about_banner":about_banner,
+        "mission_vission":mission_vission,
+        "team_title":team_title,
+        "team":team,
     }
     return render(request, "web/about.html", context)
 
 
 # Career section
 def careers(request):
+    career_Banner = CareerBanner.objects.last()
+    belif_title = BelifsTitle.objects.last()
+    onflap_belif = Belifs.objects.all()
+    what_to_expect = WhatToExpect.objects.all()
     context = {
         "is_career": True,
+        "career_Banner":career_Banner,
+        "belif_title":belif_title,
+        "onflap_belif":onflap_belif,
+        "what_to_expect":what_to_expect
     }
     return render(request, "web/careers.html",context)
 
@@ -109,28 +132,28 @@ def career(request):
     return render(request, "web/career.html", context)
 
 
-@csrf_exempt
-def searchjob(request):
-    if request.method == 'POST':
+# @csrf_exempt
+# def searchjob(request):
+#     if request.method == 'POST':
 
-        jobtype = request.POST['jobtype']
-        joblocation = request.POST['joblocation']
-        jobs = JobDetails.objects.filter(work_mode=jobtype,location=joblocation)
-        data = []
+#         jobtype = request.POST['jobtype']
+#         joblocation = request.POST['joblocation']
+#         jobs = JobDetails.objects.filter(work_mode=jobtype,location=joblocation)
+#         data = []
 
-        for job in jobs:
-            jobitem = {
-                "jobid" : job.id,
-                "location" : job.location,
-                "work_mode" : job.work_mode,
-                "experience" : job.experience,
-                "vaccancy" : job.vaccancy,
-                "job_title": job.job_title,
-            }
-            print(id) 
-            data.append(jobitem)
-        print(id)    
-        return JsonResponse({'data':data,})
+#         for job in jobs:
+#             jobitem = {
+#                 "jobid" : job.id,
+#                 "location" : job.location,
+#                 "work_mode" : job.work_mode,
+#                 "experience" : job.experience,
+#                 "vaccancy" : job.vaccancy,
+#                 "job_title": job.job_title,
+#             }
+#             print(id) 
+#             data.append(jobitem)
+#         print(id)    
+#         return JsonResponse({'data':data,})
 
 
 def careerDetails(request, id):
@@ -189,15 +212,23 @@ def applynow(request, id):
 
 # benefits
 def indianBenfits(request):
+    indian_banner =IndianBanner.objects.last()
+    indian_benefits = IndianBenefits.objects.all()
     context = {
         "is_benefits": True,
+        "indian_banner":indian_banner,
+        "indian_benefits":indian_benefits
     }
     return render(request, "web/indian_benefits.html", context)
 
 
 def kuwaitBenefits(request):
+    kuwait_banner = KuwaitBanner.objects.last()
+    kuwait_benefits = KuwaitBenefits.objects.all()
     context = {
         "is_benefits": True,
+        "kuwait_banner":kuwait_banner,
+        "kuwait_benefits":kuwait_benefits,
     }
     return render(request, "web/kuwait_benefits.html", context)
 
