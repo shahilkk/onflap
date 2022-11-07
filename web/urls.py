@@ -22,5 +22,5 @@ urlpatterns = [
     path('indianbenfits', views.indianBenfits, name="indianbenfits"),
     path('kuwaitbenfits', views.kuwaitBenefits, name="kuwaitbenfits"),
 
-    path('jobsearches',views.searchjob,name='jobsearch')
+    # path('jobsearches',views.searchjob,name='jobsearch')
 ]

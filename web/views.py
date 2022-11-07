@@ -181,22 +181,23 @@ def applynow(request, id):
             new_application.save()
             subject = 'The new application is arrived'
             message = new_application.applicant_name
-            email = ' admin@onflap.com'
+            email = 'shilpasasidharan97@gmail.com'
             try:
-                # print('try')
+                print('try')
                 mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
-                # print(cv.name, cv.read(), cv.content_type)
-                # print(cv,'#'*10)
-                # print(new_application.cv,'*'*10)
+                print(cv.name, cv.read(), cv.content_type)
+                print(cv,'#'*10)
+                print(new_application.cv,'*'*10)
                 file_path = f"{settings.MEDIA_ROOT}/cv/{cv.name}"
-                # print(file_path,'%'*10)
+                print(file_path,'%'*10)
                 mail.attach_file(file_path)
                 # mail.content_type
                 mail.send()
+                print('mailsent')
                 messages.success(request, "Sucess")
             except Exception as e:
-                # print('except')
-                # print(str(e))
+                print('except')
+                print(str(e))
                 raise HTTPException(str(e))
         else:
             print('else')
